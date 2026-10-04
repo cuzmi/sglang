@@ -8,7 +8,9 @@ from torch.nn import functional as F
 
 from sglang.kernels.ops.diffusion import (
     BitExactFusionGate,
+    can_use_rmsnorm_preserve_reduction,
     fused_packed_silu_mul_bitexact,
+    rmsnorm_preserve_reduction,
 )
 from sglang.multimodal_gen.runtime.distributed import get_sp_world_size
 from sglang.multimodal_gen.runtime.distributed.sp_shard_utils import (
@@ -26,6 +28,8 @@ _MING_SWIGLU_FUSION = BitExactFusionGate(
     "Ming-Image packed SiLU-mul", per_signature=True
 )
 
+_MING_RMSNORM_FUSION = BitExactFusionGate("Ming-Image RMSNorm", per_signature=True)
+
 
 def _eager_silu_and_mul(x: torch.Tensor) -> torch.Tensor:
     gate, up = x.chunk(2, dim=-1)
@@ -36,6 +40,32 @@ class MingRMSNorm(RMSNorm):
     def __init__(self, dim, eps=1e-5):
         # unlike Z-Image, Ming's reference accumulates the variance in fp32
         super().__init__(dim, eps=eps, cast_x_before_out_mul=True, force_native=True)
+
+    def forward_native(
+        self, x, residual=None, post_residual_addition=None, quant_linear=None
+    ):
+        if (
+            torch.compiler.is_compiling()
+            or residual is not None
+            or post_residual_addition is not None
+            or _MING_RMSNORM_FUSION.disabled
+            or not can_use_rmsnorm_preserve_reduction(x, self.weight)
+        ):
+            return super().forward_native(
+                x, residual, post_residual_addition, quant_linear
+            )
+
+        # Keep the original shape: aten's mean dispatch can depend on row count.
+        sig = (x.device, x.dtype, tuple(x.shape), self.variance_epsilon)
+        verified = _MING_RMSNORM_FUSION.is_verified(sig)
+        if not verified and torch.cuda.is_current_stream_capturing():
+            return super().forward_native(x)
+        out = rmsnorm_preserve_reduction(x, self.weight, self.variance_epsilon)
+        if verified:
+            return out
+        return _MING_RMSNORM_FUSION.accept_or_fallback(
+            out, super().forward_native(x), sig=sig, logger=logger
+        )
 
 
 class MingSiluAndMul(nn.Module):
