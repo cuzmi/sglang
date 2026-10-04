@@ -1,0 +1,53 @@
+Anima post-rebase performance (native)
+
+Run: anima-rebased-perf-20261004T163234Z-b2ba18da
+Base: affa261e3d289fe4f907c9b2e8d773fef0d36dba
+Head: 05bee50b2f4fef4484bab3db3bff7ef4495e98e5
+Image: im-USSXj25TgwLcB1dg8jFGSS
+GPU: NVIDIA H200; CUDA: 13.0; CPU: ['unknown']
+Packages: {'torch': '2.13.0+cu130', 'triton': '3.7.1', 'diffusers': '0.37.0', 'transformers': '5.12.1', 'apache-tvm-ffi': '0.1.11'}
+
+1024x1024, BF16, TP1, FA, 30 steps, CFG4, seed42, no compile/CUDA graph.
+One container/GPU; ABBA + BAAB; fresh CLI process for every arm.
+One-step same-resolution request warmup per process; one timed 30-step request.
+Metric: native worker total_duration_ms, excludes load/warmup/PNG saving.
+No profiler during timing. Four process samples per variant.
+
+Arm          Variant    Worker request (ms)
+01-baseline  baseline   3161.160232
+02-candidate candidate  2989.134031
+03-candidate candidate  3023.471062
+04-baseline  baseline   3146.867065
+05-candidate candidate  3043.642693
+06-baseline  baseline   3157.010673
+07-baseline  baseline   3142.236208
+08-candidate candidate  3007.736279
+
+OVERALL
+baseline: n=4, mean=3151.819 ms, range=3142.236..3161.160 ms, sample SD=8.767 ms
+candidate: n=4, mean=3015.996 ms, range=2989.134..3043.643 ms, sample SD=23.166 ms
+Candidate mean latency change: -4.309%
+
+ABBA
+baseline: n=2, mean=3154.014 ms, range=3146.867..3161.160 ms, sample SD=10.107 ms
+candidate: n=2, mean=3006.303 ms, range=2989.134..3023.471 ms, sample SD=24.280 ms
+Candidate mean latency change: -4.683%
+
+BAAB
+baseline: n=2, mean=3149.623 ms, range=3142.236..3157.011 ms, sample SD=10.447 ms
+candidate: n=2, mean=3025.689 ms, range=3007.736..3043.643 ms, sample SD=25.390 ms
+Candidate mean latency change: -3.935%
+
+Validity: all eight arms completed 30 steps with exact expected source hashes.
+All eight decoded pixel hashes and PNG byte hashes match.
+Pixel SHA256: 2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c
+
+Limitations: one GPU instance, one prompt/seed/resolution, four process samples per version.
+No same-version A/A run or cross-instance replication; this does not establish a universal speedup.
+ABBA/BAAB balance simple ordering effects but cannot remove all runtime noise.
+GPU boundary snapshots are archived; they do not prove isolation throughout each timed request.
+Earlier measurements used a different base and instance; they are not pooled here.
+
+Timing caveat: the native timer stops before output transport without an explicit end sync.
+This is a host-side worker metric and may omit a trailing CUDA tail.
+Use the separately archived synchronized experiment for device-completed request timing.

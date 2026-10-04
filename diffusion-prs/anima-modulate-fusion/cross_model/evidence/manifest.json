@@ -1,0 +1,116 @@
+{
+  "status": "complete",
+  "baseline_commit": "6fa3fe69e2e5e19b75cadd9fc285b72634551992",
+  "scope": "checkpoint-free real modulation entrypoints; no timing or full image/video generation",
+  "gpu": "NVIDIA H200",
+  "cuda": "13.0",
+  "packages": {
+    "torch": "2.13.0+cu130",
+    "triton": "3.7.1",
+    "diffusers": "0.37.0",
+    "transformers": "5.12.1",
+    "apache-tvm-ffi": "0.1.11"
+  },
+  "baseline_sha256": "59a5b7512980429ea2b08d8479ea4cfd94f81709bade49e3d83cef319846e8b5",
+  "candidate_sha256": "5705525464fedef85e83631e44aa53ce87bd7a7b1b83d7294a25c22621bcc8b0",
+  "arms": [
+    {
+      "variant": "baseline",
+      "backend_sha256": "59a5b7512980429ea2b08d8479ea4cfd94f81709bade49e3d83cef319846e8b5",
+      "tests": {
+        "caller-checks": {
+          "command": [
+            "/opt/sglang/bin/python",
+            "/workspace/check_callers.py",
+            "/results/cross-model-correctness-20261004T004258Z-cb6a67f7/baseline"
+          ],
+          "exit_code": 0
+        },
+        "existing-kernel": {
+          "command": [
+            "/opt/sglang/bin/python",
+            "-m",
+            "pytest",
+            "-q",
+            "test/registered/kernels/ops/diffusion/test_modulate.py",
+            "-k",
+            "modulate_scale_shift"
+          ],
+          "exit_code": 0
+        },
+        "existing-model-sites": {
+          "command": [
+            "/opt/sglang/bin/python",
+            "-m",
+            "pytest",
+            "-q",
+            "test/registered/kernels/ops/diffusion/test_model_fast_paths.py",
+            "-k",
+            "flux_fused_ln_modulate or flux_norm_modulate or ltx2_lossless"
+          ],
+          "exit_code": 0
+        },
+        "existing-ltx-layout": {
+          "command": [
+            "/opt/sglang/bin/python",
+            "-m",
+            "pytest",
+            "-q",
+            "python/sglang/multimodal_gen/test/unit/test_ltx2_modulate_mount.py"
+          ],
+          "exit_code": 0
+        }
+      }
+    },
+    {
+      "variant": "candidate",
+      "backend_sha256": "5705525464fedef85e83631e44aa53ce87bd7a7b1b83d7294a25c22621bcc8b0",
+      "tests": {
+        "caller-checks": {
+          "command": [
+            "/opt/sglang/bin/python",
+            "/workspace/check_callers.py",
+            "/results/cross-model-correctness-20261004T004258Z-cb6a67f7/candidate"
+          ],
+          "exit_code": 0
+        },
+        "existing-kernel": {
+          "command": [
+            "/opt/sglang/bin/python",
+            "-m",
+            "pytest",
+            "-q",
+            "test/registered/kernels/ops/diffusion/test_modulate.py",
+            "-k",
+            "modulate_scale_shift"
+          ],
+          "exit_code": 0
+        },
+        "existing-model-sites": {
+          "command": [
+            "/opt/sglang/bin/python",
+            "-m",
+            "pytest",
+            "-q",
+            "test/registered/kernels/ops/diffusion/test_model_fast_paths.py",
+            "-k",
+            "flux_fused_ln_modulate or flux_norm_modulate or ltx2_lossless"
+          ],
+          "exit_code": 0
+        },
+        "existing-ltx-layout": {
+          "command": [
+            "/opt/sglang/bin/python",
+            "-m",
+            "pytest",
+            "-q",
+            "python/sglang/multimodal_gen/test/unit/test_ltx2_modulate_mount.py"
+          ],
+          "exit_code": 0
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "matching_case_outputs": true
+}

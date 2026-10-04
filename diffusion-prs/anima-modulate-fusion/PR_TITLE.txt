@@ -1,0 +1,1 @@
+[Diffusion] Fuse Anima AdaLN modulation and reduce CUDA dispatch overhead

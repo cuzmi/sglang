@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "base": "6fa3fe69e2e5e19b75cadd9fc285b72634551992",
+  "baseline_sha256": "4e8001618a694a59f5187ea6176e870f626a6451f9908cd05b68d6034dcdf783",
+  "candidate_sha256": "1bc9d2b61589a5ef5354ed5d637d9cf72a440c6d11087859f7de59fcdeb1ffc2",
+  "archive_sha256": "349f9021b4d7bcd7d3c42425d1691fccc42f8d75f2ac5054882407d621ebb233",
+  "model": "inclusionAI/Ming-Image-0.1-Design",
+  "revision": "208087ada1486931692c1896f38d4cd16ff3df82",
+  "gpu": "NVIDIA H200",
+  "versions": {
+    "torch": "2.13.0+cu130",
+    "triton": "3.7.1",
+    "diffusers": "0.37.0",
+    "transformers": "5.12.1"
+  },
+  "nvidia_smi": "Sat Oct  3 23:18:23 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 580.95.05              Driver Version: 580.95.05      CUDA Version: 13.0     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA H200                    On  |   00000000:CC:00.0 Off |                    0 |\n| N/A   36C    P0             78W /  700W |       4MiB / 143771MiB |      0%      Default |\n|                                         |                        |             Disabled |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+  "arms": []
+}

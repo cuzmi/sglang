@@ -1,0 +1,40 @@
+{
+  "base": "affa261e3d289fe4f907c9b2e8d773fef0d36dba",
+  "head": "05bee50b2f4fef4484bab3db3bff7ef4495e98e5",
+  "runs": {
+    "native": "anima-rebased-perf-20261004T163234Z-b2ba18da",
+    "synchronized": "anima-rebased-sync-perf-20261004T164048Z-a9b075f6"
+  },
+  "modal_volume": "anima-modulate-experiments",
+  "sha256": {
+    ".gitattributes": "fb25a78a6381f5646d71aacea4486f6aeeeb03c4d71740227011024be0d20a8f",
+    "PR_BODY.txt": "960d864eae88695747972fdc1b70b73d429448fbfbebc6eb41728c2b1c61461a",
+    "README.txt": "94abbe912e88dfafbae9d0b709d3a1a12256aac781b07ba8485800890a12f31a",
+    "REPORT-native.txt": "d487c4dcc8ec085f2acb19101d1dcc91e704649639f76a1599b9d042bb9fbaab",
+    "REPORT-synchronized.txt": "f91ef5f06fd95a1034c7298b71443b96485e7db2f0acd3ce38a543f95bbf1355",
+    "analyze.py": "0752c338d654b0f12c52ccf63af56e5f182e7fd4c361f7b50321883ac213f21b",
+    "evidence/native/01-baseline.json": "dbb9017cc57d96f1f52ac87803911e76bd3cd2f79e0a7107a5775fe8ab05a32f",
+    "evidence/native/02-candidate.json": "add67bb2ab4da3329f2c85a643d2c745819fc31dbdee972b040ab1eff0fb0e2e",
+    "evidence/native/03-candidate.json": "2ab73f29cd23170c7027d3af7cae31d5af1800b42b815b1e53ebb3ee4100f68b",
+    "evidence/native/04-baseline.json": "2645da7a57e940477495b4adc943aab6d7beb786e4a176ffbcb4ae5afb133192",
+    "evidence/native/05-candidate.json": "29897cc4815d5f248468f151b6c1e92611ee58d48c6dcb2012f1cf35b5746e1e",
+    "evidence/native/06-baseline.json": "ca28d62af59dd6773756f02bb015d39253843c67efed8fe107a793202afc49d3",
+    "evidence/native/07-baseline.json": "554d6cc6a3fad32af98d00b28cd93737a3b272c1baa56d3bf09bbac12733ed24",
+    "evidence/native/08-candidate.json": "e532d71176e8e23ed774665b9c51f4f5d2d42d096fbff37c4ec9464a3966fea0",
+    "evidence/native/manifest.json": "802f91a567ab10789ffd1a094538de8f8fecbf7cecb0e7f68fa33d1533d7e528",
+    "evidence/native/summary.json": "8284df8a66c5ad4f993fd7379e74d5b0ca3cd32b4718b1f1252671434d1eb08a",
+    "evidence/synchronized/01-baseline.json": "e240f9b3eaaf284299567568f89df013b684eadd3272a5c8342a40648ee02f87",
+    "evidence/synchronized/02-candidate.json": "d14c35eb84c6d9cde77e9245a4b9f0f9441134353fb3a4e37f50b68827e3bcd8",
+    "evidence/synchronized/03-candidate.json": "62999bfa202069043dc24fee4587d6198e5619422d935fc27a7658b2ec7d65a9",
+    "evidence/synchronized/04-baseline.json": "009238434b1689d6f9aed8d95f6497f8327c8ed09d13d91956d9632b9cbfd944",
+    "evidence/synchronized/05-candidate.json": "bd3118e509241bc71cbb58ddf8db5f07d9433d29abe9d8f031c69f26eb78adeb",
+    "evidence/synchronized/06-baseline.json": "a4d509c318c60c763410224ae7470f481421f6dd784c3ef2c1957a5a7465946f",
+    "evidence/synchronized/07-baseline.json": "212b6f46c918b6ebd34a142843e6ac36857e6bb70c545778dab44674a2bb46ea",
+    "evidence/synchronized/08-candidate.json": "f0f4eeb6985e5af7475dc76c067b8f3d53ff2e650964841f72a0694ef2351f05",
+    "evidence/synchronized/manifest.json": "bc512b5bf88d4c2869ec0729ce21567b2d32d46a55a7b8d397ea7e9fe85d8b48",
+    "evidence/synchronized/summary.json": "8add4e9ec0a12e9a598b8fa552f6f342ac12036881bbae48321a86acf5218ccf",
+    "evidence/synchronized/timing.patch": "a3a87df01950ea41e74575ff481cd16df846e92f52a7ac17b0dfc0e6844b32b9",
+    "run_modal.py": "ab152e157e6586f90e257e09de7389d6016749c7fb664a4041a948aa7d6895fa",
+    "run_modal_synchronized.py": "abde84133f45bcdb9ec339716bcb50c011b6f8c600ffe71b0e6abf6a9561aae5"
+  }
+}

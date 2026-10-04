@@ -1,0 +1,48 @@
+Unit-test review of the final two-file Anima change
+
+Decision
+  Pure Anima call-site integration does not warrant another broad numerical
+  suite. The final patch also changes the shared modulation wrapper, so a small
+  extension to the existing test_modulate.py is worthwhile before submission.
+  This is a review only: no SGLang tests have been added or changed.
+
+Current coverage (source inspected at baseline plus final patch)
+  test/registered/kernels/ops/diffusion/test_modulate.py:
+    test_modulate_scale_shift_matches_eager: 5 shapes x FP16/BF16, torch.equal,
+      but calls the strict CUDA entrypoint rather than the public wrapper.
+    test_modulate_scale_shift_accepts_adaln_chunk_views: batch 1, width 3072.
+    test_modulate_scale_shift_guards_reject_fp32: public wrapper eager fallback.
+  python/sglang/multimodal_gen/test/unit/test_anima_cuda.py:
+    test_transformer_matches_cosmos: FP32/BF16 x batch 1/2, small complete model
+      (hidden width 128), tolerance comparison; does not assert fast-path use.
+  Standalone verify_anima.py:
+    36 full AdaLN cases at width 2048, FP16/BF16/FP32, gated/ungated, batch 1/2,
+    actual dispatch assertions, bit-exact output/gates, and CUDA graph replay.
+    Already run successfully, but not a persistent repository regression test.
+
+Recommended minimal follow-up
+  1. Extend the existing numerical test to cover both public and strict CUDA
+     entrypoints and include one small batched Anima-width shape [2,17,2048].
+     For supported inputs, spy on the real custom-op entrypoint and require it
+     to run, in addition to torch.equal. Output equality alone would pass if
+     the public wrapper silently fell back and lost the optimization.
+  2. Add one public-wrapper failure regression: simulate a catchable custom-op
+     RuntimeError on an eligible input; verify exact eager output on the first
+     and second calls and only one failing invocation. Isolate/restore
+     _FAILED_RUNTIME_KEYS with monkeypatch so the test does not disable other
+     cases. This checks the fallback and per-device/dtype disable contract.
+
+Not recommended
+  - Timing assertions in unit tests, another complete 36-case AdaLN matrix,
+    checkpoint downloads, or image generation in kernel CI.
+  - Tests that assert a particular private getter name, FFI attribute lookup
+    count, or number of eligibility checks. Those mirror implementation details;
+    the benchmark demonstrates their performance effect.
+  - New CUDA arithmetic tests solely for geometry tuning: no CUDA arithmetic or
+    geometry change was adopted.
+
+Remaining boundaries
+  The archived CUDA graph replay is not torch.compile coverage. Anima preserves
+  its original expression while compiling; none of the recorded checks proves
+  full-model compiled-mode performance or numerical parity. No such claim is
+  made. Broader compile testing can be considered if that branch is changed.

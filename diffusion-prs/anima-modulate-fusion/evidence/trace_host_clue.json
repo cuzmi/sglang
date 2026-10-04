@@ -1,0 +1,13 @@
+{
+  "baseline": {
+    "count": 170,
+    "cpu_range_sum_ms": 93.584011,
+    "cpu_range_median_us": 460.894
+  },
+  "candidate": {
+    "count": 170,
+    "cpu_range_sum_ms": 125.567798,
+    "cpu_range_median_us": 576.171
+  },
+  "caveat": "Profiled CPU durations include instrumentation overhead and are not unprofiled dispatch timing."
+}

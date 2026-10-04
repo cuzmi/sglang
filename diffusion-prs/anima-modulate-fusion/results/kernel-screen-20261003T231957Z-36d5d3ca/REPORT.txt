@@ -1,0 +1,72 @@
+Anima modulation launch geometry and dispatch screening
+
+GPU: NVIDIA H200; CUDA: 13.0
+Packages: {'torch': '2.13.0+cu130', 'triton': '3.7.1', 'apache-tvm-ffi': '0.1.11'}
+
+Geometry experiment: BF16, hidden size 2048; same elementwise CUDA arithmetic, vector width 8.
+Only rows per block and threads per block vary. Bit-exact checks pass for all 9 variants at all 4 shapes.
+A pre-bound FFI callable and preallocated output are captured 64 times per CUDA graph.
+20 replays per measurement, 7 shuffled repetitions. Values below are median microseconds per kernel.
+These timings isolate device work; they exclude Python, allocation, row preparation and model work.
+
+Shape [1, 4096, 2048]
+  r4_t256      8.431500 us
+  r1_t128      8.109450 us
+  r1_t256      8.202625 us
+  r2_t128      8.286500 us
+  r2_t256      8.345500 us
+  r4_t128      8.475850 us
+  r8_t128      9.322850 us
+  r8_t256      8.764625 us
+  r16_t256     10.162525 us
+
+Shape [1, 1024, 2048]
+  r4_t256      3.608375 us
+  r1_t128      3.053150 us
+  r1_t256      3.069300 us
+  r2_t128      3.202125 us
+  r2_t256      3.254350 us
+  r4_t128      3.554200 us
+  r8_t128      4.970625 us
+  r8_t256      5.028925 us
+  r16_t256     8.638125 us
+
+Shape [2, 4096, 2048]
+  r4_t256      18.610799 us
+  r1_t128      18.352599 us
+  r1_t256      18.694749 us
+  r2_t128      18.473201 us
+  r2_t256      18.697225 us
+  r4_t128      18.442550 us
+  r8_t128      18.618675 us
+  r8_t256      18.645550 us
+  r16_t256     22.913601 us
+
+Shape [2, 1024, 2048]
+  r4_t256      5.157700 us
+  r1_t128      4.586450 us
+  r1_t256      4.659925 us
+  r2_t128      4.696675 us
+  r2_t256      4.788575 us
+  r4_t128      5.195975 us
+  r8_t128      5.704075 us
+  r8_t256      5.809500 us
+  r16_t256     8.746725 us
+
+Host-path screen: full AdaLN at [1,4096,2048] with GEMMs and LayerNorm retained.
+20 warmup calls, 200 measured calls per repetition, 7 shuffled repetitions.
+CUDA event interval includes gaps due to host submission; this is not isolated kernel time.
+The original forward is used for eager. All outputs and gates match bit-exactly.
+The checked_cached_ffi prototype has one eligibility check and a pre-bound FFI callable,
+but bypasses some production wrapper/custom-op dispatch; only the separate full-model run tests the final patch.
+
+eager                               host=86.413845 us, event=86.613598 us
+public_double_guard                 host=94.403805 us, event=94.554081 us
+single_guard                        host=89.950510 us, event=90.092163 us
+checked_cached_ffi                  host=83.377165 us, event=83.616323 us
+cached_ffi_without_python_guard     host=78.293755 us, event=78.430562 us
+
+Conclusion: the best screened geometry saves about 0.32 us at the target shape.
+The larger microbenchmark effect comes from host dispatch. No CUDA geometry change was adopted.
+Full-model speed must be judged using dispatch-abccba results, not these operator measurements.
+Raw samples: screen.json. Harness: ../../../kernel_screen.py and ../../../kernel_screen_modal.py.

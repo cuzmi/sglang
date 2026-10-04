@@ -1,0 +1,148 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/xinyuj2/main/ap-0ciMkpNLXiCIYsbsfvcyak
+Building image im-yMDSnW7K4cIsWgMA9bEPuR
+
+=> Step 0: FROM base
+
+=> Step 1: COPY . /
+Saving image...
+Image saved, took 3.28s
+
+Built image im-yMDSnW7K4cIsWgMA9bEPuR in 4.82s
+
+
+Building image im-WWAdk7EWBK4Uj9hs2KgXL7
+
+=> Step 0: FROM base
+
+=> Step 1: COPY . /
+Saving image...
+Image saved, took 3.88s
+
+Built image im-WWAdk7EWBK4Uj9hs2KgXL7 in 6.14s
+
+
+Building image im-INPc9LkmwDvjzdqzmYRHuP
+
+=> Step 0: FROM base
+
+=> Step 1: ENV HF_HOME=/vol/hf-cache
+
+=> Step 2: ENV PYTHONPATH=/workspace/sglang/python
+
+=> Step 3: ENV PYTHONUNBUFFERED=1
+
+=> Step 4: ENV OMP_NUM_THREADS=8
+Saving image...
+Image saved, took 2.84s
+
+Built image im-INPc9LkmwDvjzdqzmYRHuP in 5.00s
+
+
+✓ Created objects.
+├── ✓ Uploaded /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/ming_image/rmsnorm/experiment.py
+├── ✓ Uploaded /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/ming_image/rmsnorm/inputs/baseline.tar.gz
+├── ✓ Uploaded /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/ming_image/rmsnorm/inputs/candidate_ming_imag
+│   e.py
+├── ✓ Uploaded /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/ming_image/rmsnorm/verify_rmsnorm.py
+└── ✓ Created Function run.
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/importlib/metadata/__init__.py", line 397, in from_name
+    return next(cls.discover(name=name))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/pkg/modal/_runtime/container_io_manager.py", line 987, in handle_input_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 189, in run_input_sync
+    values = io_context.call_function_sync()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_runtime/container_io_manager.py", line 266, in call_function_sync
+    expected_value_or_values = self.finalized_function.callable(*args, **kwargs)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/experiment.py", line 91, in run
+    manifest = dict(status='running', base=BASE, baseline_sha256=sha(baseline), candidate_sha256=sha(candidate), archive_sha256=sha(Path('/workspace/baseline.tar.gz').read_bytes()), model=MODEL, revision=REVISION, gpu=torch.cuda.get_device_name(), versions={p:importlib.metadata.version(p) for p in ['torch','triton','diffusers','transformers','sgl-kernel']}, nvidia_smi=subprocess.check_output(['nvidia-smi'],text=True), arms=[])
+                                                                                                                                                                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/metadata/__init__.py", line 889, in version
+    return distribution(distribution_name).version
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/metadata/__init__.py", line 862, in distribution
+    return Distribution.from_name(distribution_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/metadata/__init__.py", line 399, in from_name
+    raise PackageNotFoundError(name)
+importlib.metadata.PackageNotFoundError: No package metadata was found for sgl-kernel
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /Users/cuzimi/Coding                                                         │
+│ Works/RemoteFiles/modal_sglang/ming_image/rmsnorm/experiment.py:140 in main  │
+│                                                                              │
+│   139 def main(mode: str = 'micro'):                                         │
+│ ❱ 140 │   print('RESULT',run.remote(mode))                                   │
+│   141                                                                        │
+│                                                                              │
+│ /private/tmp/uv-ming-rms-cache/archive-v0/RCrxV2D8o_Ox8rM2fIUsh/lib/python3. │
+│ 13/site-packages/modal/_object.py:49 in wrapped                              │
+│                                                                              │
+│    48 │   │   await self.hydrate()                                           │
+│ ❱  49 │   │   return await method(self, *args, **kwargs)                     │
+│    50                                                                        │
+│                                                                              │
+│ /private/tmp/uv-ming-rms-cache/archive-v0/RCrxV2D8o_Ox8rM2fIUsh/lib/python3. │
+│ 13/site-packages/modal/_functions.py:2067 in remote                          │
+│                                                                              │
+│   2066 │   │                                                                 │
+│ ❱ 2067 │   │   return await self._call_function(args, kwargs)                │
+│   2068                                                                       │
+│                                                                              │
+│ /private/tmp/uv-ming-rms-cache/archive-v0/RCrxV2D8o_Ox8rM2fIUsh/lib/python3. │
+│ 13/site-packages/modal/_functions.py:2004 in _call_function                  │
+│                                                                              │
+│   2003 │   │                                                                 │
+│ ❱ 2004 │   │   return await invocation.run_function()                        │
+│   2005                                                                       │
+│                                                                              │
+│ /private/tmp/uv-ming-rms-cache/archive-v0/RCrxV2D8o_Ox8rM2fIUsh/lib/python3. │
+│ 13/site-packages/modal/_functions.py:515 in run_function                     │
+│                                                                              │
+│    514 │   │   │   # No more retries left.                                   │
+│ ❱  515 │   │   │   return await _process_result(                             │
+│    516 │   │   │   │   await_response.output.result, await_response.output.d │
+│                                                                              │
+│ /private/tmp/uv-ming-rms-cache/archive-v0/RCrxV2D8o_Ox8rM2fIUsh/lib/python3. │
+│ 13/site-packages/modal/_utils/function_utils.py:572 in _process_result       │
+│                                                                              │
+│   571 │   │   │                                                              │
+│ ❱ 572 │   │   │   raise exc_with_hints(exc)                                  │
+│   573                                                                        │
+│                                                                              │
+│     ...Remote call to Modal Function (ta-01M420TZV0KW5NPNC40S92P19R)...      │
+│                                                                              │
+│ /root/experiment.py:91 in run                                                │
+│                                                                              │
+│ ❱ 91 manifest = dict(status='running', base=BASE, baseline_sha256=sha(baseli │
+│                                                                              │
+│                                                                              │
+│ /usr/lib/python3.12/importlib/metadata/__init__.py:889 in version            │
+│                                                                              │
+│ ❱ 889 return distribution(distribution_name).version                         │
+│                                                                              │
+│                                                                              │
+│ /usr/lib/python3.12/importlib/metadata/__init__.py:862 in distribution       │
+│                                                                              │
+│ ❱ 862 return Distribution.from_name(distribution_name)                       │
+│                                                                              │
+│                                                                              │
+│ /usr/lib/python3.12/importlib/metadata/__init__.py:399 in from_name          │
+│                                                                              │
+│ ❱ 399 raise PackageNotFoundError(name)                                       │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+PackageNotFoundError: No package metadata was found for sgl-kernel

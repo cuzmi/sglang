@@ -1,0 +1,240 @@
+{
+  "run_id": "anima-rebased-sync-perf-20261004T164048Z-a9b075f6",
+  "mode": "synchronized",
+  "metric": "worker total_duration_ms with explicit CUDA synchronization at request boundaries; excludes load/warmup/PNG saving",
+  "baseline_commit": "affa261e3d289fe4f907c9b2e8d773fef0d36dba",
+  "candidate_commit": "05bee50b2f4fef4484bab3db3bff7ef4495e98e5",
+  "overall": {
+    "baseline": {
+      "n": 4,
+      "values_ms": [
+        3229.577145999997,
+        3179.790543000024,
+        3164.0331290000177,
+        3169.5118530000173
+      ],
+      "mean_ms": 3185.728167750014,
+      "median_ms": 3174.6511980000205,
+      "min_ms": 3164.0331290000177,
+      "max_ms": 3229.577145999997,
+      "sample_stdev_ms": 29.953474209591395
+    },
+    "candidate": {
+      "n": 4,
+      "values_ms": [
+        3099.7785069999964,
+        3054.3071420000274,
+        3056.5752349999684,
+        3051.4241619999893
+      ],
+      "mean_ms": 3065.5212614999955,
+      "median_ms": 3055.441188499998,
+      "min_ms": 3051.4241619999893,
+      "max_ms": 3099.7785069999964,
+      "sample_stdev_ms": 22.93523453741829
+    },
+    "latency_change_percent": -3.773294516051484
+  },
+  "abba": {
+    "baseline": {
+      "n": 2,
+      "values_ms": [
+        3229.577145999997,
+        3179.790543000024
+      ],
+      "mean_ms": 3204.6838445000103,
+      "median_ms": 3204.6838445000103,
+      "min_ms": 3179.790543000024,
+      "max_ms": 3229.577145999997,
+      "sample_stdev_ms": 35.20444459352323
+    },
+    "candidate": {
+      "n": 2,
+      "values_ms": [
+        3099.7785069999964,
+        3054.3071420000274
+      ],
+      "mean_ms": 3077.042824500012,
+      "median_ms": 3077.042824500012,
+      "min_ms": 3054.3071420000274,
+      "max_ms": 3099.7785069999964,
+      "sample_stdev_ms": 32.15311054128668
+    },
+    "latency_change_percent": -3.9829520225235338
+  },
+  "baab": {
+    "baseline": {
+      "n": 2,
+      "values_ms": [
+        3164.0331290000177,
+        3169.5118530000173
+      ],
+      "mean_ms": 3166.7724910000175,
+      "median_ms": 3166.7724910000175,
+      "min_ms": 3164.0331290000177,
+      "max_ms": 3169.5118530000173,
+      "sample_stdev_ms": 3.874042892649205
+    },
+    "candidate": {
+      "n": 2,
+      "values_ms": [
+        3056.5752349999684,
+        3051.4241619999893
+      ],
+      "mean_ms": 3053.999698499979,
+      "median_ms": 3053.999698499979,
+      "min_ms": 3051.4241619999893,
+      "max_ms": 3056.5752349999684,
+      "sample_stdev_ms": 3.642358648672139
+    },
+    "latency_change_percent": -3.561127072454351
+  },
+  "all_output_pixels_equal": true,
+  "all_png_bytes_equal": true,
+  "gpu_snapshots": [
+    {
+      "arm": "01-baseline",
+      "when": "before",
+      "utc": "2026-10-04T16:40:52.341373+00:00",
+      "gpu": "NVIDIA H200, GPU-c7ef753f-2b59-aba1-9c5f-2602abc00b4a, 580.95.05, P0, 30, 345 MHz, 3201 MHz, 77.40 W, 700.00 W, 0 %, 4 MiB",
+      "gpu_exit_code": 0,
+      "processes": "",
+      "process_exit_code": 0
+    },
+    {
+      "arm": "01-baseline",
+      "when": "after",
+      "utc": "2026-10-04T16:42:31.945177+00:00",
+      "gpu": "NVIDIA H200, GPU-c7ef753f-2b59-aba1-9c5f-2602abc00b4a, 580.95.05, P0, 33, 345 MHz, 3201 MHz, 77.88 W, 700.00 W, 0 %, 4 MiB",
+      "gpu_exit_code": 0,
+      "processes": "",
+      "process_exit_code": 0
+    },
+    {
+      "arm": "02-candidate",
+      "when": "before",
+      "utc": "2026-10-04T16:42:34.676747+00:00",
+      "gpu": "NVIDIA H200, GPU-c7ef753f-2b59-aba1-9c5f-2602abc00b4a, 580.95.05, P0, 32, 345 MHz, 3201 MHz, 77.75 W, 700.00 W, 0 %, 4 MiB",
+      "gpu_exit_code": 0,
+      "processes": "",
+      "process_exit_code": 0
+    },
+    {
+      "arm": "02-candidate",
+      "when": "after",
+      "utc": "2026-10-04T16:43:43.524002+00:00",
+      "gpu": "NVIDIA H200, GPU-c7ef753f-2b59-aba1-9c5f-2602abc00b4a, 580.95.05, P0, 33, 345 MHz, 3201 MHz, 78.17 W, 700.00 W, 0 %, 4 MiB",
+      "gpu_exit_code": 0,
+      "processes": "",
+      "process_exit_code": 0
+    },
+    {
+      "arm": "03-candidate",
+      "when": "before",
+      "utc": "2026-10-04T16:43:47.045928+00:00",
+      "gpu": "NVIDIA H200, GPU-c7ef753f-2b59-aba1-9c5f-2602abc00b4a, 580.95.05, P0, 32, 345 MHz, 3201 MHz, 77.75 W, 700.00 W, 0 %, 4 MiB",
+      "gpu_exit_code": 0,
+      "processes": "",
+      "process_exit_code": 0
+    },
+    {
+      "arm": "03-candidate",
+      "when": "after",
+      "utc": "2026-10-04T16:44:46.433148+00:00",
+      "gpu": "NVIDIA H200, GPU-c7ef753f-2b59-aba1-9c5f-2602abc00b4a, 580.95.05, P0, 34, 435 MHz, 3201 MHz, 106.51 W, 700.00 W, 0 %, 4 MiB",
+      "gpu_exit_code": 0,
+      "processes": "",
+      "process_exit_code": 0
+    },
+    {
+      "arm": "04-baseline",
+      "when": "before",
+      "utc": "2026-10-04T16:44:48.760670+00:00",
+      "gpu": "NVIDIA H200, GPU-c7ef753f-2b59-aba1-9c5f-2602abc00b4a, 580.95.05, P0, 33, 345 MHz, 3201 MHz, 77.75 W, 700.00 W, 0 %, 4 MiB",
+      "gpu_exit_code": 0,
+      "processes": "",
+      "process_exit_code": 0
+    },
+    {
+      "arm": "04-baseline",
+      "when": "after",
+      "utc": "2026-10-04T16:45:47.610781+00:00",
+      "gpu": "NVIDIA H200, GPU-c7ef753f-2b59-aba1-9c5f-2602abc00b4a, 580.95.05, P0, 33, 375 MHz, 3201 MHz, 96.62 W, 700.00 W, 0 %, 4 MiB",
+      "gpu_exit_code": 0,
+      "processes": "",
+      "process_exit_code": 0
+    },
+    {
+      "arm": "05-candidate",
+      "when": "before",
+      "utc": "2026-10-04T16:45:52.353639+00:00",
+      "gpu": "NVIDIA H200, GPU-c7ef753f-2b59-aba1-9c5f-2602abc00b4a, 580.95.05, P0, 32, 345 MHz, 3201 MHz, 77.72 W, 700.00 W, 0 %, 4 MiB",
+      "gpu_exit_code": 0,
+      "processes": "",
+      "process_exit_code": 0
+    },
+    {
+      "arm": "05-candidate",
+      "when": "after",
+      "utc": "2026-10-04T16:46:52.350764+00:00",
+      "gpu": "NVIDIA H200, GPU-c7ef753f-2b59-aba1-9c5f-2602abc00b4a, 580.95.05, P0, 33, 345 MHz, 3201 MHz, 78.78 W, 700.00 W, 0 %, 4 MiB",
+      "gpu_exit_code": 0,
+      "processes": "",
+      "process_exit_code": 0
+    },
+    {
+      "arm": "06-baseline",
+      "when": "before",
+      "utc": "2026-10-04T16:46:54.798987+00:00",
+      "gpu": "NVIDIA H200, GPU-c7ef753f-2b59-aba1-9c5f-2602abc00b4a, 580.95.05, P0, 33, 345 MHz, 3201 MHz, 77.87 W, 700.00 W, 0 %, 4 MiB",
+      "gpu_exit_code": 0,
+      "processes": "",
+      "process_exit_code": 0
+    },
+    {
+      "arm": "06-baseline",
+      "when": "after",
+      "utc": "2026-10-04T16:48:04.967963+00:00",
+      "gpu": "NVIDIA H200, GPU-c7ef753f-2b59-aba1-9c5f-2602abc00b4a, 580.95.05, P0, 33, 360 MHz, 3201 MHz, 79.81 W, 700.00 W, 0 %, 4 MiB",
+      "gpu_exit_code": 0,
+      "processes": "",
+      "process_exit_code": 0
+    },
+    {
+      "arm": "07-baseline",
+      "when": "before",
+      "utc": "2026-10-04T16:48:07.198963+00:00",
+      "gpu": "NVIDIA H200, GPU-c7ef753f-2b59-aba1-9c5f-2602abc00b4a, 580.95.05, P0, 32, 345 MHz, 3201 MHz, 77.77 W, 700.00 W, 0 %, 4 MiB",
+      "gpu_exit_code": 0,
+      "processes": "",
+      "process_exit_code": 0
+    },
+    {
+      "arm": "07-baseline",
+      "when": "after",
+      "utc": "2026-10-04T16:49:05.871542+00:00",
+      "gpu": "NVIDIA H200, GPU-c7ef753f-2b59-aba1-9c5f-2602abc00b4a, 580.95.05, P0, 33, 360 MHz, 3201 MHz, 88.07 W, 700.00 W, 0 %, 4 MiB",
+      "gpu_exit_code": 0,
+      "processes": "",
+      "process_exit_code": 0
+    },
+    {
+      "arm": "08-candidate",
+      "when": "before",
+      "utc": "2026-10-04T16:49:08.348872+00:00",
+      "gpu": "NVIDIA H200, GPU-c7ef753f-2b59-aba1-9c5f-2602abc00b4a, 580.95.05, P0, 32, 345 MHz, 3201 MHz, 77.87 W, 700.00 W, 0 %, 4 MiB",
+      "gpu_exit_code": 0,
+      "processes": "",
+      "process_exit_code": 0
+    },
+    {
+      "arm": "08-candidate",
+      "when": "after",
+      "utc": "2026-10-04T16:50:05.618508+00:00",
+      "gpu": "NVIDIA H200, GPU-c7ef753f-2b59-aba1-9c5f-2602abc00b4a, 580.95.05, P0, 34, 435 MHz, 3201 MHz, 96.34 W, 700.00 W, 0 %, 4 MiB",
+      "gpu_exit_code": 0,
+      "processes": "",
+      "process_exit_code": 0
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "adaln_calls": 5270,
+  "modulate_calls": 5270,
+  "checked_signatures": [
+    [
+      [
+        1,
+        4096,
+        2048
+      ],
+      "torch.bfloat16",
+      [
+        6144,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        4096,
+        2048
+      ],
+      "torch.bfloat16",
+      [
+        4096,
+        1
+      ]
+    ]
+  ]
+}

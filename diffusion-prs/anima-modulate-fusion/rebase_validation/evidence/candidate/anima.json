@@ -1,0 +1,294 @@
+{
+  "correctness": [
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    }
+  ],
+  "scope": "correctness only; no performance measurements",
+  "cuda_graph_replay_bit_exact": true
+}

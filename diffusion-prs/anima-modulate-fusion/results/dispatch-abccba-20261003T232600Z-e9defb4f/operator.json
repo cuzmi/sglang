@@ -1,0 +1,399 @@
+{
+  "correctness": [
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    }
+  ],
+  "microbenchmark": [
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 1024,
+      "hidden": 2048,
+      "abba_us": [
+        21.664960384368896,
+        16.08448028564453,
+        15.737919807434082,
+        20.893120765686035
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 4096,
+      "hidden": 2048,
+      "abba_us": [
+        45.844478607177734,
+        15.848959684371948,
+        15.96735954284668,
+        45.730881690979004
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 1024,
+      "hidden": 2048,
+      "abba_us": [
+        28.52224111557007,
+        31.888000965118408,
+        31.882240772247314,
+        28.46560001373291
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 4096,
+      "hidden": 2048,
+      "abba_us": [
+        100.3990364074707,
+        31.64799928665161,
+        31.45024061203003,
+        100.46175956726074
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 1024,
+      "hidden": 2048,
+      "abba_us": [
+        21.106560230255127,
+        16.055359840393066,
+        15.949759483337402,
+        20.883519649505615
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 4096,
+      "hidden": 2048,
+      "abba_us": [
+        45.18815994262695,
+        15.95263957977295,
+        16.005120277404785,
+        45.188798904418945
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 1024,
+      "hidden": 2048,
+      "abba_us": [
+        27.954881191253662,
+        32.33952045440674,
+        31.961920261383057,
+        27.933759689331055
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 4096,
+      "hidden": 2048,
+      "abba_us": [
+        99.95840072631836,
+        31.642560958862305,
+        31.47711992263794,
+        100.01919746398926
+      ],
+      "includes_row_copies": true
+    }
+  ],
+  "cuda_graph_replay_bit_exact": true
+}

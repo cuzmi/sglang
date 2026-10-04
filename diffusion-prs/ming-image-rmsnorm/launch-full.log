@@ -1,0 +1,102 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/xinyuj2/main/ap-PiYUpHD0O2sggd0lHa7Dma
+✓ Created objects.
+├── ✓ Uploaded /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/ming_image/rmsnorm/experiment.py
+├── ✓ Uploaded /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/ming_image/rmsnorm/inputs/baseline.tar.gz
+├── ✓ Uploaded /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/ming_image/rmsnorm/inputs/candidate_ming_imag
+│   e.py
+├── ✓ Uploaded /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/ming_image/rmsnorm/verify_rmsnorm.py
+├── ✓ Uploaded /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/ming_image/rmsnorm/inputs/test_rmsnorm_preser
+│   ve_reduction.py
+├── ✓ Uploaded /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/ming_image/rmsnorm/inputs/test_model_fast_pat
+│   hs.py
+└── ✓ Created Function run.
+Traceback (most recent call last):
+  File "/pkg/modal/_runtime/container_io_manager.py", line 987, in handle_input_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 189, in run_input_sync
+    values = io_context.call_function_sync()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_runtime/container_io_manager.py", line 266, in call_function_sync
+    expected_value_or_values = self.finalized_function.callable(*args, **kwargs)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/experiment.py", line 107, in run
+    manifest['model_config'] = json.loads((modelpath/'config.json').read_text())
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/vol/hf-cache/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/config.json'
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /Users/cuzimi/Coding                                                         │
+│ Works/RemoteFiles/modal_sglang/ming_image/rmsnorm/experiment.py:144 in main  │
+│                                                                              │
+│   143 def main(mode: str = 'micro'):                                         │
+│ ❱ 144 │   print('RESULT',run.remote(mode))                                   │
+│   145                                                                        │
+│                                                                              │
+│ /private/tmp/uv-ming-rms-cache/archive-v0/RCrxV2D8o_Ox8rM2fIUsh/lib/python3. │
+│ 13/site-packages/modal/_object.py:49 in wrapped                              │
+│                                                                              │
+│    48 │   │   await self.hydrate()                                           │
+│ ❱  49 │   │   return await method(self, *args, **kwargs)                     │
+│    50                                                                        │
+│                                                                              │
+│ /private/tmp/uv-ming-rms-cache/archive-v0/RCrxV2D8o_Ox8rM2fIUsh/lib/python3. │
+│ 13/site-packages/modal/_functions.py:2067 in remote                          │
+│                                                                              │
+│   2066 │   │                                                                 │
+│ ❱ 2067 │   │   return await self._call_function(args, kwargs)                │
+│   2068                                                                       │
+│                                                                              │
+│ /private/tmp/uv-ming-rms-cache/archive-v0/RCrxV2D8o_Ox8rM2fIUsh/lib/python3. │
+│ 13/site-packages/modal/_functions.py:2004 in _call_function                  │
+│                                                                              │
+│   2003 │   │                                                                 │
+│ ❱ 2004 │   │   return await invocation.run_function()                        │
+│   2005                                                                       │
+│                                                                              │
+│ /private/tmp/uv-ming-rms-cache/archive-v0/RCrxV2D8o_Ox8rM2fIUsh/lib/python3. │
+│ 13/site-packages/modal/_functions.py:515 in run_function                     │
+│                                                                              │
+│    514 │   │   │   # No more retries left.                                   │
+│ ❱  515 │   │   │   return await _process_result(                             │
+│    516 │   │   │   │   await_response.output.result, await_response.output.d │
+│                                                                              │
+│ /private/tmp/uv-ming-rms-cache/archive-v0/RCrxV2D8o_Ox8rM2fIUsh/lib/python3. │
+│ 13/site-packages/modal/_utils/function_utils.py:572 in _process_result       │
+│                                                                              │
+│   571 │   │   │                                                              │
+│ ❱ 572 │   │   │   raise exc_with_hints(exc)                                  │
+│   573                                                                        │
+│                                                                              │
+│     ...Remote call to Modal Function (ta-01M4214GGZR72AXD3XZZRH3PMR)...      │
+│                                                                              │
+│ /root/experiment.py:107 in run                                               │
+│                                                                              │
+│ ❱ 107 manifest['model_config'] = json.loads((modelpath/'config.json').read_t │
+│                                                                              │
+│                                                                              │
+│ /usr/lib/python3.12/pathlib.py:1029 in read_text                             │
+│                                                                              │
+│ ❱ 1029 with self.open(mode='r', encoding=encoding, errors=errors) as f:      │
+│                                                                              │
+│                                                                              │
+│ /usr/lib/python3.12/pathlib.py:1015 in open                                  │
+│                                                                              │
+│ ❱ 1015 return io.open(self, mode, buffering, encoding, errors, newline)      │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileNotFoundError: [Errno 2] No such file or directory: 
+'/vol/hf-cache/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ad
+a1486931692c1896f38d4cd16ff3df82/config.json'

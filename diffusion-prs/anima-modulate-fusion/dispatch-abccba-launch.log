@@ -1,0 +1,1306 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/xinyuj2/main/ap-IhAzD8MSV6HaWdEpG66xFz
+Building image im-GXq4ev04hqWsDM11voLh3k
+
+=> Step 0: FROM base
+
+=> Step 1: COPY . /
+Saving image...
+Image saved, took 5.45s
+
+Built image im-GXq4ev04hqWsDM11voLh3k in 7.16s
+
+
+✓ Created objects.
+├── 🔨 Created mount /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/anima/dispatch_abccba.py
+├── 🔨 Created mount /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/anima/inputs/dispatch_modulate_scale_shift_ji
+│   t.py
+└── 🔨 Created function experiment.
+RUN_ID=dispatch-abccba-20261003T232600Z-e9defb4f
+RUN ['/opt/sglang/bin/python', '/workspace/verify_anima.py', '/results/dispatch-abccba-20261003T232600Z-e9defb4f/operator.json']
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+{
+  "correctness": [
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    }
+  ],
+  "microbenchmark": [
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 1024,
+      "hidden": 2048,
+      "abba_us": [
+        21.664960384368896,
+        16.08448028564453,
+        15.737919807434082,
+        20.893120765686035
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 4096,
+      "hidden": 2048,
+      "abba_us": [
+        45.844478607177734,
+        15.848959684371948,
+        15.96735954284668,
+        45.730881690979004
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 1024,
+      "hidden": 2048,
+      "abba_us": [
+        28.52224111557007,
+        31.888000965118408,
+        31.882240772247314,
+        28.46560001373291
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 4096,
+      "hidden": 2048,
+      "abba_us": [
+        100.3990364074707,
+        31.64799928665161,
+        31.45024061203003,
+        100.46175956726074
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 1024,
+      "hidden": 2048,
+      "abba_us": [
+        21.106560230255127,
+        16.055359840393066,
+        15.949759483337402,
+        20.883519649505615
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 4096,
+      "hidden": 2048,
+      "abba_us": [
+        45.18815994262695,
+        15.95263957977295,
+        16.005120277404785,
+        45.188798904418945
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 1024,
+      "hidden": 2048,
+      "abba_us": [
+        27.954881191253662,
+        32.33952045440674,
+        31.961920261383057,
+        27.933759689331055
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 4096,
+      "hidden": 2048,
+      "abba_us": [
+        99.95840072631836,
+        31.642560958862305,
+        31.47711992263794,
+        100.01919746398926
+      ],
+      "includes_row_copies": true
+    }
+  ],
+  "cuda_graph_replay_bit_exact": true
+}
+RUN ['/opt/sglang/bin/python', '-m', 'pytest', '-q', 'test/registered/kernels/ops/diffusion/test_modulate.py', '-k', 'modulate_scale_shift']
+............                                                             [100%]
+=============================== warnings summary ===============================
+../../opt/sglang/lib/python3.12/site-packages/_pytest/config/__init__.py:1464
+  /opt/sglang/lib/python3.12/site-packages/_pytest/config/__init__.py:1464: PytestConfigWarning: Unknown config option: asyncio_mode
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+12 passed, 1006 deselected, 1 warning in 26.74s
+RUN ['/opt/sglang/bin/python', '-m', 'pytest', '-q', 'python/sglang/multimodal_gen/test/unit/test_anima.py', 'python/sglang/multimodal_gen/test/unit/test_anima_cuda.py']
+.................                                                        [100%]
+=============================== warnings summary ===============================
+../../opt/sglang/lib/python3.12/site-packages/torch/jit/_script.py:365: 14 warnings
+  /opt/sglang/lib/python3.12/site-packages/torch/jit/_script.py:365: DeprecationWarning: `torch.jit.script_method` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+17 passed, 14 warnings in 15.33s
+RUN ['sglang', 'generate', '--model-path', '/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c', '--model-id', 'circlestone-labs/Anima-Base-v1.0-Diffusers', '--revision', '073c3a9db359c31ad0e8aa268d15775473c2176c', '--num-gpus', '1', '--enable-torch-compile=false', '--enable-breakable-cuda-graph=false', '--performance-mode=speed', '--attention-backend', 'fa', '--width', '1024', '--height', '1024', '--num-inference-steps', '30', '--guidance-scale', '4', '--negative-prompt', '', '--prompt', 'masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset', '--seed', '42', '--generator-device', 'cpu', '--quality', 'lossless', '--save-output', '--warmup-mode', 'request', '--warmup-steps', '1', '--perf-dump-path', '/results/dispatch-abccba-20261003T232600Z-e9defb4f/01-eager/perf.json', '--output-path', '/results/dispatch-abccba-20261003T232600Z-e9defb4f/01-eager/outputs', '--output-file-name', 'sample']
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+--model-id 'circlestone-labs/Anima-Base-v1.0-Diffusers' did not match any registered model; falling back to automatic detection.
+[10-03 23:28:23] Applying performance_mode=speed
+[10-03 23:28:23] server_args: {"model_path": "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c", "model_subfolder": null, "model_variant": null, "model_id": "circlestone-labs/Anima-Base-v1.0-Diffusers", "served_model_name": "circlestone-labs/Anima-Base-v1.0-Diffusers", "backend": "auto", "attention_backend": "fa", "enable_attention_backend_autotune": false, "attention_backend_config": {}, "component_attention_backends": {}, "cache_dit_config": null, "nccl_port": null, "enable_nccl_nvls": false, "trust_remote_code": false, "revision": "073c3a9db359c31ad0e8aa268d15775473c2176c", "num_gpus": 1, "performance_mode": "speed", "base_gpu_id": 0, "gpu_ids": null, "nnodes": 1, "node_rank": 0, "dist_init_addr": null, "tp_size": 1, "sp_degree": 1, "ulysses_degree": 1, "ring_degree": 1, "kv_gather_degree": 1, "sp_split_auto": false, "dp_size": 1, "enable_cfg_parallel": false, "cfg_parallel_degree": 1, "encoder_parallel": "auto", "hsdp_replicate_dim": 1, "hsdp_shard_dim": 1, "dist_timeout": 3600, "scheduler_rpc_timeout": null, "pipeline_class_name": null, "lora_path": null, "lora_nickname": "default", "lora_scale": 1.0, "lora_alpha": null, "lora_merge_mode": "auto", "lora_weight_name": null, "component_paths": {}, "component_weights_paths": {}, "component_direct_gpu_weight_loading": {}, "component_quantizations": {}, "component_precisions": {}, "component_quantization_ignored_layers": {}, "load_diffusion_decoder": false, "transformer_weights_path": null, "minimax_h3_adaln_cache_path": null, "minimax_h3_adaln_online": false, "minimax_h3_adaln_plan_width": 4, "minimax_h3_adaln_host_cache_gb": 8.0, "quantization": null, "quantization_ignored_layers": null, "lora_target_modules": null, "component_residency": null, "cpu_offload_components": null, "dit_cpu_offload": false, "direct_gpu_weight_loading": false, "dit_layerwise_offload": false, "layerwise_offload_components": null, "dit_offload_prefetch_size": 0.0, "dit_layerwise_resident_layers": 0.0, "dit_layerwise_residency_policy": "leading", "dit_layerwise_residency_lifetime": "forward", "layerwise_prefetch_size": {}, "layerwise_resident_layers": {}, "layerwise_residency_policy": {}, "layerwise_residency_lifetime": {}, "offload_during_compile": true, "text_encoder_cpu_offload": false, "image_encoder_cpu_offload": false, "vae_cpu_offload": false, "use_fsdp_inference": false, "pin_cpu_memory": true, "ltx2_two_stage_device_mode": null, "comfyui_mode": false, "enable_torch_compile": false, "regional_compile": false, "enable_breakable_cuda_graph": false, "bcg_text_buckets": null, "enable_layerwise_nvtx_marker": false, "warmup_mode": "request", "warmup_resolutions": null, "warmup_num_frames": null, "warmup_steps": 1, "warmup_sampling_params": null, "disable_autocast": true, "master_port": 30005, "host": "127.0.0.1", "port": 30000, "enable_metrics": false, "webui": false, "webui_port": 12312, "scheduler_port": 5588, "scheduler_ports": [5588], "batching_mode": "dynamic", "batching_max_size": 1, "batching_delay_ms": 0.0, "batching_config": null, "enable_batching_metrics": false, "strict_ports": false, "output_path": "/results/dispatch-abccba-20261003T232600Z-e9defb4f/01-eager/outputs", "input_save_path": "inputs/uploads", "prompt_file_path": null, "model_paths": {}, "model_loaded": {"transformer": true, "vae": true, "video_vae": true, "audio_vae": true, "video_dit": true, "audio_dit": true, "dual_tower_bridge": true}, "boundary_ratio": null, "disagg_role": "monolithic", "disagg_timeout": 3600, "disagg_downstream_wait_timeout": 1800, "disagg_dispatch_policy": "round_robin", "disagg_mode": false, "disagg_instance_id": 0, "disagg_max_slots_per_instance": 8, "disagg_transfer_redundancy": 1.25, "disagg_role_device": "auto", "disagg_transfer_backend": "auto", "disagg_transfer_pool_size": 268435456, "disagg_transfer_pin_memory": "auto", "disagg_p2p_hostname": "127.0.0.1", "disagg_ib_device": null, "disagg_server_addr": null, "encoder_urls": null, "denoiser_urls": null, "decoder_urls": null, "encoder_tp": null, "denoiser_tp": null, "denoiser_sp": null, "denoiser_ulysses": null, "denoiser_ring": null, "decoder_sp": null, "pool_work_endpoint": null, "pool_result_endpoint": null, "pool_control_endpoint": null, "pool_control_advertised_endpoint": null, "log_level": "info", "log_requests": false, "log_requests_level": 2, "log_requests_format": "text", "log_requests_target": null, "uvicorn_access_log_exclude_prefixes": [], "enable_cache_report": false, "enable_trace": false, "otlp_traces_endpoint": "localhost:4317", "otlp_service_name": null, "srt_encoder_url": null, "srt_encoder_connect_timeout": 3.05, "srt_encoder_timeout": 100, "pe_server_url": null, "prompt_enhancer_config": null}
+[10-03 23:28:23] Diffusers version: 0.39.0.dev0
+[10-03 23:28:23] Local mode: True
+[10-03 23:28:23] Starting server...
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:28:44] Scheduler (dp replica 0) bind at endpoint: tcp://127.0.0.1:5588
+[10-03 23:28:44] torch.compile cache: TORCHINDUCTOR_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/inductor TRITON_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/triton
+[10-03 23:28:44] Initializing distributed environment with world_size=1, device=cuda:0, timeout=3600
+[10-03 23:28:44] Setting distributed timeout to 3600 seconds
+[10-03 23:28:45] No pipeline_class_name specified, using model_index.json
+[10-03 23:28:46] Diffusers version: 0.39.0.dev0
+[93m[10-03 23:28:46] --model-id 'circlestone-labs/Anima-Base-v1.0-Diffusers' did not match any registered model; falling back to automatic detection.[0;0m
+[10-03 23:28:46] Using pipeline from model_index.json: AnimaPipeline
+[10-03 23:28:46] Loading pipeline modules...
+[10-03 23:28:46] Model already exists locally and is complete
+[10-03 23:28:46] Model path: /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c
+[10-03 23:28:46] Diffusers version: 0.39.0.dev0
+[10-03 23:28:46] Loading pipeline modules from config: {'_class_name': 'AnimaModularPipeline', '_diffusers_version': '0.39.0.dev0', 'scheduler': ['diffusers', 'FlowMatchEulerDiscreteScheduler'], 't5_tokenizer': ['transformers', 'T5Tokenizer'], 'text_conditioner': ['diffusers', 'AnimaTextConditioner'], 'text_encoder': ['transformers', 'Qwen3Model'], 'tokenizer': ['transformers', 'Qwen2Tokenizer'], 'transformer': ['diffusers', 'CosmosTransformer3DModel'], 'vae': ['diffusers', 'AutoencoderKLQwenImage']}
+[10-03 23:28:46] Loading required components: ['text_encoder', 'tokenizer', 't5_tokenizer', 'text_conditioner', 'vae', 'transformer', 'scheduler']
+[10-03 23:28:47] Memory-aware component load order: ['transformer', 'text_encoder', 'text_conditioner', 'vae', 'tokenizer', 't5_tokenizer', 'scheduler']
+
+Loading required modules:   0%|          | 0/7 [00:00<?, ?it/s][10-03 23:28:47] Loading transformer from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/transformer. avail mem: 138.65 GB
+[10-03 23:28:47] Loading CosmosTransformer3DModel from 1 safetensors file(s) , param_dtype: torch.bfloat16
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/1[A
+
+Loading safetensors checkpoint shards: 100%|██████████| 1/1[A
+Loading safetensors checkpoint shards: 100%|██████████| 1/1
+[10-03 23:28:52] Attention backends for transformer: fa
+[10-03 23:28:52] Loaded transformer: AnimaTransformer3DModel (sgl-diffusion version). model size: 3.64 GB, vram: 3.64 GB. avail GPU mem: 134.93 GB
+
+Loading required modules:  14%|█▍        | 1/7 [00:05<00:31,  5.19s/it][10-03 23:28:52] Loading text_encoder from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/text_encoder. avail mem: 134.93 GB
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/1[A
+
+Loading safetensors checkpoint shards: 100%|██████████| 1/1[A
+Loading safetensors checkpoint shards: 100%|██████████| 1/1
+[10-03 23:28:54] Attention backends for text_encoder: fa
+[10-03 23:28:54] Loaded text_encoder: Qwen3ForCausalLM (sgl-diffusion version). model size: 1.12 GB, vram: 1.12 GB. avail GPU mem: 133.77 GB
+
+Loading required modules:  29%|██▊       | 2/7 [00:06<00:14,  2.96s/it][10-03 23:28:54] Loading text_conditioner from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/text_conditioner. avail mem: 133.77 GB
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/1[A
+Loading safetensors checkpoint shards: 100%|██████████| 1/1
+[10-03 23:28:54] Attention backends for text_conditioner: fa
+[10-03 23:28:54] Loaded text_conditioner: AnimaTextConditioner (sgl-diffusion version). model size: 0.25 GB, vram: 0.25 GB. avail GPU mem: 133.59 GB
+
+Loading required modules:  43%|████▎     | 3/7 [00:07<00:07,  1.82s/it][10-03 23:28:54] Loading vae from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/vae. avail mem: 133.59 GB
+[10-03 23:28:55] Qwen-Image VAE: installed quality-gated fast path (29 RMSNorm+SiLU fusions, 3 channels_last upsamples).
+[10-03 23:28:55] Loaded vae: AutoencoderKLQwenImage (sgl-diffusion version). model size: 0.24 GB, vram: 0.24 GB. avail GPU mem: 133.31 GB
+
+Loading required modules:  57%|█████▋    | 4/7 [00:07<00:03,  1.33s/it][10-03 23:28:55] Loading tokenizer from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/tokenizer. avail mem: 133.31 GB
+[10-03 23:28:56] Loaded tokenizer: Qwen2Tokenizer (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 133.31 GB
+
+Loading required modules:  71%|███████▏  | 5/7 [00:09<00:02,  1.42s/it][10-03 23:28:56] Loading t5_tokenizer from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/t5_tokenizer. avail mem: 133.31 GB
+[10-03 23:28:57] Loaded t5_tokenizer: T5Tokenizer (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 133.31 GB
+
+Loading required modules:  86%|████████▌ | 6/7 [00:09<00:01,  1.05s/it][10-03 23:28:57] Loading scheduler from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/scheduler. avail mem: 133.31 GB
+[10-03 23:28:57] Loaded scheduler: FlowMatchEulerDiscreteScheduler (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 133.31 GB
+
+Loading required modules: 100%|██████████| 7/7 [00:09<00:00,  1.37s/it]
+[10-03 23:28:57] Creating pipeline stages...
+[10-03 23:28:57] Using fa attention backend
+[10-03 23:28:57] Pipeline instantiated
+[10-03 23:28:57] Worker 0: Initialized device, model, and distributed environment.
+[10-03 23:28:57] Worker 0: Scheduler loop started.
+[10-03 23:28:57] [server-load] workers_ready_monotonic_ns=183139991905
+[10-03 23:28:57] Processing 1 grouped request(s)
+
+Warmup requests:   0%|          | 0/1 [00:00<?, ?req/s]
+Warmup requests: 100%|██████████| 1/1 [00:13<00:00, 13.16s/req, warmup req (1024x1024, 1/30 steps), last=13.16s]
+Warmup requests: 100%|██████████| 1/1 [00:13<00:00, 13.16s/req, warmup req (1024x1024, 1/30 steps), last=13.16s]
+[10-03 23:29:10] The server is fired up and ready to roll!
+[10-03 23:29:10] Sampling params:
+                       width: 1024
+                      height: 1024
+                  num_frames: 1
+                         fps: 24
+                      prompt: <redacted, len=88>
+                  neg_prompt: <redacted, len=0>
+                        seed: 42
+                 infer_steps: 30
+      num_outputs_per_prompt: 1
+              guidance_scale: 4.0
+     embedded_guidance_scale: 6.0
+                    n_tokens: None
+                  flow_shift: None
+                  image_path: None
+                 save_output: True
+            output_file_path: /results/dispatch-abccba-20261003T232600Z-e9defb4f/01-eager/outputs/sample.png
+        
+[10-03 23:29:10] Running pipeline stages: ['InputValidationStage', 'TextEncodingStage', 'AnimaTextConditioningStage', 'TimestepPreparationStage', 'LatentPreparationStage', 'denoising_stage', 'decoding_stage']
+[10-03 23:29:10] [InputValidationStage] started...
+[10-03 23:29:10] [InputValidationStage] finished in 0.0000 seconds
+[10-03 23:29:10] [TextEncodingStage] started...
+[10-03 23:29:10] [TextEncodingStage] finished in 0.0274 seconds
+[10-03 23:29:10] [AnimaTextConditioningStage] started...
+[10-03 23:29:10] [AnimaTextConditioningStage] finished in 0.0110 seconds
+[10-03 23:29:10] [TimestepPreparationStage] started...
+[10-03 23:29:10] [TimestepPreparationStage] finished in 0.0005 seconds
+[10-03 23:29:10] [LatentPreparationStage] started...
+[10-03 23:29:10] [LatentPreparationStage] finished in 0.0022 seconds
+[10-03 23:29:10] [DenoisingStage] started...
+
+  0%|          | 0/30 [00:00<?, ?it/s]
+  7%|▋         | 2/30 [00:00<00:02, 12.16it/s]
+ 13%|█▎        | 4/30 [00:00<00:02, 11.19it/s]
+ 20%|██        | 6/30 [00:00<00:02, 10.89it/s]
+ 27%|██▋       | 8/30 [00:00<00:02, 10.75it/s]
+ 33%|███▎      | 10/30 [00:00<00:01, 10.66it/s]
+ 40%|████      | 12/30 [00:01<00:01, 10.60it/s]
+ 47%|████▋     | 14/30 [00:01<00:01, 10.55it/s]
+ 53%|█████▎    | 16/30 [00:01<00:01, 10.53it/s]
+ 60%|██████    | 18/30 [00:01<00:01, 10.53it/s]
+ 67%|██████▋   | 20/30 [00:01<00:00, 10.51it/s]
+ 73%|███████▎  | 22/30 [00:02<00:00, 10.49it/s]
+ 80%|████████  | 24/30 [00:02<00:00, 10.48it/s]
+ 87%|████████▋ | 26/30 [00:02<00:00, 10.47it/s]
+ 93%|█████████▎| 28/30 [00:02<00:00, 10.47it/s]
+100%|██████████| 30/30 [00:02<00:00, 10.47it/s]
+100%|██████████| 30/30 [00:02<00:00, 10.59it/s]
+[10-03 23:29:13] [DenoisingStage] average time per step: 0.0945 seconds
+[10-03 23:29:13] [DenoisingStage] finished in 2.8349 seconds
+[10-03 23:29:13] [DecodingStage] started...
+[10-03 23:29:13] [DecodingStage] finished in 0.2820 seconds
+[10-03 23:29:13] Output saved to [1;36m/results/dispatch-abccba-20261003T232600Z-e9defb4f/01-eager/outputs/sample.png[0;0m
+[10-03 23:29:13] Metrics dumped to: [1;36m/results/dispatch-abccba-20261003T232600Z-e9defb4f/01-eager/perf.json[0;0m
+[10-03 23:29:13] Pixel data generated successfully in [92m16.57[0;0m seconds
+[10-03 23:29:13] Warmed-up request processed in [92m3.16[0;0m seconds (with warmup excluded)
+[10-03 23:29:13] Memory usage - Max peak: 5870.00 MB, Avg peak: 5870.00 MB
+[10-03 23:29:13] Metrics dumped to: [1;36m/results/dispatch-abccba-20261003T232600Z-e9defb4f/01-eager/perf.json[0;0m
+[93m[10-03 23:29:13] Generator was garbage collected without being shut down. Forcing local server and client cleanup.[0;0m
+[93m[10-03 23:29:13] Local worker sglang-diffusionWorker-0 did not terminate gracefully, forcing.[0;0m
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+RESULT {"label": "01-eager", "variant": "eager", "profile": false, "seed": 42, "size": 1024, "steps": 30, "command": ["sglang", "generate", "--model-path", "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c", "--model-id", "circlestone-labs/Anima-Base-v1.0-Diffusers", "--revision", "073c3a9db359c31ad0e8aa268d15775473c2176c", "--num-gpus", "1", "--enable-torch-compile=false", "--enable-breakable-cuda-graph=false", "--performance-mode=speed", "--attention-backend", "fa", "--width", "1024", "--height", "1024", "--num-inference-steps", "30", "--guidance-scale", "4", "--negative-prompt", "", "--prompt", "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset", "--seed", "42", "--generator-device", "cpu", "--quality", "lossless", "--save-output", "--warmup-mode", "request", "--warmup-steps", "1", "--perf-dump-path", "/results/dispatch-abccba-20261003T232600Z-e9defb4f/01-eager/perf.json", "--output-path", "/results/dispatch-abccba-20261003T232600Z-e9defb4f/01-eager/outputs", "--output-file-name", "sample"], "total_duration_ms": 3163.636612999994, "denoise_steps_ms": [{"step": 0, "duration_ms": 78.61317300000792}, {"step": 1, "duration_ms": 85.94840899999667}, {"step": 2, "duration_ms": 93.6984749999965}, {"step": 3, "duration_ms": 94.80930600000192}, {"step": 4, "duration_ms": 94.65700199999105}, {"step": 5, "duration_ms": 94.79391499999679}, {"step": 6, "duration_ms": 94.91583199999809}, {"step": 7, "duration_ms": 94.79584199999636}, {"step": 8, "duration_ms": 95.1791350000235}, {"step": 9, "duration_ms": 94.95354400002043}, {"step": 10, "duration_ms": 95.230244999982}, {"step": 11, "duration_ms": 95.5841949999865}, {"step": 12, "duration_ms": 95.5468109999913}, {"step": 13, "duration_ms": 95.7615819999944}, {"step": 14, "duration_ms": 95.53761200001532}, {"step": 15, "duration_ms": 95.112682000007}, {"step": 16, "duration_ms": 94.746200000003}, {"step": 17, "duration_ms": 95.38395299998115}, {"step": 18, "duration_ms": 95.12233800001013}, {"step": 19, "duration_ms": 95.92249199999969}, {"step": 20, "duration_ms": 95.89074300001244}, {"step": 21, "duration_ms": 95.47716300002662}, {"step": 22, "duration_ms": 94.70207500001493}, {"step": 23, "duration_ms": 96.60602500002824}, {"step": 24, "duration_ms": 95.37415899998791}, {"step": 25, "duration_ms": 95.81992099998615}, {"step": 26, "duration_ms": 95.5145009999967}, {"step": 27, "duration_ms": 95.55336099998613}, {"step": 28, "duration_ms": 95.45601400000692}, {"step": 29, "duration_ms": 95.49384499999292}], "denoise_ms": 2832.2005500000387, "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c", "mode": "RGB", "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d", "source_sha256": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6"}
+RUN ['sglang', 'generate', '--model-path', '/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c', '--model-id', 'circlestone-labs/Anima-Base-v1.0-Diffusers', '--revision', '073c3a9db359c31ad0e8aa268d15775473c2176c', '--num-gpus', '1', '--enable-torch-compile=false', '--enable-breakable-cuda-graph=false', '--performance-mode=speed', '--attention-backend', 'fa', '--width', '1024', '--height', '1024', '--num-inference-steps', '30', '--guidance-scale', '4', '--negative-prompt', '', '--prompt', 'masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset', '--seed', '42', '--generator-device', 'cpu', '--quality', 'lossless', '--save-output', '--warmup-mode', 'request', '--warmup-steps', '1', '--perf-dump-path', '/results/dispatch-abccba-20261003T232600Z-e9defb4f/02-initial_mount/perf.json', '--output-path', '/results/dispatch-abccba-20261003T232600Z-e9defb4f/02-initial_mount/outputs', '--output-file-name', 'sample']
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+--model-id 'circlestone-labs/Anima-Base-v1.0-Diffusers' did not match any registered model; falling back to automatic detection.
+[10-03 23:29:38] Applying performance_mode=speed
+[10-03 23:29:38] server_args: {"model_path": "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c", "model_subfolder": null, "model_variant": null, "model_id": "circlestone-labs/Anima-Base-v1.0-Diffusers", "served_model_name": "circlestone-labs/Anima-Base-v1.0-Diffusers", "backend": "auto", "attention_backend": "fa", "enable_attention_backend_autotune": false, "attention_backend_config": {}, "component_attention_backends": {}, "cache_dit_config": null, "nccl_port": null, "enable_nccl_nvls": false, "trust_remote_code": false, "revision": "073c3a9db359c31ad0e8aa268d15775473c2176c", "num_gpus": 1, "performance_mode": "speed", "base_gpu_id": 0, "gpu_ids": null, "nnodes": 1, "node_rank": 0, "dist_init_addr": null, "tp_size": 1, "sp_degree": 1, "ulysses_degree": 1, "ring_degree": 1, "kv_gather_degree": 1, "sp_split_auto": false, "dp_size": 1, "enable_cfg_parallel": false, "cfg_parallel_degree": 1, "encoder_parallel": "auto", "hsdp_replicate_dim": 1, "hsdp_shard_dim": 1, "dist_timeout": 3600, "scheduler_rpc_timeout": null, "pipeline_class_name": null, "lora_path": null, "lora_nickname": "default", "lora_scale": 1.0, "lora_alpha": null, "lora_merge_mode": "auto", "lora_weight_name": null, "component_paths": {}, "component_weights_paths": {}, "component_direct_gpu_weight_loading": {}, "component_quantizations": {}, "component_precisions": {}, "component_quantization_ignored_layers": {}, "load_diffusion_decoder": false, "transformer_weights_path": null, "minimax_h3_adaln_cache_path": null, "minimax_h3_adaln_online": false, "minimax_h3_adaln_plan_width": 4, "minimax_h3_adaln_host_cache_gb": 8.0, "quantization": null, "quantization_ignored_layers": null, "lora_target_modules": null, "component_residency": null, "cpu_offload_components": null, "dit_cpu_offload": false, "direct_gpu_weight_loading": false, "dit_layerwise_offload": false, "layerwise_offload_components": null, "dit_offload_prefetch_size": 0.0, "dit_layerwise_resident_layers": 0.0, "dit_layerwise_residency_policy": "leading", "dit_layerwise_residency_lifetime": "forward", "layerwise_prefetch_size": {}, "layerwise_resident_layers": {}, "layerwise_residency_policy": {}, "layerwise_residency_lifetime": {}, "offload_during_compile": true, "text_encoder_cpu_offload": false, "image_encoder_cpu_offload": false, "vae_cpu_offload": false, "use_fsdp_inference": false, "pin_cpu_memory": true, "ltx2_two_stage_device_mode": null, "comfyui_mode": false, "enable_torch_compile": false, "regional_compile": false, "enable_breakable_cuda_graph": false, "bcg_text_buckets": null, "enable_layerwise_nvtx_marker": false, "warmup_mode": "request", "warmup_resolutions": null, "warmup_num_frames": null, "warmup_steps": 1, "warmup_sampling_params": null, "disable_autocast": true, "master_port": 30005, "host": "127.0.0.1", "port": 30000, "enable_metrics": false, "webui": false, "webui_port": 12312, "scheduler_port": 5596, "scheduler_ports": [5596], "batching_mode": "dynamic", "batching_max_size": 1, "batching_delay_ms": 0.0, "batching_config": null, "enable_batching_metrics": false, "strict_ports": false, "output_path": "/results/dispatch-abccba-20261003T232600Z-e9defb4f/02-initial_mount/outputs", "input_save_path": "inputs/uploads", "prompt_file_path": null, "model_paths": {}, "model_loaded": {"transformer": true, "vae": true, "video_vae": true, "audio_vae": true, "video_dit": true, "audio_dit": true, "dual_tower_bridge": true}, "boundary_ratio": null, "disagg_role": "monolithic", "disagg_timeout": 3600, "disagg_downstream_wait_timeout": 1800, "disagg_dispatch_policy": "round_robin", "disagg_mode": false, "disagg_instance_id": 0, "disagg_max_slots_per_instance": 8, "disagg_transfer_redundancy": 1.25, "disagg_role_device": "auto", "disagg_transfer_backend": "auto", "disagg_transfer_pool_size": 268435456, "disagg_transfer_pin_memory": "auto", "disagg_p2p_hostname": "127.0.0.1", "disagg_ib_device": null, "disagg_server_addr": null, "encoder_urls": null, "denoiser_urls": null, "decoder_urls": null, "encoder_tp": null, "denoiser_tp": null, "denoiser_sp": null, "denoiser_ulysses": null, "denoiser_ring": null, "decoder_sp": null, "pool_work_endpoint": null, "pool_result_endpoint": null, "pool_control_endpoint": null, "pool_control_advertised_endpoint": null, "log_level": "info", "log_requests": false, "log_requests_level": 2, "log_requests_format": "text", "log_requests_target": null, "uvicorn_access_log_exclude_prefixes": [], "enable_cache_report": false, "enable_trace": false, "otlp_traces_endpoint": "localhost:4317", "otlp_service_name": null, "srt_encoder_url": null, "srt_encoder_connect_timeout": 3.05, "srt_encoder_timeout": 100, "pe_server_url": null, "prompt_enhancer_config": null}
+[10-03 23:29:38] Diffusers version: 0.39.0.dev0
+[10-03 23:29:38] Local mode: True
+[10-03 23:29:38] Starting server...
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:29:57] Scheduler (dp replica 0) bind at endpoint: tcp://127.0.0.1:5596
+[10-03 23:29:57] torch.compile cache: TORCHINDUCTOR_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/inductor TRITON_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/triton
+[10-03 23:29:57] Initializing distributed environment with world_size=1, device=cuda:0, timeout=3600
+[10-03 23:29:57] Setting distributed timeout to 3600 seconds
+[10-03 23:29:58] No pipeline_class_name specified, using model_index.json
+[10-03 23:30:00] Diffusers version: 0.39.0.dev0
+[93m[10-03 23:30:00] --model-id 'circlestone-labs/Anima-Base-v1.0-Diffusers' did not match any registered model; falling back to automatic detection.[0;0m
+[10-03 23:30:00] Using pipeline from model_index.json: AnimaPipeline
+[10-03 23:30:00] Loading pipeline modules...
+[10-03 23:30:00] Model already exists locally and is complete
+[10-03 23:30:00] Model path: /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c
+[10-03 23:30:00] Diffusers version: 0.39.0.dev0
+[10-03 23:30:00] Loading pipeline modules from config: {'_class_name': 'AnimaModularPipeline', '_diffusers_version': '0.39.0.dev0', 'scheduler': ['diffusers', 'FlowMatchEulerDiscreteScheduler'], 't5_tokenizer': ['transformers', 'T5Tokenizer'], 'text_conditioner': ['diffusers', 'AnimaTextConditioner'], 'text_encoder': ['transformers', 'Qwen3Model'], 'tokenizer': ['transformers', 'Qwen2Tokenizer'], 'transformer': ['diffusers', 'CosmosTransformer3DModel'], 'vae': ['diffusers', 'AutoencoderKLQwenImage']}
+[10-03 23:30:00] Loading required components: ['text_encoder', 'tokenizer', 't5_tokenizer', 'text_conditioner', 'vae', 'transformer', 'scheduler']
+[10-03 23:30:00] Memory-aware component load order: ['transformer', 'text_encoder', 'text_conditioner', 'vae', 'tokenizer', 't5_tokenizer', 'scheduler']
+
+Loading required modules:   0%|          | 0/7 [00:00<?, ?it/s][10-03 23:30:00] Loading transformer from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/transformer. avail mem: 138.65 GB
+[10-03 23:30:00] Loading CosmosTransformer3DModel from 1 safetensors file(s) , param_dtype: torch.bfloat16
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/1[A
+Loading safetensors checkpoint shards: 100%|██████████| 1/1
+[10-03 23:30:02] Attention backends for transformer: fa
+[10-03 23:30:02] Loaded transformer: AnimaTransformer3DModel (sgl-diffusion version). model size: 3.64 GB, vram: 3.64 GB. avail GPU mem: 134.93 GB
+
+Loading required modules:  14%|█▍        | 1/7 [00:01<00:11,  1.95s/it][10-03 23:30:02] Loading text_encoder from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/text_encoder. avail mem: 134.93 GB
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/1[A
+
+Loading safetensors checkpoint shards: 100%|██████████| 1/1[A
+Loading safetensors checkpoint shards: 100%|██████████| 1/1
+[10-03 23:30:03] Attention backends for text_encoder: fa
+[10-03 23:30:03] Loaded text_encoder: Qwen3ForCausalLM (sgl-diffusion version). model size: 1.12 GB, vram: 1.12 GB. avail GPU mem: 133.77 GB
+
+Loading required modules:  29%|██▊       | 2/7 [00:02<00:06,  1.30s/it][10-03 23:30:03] Loading text_conditioner from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/text_conditioner. avail mem: 133.77 GB
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/1[A
+Loading safetensors checkpoint shards: 100%|██████████| 1/1
+[10-03 23:30:03] Attention backends for text_conditioner: fa
+[10-03 23:30:03] Loaded text_conditioner: AnimaTextConditioner (sgl-diffusion version). model size: 0.25 GB, vram: 0.25 GB. avail GPU mem: 133.59 GB
+
+Loading required modules:  43%|████▎     | 3/7 [00:03<00:03,  1.24it/s][10-03 23:30:03] Loading vae from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/vae. avail mem: 133.59 GB
+[10-03 23:30:03] Qwen-Image VAE: installed quality-gated fast path (29 RMSNorm+SiLU fusions, 3 channels_last upsamples).
+[10-03 23:30:03] Loaded vae: AutoencoderKLQwenImage (sgl-diffusion version). model size: 0.24 GB, vram: 0.24 GB. avail GPU mem: 133.31 GB
+
+Loading required modules:  57%|█████▋    | 4/7 [00:03<00:01,  1.63it/s][10-03 23:30:03] Loading tokenizer from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/tokenizer. avail mem: 133.31 GB
+[10-03 23:30:04] Loaded tokenizer: Qwen2Tokenizer (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 133.31 GB
+
+Loading required modules:  71%|███████▏  | 5/7 [00:04<00:01,  1.34it/s][10-03 23:30:04] Loading t5_tokenizer from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/t5_tokenizer. avail mem: 133.31 GB
+[10-03 23:30:04] Loaded t5_tokenizer: T5Tokenizer (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 133.31 GB
+
+Loading required modules:  86%|████████▌ | 6/7 [00:04<00:00,  1.85it/s][10-03 23:30:04] Loading scheduler from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/scheduler. avail mem: 133.31 GB
+[10-03 23:30:04] Loaded scheduler: FlowMatchEulerDiscreteScheduler (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 133.31 GB
+
+Loading required modules: 100%|██████████| 7/7 [00:04<00:00,  1.57it/s]
+[10-03 23:30:04] Creating pipeline stages...
+[10-03 23:30:04] Using fa attention backend
+[10-03 23:30:04] Pipeline instantiated
+[10-03 23:30:04] Worker 0: Initialized device, model, and distributed environment.
+[10-03 23:30:04] Worker 0: Scheduler loop started.
+[10-03 23:30:04] [server-load] workers_ready_monotonic_ns=250866862765
+[10-03 23:30:04] Processing 1 grouped request(s)
+
+Warmup requests:   0%|          | 0/1 [00:00<?, ?req/s]
+Warmup requests: 100%|██████████| 1/1 [00:03<00:00,  3.05s/req, warmup req (1024x1024, 1/30 steps), last=3.05s]
+Warmup requests: 100%|██████████| 1/1 [00:03<00:00,  3.05s/req, warmup req (1024x1024, 1/30 steps), last=3.05s]
+[10-03 23:30:07] The server is fired up and ready to roll!
+[10-03 23:30:07] Sampling params:
+                       width: 1024
+                      height: 1024
+                  num_frames: 1
+                         fps: 24
+                      prompt: <redacted, len=88>
+                  neg_prompt: <redacted, len=0>
+                        seed: 42
+                 infer_steps: 30
+      num_outputs_per_prompt: 1
+              guidance_scale: 4.0
+     embedded_guidance_scale: 6.0
+                    n_tokens: None
+                  flow_shift: None
+                  image_path: None
+                 save_output: True
+            output_file_path: /results/dispatch-abccba-20261003T232600Z-e9defb4f/02-initial_mount/outputs/sample.png
+        
+[10-03 23:30:07] Running pipeline stages: ['InputValidationStage', 'TextEncodingStage', 'AnimaTextConditioningStage', 'TimestepPreparationStage', 'LatentPreparationStage', 'denoising_stage', 'decoding_stage']
+[10-03 23:30:07] [InputValidationStage] started...
+[10-03 23:30:07] [InputValidationStage] finished in 0.0000 seconds
+[10-03 23:30:07] [TextEncodingStage] started...
+[10-03 23:30:07] [TextEncodingStage] finished in 0.0264 seconds
+[10-03 23:30:07] [AnimaTextConditioningStage] started...
+[10-03 23:30:07] [AnimaTextConditioningStage] finished in 0.0106 seconds
+[10-03 23:30:07] [TimestepPreparationStage] started...
+[10-03 23:30:07] [TimestepPreparationStage] finished in 0.0004 seconds
+[10-03 23:30:07] [LatentPreparationStage] started...
+[10-03 23:30:07] [LatentPreparationStage] finished in 0.0016 seconds
+[10-03 23:30:07] [DenoisingStage] started...
+
+  0%|          | 0/30 [00:00<?, ?it/s]
+  7%|▋         | 2/30 [00:00<00:02, 12.74it/s]
+ 13%|█▎        | 4/30 [00:00<00:02, 11.89it/s]
+ 20%|██        | 6/30 [00:00<00:02, 11.45it/s]
+ 27%|██▋       | 8/30 [00:00<00:01, 11.26it/s]
+ 33%|███▎      | 10/30 [00:00<00:01, 11.11it/s]
+ 40%|████      | 12/30 [00:01<00:01, 11.02it/s]
+ 47%|████▋     | 14/30 [00:01<00:01, 10.94it/s]
+ 53%|█████▎    | 16/30 [00:01<00:01, 10.93it/s]
+ 60%|██████    | 18/30 [00:01<00:01, 10.95it/s]
+ 67%|██████▋   | 20/30 [00:01<00:00, 11.00it/s]
+ 73%|███████▎  | 22/30 [00:01<00:00, 10.92it/s]
+ 80%|████████  | 24/30 [00:02<00:00, 10.95it/s]
+ 87%|████████▋ | 26/30 [00:02<00:00, 10.92it/s]
+ 93%|█████████▎| 28/30 [00:02<00:00, 10.87it/s]
+100%|██████████| 30/30 [00:02<00:00, 10.89it/s]
+100%|██████████| 30/30 [00:02<00:00, 11.04it/s]
+[10-03 23:30:10] [DenoisingStage] average time per step: 0.0906 seconds
+[10-03 23:30:10] [DenoisingStage] finished in 2.7192 seconds
+[10-03 23:30:10] [DecodingStage] started...
+[10-03 23:30:10] [DecodingStage] finished in 0.3205 seconds
+[10-03 23:30:11] Output saved to [1;36m/results/dispatch-abccba-20261003T232600Z-e9defb4f/02-initial_mount/outputs/sample.png[0;0m
+[10-03 23:30:11] Metrics dumped to: [1;36m/results/dispatch-abccba-20261003T232600Z-e9defb4f/02-initial_mount/perf.json[0;0m
+[10-03 23:30:11] Pixel data generated successfully in [92m6.42[0;0m seconds
+[10-03 23:30:11] Warmed-up request processed in [92m3.08[0;0m seconds (with warmup excluded)
+[10-03 23:30:11] Memory usage - Max peak: 5870.00 MB, Avg peak: 5870.00 MB
+[10-03 23:30:11] Metrics dumped to: [1;36m/results/dispatch-abccba-20261003T232600Z-e9defb4f/02-initial_mount/perf.json[0;0m
+[93m[10-03 23:30:11] Generator was garbage collected without being shut down. Forcing local server and client cleanup.[0;0m
+[93m[10-03 23:30:11] Local worker sglang-diffusionWorker-0 did not terminate gracefully, forcing.[0;0m
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+RESULT {"label": "02-initial_mount", "variant": "initial_mount", "profile": false, "seed": 42, "size": 1024, "steps": 30, "command": ["sglang", "generate", "--model-path", "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c", "--model-id", "circlestone-labs/Anima-Base-v1.0-Diffusers", "--revision", "073c3a9db359c31ad0e8aa268d15775473c2176c", "--num-gpus", "1", "--enable-torch-compile=false", "--enable-breakable-cuda-graph=false", "--performance-mode=speed", "--attention-backend", "fa", "--width", "1024", "--height", "1024", "--num-inference-steps", "30", "--guidance-scale", "4", "--negative-prompt", "", "--prompt", "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset", "--seed", "42", "--generator-device", "cpu", "--quality", "lossless", "--save-output", "--warmup-mode", "request", "--warmup-steps", "1", "--perf-dump-path", "/results/dispatch-abccba-20261003T232600Z-e9defb4f/02-initial_mount/perf.json", "--output-path", "/results/dispatch-abccba-20261003T232600Z-e9defb4f/02-initial_mount/outputs", "--output-file-name", "sample"], "total_duration_ms": 3084.6558810000033, "denoise_steps_ms": [{"step": 0, "duration_ms": 79.78540100000941}, {"step": 1, "duration_ms": 77.30829900000913}, {"step": 2, "duration_ms": 86.10443200001328}, {"step": 3, "duration_ms": 89.79163200001494}, {"step": 4, "duration_ms": 89.73885599999676}, {"step": 5, "duration_ms": 92.70055999999727}, {"step": 6, "duration_ms": 90.83001400000512}, {"step": 7, "duration_ms": 91.25127199999383}, {"step": 8, "duration_ms": 93.39873199999715}, {"step": 9, "duration_ms": 90.98021500000186}, {"step": 10, "duration_ms": 91.87536199999613}, {"step": 11, "duration_ms": 92.30675700001711}, {"step": 12, "duration_ms": 92.05146699997613}, {"step": 13, "duration_ms": 93.20270400002073}, {"step": 14, "duration_ms": 93.13891499999727}, {"step": 15, "duration_ms": 90.32197900000938}, {"step": 16, "duration_ms": 90.4234390000056}, {"step": 17, "duration_ms": 91.30639700001097}, {"step": 18, "duration_ms": 90.09324699999866}, {"step": 19, "duration_ms": 90.05322199999455}, {"step": 20, "duration_ms": 92.47548799999095}, {"step": 21, "duration_ms": 93.61586599999328}, {"step": 22, "duration_ms": 90.35405300002708}, {"step": 23, "duration_ms": 91.12607700001263}, {"step": 24, "duration_ms": 91.24325299995917}, {"step": 25, "duration_ms": 93.24372200001108}, {"step": 26, "duration_ms": 91.18092700003899}, {"step": 27, "duration_ms": 94.3787539999903}, {"step": 28, "duration_ms": 90.3098709999881}, {"step": 29, "duration_ms": 92.60300899995855}], "denoise_ms": 2717.1939220000354, "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c", "mode": "RGB", "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d", "source_sha256": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013"}
+RUN ['sglang', 'generate', '--model-path', '/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c', '--model-id', 'circlestone-labs/Anima-Base-v1.0-Diffusers', '--revision', '073c3a9db359c31ad0e8aa268d15775473c2176c', '--num-gpus', '1', '--enable-torch-compile=false', '--enable-breakable-cuda-graph=false', '--performance-mode=speed', '--attention-backend', 'fa', '--width', '1024', '--height', '1024', '--num-inference-steps', '30', '--guidance-scale', '4', '--negative-prompt', '', '--prompt', 'masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset', '--seed', '42', '--generator-device', 'cpu', '--quality', 'lossless', '--save-output', '--warmup-mode', 'request', '--warmup-steps', '1', '--perf-dump-path', '/results/dispatch-abccba-20261003T232600Z-e9defb4f/03-cached_dispatch/perf.json', '--output-path', '/results/dispatch-abccba-20261003T232600Z-e9defb4f/03-cached_dispatch/outputs', '--output-file-name', 'sample']
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+--model-id 'circlestone-labs/Anima-Base-v1.0-Diffusers' did not match any registered model; falling back to automatic detection.
+[10-03 23:30:36] Applying performance_mode=speed
+[10-03 23:30:37] server_args: {"model_path": "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c", "model_subfolder": null, "model_variant": null, "model_id": "circlestone-labs/Anima-Base-v1.0-Diffusers", "served_model_name": "circlestone-labs/Anima-Base-v1.0-Diffusers", "backend": "auto", "attention_backend": "fa", "enable_attention_backend_autotune": false, "attention_backend_config": {}, "component_attention_backends": {}, "cache_dit_config": null, "nccl_port": null, "enable_nccl_nvls": false, "trust_remote_code": false, "revision": "073c3a9db359c31ad0e8aa268d15775473c2176c", "num_gpus": 1, "performance_mode": "speed", "base_gpu_id": 0, "gpu_ids": null, "nnodes": 1, "node_rank": 0, "dist_init_addr": null, "tp_size": 1, "sp_degree": 1, "ulysses_degree": 1, "ring_degree": 1, "kv_gather_degree": 1, "sp_split_auto": false, "dp_size": 1, "enable_cfg_parallel": false, "cfg_parallel_degree": 1, "encoder_parallel": "auto", "hsdp_replicate_dim": 1, "hsdp_shard_dim": 1, "dist_timeout": 3600, "scheduler_rpc_timeout": null, "pipeline_class_name": null, "lora_path": null, "lora_nickname": "default", "lora_scale": 1.0, "lora_alpha": null, "lora_merge_mode": "auto", "lora_weight_name": null, "component_paths": {}, "component_weights_paths": {}, "component_direct_gpu_weight_loading": {}, "component_quantizations": {}, "component_precisions": {}, "component_quantization_ignored_layers": {}, "load_diffusion_decoder": false, "transformer_weights_path": null, "minimax_h3_adaln_cache_path": null, "minimax_h3_adaln_online": false, "minimax_h3_adaln_plan_width": 4, "minimax_h3_adaln_host_cache_gb": 8.0, "quantization": null, "quantization_ignored_layers": null, "lora_target_modules": null, "component_residency": null, "cpu_offload_components": null, "dit_cpu_offload": false, "direct_gpu_weight_loading": false, "dit_layerwise_offload": false, "layerwise_offload_components": null, "dit_offload_prefetch_size": 0.0, "dit_layerwise_resident_layers": 0.0, "dit_layerwise_residency_policy": "leading", "dit_layerwise_residency_lifetime": "forward", "layerwise_prefetch_size": {}, "layerwise_resident_layers": {}, "layerwise_residency_policy": {}, "layerwise_residency_lifetime": {}, "offload_during_compile": true, "text_encoder_cpu_offload": false, "image_encoder_cpu_offload": false, "vae_cpu_offload": false, "use_fsdp_inference": false, "pin_cpu_memory": true, "ltx2_two_stage_device_mode": null, "comfyui_mode": false, "enable_torch_compile": false, "regional_compile": false, "enable_breakable_cuda_graph": false, "bcg_text_buckets": null, "enable_layerwise_nvtx_marker": false, "warmup_mode": "request", "warmup_resolutions": null, "warmup_num_frames": null, "warmup_steps": 1, "warmup_sampling_params": null, "disable_autocast": true, "master_port": 30005, "host": "127.0.0.1", "port": 30000, "enable_metrics": false, "webui": false, "webui_port": 12312, "scheduler_port": 5627, "scheduler_ports": [5627], "batching_mode": "dynamic", "batching_max_size": 1, "batching_delay_ms": 0.0, "batching_config": null, "enable_batching_metrics": false, "strict_ports": false, "output_path": "/results/dispatch-abccba-20261003T232600Z-e9defb4f/03-cached_dispatch/outputs", "input_save_path": "inputs/uploads", "prompt_file_path": null, "model_paths": {}, "model_loaded": {"transformer": true, "vae": true, "video_vae": true, "audio_vae": true, "video_dit": true, "audio_dit": true, "dual_tower_bridge": true}, "boundary_ratio": null, "disagg_role": "monolithic", "disagg_timeout": 3600, "disagg_downstream_wait_timeout": 1800, "disagg_dispatch_policy": "round_robin", "disagg_mode": false, "disagg_instance_id": 0, "disagg_max_slots_per_instance": 8, "disagg_transfer_redundancy": 1.25, "disagg_role_device": "auto", "disagg_transfer_backend": "auto", "disagg_transfer_pool_size": 268435456, "disagg_transfer_pin_memory": "auto", "disagg_p2p_hostname": "127.0.0.1", "disagg_ib_device": null, "disagg_server_addr": null, "encoder_urls": null, "denoiser_urls": null, "decoder_urls": null, "encoder_tp": null, "denoiser_tp": null, "denoiser_sp": null, "denoiser_ulysses": null, "denoiser_ring": null, "decoder_sp": null, "pool_work_endpoint": null, "pool_result_endpoint": null, "pool_control_endpoint": null, "pool_control_advertised_endpoint": null, "log_level": "info", "log_requests": false, "log_requests_level": 2, "log_requests_format": "text", "log_requests_target": null, "uvicorn_access_log_exclude_prefixes": [], "enable_cache_report": false, "enable_trace": false, "otlp_traces_endpoint": "localhost:4317", "otlp_service_name": null, "srt_encoder_url": null, "srt_encoder_connect_timeout": 3.05, "srt_encoder_timeout": 100, "pe_server_url": null, "prompt_enhancer_config": null}
+[10-03 23:30:37] Diffusers version: 0.39.0.dev0
+[10-03 23:30:37] Local mode: True
+[10-03 23:30:37] Starting server...
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:30:55] Scheduler (dp replica 0) bind at endpoint: tcp://127.0.0.1:5627
+[10-03 23:30:56] torch.compile cache: TORCHINDUCTOR_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/inductor TRITON_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/triton
+[10-03 23:30:56] Initializing distributed environment with world_size=1, device=cuda:0, timeout=3600
+[10-03 23:30:56] Setting distributed timeout to 3600 seconds
+[10-03 23:30:56] No pipeline_class_name specified, using model_index.json
+[10-03 23:30:58] Diffusers version: 0.39.0.dev0
+[93m[10-03 23:30:58] --model-id 'circlestone-labs/Anima-Base-v1.0-Diffusers' did not match any registered model; falling back to automatic detection.[0;0m
+[10-03 23:30:58] Using pipeline from model_index.json: AnimaPipeline
+[10-03 23:30:58] Loading pipeline modules...
+[10-03 23:30:58] Model already exists locally and is complete
+[10-03 23:30:58] Model path: /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c
+[10-03 23:30:58] Diffusers version: 0.39.0.dev0
+[10-03 23:30:58] Loading pipeline modules from config: {'_class_name': 'AnimaModularPipeline', '_diffusers_version': '0.39.0.dev0', 'scheduler': ['diffusers', 'FlowMatchEulerDiscreteScheduler'], 't5_tokenizer': ['transformers', 'T5Tokenizer'], 'text_conditioner': ['diffusers', 'AnimaTextConditioner'], 'text_encoder': ['transformers', 'Qwen3Model'], 'tokenizer': ['transformers', 'Qwen2Tokenizer'], 'transformer': ['diffusers', 'CosmosTransformer3DModel'], 'vae': ['diffusers', 'AutoencoderKLQwenImage']}
+[10-03 23:30:58] Loading required components: ['text_encoder', 'tokenizer', 't5_tokenizer', 'text_conditioner', 'vae', 'transformer', 'scheduler']
+[10-03 23:30:58] Memory-aware component load order: ['transformer', 'text_encoder', 'text_conditioner', 'vae', 'tokenizer', 't5_tokenizer', 'scheduler']
+
+Loading required modules:   0%|          | 0/7 [00:00<?, ?it/s][10-03 23:30:58] Loading transformer from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/transformer. avail mem: 138.65 GB
+[10-03 23:30:58] Loading CosmosTransformer3DModel from 1 safetensors file(s) , param_dtype: torch.bfloat16
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/1[A
+Loading safetensors checkpoint shards: 100%|██████████| 1/1
+[10-03 23:30:59] Attention backends for transformer: fa
+[10-03 23:30:59] Loaded transformer: AnimaTransformer3DModel (sgl-diffusion version). model size: 3.64 GB, vram: 3.64 GB. avail GPU mem: 134.93 GB
+
+Loading required modules:  14%|█▍        | 1/7 [00:01<00:08,  1.44s/it][10-03 23:30:59] Loading text_encoder from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/text_encoder. avail mem: 134.93 GB
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/1[A
+
+Loading safetensors checkpoint shards: 100%|██████████| 1/1[A
+Loading safetensors checkpoint shards: 100%|██████████| 1/1
+[10-03 23:31:00] Attention backends for text_encoder: fa
+[10-03 23:31:00] Loaded text_encoder: Qwen3ForCausalLM (sgl-diffusion version). model size: 1.12 GB, vram: 1.12 GB. avail GPU mem: 133.77 GB
+
+Loading required modules:  29%|██▊       | 2/7 [00:02<00:04,  1.04it/s][10-03 23:31:00] Loading text_conditioner from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/text_conditioner. avail mem: 133.77 GB
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/1[A
+Loading safetensors checkpoint shards: 100%|██████████| 1/1
+[10-03 23:31:00] Attention backends for text_conditioner: fa
+[10-03 23:31:00] Loaded text_conditioner: AnimaTextConditioner (sgl-diffusion version). model size: 0.25 GB, vram: 0.25 GB. avail GPU mem: 133.59 GB
+
+Loading required modules:  43%|████▎     | 3/7 [00:02<00:02,  1.63it/s][10-03 23:31:00] Loading vae from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/vae. avail mem: 133.59 GB
+[10-03 23:31:00] Qwen-Image VAE: installed quality-gated fast path (29 RMSNorm+SiLU fusions, 3 channels_last upsamples).
+[10-03 23:31:00] Loaded vae: AutoencoderKLQwenImage (sgl-diffusion version). model size: 0.24 GB, vram: 0.24 GB. avail GPU mem: 133.31 GB
+
+Loading required modules:  57%|█████▋    | 4/7 [00:02<00:01,  2.24it/s][10-03 23:31:00] Loading tokenizer from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/tokenizer. avail mem: 133.31 GB
+[10-03 23:31:01] Loaded tokenizer: Qwen2Tokenizer (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 133.31 GB
+
+Loading required modules:  71%|███████▏  | 5/7 [00:03<00:01,  1.53it/s][10-03 23:31:01] Loading t5_tokenizer from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/t5_tokenizer. avail mem: 133.31 GB
+[10-03 23:31:01] Loaded t5_tokenizer: T5Tokenizer (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 133.31 GB
+
+Loading required modules:  86%|████████▌ | 6/7 [00:03<00:00,  2.08it/s][10-03 23:31:01] Loading scheduler from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/scheduler. avail mem: 133.31 GB
+[10-03 23:31:01] Loaded scheduler: FlowMatchEulerDiscreteScheduler (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 133.31 GB
+
+Loading required modules: 100%|██████████| 7/7 [00:03<00:00,  1.93it/s]
+[10-03 23:31:01] Creating pipeline stages...
+[10-03 23:31:01] Using fa attention backend
+[10-03 23:31:01] Pipeline instantiated
+[10-03 23:31:01] Worker 0: Initialized device, model, and distributed environment.
+[10-03 23:31:01] Worker 0: Scheduler loop started.
+[10-03 23:31:01] [server-load] workers_ready_monotonic_ns=307852879901
+[10-03 23:31:01] Processing 1 grouped request(s)
+
+Warmup requests:   0%|          | 0/1 [00:00<?, ?req/s]
+Warmup requests: 100%|██████████| 1/1 [00:02<00:00,  2.74s/req, warmup req (1024x1024, 1/30 steps), last=2.74s]
+Warmup requests: 100%|██████████| 1/1 [00:02<00:00,  2.74s/req, warmup req (1024x1024, 1/30 steps), last=2.74s]
+[10-03 23:31:04] The server is fired up and ready to roll!
+[10-03 23:31:04] Sampling params:
+                       width: 1024
+                      height: 1024
+                  num_frames: 1
+                         fps: 24
+                      prompt: <redacted, len=88>
+                  neg_prompt: <redacted, len=0>
+                        seed: 42
+                 infer_steps: 30
+      num_outputs_per_prompt: 1
+              guidance_scale: 4.0
+     embedded_guidance_scale: 6.0
+                    n_tokens: None
+                  flow_shift: None
+                  image_path: None
+                 save_output: True
+            output_file_path: /results/dispatch-abccba-20261003T232600Z-e9defb4f/03-cached_dispatch/outputs/sample.png
+        
+[10-03 23:31:04] Running pipeline stages: ['InputValidationStage', 'TextEncodingStage', 'AnimaTextConditioningStage', 'TimestepPreparationStage', 'LatentPreparationStage', 'denoising_stage', 'decoding_stage']
+[10-03 23:31:04] [InputValidationStage] started...
+[10-03 23:31:04] [InputValidationStage] finished in 0.0000 seconds
+[10-03 23:31:04] [TextEncodingStage] started...
+[10-03 23:31:04] [TextEncodingStage] finished in 0.0266 seconds
+[10-03 23:31:04] [AnimaTextConditioningStage] started...
+[10-03 23:31:04] [AnimaTextConditioningStage] finished in 0.0107 seconds
+[10-03 23:31:04] [TimestepPreparationStage] started...
+[10-03 23:31:04] [TimestepPreparationStage] finished in 0.0004 seconds
+[10-03 23:31:04] [LatentPreparationStage] started...
+[10-03 23:31:04] [LatentPreparationStage] finished in 0.0016 seconds
+[10-03 23:31:04] [DenoisingStage] started...
+
+  0%|          | 0/30 [00:00<?, ?it/s]
+  7%|▋         | 2/30 [00:00<00:02, 12.63it/s]
+ 13%|█▎        | 4/30 [00:00<00:02, 11.81it/s]
+ 20%|██        | 6/30 [00:00<00:02, 11.45it/s]
+ 27%|██▋       | 8/30 [00:00<00:01, 11.19it/s]
+ 33%|███▎      | 10/30 [00:00<00:01, 11.11it/s]
+ 40%|████      | 12/30 [00:01<00:01, 11.09it/s]
+ 47%|████▋     | 14/30 [00:01<00:01, 11.06it/s]
+ 53%|█████▎    | 16/30 [00:01<00:01, 11.06it/s]
+ 60%|██████    | 18/30 [00:01<00:01, 11.04it/s]
+ 67%|██████▋   | 20/30 [00:01<00:00, 11.02it/s]
+ 73%|███████▎  | 22/30 [00:01<00:00, 10.96it/s]
+ 80%|████████  | 24/30 [00:02<00:00, 10.95it/s]
+ 87%|████████▋ | 26/30 [00:02<00:00, 10.92it/s]
+ 93%|█████████▎| 28/30 [00:02<00:00, 10.95it/s]
+100%|██████████| 30/30 [00:02<00:00, 10.97it/s]
+100%|██████████| 30/30 [00:02<00:00, 11.08it/s]
+[10-03 23:31:07] [DenoisingStage] average time per step: 0.0902 seconds
+[10-03 23:31:07] [DenoisingStage] finished in 2.7082 seconds
+[10-03 23:31:07] [DecodingStage] started...
+[10-03 23:31:07] [DecodingStage] finished in 0.2710 seconds
+[10-03 23:31:07] Output saved to [1;36m/results/dispatch-abccba-20261003T232600Z-e9defb4f/03-cached_dispatch/outputs/sample.png[0;0m
+[10-03 23:31:07] Metrics dumped to: [1;36m/results/dispatch-abccba-20261003T232600Z-e9defb4f/03-cached_dispatch/perf.json[0;0m
+[10-03 23:31:07] Pixel data generated successfully in [92m6.00[0;0m seconds
+[10-03 23:31:07] Warmed-up request processed in [92m3.02[0;0m seconds (with warmup excluded)
+[10-03 23:31:07] Memory usage - Max peak: 5870.00 MB, Avg peak: 5870.00 MB
+[10-03 23:31:07] Metrics dumped to: [1;36m/results/dispatch-abccba-20261003T232600Z-e9defb4f/03-cached_dispatch/perf.json[0;0m
+[93m[10-03 23:31:07] Generator was garbage collected without being shut down. Forcing local server and client cleanup.[0;0m
+[93m[10-03 23:31:07] Local worker sglang-diffusionWorker-0 did not terminate gracefully, forcing.[0;0m
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+RESULT {"label": "03-cached_dispatch", "variant": "cached_dispatch", "profile": false, "seed": 42, "size": 1024, "steps": 30, "command": ["sglang", "generate", "--model-path", "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c", "--model-id", "circlestone-labs/Anima-Base-v1.0-Diffusers", "--revision", "073c3a9db359c31ad0e8aa268d15775473c2176c", "--num-gpus", "1", "--enable-torch-compile=false", "--enable-breakable-cuda-graph=false", "--performance-mode=speed", "--attention-backend", "fa", "--width", "1024", "--height", "1024", "--num-inference-steps", "30", "--guidance-scale", "4", "--negative-prompt", "", "--prompt", "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset", "--seed", "42", "--generator-device", "cpu", "--quality", "lossless", "--save-output", "--warmup-mode", "request", "--warmup-steps", "1", "--perf-dump-path", "/results/dispatch-abccba-20261003T232600Z-e9defb4f/03-cached_dispatch/perf.json", "--output-path", "/results/dispatch-abccba-20261003T232600Z-e9defb4f/03-cached_dispatch/outputs", "--output-file-name", "sample"], "total_duration_ms": 3024.218841999982, "denoise_steps_ms": [{"step": 0, "duration_ms": 80.25782100003198}, {"step": 1, "duration_ms": 78.1501189999858}, {"step": 2, "duration_ms": 85.89616300002945}, {"step": 3, "duration_ms": 91.20200600000317}, {"step": 4, "duration_ms": 90.11110800003053}, {"step": 5, "duration_ms": 90.90447599999152}, {"step": 6, "duration_ms": 90.9129499999608}, {"step": 7, "duration_ms": 93.74379000001909}, {"step": 8, "duration_ms": 90.32735599998887}, {"step": 9, "duration_ms": 92.14829699999427}, {"step": 10, "duration_ms": 90.23801299997558}, {"step": 11, "duration_ms": 90.69286600004034}, {"step": 12, "duration_ms": 91.63247300000421}, {"step": 13, "duration_ms": 90.24885600001653}, {"step": 14, "duration_ms": 90.58908200000815}, {"step": 15, "duration_ms": 90.02257899999222}, {"step": 16, "duration_ms": 91.06365799999594}, {"step": 17, "duration_ms": 91.00128300002552}, {"step": 18, "duration_ms": 90.53476700000829}, {"step": 19, "duration_ms": 91.72394400002304}, {"step": 20, "duration_ms": 90.32696700000997}, {"step": 21, "duration_ms": 94.36314800001355}, {"step": 22, "duration_ms": 90.43698900001118}, {"step": 23, "duration_ms": 92.42177099997662}, {"step": 24, "duration_ms": 93.32851299996037}, {"step": 25, "duration_ms": 90.96033600002329}, {"step": 26, "duration_ms": 90.81548599999678}, {"step": 27, "duration_ms": 90.60610500000621}, {"step": 28, "duration_ms": 90.31623499998886}, {"step": 29, "duration_ms": 91.16667099999631}], "denoise_ms": 2706.1438280001084, "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c", "mode": "RGB", "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d", "source_sha256": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013"}
+RUN ['sglang', 'generate', '--model-path', '/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c', '--model-id', 'circlestone-labs/Anima-Base-v1.0-Diffusers', '--revision', '073c3a9db359c31ad0e8aa268d15775473c2176c', '--num-gpus', '1', '--enable-torch-compile=false', '--enable-breakable-cuda-graph=false', '--performance-mode=speed', '--attention-backend', 'fa', '--width', '1024', '--height', '1024', '--num-inference-steps', '30', '--guidance-scale', '4', '--negative-prompt', '', '--prompt', 'masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset', '--seed', '42', '--generator-device', 'cpu', '--quality', 'lossless', '--save-output', '--warmup-mode', 'request', '--warmup-steps', '1', '--perf-dump-path', '/results/dispatch-abccba-20261003T232600Z-e9defb4f/04-cached_dispatch/perf.json', '--output-path', '/results/dispatch-abccba-20261003T232600Z-e9defb4f/04-cached_dispatch/outputs', '--output-file-name', 'sample']
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+--model-id 'circlestone-labs/Anima-Base-v1.0-Diffusers' did not match any registered model; falling back to automatic detection.
+[10-03 23:31:31] Applying performance_mode=speed
+[10-03 23:31:32] server_args: {"model_path": "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c", "model_subfolder": null, "model_variant": null, "model_id": "circlestone-labs/Anima-Base-v1.0-Diffusers", "served_model_name": "circlestone-labs/Anima-Base-v1.0-Diffusers", "backend": "auto", "attention_backend": "fa", "enable_attention_backend_autotune": false, "attention_backend_config": {}, "component_attention_backends": {}, "cache_dit_config": null, "nccl_port": null, "enable_nccl_nvls": false, "trust_remote_code": false, "revision": "073c3a9db359c31ad0e8aa268d15775473c2176c", "num_gpus": 1, "performance_mode": "speed", "base_gpu_id": 0, "gpu_ids": null, "nnodes": 1, "node_rank": 0, "dist_init_addr": null, "tp_size": 1, "sp_degree": 1, "ulysses_degree": 1, "ring_degree": 1, "kv_gather_degree": 1, "sp_split_auto": false, "dp_size": 1, "enable_cfg_parallel": false, "cfg_parallel_degree": 1, "encoder_parallel": "auto", "hsdp_replicate_dim": 1, "hsdp_shard_dim": 1, "dist_timeout": 3600, "scheduler_rpc_timeout": null, "pipeline_class_name": null, "lora_path": null, "lora_nickname": "default", "lora_scale": 1.0, "lora_alpha": null, "lora_merge_mode": "auto", "lora_weight_name": null, "component_paths": {}, "component_weights_paths": {}, "component_direct_gpu_weight_loading": {}, "component_quantizations": {}, "component_precisions": {}, "component_quantization_ignored_layers": {}, "load_diffusion_decoder": false, "transformer_weights_path": null, "minimax_h3_adaln_cache_path": null, "minimax_h3_adaln_online": false, "minimax_h3_adaln_plan_width": 4, "minimax_h3_adaln_host_cache_gb": 8.0, "quantization": null, "quantization_ignored_layers": null, "lora_target_modules": null, "component_residency": null, "cpu_offload_components": null, "dit_cpu_offload": false, "direct_gpu_weight_loading": false, "dit_layerwise_offload": false, "layerwise_offload_components": null, "dit_offload_prefetch_size": 0.0, "dit_layerwise_resident_layers": 0.0, "dit_layerwise_residency_policy": "leading", "dit_layerwise_residency_lifetime": "forward", "layerwise_prefetch_size": {}, "layerwise_resident_layers": {}, "layerwise_residency_policy": {}, "layerwise_residency_lifetime": {}, "offload_during_compile": true, "text_encoder_cpu_offload": false, "image_encoder_cpu_offload": false, "vae_cpu_offload": false, "use_fsdp_inference": false, "pin_cpu_memory": true, "ltx2_two_stage_device_mode": null, "comfyui_mode": false, "enable_torch_compile": false, "regional_compile": false, "enable_breakable_cuda_graph": false, "bcg_text_buckets": null, "enable_layerwise_nvtx_marker": false, "warmup_mode": "request", "warmup_resolutions": null, "warmup_num_frames": null, "warmup_steps": 1, "warmup_sampling_params": null, "disable_autocast": true, "master_port": 30005, "host": "127.0.0.1", "port": 30000, "enable_metrics": false, "webui": false, "webui_port": 12312, "scheduler_port": 5604, "scheduler_ports": [5604], "batching_mode": "dynamic", "batching_max_size": 1, "batching_delay_ms": 0.0, "batching_config": null, "enable_batching_metrics": false, "strict_ports": false, "output_path": "/results/dispatch-abccba-20261003T232600Z-e9defb4f/04-cached_dispatch/outputs", "input_save_path": "inputs/uploads", "prompt_file_path": null, "model_paths": {}, "model_loaded": {"transformer": true, "vae": true, "video_vae": true, "audio_vae": true, "video_dit": true, "audio_dit": true, "dual_tower_bridge": true}, "boundary_ratio": null, "disagg_role": "monolithic", "disagg_timeout": 3600, "disagg_downstream_wait_timeout": 1800, "disagg_dispatch_policy": "round_robin", "disagg_mode": false, "disagg_instance_id": 0, "disagg_max_slots_per_instance": 8, "disagg_transfer_redundancy": 1.25, "disagg_role_device": "auto", "disagg_transfer_backend": "auto", "disagg_transfer_pool_size": 268435456, "disagg_transfer_pin_memory": "auto", "disagg_p2p_hostname": "127.0.0.1", "disagg_ib_device": null, "disagg_server_addr": null, "encoder_urls": null, "denoiser_urls": null, "decoder_urls": null, "encoder_tp": null, "denoiser_tp": null, "denoiser_sp": null, "denoiser_ulysses": null, "denoiser_ring": null, "decoder_sp": null, "pool_work_endpoint": null, "pool_result_endpoint": null, "pool_control_endpoint": null, "pool_control_advertised_endpoint": null, "log_level": "info", "log_requests": false, "log_requests_level": 2, "log_requests_format": "text", "log_requests_target": null, "uvicorn_access_log_exclude_prefixes": [], "enable_cache_report": false, "enable_trace": false, "otlp_traces_endpoint": "localhost:4317", "otlp_service_name": null, "srt_encoder_url": null, "srt_encoder_connect_timeout": 3.05, "srt_encoder_timeout": 100, "pe_server_url": null, "prompt_enhancer_config": null}
+[10-03 23:31:32] Diffusers version: 0.39.0.dev0
+[10-03 23:31:32] Local mode: True
+[10-03 23:31:32] Starting server...
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:31:50] Scheduler (dp replica 0) bind at endpoint: tcp://127.0.0.1:5604
+[10-03 23:31:51] torch.compile cache: TORCHINDUCTOR_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/inductor TRITON_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/triton
+[10-03 23:31:51] Initializing distributed environment with world_size=1, device=cuda:0, timeout=3600
+[10-03 23:31:51] Setting distributed timeout to 3600 seconds
+[10-03 23:31:52] No pipeline_class_name specified, using model_index.json
+[10-03 23:31:53] Diffusers version: 0.39.0.dev0
+[93m[10-03 23:31:53] --model-id 'circlestone-labs/Anima-Base-v1.0-Diffusers' did not match any registered model; falling back to automatic detection.[0;0m
+[10-03 23:31:53] Using pipeline from model_index.json: AnimaPipeline
+[10-03 23:31:53] Loading pipeline modules...
+[10-03 23:31:53] Model already exists locally and is complete
+[10-03 23:31:53] Model path: /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c
+[10-03 23:31:53] Diffusers version: 0.39.0.dev0
+[10-03 23:31:53] Loading pipeline modules from config: {'_class_name': 'AnimaModularPipeline', '_diffusers_version': '0.39.0.dev0', 'scheduler': ['diffusers', 'FlowMatchEulerDiscreteScheduler'], 't5_tokenizer': ['transformers', 'T5Tokenizer'], 'text_conditioner': ['diffusers', 'AnimaTextConditioner'], 'text_encoder': ['transformers', 'Qwen3Model'], 'tokenizer': ['transformers', 'Qwen2Tokenizer'], 'transformer': ['diffusers', 'CosmosTransformer3DModel'], 'vae': ['diffusers', 'AutoencoderKLQwenImage']}
+[10-03 23:31:53] Loading required components: ['text_encoder', 'tokenizer', 't5_tokenizer', 'text_conditioner', 'vae', 'transformer', 'scheduler']
+[10-03 23:31:53] Memory-aware component load order: ['transformer', 'text_encoder', 'text_conditioner', 'vae', 'tokenizer', 't5_tokenizer', 'scheduler']
+
+Loading required modules:   0%|          | 0/7 [00:00<?, ?it/s][10-03 23:31:53] Loading transformer from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/transformer. avail mem: 138.65 GB
+[10-03 23:31:53] Loading CosmosTransformer3DModel from 1 safetensors file(s) , param_dtype: torch.bfloat16
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/1[A
+Loading safetensors checkpoint shards: 100%|██████████| 1/1
+[10-03 23:31:55] Attention backends for transformer: fa
+[10-03 23:31:55] Loaded transformer: AnimaTransformer3DModel (sgl-diffusion version). model size: 3.64 GB, vram: 3.64 GB. avail GPU mem: 134.93 GB
+
+Loading required modules:  14%|█▍        | 1/7 [00:01<00:10,  1.80s/it][10-03 23:31:55] Loading text_encoder from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/text_encoder. avail mem: 134.93 GB
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/1[A
+
+Loading safetensors checkpoint shards: 100%|██████████| 1/1[A
+Loading safetensors checkpoint shards: 100%|██████████| 1/1
+[10-03 23:31:56] Attention backends for text_encoder: fa
+[10-03 23:31:56] Loaded text_encoder: Qwen3ForCausalLM (sgl-diffusion version). model size: 1.12 GB, vram: 1.12 GB. avail GPU mem: 133.77 GB
+
+Loading required modules:  29%|██▊       | 2/7 [00:02<00:06,  1.26s/it][10-03 23:31:56] Loading text_conditioner from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/text_conditioner. avail mem: 133.77 GB
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/1[A
+Loading safetensors checkpoint shards: 100%|██████████| 1/1
+[10-03 23:31:56] Attention backends for text_conditioner: fa
+[10-03 23:31:56] Loaded text_conditioner: AnimaTextConditioner (sgl-diffusion version). model size: 0.25 GB, vram: 0.25 GB. avail GPU mem: 133.59 GB
+
+Loading required modules:  43%|████▎     | 3/7 [00:02<00:03,  1.22it/s][10-03 23:31:56] Loading vae from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/vae. avail mem: 133.59 GB
+[10-03 23:31:57] Qwen-Image VAE: installed quality-gated fast path (29 RMSNorm+SiLU fusions, 3 channels_last upsamples).
+[10-03 23:31:57] Loaded vae: AutoencoderKLQwenImage (sgl-diffusion version). model size: 0.24 GB, vram: 0.24 GB. avail GPU mem: 133.31 GB
+
+Loading required modules:  57%|█████▋    | 4/7 [00:03<00:02,  1.45it/s][10-03 23:31:57] Loading tokenizer from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/tokenizer. avail mem: 133.31 GB
+[10-03 23:31:58] Loaded tokenizer: Qwen2Tokenizer (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 133.31 GB
+
+Loading required modules:  71%|███████▏  | 5/7 [00:04<00:01,  1.29it/s][10-03 23:31:58] Loading t5_tokenizer from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/t5_tokenizer. avail mem: 133.31 GB
+[10-03 23:31:58] Loaded t5_tokenizer: T5Tokenizer (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 133.31 GB
+
+Loading required modules:  86%|████████▌ | 6/7 [00:04<00:00,  1.80it/s][10-03 23:31:58] Loading scheduler from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/scheduler. avail mem: 133.31 GB
+[10-03 23:31:58] Loaded scheduler: FlowMatchEulerDiscreteScheduler (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 133.31 GB
+
+Loading required modules: 100%|██████████| 7/7 [00:04<00:00,  1.55it/s]
+[10-03 23:31:58] Creating pipeline stages...
+[10-03 23:31:58] Using fa attention backend
+[10-03 23:31:58] Pipeline instantiated
+[10-03 23:31:58] Worker 0: Initialized device, model, and distributed environment.
+[10-03 23:31:58] Worker 0: Scheduler loop started.
+[10-03 23:31:58] [server-load] workers_ready_monotonic_ns=364282900648
+[10-03 23:31:58] Processing 1 grouped request(s)
+
+Warmup requests:   0%|          | 0/1 [00:00<?, ?req/s]
+Warmup requests: 100%|██████████| 1/1 [00:02<00:00,  2.88s/req, warmup req (1024x1024, 1/30 steps), last=2.88s]
+Warmup requests: 100%|██████████| 1/1 [00:02<00:00,  2.88s/req, warmup req (1024x1024, 1/30 steps), last=2.88s]
+[10-03 23:32:01] The server is fired up and ready to roll!
+[10-03 23:32:01] Sampling params:
+                       width: 1024
+                      height: 1024
+                  num_frames: 1
+                         fps: 24
+                      prompt: <redacted, len=88>
+                  neg_prompt: <redacted, len=0>
+                        seed: 42
+                 infer_steps: 30
+      num_outputs_per_prompt: 1
+              guidance_scale: 4.0
+     embedded_guidance_scale: 6.0
+                    n_tokens: None
+                  flow_shift: None
+                  image_path: None
+                 save_output: True
+            output_file_path: /results/dispatch-abccba-20261003T232600Z-e9defb4f/04-cached_dispatch/outputs/sample.png
+        
+[10-03 23:32:01] Running pipeline stages: ['InputValidationStage', 'TextEncodingStage', 'AnimaTextConditioningStage', 'TimestepPreparationStage', 'LatentPreparationStage', 'denoising_stage', 'decoding_stage']
+[10-03 23:32:01] [InputValidationStage] started...
+[10-03 23:32:01] [InputValidationStage] finished in 0.0000 seconds
+[10-03 23:32:01] [TextEncodingStage] started...
+[10-03 23:32:01] [TextEncodingStage] finished in 0.0265 seconds
+[10-03 23:32:01] [AnimaTextConditioningStage] started...
+[10-03 23:32:01] [AnimaTextConditioningStage] finished in 0.0110 seconds
+[10-03 23:32:01] [TimestepPreparationStage] started...
+[10-03 23:32:01] [TimestepPreparationStage] finished in 0.0004 seconds
+[10-03 23:32:01] [LatentPreparationStage] started...
+[10-03 23:32:01] [LatentPreparationStage] finished in 0.0019 seconds
+[10-03 23:32:01] [DenoisingStage] started...
+
+  0%|          | 0/30 [00:00<?, ?it/s]
+  7%|▋         | 2/30 [00:00<00:02, 12.98it/s]
+ 13%|█▎        | 4/30 [00:00<00:02, 11.79it/s]
+ 20%|██        | 6/30 [00:00<00:02, 11.44it/s]
+ 27%|██▋       | 8/30 [00:00<00:01, 11.26it/s]
+ 33%|███▎      | 10/30 [00:00<00:01, 11.16it/s]
+ 40%|████      | 12/30 [00:01<00:01, 11.06it/s]
+ 47%|████▋     | 14/30 [00:01<00:01, 11.07it/s]
+ 53%|█████▎    | 16/30 [00:01<00:01, 10.96it/s]
+ 60%|██████    | 18/30 [00:01<00:01, 10.96it/s]
+ 67%|██████▋   | 20/30 [00:01<00:00, 10.96it/s]
+ 73%|███████▎  | 22/30 [00:01<00:00, 10.96it/s]
+ 80%|████████  | 24/30 [00:02<00:00, 10.93it/s]
+ 87%|████████▋ | 26/30 [00:02<00:00, 10.94it/s]
+ 93%|█████████▎| 28/30 [00:02<00:00, 10.97it/s]
+100%|██████████| 30/30 [00:02<00:00, 10.96it/s]
+100%|██████████| 30/30 [00:02<00:00, 11.08it/s]
+[10-03 23:32:03] [DenoisingStage] average time per step: 0.0903 seconds
+[10-03 23:32:03] [DenoisingStage] finished in 2.7096 seconds
+[10-03 23:32:03] [DecodingStage] started...
+[10-03 23:32:04] [DecodingStage] finished in 0.2761 seconds
+[10-03 23:32:04] Output saved to [1;36m/results/dispatch-abccba-20261003T232600Z-e9defb4f/04-cached_dispatch/outputs/sample.png[0;0m
+[10-03 23:32:04] Metrics dumped to: [1;36m/results/dispatch-abccba-20261003T232600Z-e9defb4f/04-cached_dispatch/perf.json[0;0m
+[10-03 23:32:04] Pixel data generated successfully in [92m6.23[0;0m seconds
+[10-03 23:32:04] Warmed-up request processed in [92m3.03[0;0m seconds (with warmup excluded)
+[10-03 23:32:04] Memory usage - Max peak: 5870.00 MB, Avg peak: 5870.00 MB
+[10-03 23:32:04] Metrics dumped to: [1;36m/results/dispatch-abccba-20261003T232600Z-e9defb4f/04-cached_dispatch/perf.json[0;0m
+[93m[10-03 23:32:04] Generator was garbage collected without being shut down. Forcing local server and client cleanup.[0;0m
+[93m[10-03 23:32:04] Local worker sglang-diffusionWorker-0 did not terminate gracefully, forcing.[0;0m
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+RESULT {"label": "04-cached_dispatch", "variant": "cached_dispatch", "profile": false, "seed": 42, "size": 1024, "steps": 30, "command": ["sglang", "generate", "--model-path", "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c", "--model-id", "circlestone-labs/Anima-Base-v1.0-Diffusers", "--revision", "073c3a9db359c31ad0e8aa268d15775473c2176c", "--num-gpus", "1", "--enable-torch-compile=false", "--enable-breakable-cuda-graph=false", "--performance-mode=speed", "--attention-backend", "fa", "--width", "1024", "--height", "1024", "--num-inference-steps", "30", "--guidance-scale", "4", "--negative-prompt", "", "--prompt", "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset", "--seed", "42", "--generator-device", "cpu", "--quality", "lossless", "--save-output", "--warmup-mode", "request", "--warmup-steps", "1", "--perf-dump-path", "/results/dispatch-abccba-20261003T232600Z-e9defb4f/04-cached_dispatch/perf.json", "--output-path", "/results/dispatch-abccba-20261003T232600Z-e9defb4f/04-cached_dispatch/outputs", "--output-file-name", "sample"], "total_duration_ms": 3031.375960000048, "denoise_steps_ms": [{"step": 0, "duration_ms": 78.68160200001739}, {"step": 1, "duration_ms": 75.52256700000726}, {"step": 2, "duration_ms": 88.82039599996006}, {"step": 3, "duration_ms": 91.61168700001099}, {"step": 4, "duration_ms": 90.00298099999782}, {"step": 5, "duration_ms": 90.82550900001252}, {"step": 6, "duration_ms": 91.82035999998561}, {"step": 7, "duration_ms": 90.18024300002025}, {"step": 8, "duration_ms": 89.89362699998082}, {"step": 9, "duration_ms": 92.12151299999505}, {"step": 10, "duration_ms": 91.033632999995}, {"step": 11, "duration_ms": 92.68927099998336}, {"step": 12, "duration_ms": 90.43747199996233}, {"step": 13, "duration_ms": 89.85879499999783}, {"step": 14, "duration_ms": 92.42145299998583}, {"step": 15, "duration_ms": 94.15574799999149}, {"step": 16, "duration_ms": 90.79756500000258}, {"step": 17, "duration_ms": 91.53421999997136}, {"step": 18, "duration_ms": 91.67051899999024}, {"step": 19, "duration_ms": 90.60677500002612}, {"step": 20, "duration_ms": 92.55701000000727}, {"step": 21, "duration_ms": 90.20104900002934}, {"step": 22, "duration_ms": 91.89733400000932}, {"step": 23, "duration_ms": 92.26015199999438}, {"step": 24, "duration_ms": 90.57099000000335}, {"step": 25, "duration_ms": 91.77248499997859}, {"step": 26, "duration_ms": 90.74624999999514}, {"step": 27, "duration_ms": 90.34107099995481}, {"step": 28, "duration_ms": 91.6041899999982}, {"step": 29, "duration_ms": 90.98035199997412}], "denoise_ms": 2707.6168189998384, "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c", "mode": "RGB", "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d", "source_sha256": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013"}
+RUN ['sglang', 'generate', '--model-path', '/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c', '--model-id', 'circlestone-labs/Anima-Base-v1.0-Diffusers', '--revision', '073c3a9db359c31ad0e8aa268d15775473c2176c', '--num-gpus', '1', '--enable-torch-compile=false', '--enable-breakable-cuda-graph=false', '--performance-mode=speed', '--attention-backend', 'fa', '--width', '1024', '--height', '1024', '--num-inference-steps', '30', '--guidance-scale', '4', '--negative-prompt', '', '--prompt', 'masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset', '--seed', '42', '--generator-device', 'cpu', '--quality', 'lossless', '--save-output', '--warmup-mode', 'request', '--warmup-steps', '1', '--perf-dump-path', '/results/dispatch-abccba-20261003T232600Z-e9defb4f/05-initial_mount/perf.json', '--output-path', '/results/dispatch-abccba-20261003T232600Z-e9defb4f/05-initial_mount/outputs', '--output-file-name', 'sample']
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+--model-id 'circlestone-labs/Anima-Base-v1.0-Diffusers' did not match any registered model; falling back to automatic detection.
+[10-03 23:32:28] Applying performance_mode=speed
+[10-03 23:32:28] server_args: {"model_path": "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c", "model_subfolder": null, "model_variant": null, "model_id": "circlestone-labs/Anima-Base-v1.0-Diffusers", "served_model_name": "circlestone-labs/Anima-Base-v1.0-Diffusers", "backend": "auto", "attention_backend": "fa", "enable_attention_backend_autotune": false, "attention_backend_config": {}, "component_attention_backends": {}, "cache_dit_config": null, "nccl_port": null, "enable_nccl_nvls": false, "trust_remote_code": false, "revision": "073c3a9db359c31ad0e8aa268d15775473c2176c", "num_gpus": 1, "performance_mode": "speed", "base_gpu_id": 0, "gpu_ids": null, "nnodes": 1, "node_rank": 0, "dist_init_addr": null, "tp_size": 1, "sp_degree": 1, "ulysses_degree": 1, "ring_degree": 1, "kv_gather_degree": 1, "sp_split_auto": false, "dp_size": 1, "enable_cfg_parallel": false, "cfg_parallel_degree": 1, "encoder_parallel": "auto", "hsdp_replicate_dim": 1, "hsdp_shard_dim": 1, "dist_timeout": 3600, "scheduler_rpc_timeout": null, "pipeline_class_name": null, "lora_path": null, "lora_nickname": "default", "lora_scale": 1.0, "lora_alpha": null, "lora_merge_mode": "auto", "lora_weight_name": null, "component_paths": {}, "component_weights_paths": {}, "component_direct_gpu_weight_loading": {}, "component_quantizations": {}, "component_precisions": {}, "component_quantization_ignored_layers": {}, "load_diffusion_decoder": false, "transformer_weights_path": null, "minimax_h3_adaln_cache_path": null, "minimax_h3_adaln_online": false, "minimax_h3_adaln_plan_width": 4, "minimax_h3_adaln_host_cache_gb": 8.0, "quantization": null, "quantization_ignored_layers": null, "lora_target_modules": null, "component_residency": null, "cpu_offload_components": null, "dit_cpu_offload": false, "direct_gpu_weight_loading": false, "dit_layerwise_offload": false, "layerwise_offload_components": null, "dit_offload_prefetch_size": 0.0, "dit_layerwise_resident_layers": 0.0, "dit_layerwise_residency_policy": "leading", "dit_layerwise_residency_lifetime": "forward", "layerwise_prefetch_size": {}, "layerwise_resident_layers": {}, "layerwise_residency_policy": {}, "layerwise_residency_lifetime": {}, "offload_during_compile": true, "text_encoder_cpu_offload": false, "image_encoder_cpu_offload": false, "vae_cpu_offload": false, "use_fsdp_inference": false, "pin_cpu_memory": true, "ltx2_two_stage_device_mode": null, "comfyui_mode": false, "enable_torch_compile": false, "regional_compile": false, "enable_breakable_cuda_graph": false, "bcg_text_buckets": null, "enable_layerwise_nvtx_marker": false, "warmup_mode": "request", "warmup_resolutions": null, "warmup_num_frames": null, "warmup_steps": 1, "warmup_sampling_params": null, "disable_autocast": true, "master_port": 30005, "host": "127.0.0.1", "port": 30000, "enable_metrics": false, "webui": false, "webui_port": 12312, "scheduler_port": 5589, "scheduler_ports": [5589], "batching_mode": "dynamic", "batching_max_size": 1, "batching_delay_ms": 0.0, "batching_config": null, "enable_batching_metrics": false, "strict_ports": false, "output_path": "/results/dispatch-abccba-20261003T232600Z-e9defb4f/05-initial_mount/outputs", "input_save_path": "inputs/uploads", "prompt_file_path": null, "model_paths": {}, "model_loaded": {"transformer": true, "vae": true, "video_vae": true, "audio_vae": true, "video_dit": true, "audio_dit": true, "dual_tower_bridge": true}, "boundary_ratio": null, "disagg_role": "monolithic", "disagg_timeout": 3600, "disagg_downstream_wait_timeout": 1800, "disagg_dispatch_policy": "round_robin", "disagg_mode": false, "disagg_instance_id": 0, "disagg_max_slots_per_instance": 8, "disagg_transfer_redundancy": 1.25, "disagg_role_device": "auto", "disagg_transfer_backend": "auto", "disagg_transfer_pool_size": 268435456, "disagg_transfer_pin_memory": "auto", "disagg_p2p_hostname": "127.0.0.1", "disagg_ib_device": null, "disagg_server_addr": null, "encoder_urls": null, "denoiser_urls": null, "decoder_urls": null, "encoder_tp": null, "denoiser_tp": null, "denoiser_sp": null, "denoiser_ulysses": null, "denoiser_ring": null, "decoder_sp": null, "pool_work_endpoint": null, "pool_result_endpoint": null, "pool_control_endpoint": null, "pool_control_advertised_endpoint": null, "log_level": "info", "log_requests": false, "log_requests_level": 2, "log_requests_format": "text", "log_requests_target": null, "uvicorn_access_log_exclude_prefixes": [], "enable_cache_report": false, "enable_trace": false, "otlp_traces_endpoint": "localhost:4317", "otlp_service_name": null, "srt_encoder_url": null, "srt_encoder_connect_timeout": 3.05, "srt_encoder_timeout": 100, "pe_server_url": null, "prompt_enhancer_config": null}
+[10-03 23:32:28] Diffusers version: 0.39.0.dev0
+[10-03 23:32:28] Local mode: True
+[10-03 23:32:28] Starting server...
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:32:47] Scheduler (dp replica 0) bind at endpoint: tcp://127.0.0.1:5589
+[10-03 23:32:48] torch.compile cache: TORCHINDUCTOR_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/inductor TRITON_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/triton
+[10-03 23:32:48] Initializing distributed environment with world_size=1, device=cuda:0, timeout=3600
+[10-03 23:32:48] Setting distributed timeout to 3600 seconds
+[10-03 23:32:48] No pipeline_class_name specified, using model_index.json
+[10-03 23:32:50] Diffusers version: 0.39.0.dev0
+[93m[10-03 23:32:50] --model-id 'circlestone-labs/Anima-Base-v1.0-Diffusers' did not match any registered model; falling back to automatic detection.[0;0m
+[10-03 23:32:50] Using pipeline from model_index.json: AnimaPipeline
+[10-03 23:32:50] Loading pipeline modules...
+[10-03 23:32:50] Model already exists locally and is complete
+[10-03 23:32:50] Model path: /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c
+[10-03 23:32:50] Diffusers version: 0.39.0.dev0
+[10-03 23:32:50] Loading pipeline modules from config: {'_class_name': 'AnimaModularPipeline', '_diffusers_version': '0.39.0.dev0', 'scheduler': ['diffusers', 'FlowMatchEulerDiscreteScheduler'], 't5_tokenizer': ['transformers', 'T5Tokenizer'], 'text_conditioner': ['diffusers', 'AnimaTextConditioner'], 'text_encoder': ['transformers', 'Qwen3Model'], 'tokenizer': ['transformers', 'Qwen2Tokenizer'], 'transformer': ['diffusers', 'CosmosTransformer3DModel'], 'vae': ['diffusers', 'AutoencoderKLQwenImage']}
+[10-03 23:32:50] Loading required components: ['text_encoder', 'tokenizer', 't5_tokenizer', 'text_conditioner', 'vae', 'transformer', 'scheduler']
+[10-03 23:32:50] Memory-aware component load order: ['transformer', 'text_encoder', 'text_conditioner', 'vae', 'tokenizer', 't5_tokenizer', 'scheduler']
+
+Loading required modules:   0%|          | 0/7 [00:00<?, ?it/s][10-03 23:32:50] Loading transformer from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/transformer. avail mem: 138.65 GB
+[10-03 23:32:50] Loading CosmosTransformer3DModel from 1 safetensors file(s) , param_dtype: torch.bfloat16
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/1[A
+Loading safetensors checkpoint shards: 100%|██████████| 1/1
+[10-03 23:32:51] Attention backends for transformer: fa
+[10-03 23:32:51] Loaded transformer: AnimaTransformer3DModel (sgl-diffusion version). model size: 3.64 GB, vram: 3.64 GB. avail GPU mem: 134.93 GB
+
+Loading required modules:  14%|█▍        | 1/7 [00:01<00:10,  1.76s/it][10-03 23:32:51] Loading text_encoder from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/text_encoder. avail mem: 134.93 GB
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/1[A
+
+Loading safetensors checkpoint shards: 100%|██████████| 1/1[A
+Loading safetensors checkpoint shards: 100%|██████████| 1/1
+[10-03 23:32:52] Attention backends for text_encoder: fa
+[10-03 23:32:52] Loaded text_encoder: Qwen3ForCausalLM (sgl-diffusion version). model size: 1.12 GB, vram: 1.12 GB. avail GPU mem: 133.77 GB
+
+Loading required modules:  29%|██▊       | 2/7 [00:02<00:05,  1.18s/it][10-03 23:32:52] Loading text_conditioner from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/text_conditioner. avail mem: 133.77 GB
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/1[A
+Loading safetensors checkpoint shards: 100%|██████████| 1/1
+[10-03 23:32:52] Attention backends for text_conditioner: fa
+[10-03 23:32:52] Loaded text_conditioner: AnimaTextConditioner (sgl-diffusion version). model size: 0.25 GB, vram: 0.25 GB. avail GPU mem: 133.59 GB
+
+Loading required modules:  43%|████▎     | 3/7 [00:02<00:03,  1.25it/s][10-03 23:32:52] Loading vae from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/vae. avail mem: 133.59 GB
+[10-03 23:32:53] Qwen-Image VAE: installed quality-gated fast path (29 RMSNorm+SiLU fusions, 3 channels_last upsamples).
+[10-03 23:32:53] Loaded vae: AutoencoderKLQwenImage (sgl-diffusion version). model size: 0.24 GB, vram: 0.24 GB. avail GPU mem: 133.31 GB
+
+Loading required modules:  57%|█████▋    | 4/7 [00:03<00:01,  1.60it/s][10-03 23:32:53] Loading tokenizer from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/tokenizer. avail mem: 133.31 GB
+[10-03 23:32:54] Loaded tokenizer: Qwen2Tokenizer (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 133.31 GB
+
+Loading required modules:  71%|███████▏  | 5/7 [00:04<00:01,  1.02it/s][10-03 23:32:54] Loading t5_tokenizer from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/t5_tokenizer. avail mem: 133.31 GB
+[10-03 23:32:55] Loaded t5_tokenizer: T5Tokenizer (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 133.31 GB
+
+Loading required modules:  86%|████████▌ | 6/7 [00:05<00:00,  1.41it/s][10-03 23:32:55] Loading scheduler from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/scheduler. avail mem: 133.31 GB
+[10-03 23:32:55] Loaded scheduler: FlowMatchEulerDiscreteScheduler (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 133.31 GB
+
+Loading required modules: 100%|██████████| 7/7 [00:05<00:00,  1.39it/s]
+[10-03 23:32:55] Creating pipeline stages...
+[10-03 23:32:55] Using fa attention backend
+[10-03 23:32:55] Pipeline instantiated
+[10-03 23:32:55] Worker 0: Initialized device, model, and distributed environment.
+[10-03 23:32:55] Worker 0: Scheduler loop started.
+[10-03 23:32:55] [server-load] workers_ready_monotonic_ns=421172752621
+[10-03 23:32:55] Processing 1 grouped request(s)
+
+Warmup requests:   0%|          | 0/1 [00:00<?, ?req/s]
+Warmup requests: 100%|██████████| 1/1 [00:03<00:00,  3.30s/req, warmup req (1024x1024, 1/30 steps), last=3.30s]
+Warmup requests: 100%|██████████| 1/1 [00:03<00:00,  3.30s/req, warmup req (1024x1024, 1/30 steps), last=3.30s]
+[10-03 23:32:58] The server is fired up and ready to roll!
+[10-03 23:32:58] Sampling params:
+                       width: 1024
+                      height: 1024
+                  num_frames: 1
+                         fps: 24
+                      prompt: <redacted, len=88>
+                  neg_prompt: <redacted, len=0>
+                        seed: 42
+                 infer_steps: 30
+      num_outputs_per_prompt: 1
+              guidance_scale: 4.0
+     embedded_guidance_scale: 6.0
+                    n_tokens: None
+                  flow_shift: None
+                  image_path: None
+                 save_output: True
+            output_file_path: /results/dispatch-abccba-20261003T232600Z-e9defb4f/05-initial_mount/outputs/sample.png
+        
+[10-03 23:32:58] Running pipeline stages: ['InputValidationStage', 'TextEncodingStage', 'AnimaTextConditioningStage', 'TimestepPreparationStage', 'LatentPreparationStage', 'denoising_stage', 'decoding_stage']
+[10-03 23:32:58] [InputValidationStage] started...
+[10-03 23:32:58] [InputValidationStage] finished in 0.0000 seconds
+[10-03 23:32:58] [TextEncodingStage] started...
+[10-03 23:32:58] [TextEncodingStage] finished in 0.0279 seconds
+[10-03 23:32:58] [AnimaTextConditioningStage] started...
+[10-03 23:32:58] [AnimaTextConditioningStage] finished in 0.0128 seconds
+[10-03 23:32:58] [TimestepPreparationStage] started...
+[10-03 23:32:58] [TimestepPreparationStage] finished in 0.0005 seconds
+[10-03 23:32:58] [LatentPreparationStage] started...
+[10-03 23:32:58] [LatentPreparationStage] finished in 0.0025 seconds
+[10-03 23:32:58] [DenoisingStage] started...
+
+  0%|          | 0/30 [00:00<?, ?it/s]
+  7%|▋         | 2/30 [00:00<00:02, 11.73it/s]
+ 13%|█▎        | 4/30 [00:00<00:02, 11.88it/s]
+ 20%|██        | 6/30 [00:00<00:02, 11.46it/s]
+ 27%|██▋       | 8/30 [00:00<00:01, 11.28it/s]
+ 33%|███▎      | 10/30 [00:00<00:01, 11.16it/s]
+ 40%|████      | 12/30 [00:01<00:01, 11.02it/s]
+ 47%|████▋     | 14/30 [00:01<00:01, 11.00it/s]
+ 53%|█████▎    | 16/30 [00:01<00:01, 10.98it/s]
+ 60%|██████    | 18/30 [00:01<00:01, 10.95it/s]
+ 67%|██████▋   | 20/30 [00:01<00:00, 10.97it/s]
+ 73%|███████▎  | 22/30 [00:01<00:00, 11.00it/s]
+ 80%|████████  | 24/30 [00:02<00:00, 10.97it/s]
+ 87%|████████▋ | 26/30 [00:02<00:00, 10.93it/s]
+ 93%|█████████▎| 28/30 [00:02<00:00, 10.97it/s]
+100%|██████████| 30/30 [00:02<00:00, 10.97it/s]
+100%|██████████| 30/30 [00:02<00:00, 11.06it/s]
+[10-03 23:33:01] [DenoisingStage] average time per step: 0.0904 seconds
+[10-03 23:33:01] [DenoisingStage] finished in 2.7140 seconds
+[10-03 23:33:01] [DecodingStage] started...
+[10-03 23:33:01] [DecodingStage] finished in 0.3519 seconds
+[10-03 23:33:01] Output saved to [1;36m/results/dispatch-abccba-20261003T232600Z-e9defb4f/05-initial_mount/outputs/sample.png[0;0m
+[10-03 23:33:01] Metrics dumped to: [1;36m/results/dispatch-abccba-20261003T232600Z-e9defb4f/05-initial_mount/perf.json[0;0m
+[10-03 23:33:01] Pixel data generated successfully in [92m6.67[0;0m seconds
+[10-03 23:33:01] Warmed-up request processed in [92m3.12[0;0m seconds (with warmup excluded)
+[10-03 23:33:01] Memory usage - Max peak: 5870.00 MB, Avg peak: 5870.00 MB
+[10-03 23:33:01] Metrics dumped to: [1;36m/results/dispatch-abccba-20261003T232600Z-e9defb4f/05-initial_mount/perf.json[0;0m
+[93m[10-03 23:33:01] Generator was garbage collected without being shut down. Forcing local server and client cleanup.[0;0m
+[93m[10-03 23:33:01] Local worker sglang-diffusionWorker-0 did not terminate gracefully, forcing.[0;0m
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+RESULT {"label": "05-initial_mount", "variant": "initial_mount", "profile": false, "seed": 42, "size": 1024, "steps": 30, "command": ["sglang", "generate", "--model-path", "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c", "--model-id", "circlestone-labs/Anima-Base-v1.0-Diffusers", "--revision", "073c3a9db359c31ad0e8aa268d15775473c2176c", "--num-gpus", "1", "--enable-torch-compile=false", "--enable-breakable-cuda-graph=false", "--performance-mode=speed", "--attention-backend", "fa", "--width", "1024", "--height", "1024", "--num-inference-steps", "30", "--guidance-scale", "4", "--negative-prompt", "", "--prompt", "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset", "--seed", "42", "--generator-device", "cpu", "--quality", "lossless", "--save-output", "--warmup-mode", "request", "--warmup-steps", "1", "--perf-dump-path", "/results/dispatch-abccba-20261003T232600Z-e9defb4f/05-initial_mount/perf.json", "--output-path", "/results/dispatch-abccba-20261003T232600Z-e9defb4f/05-initial_mount/outputs", "--output-file-name", "sample"], "total_duration_ms": 3116.983787000038, "denoise_steps_ms": [{"step": 0, "duration_ms": 87.64856199996984}, {"step": 1, "duration_ms": 83.00130200001377}, {"step": 2, "duration_ms": 81.61663600003521}, {"step": 3, "duration_ms": 84.97736199996098}, {"step": 4, "duration_ms": 91.29267400004437}, {"step": 5, "duration_ms": 90.46255499998779}, {"step": 6, "duration_ms": 91.96546800001215}, {"step": 7, "duration_ms": 89.81159300003583}, {"step": 8, "duration_ms": 91.73066600004631}, {"step": 9, "duration_ms": 90.70772799998394}, {"step": 10, "duration_ms": 93.40127499996242}, {"step": 11, "duration_ms": 92.29355100001158}, {"step": 12, "duration_ms": 90.65896900000325}, {"step": 13, "duration_ms": 91.87440800002378}, {"step": 14, "duration_ms": 92.49253100000487}, {"step": 15, "duration_ms": 90.11533000000327}, {"step": 16, "duration_ms": 90.79484199997978}, {"step": 17, "duration_ms": 92.85945599998513}, {"step": 18, "duration_ms": 91.33473100001765}, {"step": 19, "duration_ms": 90.50884999999198}, {"step": 20, "duration_ms": 90.15549200000805}, {"step": 21, "duration_ms": 90.11723000003258}, {"step": 22, "duration_ms": 91.21663100000887}, {"step": 23, "duration_ms": 92.43483399995966}, {"step": 24, "duration_ms": 91.34816699997828}, {"step": 25, "duration_ms": 92.80684599997358}, {"step": 26, "duration_ms": 90.53464099997655}, {"step": 27, "duration_ms": 90.52755599998363}, {"step": 28, "duration_ms": 89.98228900003369}, {"step": 29, "duration_ms": 92.42744399995217}], "denoise_ms": 2711.099618999981, "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c", "mode": "RGB", "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d", "source_sha256": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013"}
+RUN ['sglang', 'generate', '--model-path', '/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c', '--model-id', 'circlestone-labs/Anima-Base-v1.0-Diffusers', '--revision', '073c3a9db359c31ad0e8aa268d15775473c2176c', '--num-gpus', '1', '--enable-torch-compile=false', '--enable-breakable-cuda-graph=false', '--performance-mode=speed', '--attention-backend', 'fa', '--width', '1024', '--height', '1024', '--num-inference-steps', '30', '--guidance-scale', '4', '--negative-prompt', '', '--prompt', 'masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset', '--seed', '42', '--generator-device', 'cpu', '--quality', 'lossless', '--save-output', '--warmup-mode', 'request', '--warmup-steps', '1', '--perf-dump-path', '/results/dispatch-abccba-20261003T232600Z-e9defb4f/06-eager/perf.json', '--output-path', '/results/dispatch-abccba-20261003T232600Z-e9defb4f/06-eager/outputs', '--output-file-name', 'sample']
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+--model-id 'circlestone-labs/Anima-Base-v1.0-Diffusers' did not match any registered model; falling back to automatic detection.
+[10-03 23:33:26] Applying performance_mode=speed
+[10-03 23:33:27] server_args: {"model_path": "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c", "model_subfolder": null, "model_variant": null, "model_id": "circlestone-labs/Anima-Base-v1.0-Diffusers", "served_model_name": "circlestone-labs/Anima-Base-v1.0-Diffusers", "backend": "auto", "attention_backend": "fa", "enable_attention_backend_autotune": false, "attention_backend_config": {}, "component_attention_backends": {}, "cache_dit_config": null, "nccl_port": null, "enable_nccl_nvls": false, "trust_remote_code": false, "revision": "073c3a9db359c31ad0e8aa268d15775473c2176c", "num_gpus": 1, "performance_mode": "speed", "base_gpu_id": 0, "gpu_ids": null, "nnodes": 1, "node_rank": 0, "dist_init_addr": null, "tp_size": 1, "sp_degree": 1, "ulysses_degree": 1, "ring_degree": 1, "kv_gather_degree": 1, "sp_split_auto": false, "dp_size": 1, "enable_cfg_parallel": false, "cfg_parallel_degree": 1, "encoder_parallel": "auto", "hsdp_replicate_dim": 1, "hsdp_shard_dim": 1, "dist_timeout": 3600, "scheduler_rpc_timeout": null, "pipeline_class_name": null, "lora_path": null, "lora_nickname": "default", "lora_scale": 1.0, "lora_alpha": null, "lora_merge_mode": "auto", "lora_weight_name": null, "component_paths": {}, "component_weights_paths": {}, "component_direct_gpu_weight_loading": {}, "component_quantizations": {}, "component_precisions": {}, "component_quantization_ignored_layers": {}, "load_diffusion_decoder": false, "transformer_weights_path": null, "minimax_h3_adaln_cache_path": null, "minimax_h3_adaln_online": false, "minimax_h3_adaln_plan_width": 4, "minimax_h3_adaln_host_cache_gb": 8.0, "quantization": null, "quantization_ignored_layers": null, "lora_target_modules": null, "component_residency": null, "cpu_offload_components": null, "dit_cpu_offload": false, "direct_gpu_weight_loading": false, "dit_layerwise_offload": false, "layerwise_offload_components": null, "dit_offload_prefetch_size": 0.0, "dit_layerwise_resident_layers": 0.0, "dit_layerwise_residency_policy": "leading", "dit_layerwise_residency_lifetime": "forward", "layerwise_prefetch_size": {}, "layerwise_resident_layers": {}, "layerwise_residency_policy": {}, "layerwise_residency_lifetime": {}, "offload_during_compile": true, "text_encoder_cpu_offload": false, "image_encoder_cpu_offload": false, "vae_cpu_offload": false, "use_fsdp_inference": false, "pin_cpu_memory": true, "ltx2_two_stage_device_mode": null, "comfyui_mode": false, "enable_torch_compile": false, "regional_compile": false, "enable_breakable_cuda_graph": false, "bcg_text_buckets": null, "enable_layerwise_nvtx_marker": false, "warmup_mode": "request", "warmup_resolutions": null, "warmup_num_frames": null, "warmup_steps": 1, "warmup_sampling_params": null, "disable_autocast": true, "master_port": 30005, "host": "127.0.0.1", "port": 30000, "enable_metrics": false, "webui": false, "webui_port": 12312, "scheduler_port": 5637, "scheduler_ports": [5637], "batching_mode": "dynamic", "batching_max_size": 1, "batching_delay_ms": 0.0, "batching_config": null, "enable_batching_metrics": false, "strict_ports": false, "output_path": "/results/dispatch-abccba-20261003T232600Z-e9defb4f/06-eager/outputs", "input_save_path": "inputs/uploads", "prompt_file_path": null, "model_paths": {}, "model_loaded": {"transformer": true, "vae": true, "video_vae": true, "audio_vae": true, "video_dit": true, "audio_dit": true, "dual_tower_bridge": true}, "boundary_ratio": null, "disagg_role": "monolithic", "disagg_timeout": 3600, "disagg_downstream_wait_timeout": 1800, "disagg_dispatch_policy": "round_robin", "disagg_mode": false, "disagg_instance_id": 0, "disagg_max_slots_per_instance": 8, "disagg_transfer_redundancy": 1.25, "disagg_role_device": "auto", "disagg_transfer_backend": "auto", "disagg_transfer_pool_size": 268435456, "disagg_transfer_pin_memory": "auto", "disagg_p2p_hostname": "127.0.0.1", "disagg_ib_device": null, "disagg_server_addr": null, "encoder_urls": null, "denoiser_urls": null, "decoder_urls": null, "encoder_tp": null, "denoiser_tp": null, "denoiser_sp": null, "denoiser_ulysses": null, "denoiser_ring": null, "decoder_sp": null, "pool_work_endpoint": null, "pool_result_endpoint": null, "pool_control_endpoint": null, "pool_control_advertised_endpoint": null, "log_level": "info", "log_requests": false, "log_requests_level": 2, "log_requests_format": "text", "log_requests_target": null, "uvicorn_access_log_exclude_prefixes": [], "enable_cache_report": false, "enable_trace": false, "otlp_traces_endpoint": "localhost:4317", "otlp_service_name": null, "srt_encoder_url": null, "srt_encoder_connect_timeout": 3.05, "srt_encoder_timeout": 100, "pe_server_url": null, "prompt_enhancer_config": null}
+[10-03 23:33:27] Diffusers version: 0.39.0.dev0
+[10-03 23:33:27] Local mode: True
+[10-03 23:33:27] Starting server...
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:33:46] Scheduler (dp replica 0) bind at endpoint: tcp://127.0.0.1:5637
+[10-03 23:33:46] torch.compile cache: TORCHINDUCTOR_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/inductor TRITON_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/triton
+[10-03 23:33:46] Initializing distributed environment with world_size=1, device=cuda:0, timeout=3600
+[10-03 23:33:46] Setting distributed timeout to 3600 seconds
+[10-03 23:33:47] No pipeline_class_name specified, using model_index.json
+[10-03 23:33:49] Diffusers version: 0.39.0.dev0
+[93m[10-03 23:33:49] --model-id 'circlestone-labs/Anima-Base-v1.0-Diffusers' did not match any registered model; falling back to automatic detection.[0;0m
+[10-03 23:33:49] Using pipeline from model_index.json: AnimaPipeline
+[10-03 23:33:49] Loading pipeline modules...
+[10-03 23:33:49] Model already exists locally and is complete
+[10-03 23:33:49] Model path: /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c
+[10-03 23:33:49] Diffusers version: 0.39.0.dev0
+[10-03 23:33:49] Loading pipeline modules from config: {'_class_name': 'AnimaModularPipeline', '_diffusers_version': '0.39.0.dev0', 'scheduler': ['diffusers', 'FlowMatchEulerDiscreteScheduler'], 't5_tokenizer': ['transformers', 'T5Tokenizer'], 'text_conditioner': ['diffusers', 'AnimaTextConditioner'], 'text_encoder': ['transformers', 'Qwen3Model'], 'tokenizer': ['transformers', 'Qwen2Tokenizer'], 'transformer': ['diffusers', 'CosmosTransformer3DModel'], 'vae': ['diffusers', 'AutoencoderKLQwenImage']}
+[10-03 23:33:49] Loading required components: ['text_encoder', 'tokenizer', 't5_tokenizer', 'text_conditioner', 'vae', 'transformer', 'scheduler']
+[10-03 23:33:49] Memory-aware component load order: ['transformer', 'text_encoder', 'text_conditioner', 'vae', 'tokenizer', 't5_tokenizer', 'scheduler']
+
+Loading required modules:   0%|          | 0/7 [00:00<?, ?it/s][10-03 23:33:49] Loading transformer from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/transformer. avail mem: 138.65 GB
+[10-03 23:33:49] Loading CosmosTransformer3DModel from 1 safetensors file(s) , param_dtype: torch.bfloat16
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/1[A
+Loading safetensors checkpoint shards: 100%|██████████| 1/1
+[10-03 23:33:51] Attention backends for transformer: fa
+[10-03 23:33:51] Loaded transformer: AnimaTransformer3DModel (sgl-diffusion version). model size: 3.64 GB, vram: 3.64 GB. avail GPU mem: 134.93 GB
+
+Loading required modules:  14%|█▍        | 1/7 [00:02<00:13,  2.19s/it][10-03 23:33:51] Loading text_encoder from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/text_encoder. avail mem: 134.93 GB
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/1[A
+
+Loading safetensors checkpoint shards: 100%|██████████| 1/1[A
+Loading safetensors checkpoint shards: 100%|██████████| 1/1
+[10-03 23:33:52] Attention backends for text_encoder: fa
+[10-03 23:33:52] Loaded text_encoder: Qwen3ForCausalLM (sgl-diffusion version). model size: 1.12 GB, vram: 1.12 GB. avail GPU mem: 133.77 GB
+
+Loading required modules:  29%|██▊       | 2/7 [00:03<00:07,  1.46s/it][10-03 23:33:52] Loading text_conditioner from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/text_conditioner. avail mem: 133.77 GB
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/1[A
+Loading safetensors checkpoint shards: 100%|██████████| 1/1
+[10-03 23:33:52] Attention backends for text_conditioner: fa
+[10-03 23:33:52] Loaded text_conditioner: AnimaTextConditioner (sgl-diffusion version). model size: 0.25 GB, vram: 0.25 GB. avail GPU mem: 133.59 GB
+
+Loading required modules:  43%|████▎     | 3/7 [00:03<00:03,  1.11it/s][10-03 23:33:52] Loading vae from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/vae. avail mem: 133.59 GB
+[10-03 23:33:53] Qwen-Image VAE: installed quality-gated fast path (29 RMSNorm+SiLU fusions, 3 channels_last upsamples).
+[10-03 23:33:53] Loaded vae: AutoencoderKLQwenImage (sgl-diffusion version). model size: 0.24 GB, vram: 0.24 GB. avail GPU mem: 133.31 GB
+
+Loading required modules:  57%|█████▋    | 4/7 [00:03<00:02,  1.32it/s][10-03 23:33:53] Loading tokenizer from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/tokenizer. avail mem: 133.31 GB
+[10-03 23:33:53] Loaded tokenizer: Qwen2Tokenizer (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 133.31 GB
+
+Loading required modules:  71%|███████▏  | 5/7 [00:04<00:01,  1.23it/s][10-03 23:33:53] Loading t5_tokenizer from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/t5_tokenizer. avail mem: 133.31 GB
+[10-03 23:33:54] Loaded t5_tokenizer: T5Tokenizer (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 133.31 GB
+
+Loading required modules:  86%|████████▌ | 6/7 [00:04<00:00,  1.71it/s][10-03 23:33:54] Loading scheduler from /vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c/scheduler. avail mem: 133.31 GB
+[10-03 23:33:54] Loaded scheduler: FlowMatchEulerDiscreteScheduler (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 133.31 GB
+
+Loading required modules: 100%|██████████| 7/7 [00:05<00:00,  1.40it/s]
+[10-03 23:33:54] Creating pipeline stages...
+[10-03 23:33:54] Using fa attention backend
+[10-03 23:33:54] Pipeline instantiated
+[10-03 23:33:54] Worker 0: Initialized device, model, and distributed environment.
+[10-03 23:33:54] Worker 0: Scheduler loop started.
+[10-03 23:33:54] [server-load] workers_ready_monotonic_ns=480212906203
+[10-03 23:33:54] Processing 1 grouped request(s)
+
+Warmup requests:   0%|          | 0/1 [00:00<?, ?req/s]
+Warmup requests: 100%|██████████| 1/1 [00:02<00:00,  2.95s/req, warmup req (1024x1024, 1/30 steps), last=2.95s]
+Warmup requests: 100%|██████████| 1/1 [00:02<00:00,  2.95s/req, warmup req (1024x1024, 1/30 steps), last=2.95s]
+[10-03 23:33:57] The server is fired up and ready to roll!
+[10-03 23:33:57] Sampling params:
+                       width: 1024
+                      height: 1024
+                  num_frames: 1
+                         fps: 24
+                      prompt: <redacted, len=88>
+                  neg_prompt: <redacted, len=0>
+                        seed: 42
+                 infer_steps: 30
+      num_outputs_per_prompt: 1
+              guidance_scale: 4.0
+     embedded_guidance_scale: 6.0
+                    n_tokens: None
+                  flow_shift: None
+                  image_path: None
+                 save_output: True
+            output_file_path: /results/dispatch-abccba-20261003T232600Z-e9defb4f/06-eager/outputs/sample.png
+        
+[10-03 23:33:57] Running pipeline stages: ['InputValidationStage', 'TextEncodingStage', 'AnimaTextConditioningStage', 'TimestepPreparationStage', 'LatentPreparationStage', 'denoising_stage', 'decoding_stage']
+[10-03 23:33:57] [InputValidationStage] started...
+[10-03 23:33:57] [InputValidationStage] finished in 0.0000 seconds
+[10-03 23:33:57] [TextEncodingStage] started...
+[10-03 23:33:57] [TextEncodingStage] finished in 0.0275 seconds
+[10-03 23:33:57] [AnimaTextConditioningStage] started...
+[10-03 23:33:57] [AnimaTextConditioningStage] finished in 0.0111 seconds
+[10-03 23:33:57] [TimestepPreparationStage] started...
+[10-03 23:33:57] [TimestepPreparationStage] finished in 0.0004 seconds
+[10-03 23:33:57] [LatentPreparationStage] started...
+[10-03 23:33:57] [LatentPreparationStage] finished in 0.0016 seconds
+[10-03 23:33:57] [DenoisingStage] started...
+
+  0%|          | 0/30 [00:00<?, ?it/s]
+  7%|▋         | 2/30 [00:00<00:02, 12.14it/s]
+ 13%|█▎        | 4/30 [00:00<00:02, 11.17it/s]
+ 20%|██        | 6/30 [00:00<00:02, 10.88it/s]
+ 27%|██▋       | 8/30 [00:00<00:02, 10.75it/s]
+ 33%|███▎      | 10/30 [00:00<00:01, 10.67it/s]
+ 40%|████      | 12/30 [00:01<00:01, 10.63it/s]
+ 47%|████▋     | 14/30 [00:01<00:01, 10.56it/s]
+ 53%|█████▎    | 16/30 [00:01<00:01, 10.55it/s]
+ 60%|██████    | 18/30 [00:01<00:01, 10.55it/s]
+ 67%|██████▋   | 20/30 [00:01<00:00, 10.55it/s]
+ 73%|███████▎  | 22/30 [00:02<00:00, 10.54it/s]
+ 80%|████████  | 24/30 [00:02<00:00, 10.54it/s]
+ 87%|████████▋ | 26/30 [00:02<00:00, 10.54it/s]
+ 93%|█████████▎| 28/30 [00:02<00:00, 10.54it/s]
+100%|██████████| 30/30 [00:02<00:00, 10.52it/s]
+100%|██████████| 30/30 [00:02<00:00, 10.62it/s]
+[10-03 23:33:59] [DenoisingStage] average time per step: 0.0941 seconds
+[10-03 23:33:59] [DenoisingStage] finished in 2.8252 seconds
+[10-03 23:34:00] [DecodingStage] started...
+[10-03 23:34:00] [DecodingStage] finished in 0.2831 seconds
+[10-03 23:34:00] Output saved to [1;36m/results/dispatch-abccba-20261003T232600Z-e9defb4f/06-eager/outputs/sample.png[0;0m
+[10-03 23:34:00] Metrics dumped to: [1;36m/results/dispatch-abccba-20261003T232600Z-e9defb4f/06-eager/perf.json[0;0m
+[10-03 23:34:00] Pixel data generated successfully in [92m6.36[0;0m seconds
+[10-03 23:34:00] Warmed-up request processed in [92m3.15[0;0m seconds (with warmup excluded)
+[10-03 23:34:00] Memory usage - Max peak: 5870.00 MB, Avg peak: 5870.00 MB
+[10-03 23:34:00] Metrics dumped to: [1;36m/results/dispatch-abccba-20261003T232600Z-e9defb4f/06-eager/perf.json[0;0m
+[93m[10-03 23:34:00] Generator was garbage collected without being shut down. Forcing local server and client cleanup.[0;0m
+[93m[10-03 23:34:00] Local worker sglang-diffusionWorker-0 did not terminate gracefully, forcing.[0;0m
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+RESULT {"label": "06-eager", "variant": "eager", "profile": false, "seed": 42, "size": 1024, "steps": 30, "command": ["sglang", "generate", "--model-path", "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c", "--model-id", "circlestone-labs/Anima-Base-v1.0-Diffusers", "--revision", "073c3a9db359c31ad0e8aa268d15775473c2176c", "--num-gpus", "1", "--enable-torch-compile=false", "--enable-breakable-cuda-graph=false", "--performance-mode=speed", "--attention-backend", "fa", "--width", "1024", "--height", "1024", "--num-inference-steps", "30", "--guidance-scale", "4", "--negative-prompt", "", "--prompt", "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset", "--seed", "42", "--generator-device", "cpu", "--quality", "lossless", "--save-output", "--warmup-mode", "request", "--warmup-steps", "1", "--perf-dump-path", "/results/dispatch-abccba-20261003T232600Z-e9defb4f/06-eager/perf.json", "--output-path", "/results/dispatch-abccba-20261003T232600Z-e9defb4f/06-eager/outputs", "--output-file-name", "sample"], "total_duration_ms": 3154.143770000019, "denoise_steps_ms": [{"step": 0, "duration_ms": 79.92556400000694}, {"step": 1, "duration_ms": 84.85207000001083}, {"step": 2, "duration_ms": 94.22840799999221}, {"step": 3, "duration_ms": 94.87343600000031}, {"step": 4, "duration_ms": 94.87076100003833}, {"step": 5, "duration_ms": 94.62672799998018}, {"step": 6, "duration_ms": 94.68571999997266}, {"step": 7, "duration_ms": 94.76864900000237}, {"step": 8, "duration_ms": 94.69342899996036}, {"step": 9, "duration_ms": 95.28181100000666}, {"step": 10, "duration_ms": 94.23348500001794}, {"step": 11, "duration_ms": 94.86042399998951}, {"step": 12, "duration_ms": 95.25413000000071}, {"step": 13, "duration_ms": 96.48526200004426}, {"step": 14, "duration_ms": 95.04117899996345}, {"step": 15, "duration_ms": 95.25626800001419}, {"step": 16, "duration_ms": 94.33913799995253}, {"step": 17, "duration_ms": 95.01864200001364}, {"step": 18, "duration_ms": 94.8973050000177}, {"step": 19, "duration_ms": 94.78206300002512}, {"step": 20, "duration_ms": 94.9731750000069}, {"step": 21, "duration_ms": 95.24396099999421}, {"step": 22, "duration_ms": 94.2760460000045}, {"step": 23, "duration_ms": 95.14204700002438}, {"step": 24, "duration_ms": 94.8086139999873}, {"step": 25, "duration_ms": 94.9530569999979}, {"step": 26, "duration_ms": 94.742105000023}, {"step": 27, "duration_ms": 94.86296800002947}, {"step": 28, "duration_ms": 94.77751800000078}, {"step": 29, "duration_ms": 96.16388500000994}], "denoise_ms": 2822.9178480000883, "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c", "mode": "RGB", "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d", "source_sha256": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6"}
+RESULTS dispatch-abccba-20261003T232600Z-e9defb4f
+✓ App completed. View run at 
+https://modal.com/apps/xinyuj2/main/ap-IhAzD8MSV6HaWdEpG66xFz

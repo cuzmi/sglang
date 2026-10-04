@@ -1,0 +1,59 @@
+Anima modulation integration — completed experiment, 2026-10-03
+
+Decision: Do not submit the current candidate as a performance improvement.
+Correctness passes, but native worker request latency regresses by 4.93%.
+
+Branch: perf/anima-modulate-fusion
+Isolated worktree: /Users/cuzimi/.codex/worktrees/anima-modulate-fusion/sglang
+The original shared checkout was switched externally to perf/ming-image-rmsnorm during the run.
+Its changes were left intact; the exact measured Anima file was copied into this isolated worktree.
+Baseline: 6fa3fe69e2e5e19b75cadd9fc285b72634551992
+Candidate file SHA256: ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013
+Production change: one file, +18/-1; no new repository unit tests.
+Local code remains uncommitted and has not been pushed or published as a PR.
+
+GPU: NVIDIA H200; CUDA: 13.0
+Packages: {"torch": "2.13.0+cu130", "triton": "3.7.1", "diffusers": "0.37.0", "transformers": "5.12.1", "sglang": "0.0.0.dev0", "apache-tvm-ffi": "0.1.11"}
+Model: circlestone-labs/Anima-Base-v1.0-Diffusers @ 073c3a9db359c31ad0e8aa268d15775473c2176c
+Main workload: 1024x1024, 30 steps, CFG 4, seed 42, BF16, FA, TP1,
+eager, no breakable CUDA graph; same-resolution one-step request warmup.
+Both variants used the same container and GPU, in two ABBA blocks.
+
+Baseline mean: 3809.25 ms (n=4, range 3730.83–3883.55)
+Candidate mean: 3996.92 ms (n=4, range 3980.27–4031.34)
+Delta: +187.67 ms (+4.93%). Every candidate sample is slower than every baseline.
+Do not treat the one-pair 512x512 correctness case or the profiled requests as benchmark replicates.
+
+Correctness:
+- 36 complete AdaLN exact comparisons pass; 24 actual fused calls, 12 FP32 fallbacks.
+- Warmed operator CUDA graph replay matches.
+- Existing suites: modulate 12 passed; Anima 17 passed.
+- Eight main timing images plus two diagnostics: identical RGB pixels/PNG bytes.
+- Secondary 512x512 seed-123 pair: identical RGB pixels/PNG bytes.
+- Full pre-commit checks on the production file passed.
+
+Attribution:
+ProfilerStep#4 has 170 AdaLN calls. Modulation kernels: 510 -> 170.
+All kernels inside AdaLN: 1360 -> 1020.
+Modulation GPU kernel-time sum in those diagnostics: 6.984 -> 1.540 ms.
+This proves the replacement executed; it does not prove end-to-end speed.
+The cause of the observed worker regression remains unisolated.
+
+Files:
+- manifest.json: exact commands, software, source hashes, per-run metrics and image hashes.
+- summary.json: complete ABBA statistics and CPU-launch/CUDA-kernel correlation.
+- operator.json/operator.log: isolated correctness and microbenchmark data.
+- 01-baseline through 08-baseline: untouched-source unprofiled arms.
+- quality-*: second image-correctness pair.
+- profile-*: diagnostic logs, call counters, original traces and middle-step slices.
+- ../../PR_BODY.txt: English repository-template PR draft explicitly marked not ready to publish.
+
+Reproduce from the experiment directory:
+  python prepare_inputs.py '/path/to/sglang-checkout-with-this-exact-candidate'
+  modal run --detach anima_experiment.py
+  python download_results.py RUN_ID
+  python analyze_results.py results/RUN_ID
+
+Earlier launch/setup failures were excluded and preserved in launch*.log outside this result directory.
+The completed, internally matched comparison is run anima-20261003T224511Z-017ed58d.
+The Modal job has completed; no background benchmark remains scheduled.

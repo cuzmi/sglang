@@ -1,0 +1,611 @@
+{
+  "status": "complete",
+  "scope": "real model modulation components, no checkpoints or full generation",
+  "cases": [
+    {
+      "label": "flux/normal/torch.bfloat16/1",
+      "shape": [
+        1,
+        17,
+        3072
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 1,
+      "repeat_fused_calls": 1,
+      "output_sha256": "91b6114285da4ee38cb905a3da4cfdc534ab9b040c2ed46bfd24a28c251ce903"
+    },
+    {
+      "label": "flux/normal/torch.bfloat16/2",
+      "shape": [
+        2,
+        17,
+        3072
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "6c271376842e44fb896bee853ee657a796c18b09474c360931a723ef5e41035f"
+    },
+    {
+      "label": "flux/normal/torch.float16/1",
+      "shape": [
+        1,
+        17,
+        3072
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 1,
+      "repeat_fused_calls": 1,
+      "output_sha256": "ff080ac7a1f15a812198d10ca765601a235f8e29891ca2a1bd00acb0b37316dc"
+    },
+    {
+      "label": "flux/normal/torch.float16/2",
+      "shape": [
+        2,
+        17,
+        3072
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "19bf195a7281608b1c349d77ffd0c2298ad7da14cd1e2d479f3f92f5cfa10d76"
+    },
+    {
+      "label": "flux/normal/torch.float32/1",
+      "shape": [
+        1,
+        17,
+        3072
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "70e7ca4caf15f159155d8655f1fe8ceace1677a389aeb627558e25839c834ef8"
+    },
+    {
+      "label": "flux/normal/torch.float32/2",
+      "shape": [
+        2,
+        17,
+        3072
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "089f85f8036b3750057fb1c9d43c846ace7fce0cb35cf8d7d9202151aa53b571"
+    },
+    {
+      "label": "flux/fallback/torch.bfloat16/1",
+      "shape": [
+        1,
+        17,
+        3072
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 1,
+      "repeat_fused_calls": 1,
+      "output_sha256": "91b6114285da4ee38cb905a3da4cfdc534ab9b040c2ed46bfd24a28c251ce903"
+    },
+    {
+      "label": "flux/fallback/torch.bfloat16/2",
+      "shape": [
+        2,
+        17,
+        3072
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "6c271376842e44fb896bee853ee657a796c18b09474c360931a723ef5e41035f"
+    },
+    {
+      "label": "flux/fallback/torch.float16/1",
+      "shape": [
+        1,
+        17,
+        3072
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 1,
+      "repeat_fused_calls": 1,
+      "output_sha256": "ff080ac7a1f15a812198d10ca765601a235f8e29891ca2a1bd00acb0b37316dc"
+    },
+    {
+      "label": "flux/fallback/torch.float16/2",
+      "shape": [
+        2,
+        17,
+        3072
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "19bf195a7281608b1c349d77ffd0c2298ad7da14cd1e2d479f3f92f5cfa10d76"
+    },
+    {
+      "label": "flux/fallback/torch.float32/1",
+      "shape": [
+        1,
+        17,
+        3072
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "70e7ca4caf15f159155d8655f1fe8ceace1677a389aeb627558e25839c834ef8"
+    },
+    {
+      "label": "flux/fallback/torch.float32/2",
+      "shape": [
+        2,
+        17,
+        3072
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "089f85f8036b3750057fb1c9d43c846ace7fce0cb35cf8d7d9202151aa53b571"
+    },
+    {
+      "label": "ideogram/normal/torch.bfloat16/1",
+      "shape": [
+        1,
+        17,
+        4608
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 1,
+      "repeat_fused_calls": 1,
+      "output_sha256": "c8968d06228ceb6e572f7d9607e65957d162f63c85917d3874eeb5009b9a005e"
+    },
+    {
+      "label": "ideogram/normal/torch.bfloat16/2",
+      "shape": [
+        2,
+        17,
+        4608
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "ed649b37b41b5c0771e5d82b42053a2e826a447942a6510b49401270173bc63a"
+    },
+    {
+      "label": "ideogram/normal/torch.float16/1",
+      "shape": [
+        1,
+        17,
+        4608
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 1,
+      "repeat_fused_calls": 1,
+      "output_sha256": "1ce9efbbb4ff2cd60789d30486fd838557abcdac8470fcd6715d03a1b43d54fa"
+    },
+    {
+      "label": "ideogram/normal/torch.float16/2",
+      "shape": [
+        2,
+        17,
+        4608
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "9b707a6062da1dba9570a3bbe174165a9beca8c413572c71c9f00124a7ce8240"
+    },
+    {
+      "label": "ideogram/normal/torch.float32/1",
+      "shape": [
+        1,
+        17,
+        4608
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "405bc68fc879f983f7093779d316a5c120fcb1dc10ee99cbac79c5d0095e9652"
+    },
+    {
+      "label": "ideogram/normal/torch.float32/2",
+      "shape": [
+        2,
+        17,
+        4608
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "cdd19b6fe5c206efab76673a8b439a524f6d2c51e2f97b85e47838211851243a"
+    },
+    {
+      "label": "lingbot/normal/torch.bfloat16/1",
+      "shape": [
+        1,
+        17,
+        5120
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 1,
+      "repeat_fused_calls": 1,
+      "output_sha256": "985879d00a5b2cbc17d102328ced137ffbe49d34794a43a057fb3848211f7811"
+    },
+    {
+      "label": "lingbot/normal/torch.bfloat16/2",
+      "shape": [
+        2,
+        17,
+        5120
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 1,
+      "repeat_fused_calls": 1,
+      "output_sha256": "07665670c892ce8f21afc5ef6af112ab0d08970d403f2f854913531bdad8b3fd"
+    },
+    {
+      "label": "lingbot/normal/torch.float16/1",
+      "shape": [
+        1,
+        17,
+        5120
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 1,
+      "repeat_fused_calls": 1,
+      "output_sha256": "745f58d8f1ff6096bd8583fcb443e3ada8cf9ffbface4c3c3501eac6b91ff51f"
+    },
+    {
+      "label": "lingbot/normal/torch.float16/2",
+      "shape": [
+        2,
+        17,
+        5120
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 1,
+      "repeat_fused_calls": 1,
+      "output_sha256": "18005c3e8f36a00940ec5fca2db948f9b85f361b6a4208c1e1a2196c6a048803"
+    },
+    {
+      "label": "lingbot/normal/torch.float32/1",
+      "shape": [
+        1,
+        17,
+        5120
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "bc273ced7b8b0fa1485e381b978a868dc1938274d3c43032a0badc635b8524c9"
+    },
+    {
+      "label": "lingbot/normal/torch.float32/2",
+      "shape": [
+        2,
+        17,
+        5120
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "df281dd31a80bea9e182ee8d80bbe30aa147405d2209f0b233e661271ca66887"
+    },
+    {
+      "label": "lingbot/noncontiguous/torch.bfloat16/1",
+      "shape": [
+        1,
+        17,
+        5120
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "985879d00a5b2cbc17d102328ced137ffbe49d34794a43a057fb3848211f7811"
+    },
+    {
+      "label": "lingbot/noncontiguous/torch.bfloat16/2",
+      "shape": [
+        2,
+        17,
+        5120
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "07665670c892ce8f21afc5ef6af112ab0d08970d403f2f854913531bdad8b3fd"
+    },
+    {
+      "label": "lingbot/noncontiguous/torch.float16/1",
+      "shape": [
+        1,
+        17,
+        5120
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "745f58d8f1ff6096bd8583fcb443e3ada8cf9ffbface4c3c3501eac6b91ff51f"
+    },
+    {
+      "label": "lingbot/noncontiguous/torch.float16/2",
+      "shape": [
+        2,
+        17,
+        5120
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "18005c3e8f36a00940ec5fca2db948f9b85f361b6a4208c1e1a2196c6a048803"
+    },
+    {
+      "label": "lingbot/noncontiguous/torch.float32/1",
+      "shape": [
+        1,
+        17,
+        5120
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "bc273ced7b8b0fa1485e381b978a868dc1938274d3c43032a0badc635b8524c9"
+    },
+    {
+      "label": "lingbot/noncontiguous/torch.float32/2",
+      "shape": [
+        2,
+        17,
+        5120
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "df281dd31a80bea9e182ee8d80bbe30aa147405d2209f0b233e661271ca66887"
+    },
+    {
+      "label": "ltx_video/normal/torch.bfloat16/1",
+      "shape": [
+        1,
+        17,
+        4096
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 1,
+      "repeat_fused_calls": 1,
+      "output_sha256": "696340cece3d00f5241e4ffd21a15d74484c7475fc4df2030e92f5828b956a9a"
+    },
+    {
+      "label": "ltx_video/normal/torch.bfloat16/2",
+      "shape": [
+        2,
+        17,
+        4096
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 1,
+      "repeat_fused_calls": 1,
+      "output_sha256": "34104d01a341a7244dc33d614a062f9ece601fa7c2272006a63df21b7d558e59"
+    },
+    {
+      "label": "ltx_video/normal/torch.float16/1",
+      "shape": [
+        1,
+        17,
+        4096
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 1,
+      "repeat_fused_calls": 1,
+      "output_sha256": "d1daf9d62dbc7180945c831bc0bc87794056ec5ed04cc913f06d5e1a9b3cb07d"
+    },
+    {
+      "label": "ltx_video/normal/torch.float16/2",
+      "shape": [
+        2,
+        17,
+        4096
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 1,
+      "repeat_fused_calls": 1,
+      "output_sha256": "c850c35c32a31612ec5dee029f1ec3c891d2b097d7d62d84484aa19c2e793cb3"
+    },
+    {
+      "label": "ltx_video/normal/torch.float32/1",
+      "shape": [
+        1,
+        17,
+        4096
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "39bbdbc03240064c6604bd74ea5b7b1d45eba5b25f2a93b1d0f8821797828b5e"
+    },
+    {
+      "label": "ltx_video/normal/torch.float32/2",
+      "shape": [
+        2,
+        17,
+        4096
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "9125eb1cb1a43c271b2df421b4d76bd0c2ea4837837f177de556554250f6a3bf"
+    },
+    {
+      "label": "ltx_video/per_token/torch.bfloat16/1",
+      "shape": [
+        1,
+        17,
+        4096
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "93e9363315f7aa014301aae2807123e0d2ab6fcc0cd8d90b7a7a299adfabd267"
+    },
+    {
+      "label": "ltx_video/per_token/torch.bfloat16/2",
+      "shape": [
+        2,
+        17,
+        4096
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "399d64083b9ebc95c1c4a6ac476856d2957110fbe0bee20ef969775a3c37758b"
+    },
+    {
+      "label": "ltx_video/per_token/torch.float16/1",
+      "shape": [
+        1,
+        17,
+        4096
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "d2302ca6c9c7fe10c0828306fb6889b52fa1ebc95b0456014c3b296f806265e2"
+    },
+    {
+      "label": "ltx_video/per_token/torch.float16/2",
+      "shape": [
+        2,
+        17,
+        4096
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "2bae8f0410bc7bd7029ef67eae4e3839d5a1bcc3a16986bc2a5ba15ceb8b17d2"
+    },
+    {
+      "label": "ltx_video/per_token/torch.float32/1",
+      "shape": [
+        1,
+        17,
+        4096
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "1cb532a5348f379284534f66639da01adfcc376182061620a88636f7350a63f9"
+    },
+    {
+      "label": "ltx_video/per_token/torch.float32/2",
+      "shape": [
+        2,
+        17,
+        4096
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "09cb6b9f61449c496bf85831e764be09e10ee54f0ce092adfbcdc1ac04a0c465"
+    },
+    {
+      "label": "ltx_audio/normal/torch.bfloat16/1",
+      "shape": [
+        1,
+        17,
+        2048
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 1,
+      "repeat_fused_calls": 1,
+      "output_sha256": "eb7f3e3674cf13b6bcdff9d911afcbb5a73b97096429cde5c4144c5df5e32d5a"
+    },
+    {
+      "label": "ltx_audio/normal/torch.bfloat16/2",
+      "shape": [
+        2,
+        17,
+        2048
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 1,
+      "repeat_fused_calls": 1,
+      "output_sha256": "f57c10b9075c94d6322dd6fe24b3214306a0dd484f293344296f826d7c60d354"
+    },
+    {
+      "label": "ltx_audio/normal/torch.float16/1",
+      "shape": [
+        1,
+        17,
+        2048
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 1,
+      "repeat_fused_calls": 1,
+      "output_sha256": "fa2ce26082cd66bd5f824a33bf34f6c463ff2c69550d9b320390147c6180dcec"
+    },
+    {
+      "label": "ltx_audio/normal/torch.float16/2",
+      "shape": [
+        2,
+        17,
+        2048
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 1,
+      "repeat_fused_calls": 1,
+      "output_sha256": "db9cced823f2b13c80e5d86d06b0462f86f671911c7b3d86422c1cacbb91c2f8"
+    },
+    {
+      "label": "ltx_audio/normal/torch.float32/1",
+      "shape": [
+        1,
+        17,
+        2048
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "3e992e66fd06c2f804b75f938dafb9f98e3a950593014b40d16de6acc8661078"
+    },
+    {
+      "label": "ltx_audio/normal/torch.float32/2",
+      "shape": [
+        2,
+        17,
+        2048
+      ],
+      "bit_exact": true,
+      "first_fused_calls": 0,
+      "repeat_fused_calls": 0,
+      "output_sha256": "e99ae2e26e97060c06c4fa5799d8e52a6c582e909a714dc43c138eb2481f5692"
+    }
+  ],
+  "graphs": [
+    {
+      "model": "flux",
+      "bit_exact": true,
+      "input_changed_before_replay": true
+    },
+    {
+      "model": "ideogram",
+      "bit_exact": true,
+      "input_changed_before_replay": true
+    },
+    {
+      "model": "lingbot",
+      "bit_exact": true,
+      "input_changed_before_replay": true
+    },
+    {
+      "model": "ltx_video",
+      "bit_exact": true,
+      "input_changed_before_replay": true
+    },
+    {
+      "model": "ltx_audio",
+      "bit_exact": true,
+      "input_changed_before_replay": true
+    }
+  ],
+  "errors": [],
+  "shared_error_propagation": "passed"
+}

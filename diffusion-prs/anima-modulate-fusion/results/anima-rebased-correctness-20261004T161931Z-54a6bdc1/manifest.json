@@ -1,0 +1,148 @@
+{
+  "status": "complete",
+  "baseline_commit": "affa261e3d289fe4f907c9b2e8d773fef0d36dba",
+  "scope": "checkpoint-free real modulation entrypoints; no timing or full image/video generation",
+  "gpu": "NVIDIA H200",
+  "cuda": "13.0",
+  "packages": {
+    "torch": "2.13.0+cu130",
+    "triton": "3.7.1",
+    "diffusers": "0.37.0",
+    "transformers": "5.12.1",
+    "apache-tvm-ffi": "0.1.11"
+  },
+  "baseline_sha256": "dcbce5b2978f460ba98f0b6e6c647b9432c055e3c1221efbde7029e6341e3bec",
+  "candidate_sha256": "9fd588001fb3b7b9bd0abbc68c4f1210278cb19f40eea45ed74f649e2daa190e",
+  "candidate_commit": "05bee50b2f4fef4484bab3db3bff7ef4495e98e5",
+  "candidate_model_sha256": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013",
+  "arms": [
+    {
+      "variant": "baseline",
+      "backend_sha256": "dcbce5b2978f460ba98f0b6e6c647b9432c055e3c1221efbde7029e6341e3bec",
+      "tests": {
+        "caller-checks": {
+          "command": [
+            "/opt/sglang/bin/python",
+            "/workspace/check_callers.py",
+            "/results/anima-rebased-correctness-20261004T161931Z-54a6bdc1/baseline"
+          ],
+          "exit_code": 0
+        },
+        "existing-kernel": {
+          "command": [
+            "/opt/sglang/bin/python",
+            "-m",
+            "pytest",
+            "-q",
+            "test/registered/kernels/ops/diffusion/test_modulate.py",
+            "-k",
+            "modulate_scale_shift"
+          ],
+          "exit_code": 0
+        },
+        "existing-model-sites": {
+          "command": [
+            "/opt/sglang/bin/python",
+            "-m",
+            "pytest",
+            "-q",
+            "test/registered/kernels/ops/diffusion/test_model_fast_paths.py",
+            "-k",
+            "flux_fused_ln_modulate or flux_norm_modulate or ltx2_lossless"
+          ],
+          "exit_code": 0
+        },
+        "existing-ltx-layout": {
+          "command": [
+            "/opt/sglang/bin/python",
+            "-m",
+            "pytest",
+            "-q",
+            "python/sglang/multimodal_gen/test/unit/test_ltx2_modulate_mount.py"
+          ],
+          "exit_code": 0
+        },
+        "existing-anima": {
+          "command": [
+            "/opt/sglang/bin/python",
+            "-m",
+            "pytest",
+            "-q",
+            "python/sglang/multimodal_gen/test/unit/test_anima.py",
+            "python/sglang/multimodal_gen/test/unit/test_anima_cuda.py"
+          ],
+          "exit_code": 0
+        }
+      }
+    },
+    {
+      "variant": "candidate",
+      "backend_sha256": "9fd588001fb3b7b9bd0abbc68c4f1210278cb19f40eea45ed74f649e2daa190e",
+      "tests": {
+        "caller-checks": {
+          "command": [
+            "/opt/sglang/bin/python",
+            "/workspace/check_callers.py",
+            "/results/anima-rebased-correctness-20261004T161931Z-54a6bdc1/candidate"
+          ],
+          "exit_code": 0
+        },
+        "existing-kernel": {
+          "command": [
+            "/opt/sglang/bin/python",
+            "-m",
+            "pytest",
+            "-q",
+            "test/registered/kernels/ops/diffusion/test_modulate.py",
+            "-k",
+            "modulate_scale_shift"
+          ],
+          "exit_code": 0
+        },
+        "existing-model-sites": {
+          "command": [
+            "/opt/sglang/bin/python",
+            "-m",
+            "pytest",
+            "-q",
+            "test/registered/kernels/ops/diffusion/test_model_fast_paths.py",
+            "-k",
+            "flux_fused_ln_modulate or flux_norm_modulate or ltx2_lossless"
+          ],
+          "exit_code": 0
+        },
+        "existing-ltx-layout": {
+          "command": [
+            "/opt/sglang/bin/python",
+            "-m",
+            "pytest",
+            "-q",
+            "python/sglang/multimodal_gen/test/unit/test_ltx2_modulate_mount.py"
+          ],
+          "exit_code": 0
+        },
+        "existing-anima": {
+          "command": [
+            "/opt/sglang/bin/python",
+            "-m",
+            "pytest",
+            "-q",
+            "python/sglang/multimodal_gen/test/unit/test_anima.py",
+            "python/sglang/multimodal_gen/test/unit/test_anima_cuda.py"
+          ],
+          "exit_code": 0
+        },
+        "full-adaln": {
+          "command": [
+            "/opt/sglang/bin/python",
+            "/workspace/verify_rebased_anima.py",
+            "/results/anima-rebased-correctness-20261004T161931Z-54a6bdc1/candidate/anima.json"
+          ],
+          "exit_code": 0
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "matching_case_outputs": true
+}

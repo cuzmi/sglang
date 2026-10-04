@@ -1,0 +1,2653 @@
+{
+  "status": "complete",
+  "baseline_commit": "6fa3fe69e2e5e19b75cadd9fc285b72634551992",
+  "archive_sha256": "349f9021b4d7bcd7d3c42425d1691fccc42f8d75f2ac5054882407d621ebb233",
+  "baseline_source_sha256": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6",
+  "candidate_source_sha256": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013",
+  "model_id": "circlestone-labs/Anima-Base-v1.0-Diffusers",
+  "model_revision": "073c3a9db359c31ad0e8aa268d15775473c2176c",
+  "prompt": "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+  "gpu": "NVIDIA H200",
+  "cuda": "13.0",
+  "runs": [
+    {
+      "label": "01-baseline",
+      "variant": "baseline",
+      "profile": false,
+      "seed": 42,
+      "size": 1024,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-20261003T224511Z-017ed58d/01-baseline/perf.json",
+        "--output-path",
+        "/results/anima-20261003T224511Z-017ed58d/01-baseline/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3792.128457999979,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 113.48045099998672
+        },
+        {
+          "step": 1,
+          "duration_ms": 115.531830000009
+        },
+        {
+          "step": 2,
+          "duration_ms": 111.41906099999233
+        },
+        {
+          "step": 3,
+          "duration_ms": 113.36335800001507
+        },
+        {
+          "step": 4,
+          "duration_ms": 112.34449900001664
+        },
+        {
+          "step": 5,
+          "duration_ms": 108.11326800001098
+        },
+        {
+          "step": 6,
+          "duration_ms": 110.9536920000096
+        },
+        {
+          "step": 7,
+          "duration_ms": 112.8824790000067
+        },
+        {
+          "step": 8,
+          "duration_ms": 110.58339499999192
+        },
+        {
+          "step": 9,
+          "duration_ms": 111.53287299998738
+        },
+        {
+          "step": 10,
+          "duration_ms": 112.82407799996008
+        },
+        {
+          "step": 11,
+          "duration_ms": 111.12526599998773
+        },
+        {
+          "step": 12,
+          "duration_ms": 112.28828399998747
+        },
+        {
+          "step": 13,
+          "duration_ms": 112.29968300000337
+        },
+        {
+          "step": 14,
+          "duration_ms": 111.25421399998459
+        },
+        {
+          "step": 15,
+          "duration_ms": 111.5409189999923
+        },
+        {
+          "step": 16,
+          "duration_ms": 111.70776199998045
+        },
+        {
+          "step": 17,
+          "duration_ms": 109.63943300004075
+        },
+        {
+          "step": 18,
+          "duration_ms": 112.80279300001439
+        },
+        {
+          "step": 19,
+          "duration_ms": 109.12070300003052
+        },
+        {
+          "step": 20,
+          "duration_ms": 112.11742000000413
+        },
+        {
+          "step": 21,
+          "duration_ms": 108.61905299998398
+        },
+        {
+          "step": 22,
+          "duration_ms": 112.15376900003093
+        },
+        {
+          "step": 23,
+          "duration_ms": 113.02475599995887
+        },
+        {
+          "step": 24,
+          "duration_ms": 115.01434400003063
+        },
+        {
+          "step": 25,
+          "duration_ms": 111.74670100001549
+        },
+        {
+          "step": 26,
+          "duration_ms": 113.92971399999396
+        },
+        {
+          "step": 27,
+          "duration_ms": 111.6370599999641
+        },
+        {
+          "step": 28,
+          "duration_ms": 113.29124100001309
+        },
+        {
+          "step": 29,
+          "duration_ms": 114.00940499999024
+        }
+      ],
+      "denoise_ms": 3360.3515039999934,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "mode": "RGB",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6"
+    },
+    {
+      "label": "02-candidate",
+      "variant": "candidate",
+      "profile": false,
+      "seed": 42,
+      "size": 1024,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-20261003T224511Z-017ed58d/02-candidate/perf.json",
+        "--output-path",
+        "/results/anima-20261003T224511Z-017ed58d/02-candidate/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3980.2680320000263,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 120.08733599998322
+        },
+        {
+          "step": 1,
+          "duration_ms": 117.42526499995165
+        },
+        {
+          "step": 2,
+          "duration_ms": 119.823651000047
+        },
+        {
+          "step": 3,
+          "duration_ms": 116.90114500004256
+        },
+        {
+          "step": 4,
+          "duration_ms": 118.51372500001389
+        },
+        {
+          "step": 5,
+          "duration_ms": 117.69443999997975
+        },
+        {
+          "step": 6,
+          "duration_ms": 118.63734799999293
+        },
+        {
+          "step": 7,
+          "duration_ms": 118.73540999999932
+        },
+        {
+          "step": 8,
+          "duration_ms": 116.83480299996063
+        },
+        {
+          "step": 9,
+          "duration_ms": 118.10780700000123
+        },
+        {
+          "step": 10,
+          "duration_ms": 116.07706900002768
+        },
+        {
+          "step": 11,
+          "duration_ms": 114.07277199998589
+        },
+        {
+          "step": 12,
+          "duration_ms": 118.02588599999808
+        },
+        {
+          "step": 13,
+          "duration_ms": 116.29997300002515
+        },
+        {
+          "step": 14,
+          "duration_ms": 120.35108999998556
+        },
+        {
+          "step": 15,
+          "duration_ms": 118.16342800000257
+        },
+        {
+          "step": 16,
+          "duration_ms": 120.47956200001408
+        },
+        {
+          "step": 17,
+          "duration_ms": 115.31573500002423
+        },
+        {
+          "step": 18,
+          "duration_ms": 122.63432299999977
+        },
+        {
+          "step": 19,
+          "duration_ms": 115.938615999994
+        },
+        {
+          "step": 20,
+          "duration_ms": 118.96240400000124
+        },
+        {
+          "step": 21,
+          "duration_ms": 119.25109900005282
+        },
+        {
+          "step": 22,
+          "duration_ms": 119.63967599996295
+        },
+        {
+          "step": 23,
+          "duration_ms": 115.53240900002493
+        },
+        {
+          "step": 24,
+          "duration_ms": 119.65358599996989
+        },
+        {
+          "step": 25,
+          "duration_ms": 117.88756400000011
+        },
+        {
+          "step": 26,
+          "duration_ms": 117.24869199997556
+        },
+        {
+          "step": 27,
+          "duration_ms": 118.93181400000685
+        },
+        {
+          "step": 28,
+          "duration_ms": 117.55908800000725
+        },
+        {
+          "step": 29,
+          "duration_ms": 115.40021700000125
+        }
+      ],
+      "denoise_ms": 3540.185933000032,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "mode": "RGB",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013"
+    },
+    {
+      "label": "03-candidate",
+      "variant": "candidate",
+      "profile": false,
+      "seed": 42,
+      "size": 1024,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-20261003T224511Z-017ed58d/03-candidate/perf.json",
+        "--output-path",
+        "/results/anima-20261003T224511Z-017ed58d/03-candidate/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3987.4288460000002,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 118.19803000003049
+        },
+        {
+          "step": 1,
+          "duration_ms": 117.4857660000157
+        },
+        {
+          "step": 2,
+          "duration_ms": 117.80333200005089
+        },
+        {
+          "step": 3,
+          "duration_ms": 120.62414100000751
+        },
+        {
+          "step": 4,
+          "duration_ms": 119.95219400000678
+        },
+        {
+          "step": 5,
+          "duration_ms": 115.77613700001166
+        },
+        {
+          "step": 6,
+          "duration_ms": 118.39171600001919
+        },
+        {
+          "step": 7,
+          "duration_ms": 115.60132300002124
+        },
+        {
+          "step": 8,
+          "duration_ms": 118.35926399999153
+        },
+        {
+          "step": 9,
+          "duration_ms": 117.76851400003352
+        },
+        {
+          "step": 10,
+          "duration_ms": 118.57810900005461
+        },
+        {
+          "step": 11,
+          "duration_ms": 118.54168800005027
+        },
+        {
+          "step": 12,
+          "duration_ms": 118.07194199997184
+        },
+        {
+          "step": 13,
+          "duration_ms": 119.96499800000038
+        },
+        {
+          "step": 14,
+          "duration_ms": 120.23586300000488
+        },
+        {
+          "step": 15,
+          "duration_ms": 117.317958000001
+        },
+        {
+          "step": 16,
+          "duration_ms": 120.3231149999624
+        },
+        {
+          "step": 17,
+          "duration_ms": 118.82595600002333
+        },
+        {
+          "step": 18,
+          "duration_ms": 120.47646700000314
+        },
+        {
+          "step": 19,
+          "duration_ms": 119.49626900002386
+        },
+        {
+          "step": 20,
+          "duration_ms": 116.57081799995694
+        },
+        {
+          "step": 21,
+          "duration_ms": 119.80274299997973
+        },
+        {
+          "step": 22,
+          "duration_ms": 118.74855199999956
+        },
+        {
+          "step": 23,
+          "duration_ms": 119.09841900001084
+        },
+        {
+          "step": 24,
+          "duration_ms": 115.62123400000246
+        },
+        {
+          "step": 25,
+          "duration_ms": 121.47947399995473
+        },
+        {
+          "step": 26,
+          "duration_ms": 118.9715869999759
+        },
+        {
+          "step": 27,
+          "duration_ms": 120.81246100001408
+        },
+        {
+          "step": 28,
+          "duration_ms": 116.43600799999376
+        },
+        {
+          "step": 29,
+          "duration_ms": 117.2523730000421
+        }
+      ],
+      "denoise_ms": 3556.5864510002143,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "mode": "RGB",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013"
+    },
+    {
+      "label": "04-baseline",
+      "variant": "baseline",
+      "profile": false,
+      "seed": 42,
+      "size": 1024,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-20261003T224511Z-017ed58d/04-baseline/perf.json",
+        "--output-path",
+        "/results/anima-20261003T224511Z-017ed58d/04-baseline/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3830.498422000005,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 116.94970199994259
+        },
+        {
+          "step": 1,
+          "duration_ms": 110.89934899996479
+        },
+        {
+          "step": 2,
+          "duration_ms": 114.43472499991003
+        },
+        {
+          "step": 3,
+          "duration_ms": 115.36789199999475
+        },
+        {
+          "step": 4,
+          "duration_ms": 112.86409599995295
+        },
+        {
+          "step": 5,
+          "duration_ms": 113.74789100000271
+        },
+        {
+          "step": 6,
+          "duration_ms": 113.42085500007215
+        },
+        {
+          "step": 7,
+          "duration_ms": 109.73143700005039
+        },
+        {
+          "step": 8,
+          "duration_ms": 114.84557199992196
+        },
+        {
+          "step": 9,
+          "duration_ms": 113.38521499999388
+        },
+        {
+          "step": 10,
+          "duration_ms": 115.05962700005057
+        },
+        {
+          "step": 11,
+          "duration_ms": 114.32763200002682
+        },
+        {
+          "step": 12,
+          "duration_ms": 115.39990200003558
+        },
+        {
+          "step": 13,
+          "duration_ms": 110.04061500000262
+        },
+        {
+          "step": 14,
+          "duration_ms": 114.24717900001724
+        },
+        {
+          "step": 15,
+          "duration_ms": 109.83522699996229
+        },
+        {
+          "step": 16,
+          "duration_ms": 109.32910700000775
+        },
+        {
+          "step": 17,
+          "duration_ms": 116.87323700004981
+        },
+        {
+          "step": 18,
+          "duration_ms": 111.17399200009004
+        },
+        {
+          "step": 19,
+          "duration_ms": 113.05718699998124
+        },
+        {
+          "step": 20,
+          "duration_ms": 110.28014400005759
+        },
+        {
+          "step": 21,
+          "duration_ms": 117.78144499999144
+        },
+        {
+          "step": 22,
+          "duration_ms": 114.86859199999344
+        },
+        {
+          "step": 23,
+          "duration_ms": 111.07605300003343
+        },
+        {
+          "step": 24,
+          "duration_ms": 113.0777199999784
+        },
+        {
+          "step": 25,
+          "duration_ms": 115.17016999994212
+        },
+        {
+          "step": 26,
+          "duration_ms": 111.93663000005927
+        },
+        {
+          "step": 27,
+          "duration_ms": 111.15216500002134
+        },
+        {
+          "step": 28,
+          "duration_ms": 114.3538039999612
+        },
+        {
+          "step": 29,
+          "duration_ms": 114.46732599995357
+        }
+      ],
+      "denoise_ms": 3399.154488000022,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "mode": "RGB",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6"
+    },
+    {
+      "label": "05-baseline",
+      "variant": "baseline",
+      "profile": false,
+      "seed": 42,
+      "size": 1024,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-20261003T224511Z-017ed58d/05-baseline/perf.json",
+        "--output-path",
+        "/results/anima-20261003T224511Z-017ed58d/05-baseline/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3730.830578999985,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 109.16046299996651
+        },
+        {
+          "step": 1,
+          "duration_ms": 110.40390599998773
+        },
+        {
+          "step": 2,
+          "duration_ms": 112.12422800008426
+        },
+        {
+          "step": 3,
+          "duration_ms": 109.59169099999144
+        },
+        {
+          "step": 4,
+          "duration_ms": 109.19331299999158
+        },
+        {
+          "step": 5,
+          "duration_ms": 109.43387800000437
+        },
+        {
+          "step": 6,
+          "duration_ms": 109.53252000001612
+        },
+        {
+          "step": 7,
+          "duration_ms": 113.72632799998428
+        },
+        {
+          "step": 8,
+          "duration_ms": 112.85895899993648
+        },
+        {
+          "step": 9,
+          "duration_ms": 109.25019899991639
+        },
+        {
+          "step": 10,
+          "duration_ms": 110.19640699998945
+        },
+        {
+          "step": 11,
+          "duration_ms": 112.2451749999982
+        },
+        {
+          "step": 12,
+          "duration_ms": 113.22108399997433
+        },
+        {
+          "step": 13,
+          "duration_ms": 109.81091000007837
+        },
+        {
+          "step": 14,
+          "duration_ms": 111.2145759999521
+        },
+        {
+          "step": 15,
+          "duration_ms": 109.77831899992907
+        },
+        {
+          "step": 16,
+          "duration_ms": 111.798967000027
+        },
+        {
+          "step": 17,
+          "duration_ms": 109.36879600001248
+        },
+        {
+          "step": 18,
+          "duration_ms": 109.44092900001579
+        },
+        {
+          "step": 19,
+          "duration_ms": 113.0843170000162
+        },
+        {
+          "step": 20,
+          "duration_ms": 109.2576649999728
+        },
+        {
+          "step": 21,
+          "duration_ms": 109.64296300005572
+        },
+        {
+          "step": 22,
+          "duration_ms": 110.32262500009438
+        },
+        {
+          "step": 23,
+          "duration_ms": 109.24924500000088
+        },
+        {
+          "step": 24,
+          "duration_ms": 110.67147200003546
+        },
+        {
+          "step": 25,
+          "duration_ms": 110.12934099994709
+        },
+        {
+          "step": 26,
+          "duration_ms": 108.67814400000952
+        },
+        {
+          "step": 27,
+          "duration_ms": 109.51226800000313
+        },
+        {
+          "step": 28,
+          "duration_ms": 109.2249629999742
+        },
+        {
+          "step": 29,
+          "duration_ms": 109.02175899991562
+        }
+      ],
+      "denoise_ms": 3311.145409999881,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "mode": "RGB",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6"
+    },
+    {
+      "label": "06-candidate",
+      "variant": "candidate",
+      "profile": false,
+      "seed": 42,
+      "size": 1024,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-20261003T224511Z-017ed58d/06-candidate/perf.json",
+        "--output-path",
+        "/results/anima-20261003T224511Z-017ed58d/06-candidate/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 4031.3381910000317,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 118.42526400005227
+        },
+        {
+          "step": 1,
+          "duration_ms": 115.79236399995807
+        },
+        {
+          "step": 2,
+          "duration_ms": 117.45614699998441
+        },
+        {
+          "step": 3,
+          "duration_ms": 113.38185200008866
+        },
+        {
+          "step": 4,
+          "duration_ms": 117.48329900001409
+        },
+        {
+          "step": 5,
+          "duration_ms": 119.34504400005608
+        },
+        {
+          "step": 6,
+          "duration_ms": 115.6561340000053
+        },
+        {
+          "step": 7,
+          "duration_ms": 117.12931300007767
+        },
+        {
+          "step": 8,
+          "duration_ms": 116.43556000001354
+        },
+        {
+          "step": 9,
+          "duration_ms": 115.91874900000221
+        },
+        {
+          "step": 10,
+          "duration_ms": 119.43034600005831
+        },
+        {
+          "step": 11,
+          "duration_ms": 117.7879420000636
+        },
+        {
+          "step": 12,
+          "duration_ms": 118.61674799990851
+        },
+        {
+          "step": 13,
+          "duration_ms": 119.91454200006046
+        },
+        {
+          "step": 14,
+          "duration_ms": 116.8711649999068
+        },
+        {
+          "step": 15,
+          "duration_ms": 118.04467699994348
+        },
+        {
+          "step": 16,
+          "duration_ms": 120.3322000000071
+        },
+        {
+          "step": 17,
+          "duration_ms": 118.76361099996302
+        },
+        {
+          "step": 18,
+          "duration_ms": 116.3566660000015
+        },
+        {
+          "step": 19,
+          "duration_ms": 120.46414200005984
+        },
+        {
+          "step": 20,
+          "duration_ms": 119.45523600002161
+        },
+        {
+          "step": 21,
+          "duration_ms": 120.75941099999454
+        },
+        {
+          "step": 22,
+          "duration_ms": 117.44325799998023
+        },
+        {
+          "step": 23,
+          "duration_ms": 116.65525299997626
+        },
+        {
+          "step": 24,
+          "duration_ms": 118.63187999995262
+        },
+        {
+          "step": 25,
+          "duration_ms": 116.84553700001743
+        },
+        {
+          "step": 26,
+          "duration_ms": 118.24991299999965
+        },
+        {
+          "step": 27,
+          "duration_ms": 121.35875199999191
+        },
+        {
+          "step": 28,
+          "duration_ms": 120.79987899994649
+        },
+        {
+          "step": 29,
+          "duration_ms": 117.49402800001008
+        }
+      ],
+      "denoise_ms": 3541.2989120001157,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "mode": "RGB",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013"
+    },
+    {
+      "label": "07-candidate",
+      "variant": "candidate",
+      "profile": false,
+      "seed": 42,
+      "size": 1024,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-20261003T224511Z-017ed58d/07-candidate/perf.json",
+        "--output-path",
+        "/results/anima-20261003T224511Z-017ed58d/07-candidate/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3988.637960999995,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 119.2959840000185
+        },
+        {
+          "step": 1,
+          "duration_ms": 122.41257300001962
+        },
+        {
+          "step": 2,
+          "duration_ms": 117.27395599996271
+        },
+        {
+          "step": 3,
+          "duration_ms": 117.0082819999152
+        },
+        {
+          "step": 4,
+          "duration_ms": 116.72570600001109
+        },
+        {
+          "step": 5,
+          "duration_ms": 117.5341320000598
+        },
+        {
+          "step": 6,
+          "duration_ms": 118.21669400001156
+        },
+        {
+          "step": 7,
+          "duration_ms": 116.80847799993899
+        },
+        {
+          "step": 8,
+          "duration_ms": 117.96515000003183
+        },
+        {
+          "step": 9,
+          "duration_ms": 118.06679199992232
+        },
+        {
+          "step": 10,
+          "duration_ms": 119.86862399999154
+        },
+        {
+          "step": 11,
+          "duration_ms": 117.35854300002302
+        },
+        {
+          "step": 12,
+          "duration_ms": 117.13429899998573
+        },
+        {
+          "step": 13,
+          "duration_ms": 119.49100300000737
+        },
+        {
+          "step": 14,
+          "duration_ms": 118.340842000066
+        },
+        {
+          "step": 15,
+          "duration_ms": 120.40230999991763
+        },
+        {
+          "step": 16,
+          "duration_ms": 120.24249800003872
+        },
+        {
+          "step": 17,
+          "duration_ms": 118.27037000000473
+        },
+        {
+          "step": 18,
+          "duration_ms": 119.38992099999268
+        },
+        {
+          "step": 19,
+          "duration_ms": 119.92335700006151
+        },
+        {
+          "step": 20,
+          "duration_ms": 114.62119700001949
+        },
+        {
+          "step": 21,
+          "duration_ms": 117.70870500004094
+        },
+        {
+          "step": 22,
+          "duration_ms": 118.58316199993624
+        },
+        {
+          "step": 23,
+          "duration_ms": 120.5579279999256
+        },
+        {
+          "step": 24,
+          "duration_ms": 116.6976759999443
+        },
+        {
+          "step": 25,
+          "duration_ms": 119.55140999998548
+        },
+        {
+          "step": 26,
+          "duration_ms": 117.12773499994
+        },
+        {
+          "step": 27,
+          "duration_ms": 118.0704409999862
+        },
+        {
+          "step": 28,
+          "duration_ms": 118.43576799992661
+        },
+        {
+          "step": 29,
+          "duration_ms": 117.98349900004723
+        }
+      ],
+      "denoise_ms": 3551.0670349997326,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "mode": "RGB",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013"
+    },
+    {
+      "label": "08-baseline",
+      "variant": "baseline",
+      "profile": false,
+      "seed": 42,
+      "size": 1024,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-20261003T224511Z-017ed58d/08-baseline/perf.json",
+        "--output-path",
+        "/results/anima-20261003T224511Z-017ed58d/08-baseline/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3883.550108999998,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 116.01809400008278
+        },
+        {
+          "step": 1,
+          "duration_ms": 114.19049899996025
+        },
+        {
+          "step": 2,
+          "duration_ms": 117.12933399996928
+        },
+        {
+          "step": 3,
+          "duration_ms": 118.40508700004193
+        },
+        {
+          "step": 4,
+          "duration_ms": 114.03621400006614
+        },
+        {
+          "step": 5,
+          "duration_ms": 114.71715699997276
+        },
+        {
+          "step": 6,
+          "duration_ms": 113.096106999933
+        },
+        {
+          "step": 7,
+          "duration_ms": 112.21802000000025
+        },
+        {
+          "step": 8,
+          "duration_ms": 113.74679899995499
+        },
+        {
+          "step": 9,
+          "duration_ms": 114.49048299994047
+        },
+        {
+          "step": 10,
+          "duration_ms": 113.8575209999999
+        },
+        {
+          "step": 11,
+          "duration_ms": 117.99255999994784
+        },
+        {
+          "step": 12,
+          "duration_ms": 115.27775899992321
+        },
+        {
+          "step": 13,
+          "duration_ms": 112.42305500002203
+        },
+        {
+          "step": 14,
+          "duration_ms": 112.99297599998681
+        },
+        {
+          "step": 15,
+          "duration_ms": 113.57483699998738
+        },
+        {
+          "step": 16,
+          "duration_ms": 115.23919900002966
+        },
+        {
+          "step": 17,
+          "duration_ms": 116.52742299997954
+        },
+        {
+          "step": 18,
+          "duration_ms": 111.7359029999534
+        },
+        {
+          "step": 19,
+          "duration_ms": 113.85433299994929
+        },
+        {
+          "step": 20,
+          "duration_ms": 115.47492300007889
+        },
+        {
+          "step": 21,
+          "duration_ms": 116.31000700003824
+        },
+        {
+          "step": 22,
+          "duration_ms": 117.79106599999523
+        },
+        {
+          "step": 23,
+          "duration_ms": 115.18812600002093
+        },
+        {
+          "step": 24,
+          "duration_ms": 116.44740000008369
+        },
+        {
+          "step": 25,
+          "duration_ms": 112.55712699994547
+        },
+        {
+          "step": 26,
+          "duration_ms": 112.91866399994888
+        },
+        {
+          "step": 27,
+          "duration_ms": 116.08869299993785
+        },
+        {
+          "step": 28,
+          "duration_ms": 114.14132699997026
+        },
+        {
+          "step": 29,
+          "duration_ms": 110.71772200000396
+        }
+      ],
+      "denoise_ms": 3439.1584149997243,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "mode": "RGB",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6"
+    },
+    {
+      "label": "quality-baseline",
+      "variant": "baseline",
+      "profile": false,
+      "seed": 123,
+      "size": 512,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "512",
+        "--height",
+        "512",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "123",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-20261003T224511Z-017ed58d/quality-baseline/perf.json",
+        "--output-path",
+        "/results/anima-20261003T224511Z-017ed58d/quality-baseline/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3614.0871540000035,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 117.35953899994911
+        },
+        {
+          "step": 1,
+          "duration_ms": 116.84511999999359
+        },
+        {
+          "step": 2,
+          "duration_ms": 111.89952600000197
+        },
+        {
+          "step": 3,
+          "duration_ms": 113.66963900002247
+        },
+        {
+          "step": 4,
+          "duration_ms": 114.54601599996295
+        },
+        {
+          "step": 5,
+          "duration_ms": 116.41986400002224
+        },
+        {
+          "step": 6,
+          "duration_ms": 114.81922400002986
+        },
+        {
+          "step": 7,
+          "duration_ms": 114.73415199998271
+        },
+        {
+          "step": 8,
+          "duration_ms": 118.15283600003568
+        },
+        {
+          "step": 9,
+          "duration_ms": 114.24000299996351
+        },
+        {
+          "step": 10,
+          "duration_ms": 116.41662399995312
+        },
+        {
+          "step": 11,
+          "duration_ms": 112.98851900005502
+        },
+        {
+          "step": 12,
+          "duration_ms": 115.83509299998695
+        },
+        {
+          "step": 13,
+          "duration_ms": 113.62951700004942
+        },
+        {
+          "step": 14,
+          "duration_ms": 113.00275399992188
+        },
+        {
+          "step": 15,
+          "duration_ms": 113.69992700008424
+        },
+        {
+          "step": 16,
+          "duration_ms": 114.94492099996023
+        },
+        {
+          "step": 17,
+          "duration_ms": 111.61516800007121
+        },
+        {
+          "step": 18,
+          "duration_ms": 115.79504700000598
+        },
+        {
+          "step": 19,
+          "duration_ms": 115.33632800001214
+        },
+        {
+          "step": 20,
+          "duration_ms": 117.2237440000572
+        },
+        {
+          "step": 21,
+          "duration_ms": 116.00836200000231
+        },
+        {
+          "step": 22,
+          "duration_ms": 112.36646899999414
+        },
+        {
+          "step": 23,
+          "duration_ms": 113.70205399998667
+        },
+        {
+          "step": 24,
+          "duration_ms": 114.31740600005469
+        },
+        {
+          "step": 25,
+          "duration_ms": 115.8663159999378
+        },
+        {
+          "step": 26,
+          "duration_ms": 115.67061200003081
+        },
+        {
+          "step": 27,
+          "duration_ms": 116.11562100006267
+        },
+        {
+          "step": 28,
+          "duration_ms": 117.12825899996915
+        },
+        {
+          "step": 29,
+          "duration_ms": 115.92795599995043
+        }
+      ],
+      "denoise_ms": 3450.27661600011,
+      "pixel_sha256": "e214f0f579547bc3f045106f7bdf302b67f4a9c77436febffe5c929742f86702",
+      "mode": "RGB",
+      "png_sha256": "38cabc19d015704e1399ea95f30bb7a2eb971dfb9e81e78d24974c9cbca73d42",
+      "source_sha256": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6"
+    },
+    {
+      "label": "quality-candidate",
+      "variant": "candidate",
+      "profile": false,
+      "seed": 123,
+      "size": 512,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "512",
+        "--height",
+        "512",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "123",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-20261003T224511Z-017ed58d/quality-candidate/perf.json",
+        "--output-path",
+        "/results/anima-20261003T224511Z-017ed58d/quality-candidate/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3731.517186000019,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 117.468228000007
+        },
+        {
+          "step": 1,
+          "duration_ms": 119.43393400019886
+        },
+        {
+          "step": 2,
+          "duration_ms": 120.97246300004372
+        },
+        {
+          "step": 3,
+          "duration_ms": 118.36455299999216
+        },
+        {
+          "step": 4,
+          "duration_ms": 117.66826000007313
+        },
+        {
+          "step": 5,
+          "duration_ms": 116.08156100010092
+        },
+        {
+          "step": 6,
+          "duration_ms": 116.97927700015498
+        },
+        {
+          "step": 7,
+          "duration_ms": 120.81150899985005
+        },
+        {
+          "step": 8,
+          "duration_ms": 118.7752509999882
+        },
+        {
+          "step": 9,
+          "duration_ms": 117.19906200005425
+        },
+        {
+          "step": 10,
+          "duration_ms": 120.99393400012559
+        },
+        {
+          "step": 11,
+          "duration_ms": 118.81466299996646
+        },
+        {
+          "step": 12,
+          "duration_ms": 119.1329890000361
+        },
+        {
+          "step": 13,
+          "duration_ms": 122.68347500003074
+        },
+        {
+          "step": 14,
+          "duration_ms": 119.67158900006325
+        },
+        {
+          "step": 15,
+          "duration_ms": 117.56228900003407
+        },
+        {
+          "step": 16,
+          "duration_ms": 119.01588599994284
+        },
+        {
+          "step": 17,
+          "duration_ms": 118.20078999994621
+        },
+        {
+          "step": 18,
+          "duration_ms": 120.48465899988514
+        },
+        {
+          "step": 19,
+          "duration_ms": 117.85798100004286
+        },
+        {
+          "step": 20,
+          "duration_ms": 118.92922100014403
+        },
+        {
+          "step": 21,
+          "duration_ms": 121.24228400011816
+        },
+        {
+          "step": 22,
+          "duration_ms": 117.36038100002588
+        },
+        {
+          "step": 23,
+          "duration_ms": 120.18310399980692
+        },
+        {
+          "step": 24,
+          "duration_ms": 118.14096600005541
+        },
+        {
+          "step": 25,
+          "duration_ms": 118.96840200006409
+        },
+        {
+          "step": 26,
+          "duration_ms": 118.61491099989507
+        },
+        {
+          "step": 27,
+          "duration_ms": 117.38918899982309
+        },
+        {
+          "step": 28,
+          "duration_ms": 118.92328800013274
+        },
+        {
+          "step": 29,
+          "duration_ms": 119.47428799999216
+        }
+      ],
+      "denoise_ms": 3567.398387000594,
+      "pixel_sha256": "e214f0f579547bc3f045106f7bdf302b67f4a9c77436febffe5c929742f86702",
+      "mode": "RGB",
+      "png_sha256": "38cabc19d015704e1399ea95f30bb7a2eb971dfb9e81e78d24974c9cbca73d42",
+      "source_sha256": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013"
+    },
+    {
+      "label": "profile-baseline",
+      "variant": "baseline",
+      "profile": true,
+      "seed": 42,
+      "size": 1024,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-20261003T224511Z-017ed58d/profile-baseline/perf.json",
+        "--output-path",
+        "/results/anima-20261003T224511Z-017ed58d/profile-baseline/outputs",
+        "--output-file-name",
+        "sample",
+        "--profile",
+        "--num-profiled-timesteps",
+        "5"
+      ],
+      "total_duration_ms": 25257.15688900004,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 163.0719610000142
+        },
+        {
+          "step": 1,
+          "duration_ms": 333.10996299996987
+        },
+        {
+          "step": 2,
+          "duration_ms": 331.2845830000697
+        },
+        {
+          "step": 3,
+          "duration_ms": 323.6132389999966
+        },
+        {
+          "step": 4,
+          "duration_ms": 322.11499100003493
+        },
+        {
+          "step": 5,
+          "duration_ms": 316.58197499996277
+        },
+        {
+          "step": 6,
+          "duration_ms": 4419.951161999961
+        },
+        {
+          "step": 7,
+          "duration_ms": 15180.540763999943
+        },
+        {
+          "step": 8,
+          "duration_ms": 150.5987069999719
+        },
+        {
+          "step": 9,
+          "duration_ms": 149.486109999998
+        },
+        {
+          "step": 10,
+          "duration_ms": 149.98572000013155
+        },
+        {
+          "step": 11,
+          "duration_ms": 145.12044699995386
+        },
+        {
+          "step": 12,
+          "duration_ms": 146.38373200000387
+        },
+        {
+          "step": 13,
+          "duration_ms": 147.4204409998947
+        },
+        {
+          "step": 14,
+          "duration_ms": 146.6753269999117
+        },
+        {
+          "step": 15,
+          "duration_ms": 148.51025000007212
+        },
+        {
+          "step": 16,
+          "duration_ms": 149.7066269998868
+        },
+        {
+          "step": 17,
+          "duration_ms": 145.64956000003804
+        },
+        {
+          "step": 18,
+          "duration_ms": 149.29725899992263
+        },
+        {
+          "step": 19,
+          "duration_ms": 148.75091899989457
+        },
+        {
+          "step": 20,
+          "duration_ms": 149.94692100003704
+        },
+        {
+          "step": 21,
+          "duration_ms": 148.7207379998381
+        },
+        {
+          "step": 22,
+          "duration_ms": 149.19020199999977
+        },
+        {
+          "step": 23,
+          "duration_ms": 149.256959000013
+        },
+        {
+          "step": 24,
+          "duration_ms": 147.66475900000842
+        },
+        {
+          "step": 25,
+          "duration_ms": 149.87380000002304
+        },
+        {
+          "step": 26,
+          "duration_ms": 151.05239300009998
+        },
+        {
+          "step": 27,
+          "duration_ms": 150.21865699986847
+        },
+        {
+          "step": 28,
+          "duration_ms": 150.4144410000663
+        },
+        {
+          "step": 29,
+          "duration_ms": 149.60883000003378
+        }
+      ],
+      "denoise_ms": 24663.80143699962,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "mode": "RGB",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": "4530bfa85c2261848a4c8b3abac270d59fca19d1f1cba4d51fd1ccf16855d046"
+    },
+    {
+      "label": "profile-candidate",
+      "variant": "candidate",
+      "profile": true,
+      "seed": 42,
+      "size": 1024,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-20261003T224511Z-017ed58d/profile-candidate/perf.json",
+        "--output-path",
+        "/results/anima-20261003T224511Z-017ed58d/profile-candidate/outputs",
+        "--output-file-name",
+        "sample",
+        "--profile",
+        "--num-profiled-timesteps",
+        "5"
+      ],
+      "total_duration_ms": 28308.333919000004,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 169.62955700000748
+        },
+        {
+          "step": 1,
+          "duration_ms": 357.101941999872
+        },
+        {
+          "step": 2,
+          "duration_ms": 347.04138000006424
+        },
+        {
+          "step": 3,
+          "duration_ms": 358.43988600004195
+        },
+        {
+          "step": 4,
+          "duration_ms": 363.83216300009735
+        },
+        {
+          "step": 5,
+          "duration_ms": 359.1073929999311
+        },
+        {
+          "step": 6,
+          "duration_ms": 5256.5556370000195
+        },
+        {
+          "step": 7,
+          "duration_ms": 17012.90131900009
+        },
+        {
+          "step": 8,
+          "duration_ms": 159.020289999944
+        },
+        {
+          "step": 9,
+          "duration_ms": 153.90290300001652
+        },
+        {
+          "step": 10,
+          "duration_ms": 152.95533500011516
+        },
+        {
+          "step": 11,
+          "duration_ms": 155.72580800017022
+        },
+        {
+          "step": 12,
+          "duration_ms": 155.41431099995862
+        },
+        {
+          "step": 13,
+          "duration_ms": 154.67419700007667
+        },
+        {
+          "step": 14,
+          "duration_ms": 153.37746099999094
+        },
+        {
+          "step": 15,
+          "duration_ms": 151.2269910001578
+        },
+        {
+          "step": 16,
+          "duration_ms": 150.93903499996486
+        },
+        {
+          "step": 17,
+          "duration_ms": 156.06303200002003
+        },
+        {
+          "step": 18,
+          "duration_ms": 153.79584900006193
+        },
+        {
+          "step": 19,
+          "duration_ms": 155.5267520000143
+        },
+        {
+          "step": 20,
+          "duration_ms": 156.7952730001707
+        },
+        {
+          "step": 21,
+          "duration_ms": 154.06328899985056
+        },
+        {
+          "step": 22,
+          "duration_ms": 154.04767900008665
+        },
+        {
+          "step": 23,
+          "duration_ms": 155.09780900015357
+        },
+        {
+          "step": 24,
+          "duration_ms": 152.90638700003
+        },
+        {
+          "step": 25,
+          "duration_ms": 154.41125600000305
+        },
+        {
+          "step": 26,
+          "duration_ms": 153.6092210001243
+        },
+        {
+          "step": 27,
+          "duration_ms": 155.7135840000683
+        },
+        {
+          "step": 28,
+          "duration_ms": 155.3649980000955
+        },
+        {
+          "step": 29,
+          "duration_ms": 154.68800499979807
+        }
+      ],
+      "denoise_ms": 27623.928742000997,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "mode": "RGB",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": "b473adda22e1af3035607fc5855e3ccf30fdd6904c2a86b30c57ae58e539fc90"
+    }
+  ],
+  "packages": {
+    "torch": "2.13.0+cu130",
+    "triton": "3.7.1",
+    "diffusers": "0.37.0",
+    "transformers": "5.12.1",
+    "sglang": "0.0.0.dev0",
+    "apache-tvm-ffi": "0.1.11"
+  },
+  "validity": "All subprocesses succeed; equal step counts and output dimensions; bit-identical pixels for matched inputs; no failed CUDA fast path.",
+  "operator": {
+    "correctness": [
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 1,
+        "tokens": 17,
+        "gated": false,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 1,
+        "tokens": 17,
+        "gated": true,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 1,
+        "tokens": 1024,
+        "gated": false,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 1,
+        "tokens": 1024,
+        "gated": true,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 1,
+        "tokens": 4096,
+        "gated": false,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 1,
+        "tokens": 4096,
+        "gated": true,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 2,
+        "tokens": 17,
+        "gated": false,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 2,
+        "tokens": 17,
+        "gated": true,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 2,
+        "tokens": 1024,
+        "gated": false,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 2,
+        "tokens": 1024,
+        "gated": true,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 2,
+        "tokens": 4096,
+        "gated": false,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 2,
+        "tokens": 4096,
+        "gated": true,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.float16",
+        "batch": 1,
+        "tokens": 17,
+        "gated": false,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.float16",
+        "batch": 1,
+        "tokens": 17,
+        "gated": true,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.float16",
+        "batch": 1,
+        "tokens": 1024,
+        "gated": false,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.float16",
+        "batch": 1,
+        "tokens": 1024,
+        "gated": true,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.float16",
+        "batch": 1,
+        "tokens": 4096,
+        "gated": false,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.float16",
+        "batch": 1,
+        "tokens": 4096,
+        "gated": true,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.float16",
+        "batch": 2,
+        "tokens": 17,
+        "gated": false,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.float16",
+        "batch": 2,
+        "tokens": 17,
+        "gated": true,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.float16",
+        "batch": 2,
+        "tokens": 1024,
+        "gated": false,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.float16",
+        "batch": 2,
+        "tokens": 1024,
+        "gated": true,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.float16",
+        "batch": 2,
+        "tokens": 4096,
+        "gated": false,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.float16",
+        "batch": 2,
+        "tokens": 4096,
+        "gated": true,
+        "bit_exact": true,
+        "fused_calls": 1
+      },
+      {
+        "dtype": "torch.float32",
+        "batch": 1,
+        "tokens": 17,
+        "gated": false,
+        "bit_exact": true,
+        "fused_calls": 0
+      },
+      {
+        "dtype": "torch.float32",
+        "batch": 1,
+        "tokens": 17,
+        "gated": true,
+        "bit_exact": true,
+        "fused_calls": 0
+      },
+      {
+        "dtype": "torch.float32",
+        "batch": 1,
+        "tokens": 1024,
+        "gated": false,
+        "bit_exact": true,
+        "fused_calls": 0
+      },
+      {
+        "dtype": "torch.float32",
+        "batch": 1,
+        "tokens": 1024,
+        "gated": true,
+        "bit_exact": true,
+        "fused_calls": 0
+      },
+      {
+        "dtype": "torch.float32",
+        "batch": 1,
+        "tokens": 4096,
+        "gated": false,
+        "bit_exact": true,
+        "fused_calls": 0
+      },
+      {
+        "dtype": "torch.float32",
+        "batch": 1,
+        "tokens": 4096,
+        "gated": true,
+        "bit_exact": true,
+        "fused_calls": 0
+      },
+      {
+        "dtype": "torch.float32",
+        "batch": 2,
+        "tokens": 17,
+        "gated": false,
+        "bit_exact": true,
+        "fused_calls": 0
+      },
+      {
+        "dtype": "torch.float32",
+        "batch": 2,
+        "tokens": 17,
+        "gated": true,
+        "bit_exact": true,
+        "fused_calls": 0
+      },
+      {
+        "dtype": "torch.float32",
+        "batch": 2,
+        "tokens": 1024,
+        "gated": false,
+        "bit_exact": true,
+        "fused_calls": 0
+      },
+      {
+        "dtype": "torch.float32",
+        "batch": 2,
+        "tokens": 1024,
+        "gated": true,
+        "bit_exact": true,
+        "fused_calls": 0
+      },
+      {
+        "dtype": "torch.float32",
+        "batch": 2,
+        "tokens": 4096,
+        "gated": false,
+        "bit_exact": true,
+        "fused_calls": 0
+      },
+      {
+        "dtype": "torch.float32",
+        "batch": 2,
+        "tokens": 4096,
+        "gated": true,
+        "bit_exact": true,
+        "fused_calls": 0
+      }
+    ],
+    "microbenchmark": [
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 1,
+        "tokens": 1024,
+        "hidden": 2048,
+        "abba_us": [
+          22.97055959701538,
+          24.96000051498413,
+          23.588480949401855,
+          21.93727970123291
+        ],
+        "includes_row_copies": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 1,
+        "tokens": 4096,
+        "hidden": 2048,
+        "abba_us": [
+          47.063679695129395,
+          22.032320499420166,
+          21.526079177856445,
+          47.0582389831543
+        ],
+        "includes_row_copies": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 2,
+        "tokens": 1024,
+        "hidden": 2048,
+        "abba_us": [
+          29.05344009399414,
+          50.659518241882324,
+          52.23968029022217,
+          29.075520038604736
+        ],
+        "includes_row_copies": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 2,
+        "tokens": 4096,
+        "hidden": 2048,
+        "abba_us": [
+          101.22655868530273,
+          50.865278244018555,
+          50.396480560302734,
+          100.94623565673828
+        ],
+        "includes_row_copies": true
+      },
+      {
+        "dtype": "torch.float16",
+        "batch": 1,
+        "tokens": 1024,
+        "hidden": 2048,
+        "abba_us": [
+          22.087039947509766,
+          23.51936101913452,
+          23.488318920135498,
+          21.91296100616455
+        ],
+        "includes_row_copies": true
+      },
+      {
+        "dtype": "torch.float16",
+        "batch": 1,
+        "tokens": 4096,
+        "hidden": 2048,
+        "abba_us": [
+          46.29536151885986,
+          22.884480953216553,
+          22.73439884185791,
+          46.29024028778076
+        ],
+        "includes_row_copies": true
+      },
+      {
+        "dtype": "torch.float16",
+        "batch": 2,
+        "tokens": 1024,
+        "hidden": 2048,
+        "abba_us": [
+          28.525760173797607,
+          49.28736209869385,
+          49.517760276794434,
+          28.61151933670044
+        ],
+        "includes_row_copies": true
+      },
+      {
+        "dtype": "torch.float16",
+        "batch": 2,
+        "tokens": 4096,
+        "hidden": 2048,
+        "abba_us": [
+          100.38304328918457,
+          49.697279930114746,
+          50.35615921020508,
+          100.5344009399414
+        ],
+        "includes_row_copies": true
+      }
+    ],
+    "cuda_graph_replay_bit_exact": true
+  },
+  "existing-modulate": "passed",
+  "existing-anima": "passed",
+  "profile_baseline_counts": [
+    {
+      "adaln_calls": 5270,
+      "modulate_calls": 0,
+      "checked_signatures": []
+    }
+  ],
+  "profile_candidate_counts": [
+    {
+      "adaln_calls": 5270,
+      "modulate_calls": 5270,
+      "checked_signatures": [
+        [
+          [
+            1,
+            4096,
+            2048
+          ],
+          "torch.bfloat16",
+          [
+            6144,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            4096,
+            2048
+          ],
+          "torch.bfloat16",
+          [
+            4096,
+            1
+          ]
+        ]
+      ]
+    }
+  ]
+}

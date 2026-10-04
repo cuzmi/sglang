@@ -1,0 +1,142 @@
+{
+  "timestamp": "2026-10-03T23:31:50.756281+00:00",
+  "request_id": "d17c1789-1f41-4eac-8ce8-92c2c77d851d",
+  "commit_hash": "N/A",
+  "tag": "cli_generate",
+  "total_duration_ms": 1462.305778999962,
+  "steps": [
+    {
+      "name": "InputValidationStage",
+      "duration_ms": 0.03753599992251111
+    },
+    {
+      "name": "MingImageEncodingStage",
+      "duration_ms": 69.55751800001053
+    },
+    {
+      "name": "MingImageReferenceStage",
+      "duration_ms": 0.02701500000057422
+    },
+    {
+      "name": "LatentPreparationStage",
+      "duration_ms": 2.054649999990943
+    },
+    {
+      "name": "TimestepPreparationStage",
+      "duration_ms": 0.8823120000442941
+    },
+    {
+      "name": "DenoisingStage",
+      "duration_ms": 1345.8514519999198
+    },
+    {
+      "name": "MingImageDecodingStage",
+      "duration_ms": 38.545097999985956
+    },
+    {
+      "name": "Scheduler.return_result.spill_arrays",
+      "duration_ms": 0.07945799995923153
+    },
+    {
+      "name": "Scheduler.return_result.spill_cuda",
+      "duration_ms": 0.042816000018319755
+    },
+    {
+      "name": "SchedulerClient.materialize_file_refs",
+      "duration_ms": 0.007729000003564579
+    }
+  ],
+  "denoise_steps_ms": [
+    {
+      "step": 0,
+      "duration_ms": 50.02472800003943
+    },
+    {
+      "step": 1,
+      "duration_ms": 103.05556900004831
+    },
+    {
+      "step": 2,
+      "duration_ms": 115.5728790000694
+    },
+    {
+      "step": 3,
+      "duration_ms": 116.84790000003886
+    },
+    {
+      "step": 4,
+      "duration_ms": 116.00151599998298
+    },
+    {
+      "step": 5,
+      "duration_ms": 116.30834699997195
+    },
+    {
+      "step": 6,
+      "duration_ms": 116.32742300002974
+    },
+    {
+      "step": 7,
+      "duration_ms": 119.12874699999065
+    },
+    {
+      "step": 8,
+      "duration_ms": 135.56222300007903
+    },
+    {
+      "step": 9,
+      "duration_ms": 120.56283100002929
+    },
+    {
+      "step": 10,
+      "duration_ms": 117.55568099999891
+    },
+    {
+      "step": 11,
+      "duration_ms": 116.82031500004086
+    }
+  ],
+  "memory_checkpoints": {
+    "before_forward": {
+      "allocated_mb": 46390.31,
+      "reserved_mb": 52032.0,
+      "peak_allocated_mb": 46390.31,
+      "peak_reserved_mb": 52032.0,
+      "peak_host_anon_mb": 0.0
+    },
+    "after_forward": {
+      "allocated_mb": 46402.07,
+      "reserved_mb": 52034.0,
+      "peak_allocated_mb": 50624.55,
+      "peak_reserved_mb": 52034.0,
+      "peak_host_anon_mb": 0.0
+    },
+    "load_peak": {
+      "allocated_mb": 46394.07,
+      "reserved_mb": 52034.0,
+      "peak_allocated_mb": 48176.8,
+      "peak_reserved_mb": 50042.0,
+      "peak_host_anon_mb": 0.0
+    },
+    "runtime_peak": {
+      "allocated_mb": 46394.07,
+      "reserved_mb": 52034.0,
+      "peak_allocated_mb": 50624.55,
+      "peak_reserved_mb": 52034.0,
+      "peak_host_anon_mb": 0.0
+    },
+    "warmup_peak": {
+      "allocated_mb": 46394.07,
+      "reserved_mb": 52034.0,
+      "peak_allocated_mb": 50624.55,
+      "peak_reserved_mb": 52032.0,
+      "peak_host_anon_mb": 0.0
+    }
+  },
+  "meta": {
+    "prompt": [
+      "A minimalist exhibition poster with a red geometric sculpture"
+    ],
+    "model": "inclusionAI/Ming-Image-0.1-Design"
+  }
+}

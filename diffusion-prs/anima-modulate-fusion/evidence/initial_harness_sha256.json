@@ -1,0 +1,8 @@
+{
+  "anima_experiment.py": "4b9efe41a00c529e2fac02562a8f1e65971732f5fc8e1745afdd2b0f92f82d6f",
+  "verify_anima.py": "33d8784a18d5856970241e1cc613d8afd380943845d72ad2ec7768371235aaf0",
+  "analyze_results.py": "a2479ba0e9962fad70ce75d5681818b932e0a993f9318088ddb72ec24b8cb7ca",
+  "prepare_inputs.py": "cbb8a3db19fbdcf5b3f6c952b7afd2f01d9639ee4d36ee9f9937f6398f203ad9",
+  "inputs/baseline.tar.gz": "349f9021b4d7bcd7d3c42425d1691fccc42f8d75f2ac5054882407d621ebb233",
+  "inputs/candidate_anima.py": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013"
+}

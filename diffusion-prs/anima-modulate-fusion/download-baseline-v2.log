@@ -1,0 +1,4 @@
+╭─ Error ──────────────────────────────────────────────────────────────────────╮
+│ Glob patterns in `volume get` and `Volume.listdir()` are deprecated. Please  │
+│ pass recursive=True instead. For the CLI, just remove the glob suffix.       │
+╰──────────────────────────────────────────────────────────────────────────────╯

@@ -1,0 +1,77 @@
+## Motivation
+
+Anima computes `LayerNorm(x) * (1 + scale) + shift` at 85 AdaLN sites per transformer forward. Reuse the existing bit-exact modulation kernel to reduce intermediate tensor traffic and kernel launches.
+
+The shared modulation wrapper also performs duplicate eligibility checks and repeatedly looks up the exported FFI function. Reduce this host overhead for frequent eager calls.
+
+## Modifications
+
+- Route Anima's eager CUDA FP16/BF16 modulation through `modulate_scale_shift`. Make only the small scale/shift rows contiguous when necessary.
+- Cache the exported FFI callable instead of only caching its module.
+- Invoke the custom op directly after the automatic wrapper's eligibility check. The standalone CUDA entrypoint retains its validation, and the automatic wrapper retains its error handling and eager fallback.
+- Preserve Anima's original expression for CPU, FP32, and `torch.compile` tracing.
+
+LayerNorm reduction, CUDA arithmetic, and launch geometry remain unchanged.
+
+## Accuracy Tests
+
+**Anima:**
+
+- All **36 full AdaLN cases** match the original expression bit-for-bit, covering FP16/BF16/FP32, batch sizes 1/2, sequence lengths 17/1024/4096, hidden size 2048, and gated/ungated modules.
+- Eligible cases assert actual fused dispatch; FP32 cases assert fallback.
+- Warmed BF16 batch-2 AdaLN CUDA graph replay passes.
+- Existing modulation tests: **12 passed**. Existing Anima CPU/CUDA tests: **17 passed**.
+- All six full-model benchmark outputs have identical decoded pixels and PNG bytes.
+
+**Other shared-wrapper callers:**
+
+Validated the real modulation entrypoints used by FLUX, Ideogram, LingBot, and LTX-2 on H200, before and after the wrapper change:
+
+- **48 component cases per version** match their eager references byte-for-byte. Output hashes and fused-dispatch counts also match across versions.
+- **Five changed-input CUDA graph replay checks per version** pass.
+- Runtime-error fallback and disabled retries pass.
+- **25 selected existing tests per version** pass.
+
+These cross-model checks use synthetic inputs without checkpoints. They do not cover complete image/video generation or establish performance improvements for those models.
+
+Pending repository test updates: public-wrapper dispatch coverage and runtime-error fallback regression coverage.
+
+## Speed Tests and Profiling
+
+**Configuration:** one H200, BF16, TP1, FA attention, 1024×1024, 30 steps, CFG 4, seed 42. Torch compile and CUDA graph are disabled.
+
+- Model: `circlestone-labs/Anima-Base-v1.0-Diffusers`
+- Model revision: `073c3a9db359c31ad0e8aa268d15775473c2176c`
+- Baseline: `6fa3fe69e2e5e19b75cadd9fc285b72634551992`
+- Environment: PyTorch 2.13.0+cu130, CUDA 13.0, Triton 3.7.1
+
+All variants ran in one container on the same GPU, in baseline → integration-only → final → final → integration-only → baseline order. Each fresh process performed a same-resolution one-step warmup request.
+
+| Variant | Request 1 (ms) | Request 2 (ms) | Mean (ms) |
+| --- | ---: | ---: | ---: |
+| Baseline | 3163.64 | 3154.14 | 3158.89 |
+| Anima integration only | 3084.66 | 3116.98 | 3100.82 |
+| Integration + dispatch optimization | 3024.22 | 3031.38 | 3027.80 |
+
+The final patch reduces mean worker request latency by **4.15% versus baseline** and **2.35% versus integration only** in this run. Measurements exclude model loading, warmup, and PNG saving.
+
+There are two samples per variant. An earlier integration-only experiment on another Modal instance regressed by **4.93%**; the final patch has not yet been validated across multiple instances.
+
+Separate profiler captures of the Anima integration show modulation kernel launches decreasing from **510 to 170** in a denoising step containing 170 AdaLN calls. The final patch uses the same CUDA kernel. Profiled runs are excluded from the latency table.
+
+## Checklist
+
+- [x] Format your code according to the [Format code with pre-commit](https://docs.sglang.io/developer_guide/contribution_guide.html#format-code-with-pre-commit).
+- [ ] Add unit tests according to the [Run and add unit tests](https://docs.sglang.io/developer_guide/contribution_guide.html#run-and-add-unit-tests).
+- [ ] Update documentation according to [Write documentations](https://docs.sglang.io/developer_guide/contribution_guide.html#write-documentations).
+- [x] Provide accuracy and speed benchmark results according to [Test the accuracy](https://docs.sglang.io/developer_guide/contribution_guide.html#test-the-accuracy) and [Benchmark the speed](https://docs.sglang.io/developer_guide/contribution_guide.html#benchmark-the-speed).
+- [x] Follow the SGLang code style [guidance](https://docs.sglang.io/developer_guide/contribution_guide.html#code-style-guidance).
+
+<!-- pr-states:start -->
+---
+### CI States
+
+Latest PR Test (Base): <!-- slot:pr-test:start -->:x: **Missing `run-ci` label** -- add it to run CI tests.<!-- slot:pr-test:end -->
+Latest PR Test (Extra): <!-- slot:pr-test-extra:start -->:x: **Blocked** -- `run-ci` is required first.<!-- slot:pr-test-extra:end -->
+Latest PR Test (AMD ROCm 10): <!-- slot:pr-test-amd:start -->:heavy_minus_sign: **No AMD PR run found for this commit**.<!-- slot:pr-test-amd:end -->
+<!-- pr-states:end -->

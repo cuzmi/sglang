@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "6fa3fe69e2e5e19b75cadd9fc285b72634551992",
+  "source_branch": "perf/anima-modulate-fusion",
+  "final_patch": "patches/dispatch_candidate.patch",
+  "initial_patch": "patches/candidate.patch",
+  "source_sha256": {
+    "python/sglang/multimodal_gen/runtime/models/dits/anima.py": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013",
+    "python/sglang/kernels/ops/diffusion/modulate/modulate_scale_shift_jit.py": "5705525464fedef85e83631e44aa53ce87bd7a7b1b83d7294a25c22621bcc8b0"
+  },
+  "modal_results_volume": "anima-modulate-experiments",
+  "modal_image": "im-rRXDzAdc13HCyQHStCXqwE",
+  "runs": {
+    "initial": "anima-20261003T224511Z-017ed58d",
+    "geometry": "kernel-screen-20261003T231957Z-36d5d3ca",
+    "dispatch": "dispatch-abccba-20261003T232600Z-e9defb4f"
+  },
+  "archival_validation": {
+    "python_ast_files": 9,
+    "json_files": 10,
+    "credentials_scan": "passed common token/private-key patterns; not exhaustive",
+    "source_input_reconstruction": "passed: both source hashes and baseline archive hash",
+    "new_gpu_runs": 0,
+    "repository_unit_tests_added": false
+  },
+  "limitations": [
+    "Final comparison has two requests per arm on one instance.",
+    "Initial integration changed performance sign across instances.",
+    "Historical image is account-scoped; rebuilding mutable base image does not recreate the historical environment.",
+    "Full images, logs and traces are stored on Modal/local ignored paths, not Git."
+  ],
+  "sha256": {
+    ".gitignore": "54d581a1abb03a7176fb94064ec91aea1df118f3031e835522d8b9c8b65759ff",
+    "PR_BODY.txt": "70b0afcd5abb4149c0a7534a74778cfa2a42a5f1858e6e016ed7bce8358f252b",
+    "PR_TITLE.txt": "354af202aaf8a841e51630663ed05065a0791284d8530ee23a3bae7d1d3c4797",
+    "README.txt": "b37d2a3326431591426acce05a13798cf2b036ce83f6a9a891e6b29a817dd1aa",
+    "UNIT_TEST_REVIEW.txt": "0d652f2dec8897ca87de84919649dc3e8166c9a636640ac3152f94bd35e76582",
+    "analyze_dispatch.py": "ff8d7f5f894bf4c53f7b1544c000c010f991bf93af953e47a10b9d14d9937f87",
+    "analyze_results.py": "a2479ba0e9962fad70ce75d5681818b932e0a993f9318088ddb72ec24b8cb7ca",
+    "anima_experiment.py": "4b9efe41a00c529e2fac02562a8f1e65971732f5fc8e1745afdd2b0f92f82d6f",
+    "dispatch_abccba.py": "04cbcd06d84959beb799d214ccc3afde2921d05779be51ee6f3d1639d0c6ae64",
+    "download_results.py": "9c58aa4251982f3269fa7a508ac9c95a7af74ebc8cf1cb10af927a35c33a5169",
+    "evidence/dispatch/REPORT.txt": "e8fee8b8f7c53602d8d3415066a0e9caa9dbe51c19e8dfc68abb4678ed7385fe",
+    "evidence/dispatch/existing-anima-test-output.txt": "b1c1c071de3651bab07c1ea49d4f57443412f0c68bc930ecf081e47fec392dc6",
+    "evidence/dispatch/existing-modulate-test-output.txt": "b87bc796eb43c913508f943b4423c78ab2cff5c95ff139528fa4d2816c20d334",
+    "evidence/dispatch/manifest.json": "e839bc6c35672412954c43dc45222aa8f179869434a9a8059f7447a73e33c694",
+    "evidence/dispatch/operator.json": "f42cc78133db534e9120488f93825e2b3210a0631d5d0a85d750c23efc51efb2",
+    "evidence/dispatch/summary.json": "3e8b3b65c39c9e7fa89a99346dbc1e97d77d7201229bf767cfe4cdfa5c0d8b7c",
+    "evidence/dispatch_provenance.json": "b80cdefda4953eea67a9e31672d0b71bf76e58fda550bd7eae5e1443cc5bb2c8",
+    "evidence/geometry/REPORT.txt": "c52fb114f63c262c037ee04bcfef0dd785744f3999bd83166eb4b197a49de81f",
+    "evidence/geometry/screen.json": "31888236673d58854dea8428bbad80bf41d947e2f05b074c628e0413c42703ba",
+    "evidence/initial/REPORT.txt": "50206b4f5f4e15ae1c028cc2435ac36df4a308d0ecd138c5fb72b894ea90c157",
+    "evidence/initial/existing-anima-test-output.txt": "7c8d02e3d090082843d7d95840342ece706e73dbe307e62186a38de53f2b2038",
+    "evidence/initial/existing-modulate-test-output.txt": "e6b67f60884f92fb1401c66f6364750883ff239d777658a8d41535c2606c1ca0",
+    "evidence/initial/manifest.json": "e8e812ffdc81aa1f1c8c59d89affc66f0cdc233bcfa798356341d92bb08fcd76",
+    "evidence/initial/operator.json": "6a341f00a7938947534ef38f13a22582f11da9071a75f54b35ba516e8bb56212",
+    "evidence/initial/summary.json": "660b8eb02540f93357f9639cffee4417ddffc5544452ae81d61d4a433a0a3c6b",
+    "evidence/initial_harness_sha256.json": "db3a20af0976ad03356c8e33d6f5890315282cee319dd22f82eed9ec5d34521f",
+    "evidence/pre-commit.txt": "cf8d6ac54e7852e6dea81616361aaa45ba267ebe5f8bdbaacf354a89e1b52ea6",
+    "evidence/trace_host_clue.json": "b18770e477c1663b952994f11ad6d8df17e76a5b51260d98989fc2671cec217a",
+    "kernel_screen.py": "81b31e6bef2b5b54ec0181b761efc69794772b08d078f997abe13a9040c435b2",
+    "kernel_screen_modal.py": "cdc56dafbe872e10aece7cc8c983335cee2c16edf0886f64e80e4c4f7c669347",
+    "patches/candidate.patch": "ade58c0bd29048c090758fcac29e57dd49ca14d02b751a59e4a266f677074a77",
+    "patches/dispatch_candidate.patch": "45d17104349bc3d655b6299045534bf2ecff99da55c8fe29916aeb89ca013fa2",
+    "prepare_inputs.py": "e411aba848d68b924cb0164afcfe5be29f9668a7f809e77e486f2870ad340029",
+    "verify_anima.py": "33d8784a18d5856970241e1cc613d8afd380943845d72ad2ec7768371235aaf0",
+    ".gitattributes": "997eaa2b5c13b95a88e864c8ef2ae13a6896bff218ae9278612956bc46d05fc8"
+  }
+}

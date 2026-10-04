@@ -1,0 +1,1 @@
+[Diffusion] Reuse bit-exact modulation in Anima AdaLN

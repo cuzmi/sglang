@@ -1,0 +1,122 @@
+{
+  "runs": [
+    {
+      "label": "01-baseline",
+      "total_duration_ms": 3792.128457999979,
+      "denoise_ms": 3360.3515039999934,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c"
+    },
+    {
+      "label": "02-candidate",
+      "total_duration_ms": 3980.2680320000263,
+      "denoise_ms": 3540.185933000032,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c"
+    },
+    {
+      "label": "03-candidate",
+      "total_duration_ms": 3987.4288460000002,
+      "denoise_ms": 3556.5864510002143,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c"
+    },
+    {
+      "label": "04-baseline",
+      "total_duration_ms": 3830.498422000005,
+      "denoise_ms": 3399.154488000022,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c"
+    },
+    {
+      "label": "05-baseline",
+      "total_duration_ms": 3730.830578999985,
+      "denoise_ms": 3311.145409999881,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c"
+    },
+    {
+      "label": "06-candidate",
+      "total_duration_ms": 4031.3381910000317,
+      "denoise_ms": 3541.2989120001157,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c"
+    },
+    {
+      "label": "07-candidate",
+      "total_duration_ms": 3988.637960999995,
+      "denoise_ms": 3551.0670349997326,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c"
+    },
+    {
+      "label": "08-baseline",
+      "total_duration_ms": 3883.550108999998,
+      "denoise_ms": 3439.1584149997243,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c"
+    }
+  ],
+  "timing": {
+    "baseline": {
+      "n": 4,
+      "mean_ms": 3809.251891999992,
+      "median_ms": 3811.313439999992,
+      "min_ms": 3730.830578999985,
+      "max_ms": 3883.550108999998,
+      "spread_ms": 152.71953000001304,
+      "stdev_ms": 64.32924273096776
+    },
+    "candidate": {
+      "n": 4,
+      "mean_ms": 3996.918257500013,
+      "median_ms": 3988.033403499998,
+      "min_ms": 3980.2680320000263,
+      "max_ms": 4031.3381910000317,
+      "spread_ms": 51.07015900000533,
+      "stdev_ms": 23.242017067449915
+    }
+  },
+  "profile": {
+    "baseline": {
+      "path": "results/anima-20261003T224511Z-017ed58d/profile-baseline/traces/84affe4d-72cc-4d64-940a-1fc441121833-5_steps-global-rank0.trace.json.gz",
+      "step": "ProfilerStep#4",
+      "adaln_calls": 170,
+      "adaln_kernel_count": 1360,
+      "modulation_kernel_count": 510,
+      "modulation_kernel_time_ms": 6.983883,
+      "modulation_kernel_names": {
+        "void at::native::vectorized_elementwise_kernel<8, at::native::CUDAFunctorOnSelf_add<c10::BFloat16>, std::array<char*, 2ul> >(int, at::native::CUDAFunctorOnSelf_add<c10::BFloat16>, std::array<char*, 2ul>)": 170,
+        "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<c10::BFloat16, c10::BFloat16, c10::BFloat16, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<c10::BFloat16, c10::BFloat16, c10::BFloat16, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<c10::BFloat16, c10::BFloat16, c10::BFloat16, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<c10::BFloat16, c10::BFloat16, c10::BFloat16, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1})": 170,
+        "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<c10::BFloat16> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<c10::BFloat16> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<c10::BFloat16> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<c10::BFloat16> const&)::{lambda(int)#1})": 170
+      },
+      "adaln_kernel_names": {
+        "void at::native::vectorized_elementwise_kernel<8, at::native::(anonymous namespace)::silu_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#6}::operator()() const::{lambda(c10::BFloat16)#1}, std::array<char*, 2ul> >(int, at::native::(anonymous namespace)::silu_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#6}::operator()() const::{lambda(c10::BFloat16)#1}, std::array<char*, 2ul>)": 170,
+        "nvjet_sm90_tst_8x64_64x16_4x1_v_bz_TNN": 170,
+        "nvjet_sm90_tst_64x8_64x16_4x1_v_bz_TNT": 170,
+        "void at::native::vectorized_elementwise_kernel<8, at::native::CUDAFunctor_add<c10::BFloat16>, std::array<char*, 3ul> >(int, at::native::CUDAFunctor_add<c10::BFloat16>, std::array<char*, 3ul>)": 170,
+        "void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<c10::BFloat16, float, false>(int, float, c10::BFloat16 const*, c10::BFloat16 const*, c10::BFloat16 const*, float*, float*, c10::BFloat16*)": 170,
+        "void at::native::vectorized_elementwise_kernel<8, at::native::CUDAFunctorOnSelf_add<c10::BFloat16>, std::array<char*, 2ul> >(int, at::native::CUDAFunctorOnSelf_add<c10::BFloat16>, std::array<char*, 2ul>)": 170,
+        "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<c10::BFloat16, c10::BFloat16, c10::BFloat16, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<c10::BFloat16, c10::BFloat16, c10::BFloat16, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<c10::BFloat16, c10::BFloat16, c10::BFloat16, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<c10::BFloat16, c10::BFloat16, c10::BFloat16, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1})": 170,
+        "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<c10::BFloat16> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<c10::BFloat16> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<c10::BFloat16> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<c10::BFloat16> const&)::{lambda(int)#1})": 170
+      },
+      "note": "Diagnostic durations only; not end-to-end performance evidence."
+    },
+    "candidate": {
+      "path": "results/anima-20261003T224511Z-017ed58d/profile-candidate/traces/2957dcb8-2ea8-4a00-a4d5-6848602f64bc-5_steps-global-rank0.trace.json.gz",
+      "step": "ProfilerStep#4",
+      "adaln_calls": 170,
+      "adaln_kernel_count": 1020,
+      "modulation_kernel_count": 170,
+      "modulation_kernel_time_ms": 1.5395750000000001,
+      "modulation_kernel_names": {
+        "void sglang::modulate_scale_shift::(anonymous namespace)::modulate_scale_shift_kernel<__nv_bfloat16, 8>(__nv_bfloat16*, __nv_bfloat16 const*, __nv_bfloat16 const*, __nv_bfloat16 const*, long, long, long)": 170
+      },
+      "adaln_kernel_names": {
+        "void at::native::vectorized_elementwise_kernel<8, at::native::(anonymous namespace)::silu_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#6}::operator()() const::{lambda(c10::BFloat16)#1}, std::array<char*, 2ul> >(int, at::native::(anonymous namespace)::silu_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#6}::operator()() const::{lambda(c10::BFloat16)#1}, std::array<char*, 2ul>)": 170,
+        "nvjet_sm90_tst_8x64_64x16_4x1_v_bz_TNN": 170,
+        "nvjet_sm90_tst_64x8_64x16_4x1_v_bz_TNT": 170,
+        "void at::native::vectorized_elementwise_kernel<8, at::native::CUDAFunctor_add<c10::BFloat16>, std::array<char*, 3ul> >(int, at::native::CUDAFunctor_add<c10::BFloat16>, std::array<char*, 3ul>)": 170,
+        "void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<c10::BFloat16, float, false>(int, float, c10::BFloat16 const*, c10::BFloat16 const*, c10::BFloat16 const*, float*, float*, c10::BFloat16*)": 170,
+        "void sglang::modulate_scale_shift::(anonymous namespace)::modulate_scale_shift_kernel<__nv_bfloat16, 8>(__nv_bfloat16*, __nv_bfloat16 const*, __nv_bfloat16 const*, __nv_bfloat16 const*, long, long, long)": 170
+      },
+      "note": "Diagnostic durations only; not end-to-end performance evidence."
+    }
+  },
+  "delta": {
+    "saved_ms": -187.66636550002113,
+    "reduction_percent": -4.926593746508311
+  }
+}

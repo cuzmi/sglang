@@ -1,0 +1,676 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/xinyuj2/main/ap-3mG2IJJY45OztpzBBCg2qZ
+✓ Created objects.
+├── 🔨 Created mount /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/anima/anima_experiment.py
+├── 🔨 Created mount /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/anima/inputs/baseline.tar.gz
+├── 🔨 Created mount /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/anima/inputs/candidate_anima.py
+├── 🔨 Created mount /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/anima/verify_anima.py
+├── 🔨 Created function experiment.
+└── 🔨 Created function download.
+
+[1AFetching 15 files:   0%|          | 0/15 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+[1AFetching 15 files:   7%|▋         | 1/15 [00:00<00:01,  9.60it/s]
+[1AFetching 15 files:  40%|████      | 6/15 [00:00<00:00, 24.27it/s]
+[1AFetching 15 files:  73%|███████▎  | 11/15 [00:02<00:01,  3.11it/s]
+[1AFetching 15 files:  87%|████████▋ | 13/15 [00:04<00:00,  2.61it/s]
+[1AFetching 15 files:  93%|█████████▎| 14/15 [00:05<00:00,  1.81it/s]
+[1AFetching 15 files: 100%|██████████| 15/15 [00:13<00:00,  1.73s/it]Fetching 15 files: 100%|██████████| 15/15 [00:13<00:00,  1.15it/s]
+Model cache: /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c
+RUN_ID=anima-20261003T224144Z-504c704b
+RUN ['/opt/sglang/bin/python', '/workspace/verify_anima.py', '/results/anima-20261003T224144Z-504c704b/operator.json']
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+{
+  "correctness": [
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    }
+  ],
+  "microbenchmark": [
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 1024,
+      "hidden": 2048,
+      "abba_us": [
+        21.541759967803955,
+        15.797439813613892,
+        15.736960172653198,
+        20.919361114501953
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 4096,
+      "hidden": 2048,
+      "abba_us": [
+        45.90015888214111,
+        15.904320478439331,
+        16.107200384140015,
+        45.781121253967285
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 1024,
+      "hidden": 2048,
+      "abba_us": [
+        28.569600582122803,
+        32.806079387664795,
+        32.4620795249939,
+        28.538880348205566
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 4096,
+      "hidden": 2048,
+      "abba_us": [
+        100.69888114929199,
+        35.91871976852417,
+        36.08576059341431,
+        100.31200408935547
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 1024,
+      "hidden": 2048,
+      "abba_us": [
+        24.898879528045654,
+        17.39680051803589,
+        17.310080528259277,
+        24.573440551757812
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 4096,
+      "hidden": 2048,
+      "abba_us": [
+        45.403199195861816,
+        17.358399629592896,
+        17.302080392837524,
+        45.40287971496582
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 1024,
+      "hidden": 2048,
+      "abba_us": [
+        28.0784010887146,
+        36.39136075973511,
+        36.221439838409424,
+        28.110079765319824
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 4096,
+      "hidden": 2048,
+      "abba_us": [
+        100.20288467407227,
+        36.308159828186035,
+        36.522560119628906,
+        100.2723217010498
+      ],
+      "includes_row_copies": true
+    }
+  ],
+  "cuda_graph_replay_bit_exact": true
+}
+RUN ['/opt/sglang/bin/python', '-m', 'pytest', '-q', 'test/registered/kernels/ops/diffusion/test_modulate.py', '-k', 'modulate_scale_shift']
+............                                                             [100%]
+=============================== warnings summary ===============================
+../../opt/sglang/lib/python3.12/site-packages/_pytest/config/__init__.py:1464
+  /opt/sglang/lib/python3.12/site-packages/_pytest/config/__init__.py:1464: PytestConfigWarning: Unknown config option: asyncio_mode
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+12 passed, 1006 deselected, 1 warning in 27.05s
+RUN ['/opt/sglang/bin/python', '-m', 'pytest', '-q', 'python/sglang/multimodal_gen/test/unit/test_anima.py', 'python/sglang/multimodal_gen/test/unit/test_anima_cuda.py']
+.................                                                        [100%]
+=============================== warnings summary ===============================
+../../opt/sglang/lib/python3.12/site-packages/torch/jit/_script.py:365: 14 warnings
+  /opt/sglang/lib/python3.12/site-packages/torch/jit/_script.py:365: DeprecationWarning: `torch.jit.script_method` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+17 passed, 14 warnings in 14.14s
+RUN ['sglang', 'generate', '--model-path', 'circlestone-labs/Anima-Base-v1.0-Diffusers', '--revision', '073c3a9db359c31ad0e8aa268d15775473c2176c', '--num-gpus', '1', '--enable-torch-compile=false', '--enable-breakable-cuda-graph=false', '--performance-mode=speed', '--attention-backend', 'fa', '--width', '1024', '--height', '1024', '--num-inference-steps', '30', '--guidance-scale', '4', '--negative-prompt', '', '--prompt', 'masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset', '--seed', '42', '--generator-device', 'cpu', '--quality', 'lossless', '--save-output', '--warmup-mode', 'request', '--warmup-steps', '1', '--perf-dump-path', '/results/anima-20261003T224144Z-504c704b/01-baseline/perf.json', '--output-path', '/results/anima-20261003T224144Z-504c704b/01-baseline/outputs', '--output-file-name', 'sample']
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Could not read model config for 'circlestone-labs/Anima-Base-v1.0-Diffusers': Could not find model at circlestone-labs/Anima-Base-v1.0-Diffusers and failed to download from Hugging Face Hub: Cannot find an appropriate cached snapshot folder for the specified revision on the local disk and outgoing traffic has been disabled. To enable repo look-ups and downloads online, set 'HF_HUB_OFFLINE=0' as environment variable.
+[10-03 22:44:06] Applying performance_mode=speed
+[10-03 22:44:06] server_args: {"model_path": "circlestone-labs/Anima-Base-v1.0-Diffusers", "model_subfolder": null, "model_variant": null, "model_id": null, "served_model_name": "circlestone-labs/Anima-Base-v1.0-Diffusers", "backend": "auto", "attention_backend": "fa", "enable_attention_backend_autotune": false, "attention_backend_config": {}, "component_attention_backends": {}, "cache_dit_config": null, "nccl_port": null, "enable_nccl_nvls": false, "trust_remote_code": false, "revision": "073c3a9db359c31ad0e8aa268d15775473c2176c", "num_gpus": 1, "performance_mode": "speed", "base_gpu_id": 0, "gpu_ids": null, "nnodes": 1, "node_rank": 0, "dist_init_addr": null, "tp_size": 1, "sp_degree": 1, "ulysses_degree": 1, "ring_degree": 1, "kv_gather_degree": 1, "sp_split_auto": false, "dp_size": 1, "enable_cfg_parallel": false, "cfg_parallel_degree": 1, "encoder_parallel": "auto", "hsdp_replicate_dim": 1, "hsdp_shard_dim": 1, "dist_timeout": 3600, "scheduler_rpc_timeout": null, "pipeline_class_name": null, "lora_path": null, "lora_nickname": "default", "lora_scale": 1.0, "lora_alpha": null, "lora_merge_mode": "auto", "lora_weight_name": null, "component_paths": {}, "component_weights_paths": {}, "component_direct_gpu_weight_loading": {}, "component_quantizations": {}, "component_precisions": {}, "component_quantization_ignored_layers": {}, "load_diffusion_decoder": false, "transformer_weights_path": null, "minimax_h3_adaln_cache_path": null, "minimax_h3_adaln_online": false, "minimax_h3_adaln_plan_width": 4, "minimax_h3_adaln_host_cache_gb": 8.0, "quantization": null, "quantization_ignored_layers": null, "lora_target_modules": null, "component_residency": null, "cpu_offload_components": null, "dit_cpu_offload": false, "direct_gpu_weight_loading": false, "dit_layerwise_offload": false, "layerwise_offload_components": null, "dit_offload_prefetch_size": 0.0, "dit_layerwise_resident_layers": 0.0, "dit_layerwise_residency_policy": "leading", "dit_layerwise_residency_lifetime": "forward", "layerwise_prefetch_size": {}, "layerwise_resident_layers": {}, "layerwise_residency_policy": {}, "layerwise_residency_lifetime": {}, "offload_during_compile": true, "text_encoder_cpu_offload": false, "image_encoder_cpu_offload": false, "vae_cpu_offload": false, "use_fsdp_inference": false, "pin_cpu_memory": true, "ltx2_two_stage_device_mode": null, "comfyui_mode": false, "enable_torch_compile": false, "regional_compile": false, "enable_breakable_cuda_graph": false, "bcg_text_buckets": null, "enable_layerwise_nvtx_marker": false, "warmup_mode": "request", "warmup_resolutions": null, "warmup_num_frames": null, "warmup_steps": 1, "warmup_sampling_params": null, "disable_autocast": false, "master_port": 30005, "host": "127.0.0.1", "port": 30000, "enable_metrics": false, "webui": false, "webui_port": 12312, "scheduler_port": 5625, "scheduler_ports": [5625], "batching_mode": "dynamic", "batching_max_size": 1, "batching_delay_ms": 0.0, "batching_config": null, "enable_batching_metrics": false, "strict_ports": false, "output_path": "/results/anima-20261003T224144Z-504c704b/01-baseline/outputs", "input_save_path": "inputs/uploads", "prompt_file_path": null, "model_paths": {}, "model_loaded": {"transformer": true, "vae": true, "video_vae": true, "audio_vae": true, "video_dit": true, "audio_dit": true, "dual_tower_bridge": true}, "boundary_ratio": null, "disagg_role": "monolithic", "disagg_timeout": 3600, "disagg_downstream_wait_timeout": 1800, "disagg_dispatch_policy": "round_robin", "disagg_mode": false, "disagg_instance_id": 0, "disagg_max_slots_per_instance": 8, "disagg_transfer_redundancy": 1.25, "disagg_role_device": "auto", "disagg_transfer_backend": "auto", "disagg_transfer_pool_size": 268435456, "disagg_transfer_pin_memory": "auto", "disagg_p2p_hostname": "127.0.0.1", "disagg_ib_device": null, "disagg_server_addr": null, "encoder_urls": null, "denoiser_urls": null, "decoder_urls": null, "encoder_tp": null, "denoiser_tp": null, "denoiser_sp": null, "denoiser_ulysses": null, "denoiser_ring": null, "decoder_sp": null, "pool_work_endpoint": null, "pool_result_endpoint": null, "pool_control_endpoint": null, "pool_control_advertised_endpoint": null, "log_level": "info", "log_requests": false, "log_requests_level": 2, "log_requests_format": "text", "log_requests_target": null, "uvicorn_access_log_exclude_prefixes": [], "enable_cache_report": false, "enable_trace": false, "otlp_traces_endpoint": "localhost:4317", "otlp_service_name": null, "srt_encoder_url": null, "srt_encoder_connect_timeout": 3.05, "srt_encoder_timeout": 100, "pe_server_url": null, "prompt_enhancer_config": null}
+[10-03 22:44:06] Checking for cached model in Hugging Face Hub cache for circlestone-labs/Anima-Base-v1.0-Diffusers...
+[10-03 22:44:06] Model not found in cache, will download from Hugging Face Hub
+[10-03 22:44:06] Downloading model snapshot from Hugging Face Hub for circlestone-labs/Anima-Base-v1.0-Diffusers (attempt 1/5)...
+[91m[10-03 22:44:06] Could not read model config for 'circlestone-labs/Anima-Base-v1.0-Diffusers': Could not find model at circlestone-labs/Anima-Base-v1.0-Diffusers and failed to download from Hugging Face Hub: Cannot find an appropriate cached snapshot folder for the specified revision on the local disk and outgoing traffic has been disabled. To enable repo look-ups and downloads online, set 'HF_HUB_OFFLINE=0' as environment variable.[0;0m
+[10-03 22:44:06] Falling back to diffusers backend
+[10-03 22:44:06] Local mode: True
+[10-03 22:44:06] Starting server...
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 22:44:25] Scheduler (dp replica 0) bind at endpoint: tcp://127.0.0.1:5625
+[10-03 22:44:25] torch.compile cache: TORCHINDUCTOR_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/inductor TRITON_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/triton
+[10-03 22:44:25] Initializing distributed environment with world_size=1, device=cuda:0, timeout=3600
+[10-03 22:44:25] Setting distributed timeout to 3600 seconds
+[10-03 22:44:26] No pipeline_class_name specified, using model_index.json
+[10-03 22:44:27] Checking for cached model in Hugging Face Hub cache for circlestone-labs/Anima-Base-v1.0-Diffusers...
+[10-03 22:44:27] Model not found in cache, will download from Hugging Face Hub
+[10-03 22:44:27] Downloading model snapshot from Hugging Face Hub for circlestone-labs/Anima-Base-v1.0-Diffusers (attempt 1/5)...
+[91m[10-03 22:44:27] Could not read model config for 'circlestone-labs/Anima-Base-v1.0-Diffusers': Could not find model at circlestone-labs/Anima-Base-v1.0-Diffusers and failed to download from Hugging Face Hub: Cannot find an appropriate cached snapshot folder for the specified revision on the local disk and outgoing traffic has been disabled. To enable repo look-ups and downloads online, set 'HF_HUB_OFFLINE=0' as environment variable.[0;0m
+[10-03 22:44:27] Falling back to diffusers backend
+[10-03 22:44:27] Using pipeline from model_index.json: DiffusersPipeline
+[10-03 22:44:27] Loading diffusers pipeline from circlestone-labs/Anima-Base-v1.0-Diffusers
+[10-03 22:44:27] Checking for cached model in Hugging Face Hub cache for circlestone-labs/Anima-Base-v1.0-Diffusers...
+[10-03 22:44:27] Model not found in cache, will download from Hugging Face Hub
+[10-03 22:44:27] Downloading model snapshot from Hugging Face Hub for circlestone-labs/Anima-Base-v1.0-Diffusers (attempt 1/5)...
+[10-03 22:44:28] Worker 0: Shutdown complete.
+Process sglang-diffusionWorker-0:
+Traceback (most recent call last):
+  File "/opt/sglang/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 277, in snapshot_download
+    repo_info = api.repo_info(repo_id=repo_id, repo_type=repo_type, revision=revision)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 91, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/huggingface_hub/hf_api.py", line 3640, in repo_info
+    return method(
+           ^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 91, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/huggingface_hub/hf_api.py", line 3319, in model_info
+    r = get_session().get(path, headers=headers, timeout=timeout, params=params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/httpx/_client.py", line 1053, in get
+    return self.request(
+           ^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/httpx/_client.py", line 977, in _send_handling_redirects
+    hook(request)
+  File "/opt/sglang/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 284, in hf_request_event_hook
+    raise OfflineModeIsEnabled(
+huggingface_hub.errors.OfflineModeIsEnabled: Cannot reach https://huggingface.co/api/models/circlestone-labs/Anima-Base-v1.0-Diffusers/revision/main: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspace/sglang/python/sglang/multimodal_gen/runtime/utils/hf_diffusers_utils.py", line 1090, in maybe_download_model
+    local_path = snapshot_download(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/workspace/sglang/python/sglang/multimodal_gen/runtime/utils/hf_diffusers_utils.py", line 1270, in snapshot_download
+    return _hf_snapshot_download(**hf_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 91, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 266, in _inner
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/sglang/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 369, in snapshot_download
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: Cannot find an appropriate cached snapshot folder for the specified revision on the local disk and outgoing traffic has been disabled. To enable repo look-ups and downloads online, set 'HF_HUB_OFFLINE=0' as environment variable.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/sglang/python/sglang/multimodal_gen/runtime/managers/worker_bootstrap.py", line 147, in bootstrap_scheduler_process
+    gpu_worker.run_scheduler_process(
+  File "/workspace/sglang/python/sglang/multimodal_gen/runtime/managers/gpu_worker.py", line 1607, in run_scheduler_process
+    scheduler = Scheduler(
+                ^^^^^^^^^^
+  File "/workspace/sglang/python/sglang/multimodal_gen/runtime/managers/scheduler.py", line 139, in __init__
+    worker = Exec_worker(
+             ^^^^^^^^^^^^
+  File "/workspace/sglang/python/sglang/multimodal_gen/runtime/managers/gpu_worker.py", line 252, in __init__
+    self.init_device_and_model()
+  File "/workspace/sglang/python/sglang/multimodal_gen/runtime/managers/gpu_worker.py", line 431, in init_device_and_model
+    self.pipeline = build_pipeline(self.server_args)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/sglang/python/sglang/multimodal_gen/runtime/pipelines_core/__init__.py", line 80, in build_pipeline
+    pipeline = pipeline_cls(model_path, server_args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/sglang/python/sglang/multimodal_gen/runtime/pipelines/diffusers_pipeline.py", line 393, in __init__
+    self.diffusers_pipe = self._load_diffusers_pipeline(model_path, server_args)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/sglang/python/sglang/multimodal_gen/runtime/pipelines/diffusers_pipeline.py", line 409, in _load_diffusers_pipeline
+    model_path = maybe_download_model(model_path, force_diffusers_model=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/sglang/python/sglang/multimodal_gen/runtime/utils/hf_diffusers_utils.py", line 1186, in maybe_download_model
+    raise ValueError(
+ValueError: Could not find model at circlestone-labs/Anima-Base-v1.0-Diffusers and failed to download from Hugging Face Hub: Cannot find an appropriate cached snapshot folder for the specified revision on the local disk and outgoing traffic has been disabled. To enable repo look-ups and downloads online, set 'HF_HUB_OFFLINE=0' as environment variable.
+[91m[10-03 22:44:29] Rank 0 scheduler is dead. Please check if there are relevant logs.[0;0m
+[91m[10-03 22:44:29] Exit code: 1[0;0m
+Traceback (most recent call last):
+  File "/opt/sglang/bin/sglang", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/workspace/sglang/python/sglang/cli/main.py", line 55, in main
+    generate(args, extra_argv)
+  File "/workspace/sglang/python/sglang/cli/generate.py", line 34, in generate
+    generate_cmd(parsed_args, unknown_args)
+  File "/workspace/sglang/python/sglang/multimodal_gen/runtime/entrypoints/cli/generate.py", line 202, in generate_cmd
+    generator = DiffGenerator.from_pretrained(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/sglang/python/sglang/multimodal_gen/runtime/entrypoints/diffusion_generator.py", line 148, in from_pretrained
+    return cls._create(server_args, local_mode=local_mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/sglang/python/sglang/multimodal_gen/runtime/entrypoints/diffusion_generator.py", line 181, in _create
+    instance.local_scheduler_process = instance._start_local_server_if_needed()
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/sglang/python/sglang/multimodal_gen/runtime/entrypoints/diffusion_generator.py", line 201, in _start_local_server_if_needed
+    processes = launch_server(self.server_args, launch_http_server=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/sglang/python/sglang/multimodal_gen/runtime/launch_server.py", line 196, in launch_server
+    data = reader.recv()
+           ^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+    raise EOFError
+EOFError
+Traceback (most recent call last):
+  File "/pkg/modal/_runtime/container_io_manager.py", line 915, in handle_input_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 189, in run_input_sync
+    values = io_context.call_function_sync()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/modal/_runtime/container_io_manager.py", line 218, in call_function_sync
+    expected_value_or_values = self.finalized_function.callable(*args, **kwargs)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anima_experiment.py", line 188, in experiment
+    r = generate(out, f"{i:02d}-{variant}", variant)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/anima_experiment.py", line 133, in generate
+    logged(command, arm / "generate.log", env)
+  File "/root/anima_experiment.py", line 69, in logged
+    raise RuntimeError(f"Exit {code}: {path}")
+RuntimeError: Exit 1: /results/anima-20261003T224144Z-504c704b/01-baseline/generate.log
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /Users/cuzimi/Coding                                                         │
+│ Works/RemoteFiles/modal_sglang/anima/anima_experiment.py:227 in main         │
+│                                                                              │
+│   226 │   print("Model cache:", download.remote())                           │
+│ ❱ 227 │   print("Results:", VOLUME, experiment.remote())                     │
+│   228                                                                        │
+│                                                                              │
+│ /opt/homebrew/Caskroom/miniforge/base/envs/remote/lib/python3.12/site-packag │
+│ es/modal/_object.py:45 in wrapped                                            │
+│                                                                              │
+│    44 │   │   await self.hydrate()                                           │
+│ ❱  45 │   │   return await method(self, *args, **kwargs)                     │
+│    46                                                                        │
+│                                                                              │
+│ /opt/homebrew/Caskroom/miniforge/base/envs/remote/lib/python3.12/site-packag │
+│ es/modal/_functions.py:1761 in remote                                        │
+│                                                                              │
+│   1760 │   │                                                                 │
+│ ❱ 1761 │   │   return await self._call_function(args, kwargs)                │
+│   1762                                                                       │
+│                                                                              │
+│ /opt/homebrew/Caskroom/miniforge/base/envs/remote/lib/python3.12/site-packag │
+│ es/modal/_functions.py:1699 in _call_function                                │
+│                                                                              │
+│   1698 │   │                                                                 │
+│ ❱ 1699 │   │   return await invocation.run_function()                        │
+│   1700                                                                       │
+│                                                                              │
+│ /opt/homebrew/Caskroom/miniforge/base/envs/remote/lib/python3.12/site-packag │
+│ es/modal/_functions.py:494 in run_function                                   │
+│                                                                              │
+│    493 │   │   │   # No more retries left.                                   │
+│ ❱  494 │   │   │   return await _process_result(                             │
+│    495 │   │   │   │   await_response.output.result, await_response.output.d │
+│                                                                              │
+│ /opt/homebrew/Caskroom/miniforge/base/envs/remote/lib/python3.12/site-packag │
+│ es/modal/_utils/function_utils.py:548 in _process_result                     │
+│                                                                              │
+│   547 │   │   │                                                              │
+│ ❱ 548 │   │   │   raise exc_with_hints(exc)                                  │
+│   549                                                                        │
+│                                                                              │
+│     ...Remote call to Modal Function (ta-01M41YW1CYVQ61A2MH7E4XNQVR)...      │
+│                                                                              │
+│ /root/anima_experiment.py:188 in experiment                                  │
+│                                                                              │
+│ ❱ 188 r = generate(out, f"{i:02d}-{variant}", variant)                       │
+│                                                                              │
+│                                                                              │
+│ /root/anima_experiment.py:133 in generate                                    │
+│                                                                              │
+│ ❱ 133 logged(command, arm / "generate.log", env)                             │
+│                                                                              │
+│                                                                              │
+│ /root/anima_experiment.py:69 in logged                                       │
+│                                                                              │
+│ ❱ 69 raise RuntimeError(f"Exit {code}: {path}")                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RuntimeError: Exit 1: 
+/results/anima-20261003T224144Z-504c704b/01-baseline/generate.log

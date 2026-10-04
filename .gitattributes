@@ -1,0 +1,7 @@
+*.patch -whitespace
+*.diff -whitespace
+*.log -whitespace
+*.png binary
+*.gz binary
+diffusion-prs/ming-image-rmsnorm/evidence/kernel-tests.txt -whitespace
+diffusion-prs/ming-image-rmsnorm/evidence/wrapper-tests.txt -whitespace

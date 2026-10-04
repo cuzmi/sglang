@@ -1,0 +1,61 @@
+## Motivation
+
+Anima computes `LayerNorm(x) * (1 + scale) + shift` at 85 AdaLN sites per transformer forward. Reuse the existing bit-exact modulation kernel to reduce intermediate tensor traffic and kernel launches.
+
+The shared kernel loader caches its module but looks up the exported FFI function on each call. Cache the callable to avoid that repeated lookup.
+
+## Modifications
+
+- Route Anima's eager CUDA FP16/BF16 modulation through `modulate_scale_shift`. Make only the small scale/shift rows contiguous when necessary.
+- Cache the exported FFI callable instead of only caching its module.
+- Preserve Anima's original expression for CPU, FP32, and `torch.compile` tracing.
+
+The current upstream eligibility checks, CUDA launcher validation, and error propagation remain unchanged. Unsupported inputs retain the public wrapper's eager fallback. CUDA arithmetic, launch geometry, and LayerNorm reduction are unchanged.
+
+## Accuracy Tests
+
+Revalidated the rebased patch on H200 against `affa261e3d289fe4f907c9b2e8d773fef0d36dba`:
+
+- **Anima:** 36/36 full AdaLN comparisons are bit-exact, covering FP16/BF16/FP32, batch 1/2, sequence lengths 17/1024/4096, hidden size 2048, and gated/ungated modules. Eligible cases assert fused dispatch; FP32 cases assert fallback. Warmed BF16 batch-2 CUDA graph replay also passes.
+- **Other callers:** 48 component cases per version cover FLUX, Ideogram, LingBot, and LTX-2 video/audio. Outputs match the eager references byte-for-byte; baseline/candidate output hashes and dispatch counts match. Five changed-input CUDA graph replays per version pass.
+- **Error behavior:** supported-input kernel errors propagate in both versions, matching current upstream behavior. This PR does not restore the removed catch-and-disable mechanism.
+- **Existing tests:** 42 passed per version: 12 modulation kernel tests, 9 FLUX/LTX model-site tests, 4 LTX layout tests, and 17 Anima CPU/CUDA tests.
+- Pre-commit passes for both changed files.
+
+These are checkpoint-free component checks with synthetic inputs. No new repository unit tests are added. Post-rebase full-model Anima generation also passes: all 16 outputs across the two performance experiments have identical decoded pixels and PNG bytes. Other models were checked at the component level only.
+
+[Rebased validation scripts and evidence](https://github.com/cuzmi/RemoteFiles/tree/main/modal_sglang/anima/rebase_validation)
+
+## Speed Tests and Profiling
+
+Rebenchmarked the current PR head `05bee50b2f4fef4484bab3db3bff7ef4495e98e5` against base `affa261e3d289fe4f907c9b2e8d773fef0d36dba` on H200:
+
+- Anima-Base-v1.0-Diffusers at revision `073c3a9db359c31ad0e8aa268d15775473c2176c`.
+- BF16, TP1, FA attention, 1024x1024, 30 steps, CFG 4, seed 42; torch.compile and CUDA graph disabled.
+- One container/GPU, ABBA + BAAB order, fresh CLI process and one-step same-resolution request warmup per arm; **four measured process samples per version**.
+- Primary metric: worker request wall time with CUDA synchronized at request boundaries. The same timing-only overlay is applied to both versions; no per-stage synchronization or profiler. Model loading, warmup, output transport, and PNG saving are excluded. The overlay is not part of this PR.
+
+| Version | Mean worker request (ms) | Range (ms) | Sample SD (ms) |
+| --- | ---: | ---: | ---: |
+| Base | 3185.73 | 3164.03–3229.58 | 29.95 |
+| PR | 3065.52 | 3051.42–3099.78 | 22.94 |
+
+Mean latency decreases by **3.77%** (120.21 ms). ABBA and BAAB separately show **3.98%** and **3.56%** reductions. All eight requests complete 30 steps with identical output pixels and PNG bytes; source hashes and synchronization markers are verified.
+
+A separate eight-arm run using the unmodified native timer measured 3151.82 → 3016.00 ms (4.31% lower). That timer stops before output transport without an explicit end synchronization, so it may omit trailing CUDA work. It ran on a different H200 instance; its samples are **not pooled** with the synchronized result, and the difference between runs does not measure the CUDA tail.
+
+These are fixed-workload observations, not a universal speedup claim: one prompt/seed/resolution and four process samples per version, with no separate A/A control or repeated synchronized experiment across instances. Boundary GPU snapshots showed no residual compute processes, but do not prove isolation throughout the timed requests. The two PR changes are measured together; their individual contributions are not isolated here.
+
+[Post-rebase scripts, timing patch, every sample, and reports](https://github.com/cuzmi/RemoteFiles/tree/main/modal_sglang/anima/rebased_perf)
+
+Historical experiments against `6fa3fe69e2` are retained separately: an initial integration-only run regressed by 4.93%; a later combined run improved by 4.15% but included duplicate-check removal already present in the current base. Neither is used as the current PR's speed result. Historical profiling showed 510 modulation launches replaced by 170 during one denoising step with 170 AdaLN calls; this was not reprofiled after rebasing.
+
+[Historical experiment archive](https://github.com/cuzmi/RemoteFiles/tree/32ccb03589cbb84810a165d90637ceb993e79f1f/modal_sglang/anima)
+
+## Checklist
+
+- [x] Format your code according to the [Format code with pre-commit](https://docs.sglang.io/developer_guide/contribution_guide.html#format-code-with-pre-commit).
+- [ ] Add unit tests according to the [Run and add unit tests](https://docs.sglang.io/developer_guide/contribution_guide.html#run-and-add-unit-tests).
+- [ ] Update documentation according to [Write documentations](https://docs.sglang.io/developer_guide/contribution_guide.html#write-documentations).
+- [x] Provide accuracy and speed benchmark results according to [Test the accuracy](https://docs.sglang.io/developer_guide/contribution_guide.html#test-the-accuracy) and [Benchmark the speed](https://docs.sglang.io/developer_guide/contribution_guide.html#benchmark-the-speed).
+- [x] Follow the SGLang code style [guidance](https://docs.sglang.io/developer_guide/contribution_guide.html#code-style-guidance).

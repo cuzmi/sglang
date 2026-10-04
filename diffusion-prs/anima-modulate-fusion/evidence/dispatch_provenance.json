@@ -1,0 +1,12 @@
+{
+  "baseline_commit": "6fa3fe69e2e5e19b75cadd9fc285b72634551992",
+  "branch": "perf/anima-modulate-fusion",
+  "source_sha256": {
+    "python/sglang/multimodal_gen/runtime/models/dits/anima.py": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013",
+    "python/sglang/kernels/ops/diffusion/modulate/modulate_scale_shift_jit.py": "5705525464fedef85e83631e44aa53ce87bd7a7b1b83d7294a25c22621bcc8b0"
+  },
+  "patch_sha256": "45d17104349bc3d655b6299045534bf2ecff99da55c8fe29916aeb89ca013fa2",
+  "screen_run": "kernel-screen-20261003T231957Z-36d5d3ca",
+  "full_model_run": "dispatch-abccba-20261003T232600Z-e9defb4f",
+  "cuda_geometry_changed": false
+}

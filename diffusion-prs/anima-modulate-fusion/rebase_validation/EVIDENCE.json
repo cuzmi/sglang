@@ -1,0 +1,32 @@
+{
+  "run_id": "anima-rebased-correctness-20261004T161931Z-54a6bdc1",
+  "base": "affa261e3d289fe4f907c9b2e8d773fef0d36dba",
+  "head": "05bee50b2f4fef4484bab3db3bff7ef4495e98e5",
+  "modal_volume": "anima-modulate-experiments",
+  "sha256": {
+    ".gitattributes": "4271bda00d49f54b888bd21f7dcc56934d347d61dcec5b16ae8edf596c577cb8",
+    "PR_BODY.before.txt": "0ae8a247711be222a47138fa7d604af6179d956e730328c1ffb5c23d329066f5",
+    "PR_BODY.txt": "e3568d5d53223b6bc95be030c54cd7e2df14a82ee3853593309dfb9cca477023",
+    "README.txt": "061b0a77238e2ebb590a8ad8b169979f71df710dd7536242a206a788a27a883f",
+    "REPORT.txt": "1881c535750ab4fc1fb1f3d3abbc4a37e35fcc75baa7a3d9f4a3ca9eaf01105f",
+    "analyze.py": "71cb158e08b82ec9a221e68e375345afb60e06e641c738d929f55c52b52f31d9",
+    "candidate.patch": "a38b9ff695624f6e092869e6ff22076a929cfc60f7ac604e51bd8e51c6590f09",
+    "check_callers.py": "a984a1f8cbabc7ed623c1881b5f4a1fd24872ecad51b31ea3995ac5f821a2e62",
+    "evidence/baseline/callers.json": "97a7fd2057951056c4b508d68665677d7c34121f04540b14189be3d83e0a6857",
+    "evidence/baseline/existing-anima.txt": "1bc559b5a5c729b7606b4ffd8457609a4bd8463f847eb83239a882c5af3038d8",
+    "evidence/baseline/existing-kernel.txt": "005226ec9a8c92302ead24e0e5e14811a48881b1dd9de963c2030ae9ea58a0c7",
+    "evidence/baseline/existing-ltx-layout.txt": "1c1247c583fc8e0191c9505b11c38d9c7bb7549942fd58f9409ebf55b60caddc",
+    "evidence/baseline/existing-model-sites.txt": "a002519e02c21915d51b840217551ab43eb44ec7a55c7f265a9a03ba80fea499",
+    "evidence/candidate/anima.json": "64bd2ee902a58e04b4c1285e07a27a30a007ca7dae7be5858859bae447044701",
+    "evidence/candidate/callers.json": "97a7fd2057951056c4b508d68665677d7c34121f04540b14189be3d83e0a6857",
+    "evidence/candidate/existing-anima.txt": "0cabc9cccdfdf77496066edf537d81f0468ad730e6dc30a932fe1cdc85ee49a9",
+    "evidence/candidate/existing-kernel.txt": "c14056eec300fdd8d0491dce3c91bfe105f00cb77788158d03ea69333331df5a",
+    "evidence/candidate/existing-ltx-layout.txt": "3376b224411837697324b93b5eaf76a103c8ceea13962a4fe1e4f7ce538469f9",
+    "evidence/candidate/existing-model-sites.txt": "4e8d4d0c7a7c685565677370a6488e2a287e5a4742ddba23d7cfab212a1a1a34",
+    "evidence/manifest.json": "0a1c7b2e59e4e97c65e557acc045f3b37b6375b00e7609682ec0126025e91d4a",
+    "evidence/pre-commit.txt": "115799eb4a740e1ef4a681e6bb3457eb1d1845ddfc1f3aa8a199e6b9d1e76907",
+    "provenance.json": "6b7ff41c9eba6e9adfde495c0af87b5b0378b3c40a2ef09bd6ddc2b2177bfd18",
+    "run_modal.py": "d2f13fc3efeef7e2e5460f2cdedae3ad1cb1bf4fbc0111b16e9b8d2c10de38bc",
+    "verify_anima.py": "4f1b09f96c11b62b7ca02377073f998f2a4c21a128b1da17ecce46b7431f0028"
+  }
+}

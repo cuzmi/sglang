@@ -1,0 +1,1606 @@
+{
+  "status": "complete",
+  "baseline_commit": "affa261e3d289fe4f907c9b2e8d773fef0d36dba",
+  "candidate_commit": "05bee50b2f4fef4484bab3db3bff7ef4495e98e5",
+  "image_id": "im-USSXj25TgwLcB1dg8jFGSS",
+  "model_id": "circlestone-labs/Anima-Base-v1.0-Diffusers",
+  "model_revision": "073c3a9db359c31ad0e8aa268d15775473c2176c",
+  "gpu": "NVIDIA H200",
+  "cuda": "13.0",
+  "cpu_models": [
+    "unknown"
+  ],
+  "visible_cpu_count": 24,
+  "sglang_import_path": "/workspace/sglang-rebased/python/sglang/__init__.py",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "packages": {
+    "torch": "2.13.0+cu130",
+    "triton": "3.7.1",
+    "diffusers": "0.37.0",
+    "transformers": "5.12.1",
+    "apache-tvm-ffi": "0.1.11"
+  },
+  "baseline_source_sha256": {
+    "python/sglang/multimodal_gen/runtime/models/dits/anima.py": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6",
+    "python/sglang/kernels/ops/diffusion/modulate/modulate_scale_shift_jit.py": "dcbce5b2978f460ba98f0b6e6c647b9432c055e3c1221efbde7029e6341e3bec"
+  },
+  "candidate_source_sha256": {
+    "python/sglang/multimodal_gen/runtime/models/dits/anima.py": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013",
+    "python/sglang/kernels/ops/diffusion/modulate/modulate_scale_shift_jit.py": "9fd588001fb3b7b9bd0abbc68c4f1210278cb19f40eea45ed74f649e2daa190e"
+  },
+  "cuda_source_sha256": "33570b4d2adc897ed2a91d95a4e5f0e6681f8504904d699a3d9da48ebac3e7a5",
+  "order": [
+    "baseline",
+    "candidate",
+    "candidate",
+    "baseline",
+    "candidate",
+    "baseline",
+    "baseline",
+    "candidate"
+  ],
+  "workload": {
+    "width": 1024,
+    "height": 1024,
+    "steps": 30,
+    "cfg": 4,
+    "seed": 42,
+    "prompt": "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+    "negative_prompt": "",
+    "dtype": "bfloat16",
+    "tp": 1,
+    "attention": "fa",
+    "compile": false,
+    "cuda_graph": false,
+    "warmup_mode": "request",
+    "warmup_steps": 1
+  },
+  "metric": "native worker total_duration_ms, excludes load/warmup/PNG saving",
+  "validity": "All 8 arms must complete with matched work and identical output pixels. No failed-arm exclusion.",
+  "runs": [
+    {
+      "label": "01-baseline",
+      "variant": "baseline",
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-rebased-perf-20261004T163234Z-b2ba18da/01-baseline/perf.json",
+        "--output-path",
+        "/results/anima-rebased-perf-20261004T163234Z-b2ba18da/01-baseline/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3161.160231999986,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 79.8394170000023
+        },
+        {
+          "step": 1,
+          "duration_ms": 85.49802000000284
+        },
+        {
+          "step": 2,
+          "duration_ms": 95.30958799999212
+        },
+        {
+          "step": 3,
+          "duration_ms": 95.67475699999761
+        },
+        {
+          "step": 4,
+          "duration_ms": 95.15413900000169
+        },
+        {
+          "step": 5,
+          "duration_ms": 95.58467899999812
+        },
+        {
+          "step": 6,
+          "duration_ms": 95.31024099999286
+        },
+        {
+          "step": 7,
+          "duration_ms": 95.68796199999952
+        },
+        {
+          "step": 8,
+          "duration_ms": 95.27197100000251
+        },
+        {
+          "step": 9,
+          "duration_ms": 97.2717429999932
+        },
+        {
+          "step": 10,
+          "duration_ms": 97.75234100000318
+        },
+        {
+          "step": 11,
+          "duration_ms": 96.6373400000009
+        },
+        {
+          "step": 12,
+          "duration_ms": 95.66428799999471
+        },
+        {
+          "step": 13,
+          "duration_ms": 95.86773499999879
+        },
+        {
+          "step": 14,
+          "duration_ms": 95.62175299998898
+        },
+        {
+          "step": 15,
+          "duration_ms": 96.25553100001127
+        },
+        {
+          "step": 16,
+          "duration_ms": 95.40863899999863
+        },
+        {
+          "step": 17,
+          "duration_ms": 95.51706800000659
+        },
+        {
+          "step": 18,
+          "duration_ms": 95.42517299999531
+        },
+        {
+          "step": 19,
+          "duration_ms": 96.38182400000517
+        },
+        {
+          "step": 20,
+          "duration_ms": 96.2322280000052
+        },
+        {
+          "step": 21,
+          "duration_ms": 96.77365800000359
+        },
+        {
+          "step": 22,
+          "duration_ms": 97.21498300000064
+        },
+        {
+          "step": 23,
+          "duration_ms": 97.11893399999383
+        },
+        {
+          "step": 24,
+          "duration_ms": 96.0393109999984
+        },
+        {
+          "step": 25,
+          "duration_ms": 96.66427999999883
+        },
+        {
+          "step": 26,
+          "duration_ms": 96.34507800001302
+        },
+        {
+          "step": 27,
+          "duration_ms": 95.95125099998825
+        },
+        {
+          "step": 28,
+          "duration_ms": 95.79330900000116
+        },
+        {
+          "step": 29,
+          "duration_ms": 95.99980199999436
+        }
+      ],
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": {
+        "python/sglang/multimodal_gen/runtime/models/dits/anima.py": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6",
+        "python/sglang/kernels/ops/diffusion/modulate/modulate_scale_shift_jit.py": "dcbce5b2978f460ba98f0b6e6c647b9432c055e3c1221efbde7029e6341e3bec"
+      },
+      "gpu_before": {
+        "utc": "2026-10-04T16:32:35.744874+00:00",
+        "gpu": "NVIDIA H200, GPU-95d994f4-4962-1fab-8379-49f6c101a354, 580.95.05, P0, 39, 345 MHz, 3201 MHz, 81.39 W, 700.00 W, 0 %, 4 MiB",
+        "gpu_exit_code": 0,
+        "processes": "",
+        "process_exit_code": 0
+      },
+      "gpu_after": {
+        "utc": "2026-10-04T16:34:03.616417+00:00",
+        "gpu": "NVIDIA H200, GPU-95d994f4-4962-1fab-8379-49f6c101a354, 580.95.05, P0, 42, 405 MHz, 3201 MHz, 93.03 W, 700.00 W, 0 %, 4 MiB",
+        "gpu_exit_code": 0,
+        "processes": "",
+        "process_exit_code": 0
+      }
+    },
+    {
+      "label": "02-candidate",
+      "variant": "candidate",
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-rebased-perf-20261004T163234Z-b2ba18da/02-candidate/perf.json",
+        "--output-path",
+        "/results/anima-rebased-perf-20261004T163234Z-b2ba18da/02-candidate/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 2989.134030999992,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 81.3835289999929
+        },
+        {
+          "step": 1,
+          "duration_ms": 78.89001000000917
+        },
+        {
+          "step": 2,
+          "duration_ms": 81.751813000011
+        },
+        {
+          "step": 3,
+          "duration_ms": 89.3798419999996
+        },
+        {
+          "step": 4,
+          "duration_ms": 89.45144800000548
+        },
+        {
+          "step": 5,
+          "duration_ms": 89.9212870000099
+        },
+        {
+          "step": 6,
+          "duration_ms": 89.8314389999939
+        },
+        {
+          "step": 7,
+          "duration_ms": 90.49079100000768
+        },
+        {
+          "step": 8,
+          "duration_ms": 90.57472000000644
+        },
+        {
+          "step": 9,
+          "duration_ms": 90.00335300001439
+        },
+        {
+          "step": 10,
+          "duration_ms": 90.0796029999924
+        },
+        {
+          "step": 11,
+          "duration_ms": 94.23740399998337
+        },
+        {
+          "step": 12,
+          "duration_ms": 89.90403799998603
+        },
+        {
+          "step": 13,
+          "duration_ms": 89.78131000000644
+        },
+        {
+          "step": 14,
+          "duration_ms": 91.972716000015
+        },
+        {
+          "step": 15,
+          "duration_ms": 91.1181410000097
+        },
+        {
+          "step": 16,
+          "duration_ms": 92.33611900000938
+        },
+        {
+          "step": 17,
+          "duration_ms": 91.76106700002151
+        },
+        {
+          "step": 18,
+          "duration_ms": 89.74704199999906
+        },
+        {
+          "step": 19,
+          "duration_ms": 90.178356000024
+        },
+        {
+          "step": 20,
+          "duration_ms": 92.43878799998129
+        },
+        {
+          "step": 21,
+          "duration_ms": 88.70209500000215
+        },
+        {
+          "step": 22,
+          "duration_ms": 91.69577699998399
+        },
+        {
+          "step": 23,
+          "duration_ms": 91.40196999999262
+        },
+        {
+          "step": 24,
+          "duration_ms": 89.60277799999972
+        },
+        {
+          "step": 25,
+          "duration_ms": 91.04684600001178
+        },
+        {
+          "step": 26,
+          "duration_ms": 90.64293000000134
+        },
+        {
+          "step": 27,
+          "duration_ms": 90.19599499998776
+        },
+        {
+          "step": 28,
+          "duration_ms": 89.78460099999097
+        },
+        {
+          "step": 29,
+          "duration_ms": 90.82736199999886
+        }
+      ],
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": {
+        "python/sglang/multimodal_gen/runtime/models/dits/anima.py": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013",
+        "python/sglang/kernels/ops/diffusion/modulate/modulate_scale_shift_jit.py": "9fd588001fb3b7b9bd0abbc68c4f1210278cb19f40eea45ed74f649e2daa190e"
+      },
+      "gpu_before": {
+        "utc": "2026-10-04T16:34:05.005265+00:00",
+        "gpu": "NVIDIA H200, GPU-95d994f4-4962-1fab-8379-49f6c101a354, 580.95.05, P0, 41, 345 MHz, 3201 MHz, 82.34 W, 700.00 W, 0 %, 4 MiB",
+        "gpu_exit_code": 0,
+        "processes": "",
+        "process_exit_code": 0
+      },
+      "gpu_after": {
+        "utc": "2026-10-04T16:35:06.130058+00:00",
+        "gpu": "NVIDIA H200, GPU-95d994f4-4962-1fab-8379-49f6c101a354, 580.95.05, P0, 42, 480 MHz, 3201 MHz, 119.38 W, 700.00 W, 0 %, 4 MiB",
+        "gpu_exit_code": 0,
+        "processes": "",
+        "process_exit_code": 0
+      }
+    },
+    {
+      "label": "03-candidate",
+      "variant": "candidate",
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-rebased-perf-20261004T163234Z-b2ba18da/03-candidate/perf.json",
+        "--output-path",
+        "/results/anima-rebased-perf-20261004T163234Z-b2ba18da/03-candidate/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3023.4710619999987,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 82.76806399999259
+        },
+        {
+          "step": 1,
+          "duration_ms": 81.66650199999026
+        },
+        {
+          "step": 2,
+          "duration_ms": 80.5422379999925
+        },
+        {
+          "step": 3,
+          "duration_ms": 90.3488240000172
+        },
+        {
+          "step": 4,
+          "duration_ms": 90.57162800002061
+        },
+        {
+          "step": 5,
+          "duration_ms": 90.30377199999862
+        },
+        {
+          "step": 6,
+          "duration_ms": 90.10691800000359
+        },
+        {
+          "step": 7,
+          "duration_ms": 90.88570599999457
+        },
+        {
+          "step": 8,
+          "duration_ms": 92.1309709999889
+        },
+        {
+          "step": 9,
+          "duration_ms": 90.1244750000103
+        },
+        {
+          "step": 10,
+          "duration_ms": 91.98926299998789
+        },
+        {
+          "step": 11,
+          "duration_ms": 91.3873840000008
+        },
+        {
+          "step": 12,
+          "duration_ms": 90.07643499998608
+        },
+        {
+          "step": 13,
+          "duration_ms": 93.92372700000351
+        },
+        {
+          "step": 14,
+          "duration_ms": 91.08456399999909
+        },
+        {
+          "step": 15,
+          "duration_ms": 90.40295899998796
+        },
+        {
+          "step": 16,
+          "duration_ms": 89.8797170000023
+        },
+        {
+          "step": 17,
+          "duration_ms": 90.77490199999261
+        },
+        {
+          "step": 18,
+          "duration_ms": 92.83975000002442
+        },
+        {
+          "step": 19,
+          "duration_ms": 91.31939299999203
+        },
+        {
+          "step": 20,
+          "duration_ms": 92.39568699999268
+        },
+        {
+          "step": 21,
+          "duration_ms": 92.35058400000185
+        },
+        {
+          "step": 22,
+          "duration_ms": 91.10310799999866
+        },
+        {
+          "step": 23,
+          "duration_ms": 93.43891000000326
+        },
+        {
+          "step": 24,
+          "duration_ms": 91.23016899999925
+        },
+        {
+          "step": 25,
+          "duration_ms": 92.80075699999202
+        },
+        {
+          "step": 26,
+          "duration_ms": 90.69353099999944
+        },
+        {
+          "step": 27,
+          "duration_ms": 90.46701900001608
+        },
+        {
+          "step": 28,
+          "duration_ms": 89.64696999998978
+        },
+        {
+          "step": 29,
+          "duration_ms": 92.7111370000091
+        }
+      ],
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": {
+        "python/sglang/multimodal_gen/runtime/models/dits/anima.py": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013",
+        "python/sglang/kernels/ops/diffusion/modulate/modulate_scale_shift_jit.py": "9fd588001fb3b7b9bd0abbc68c4f1210278cb19f40eea45ed74f649e2daa190e"
+      },
+      "gpu_before": {
+        "utc": "2026-10-04T16:35:08.027960+00:00",
+        "gpu": "NVIDIA H200, GPU-95d994f4-4962-1fab-8379-49f6c101a354, 580.95.05, P0, 41, 345 MHz, 3201 MHz, 81.98 W, 700.00 W, 0 %, 4 MiB",
+        "gpu_exit_code": 0,
+        "processes": "",
+        "process_exit_code": 0
+      },
+      "gpu_after": {
+        "utc": "2026-10-04T16:36:05.394995+00:00",
+        "gpu": "NVIDIA H200, GPU-95d994f4-4962-1fab-8379-49f6c101a354, 580.95.05, P0, 42, 435 MHz, 3201 MHz, 107.76 W, 700.00 W, 0 %, 4 MiB",
+        "gpu_exit_code": 0,
+        "processes": "",
+        "process_exit_code": 0
+      }
+    },
+    {
+      "label": "04-baseline",
+      "variant": "baseline",
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-rebased-perf-20261004T163234Z-b2ba18da/04-baseline/perf.json",
+        "--output-path",
+        "/results/anima-rebased-perf-20261004T163234Z-b2ba18da/04-baseline/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3146.867064999981,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 81.51435499996751
+        },
+        {
+          "step": 1,
+          "duration_ms": 84.298906000015
+        },
+        {
+          "step": 2,
+          "duration_ms": 95.29351000003317
+        },
+        {
+          "step": 3,
+          "duration_ms": 95.30025100002604
+        },
+        {
+          "step": 4,
+          "duration_ms": 94.75800500001696
+        },
+        {
+          "step": 5,
+          "duration_ms": 95.29294099996832
+        },
+        {
+          "step": 6,
+          "duration_ms": 94.80692100004262
+        },
+        {
+          "step": 7,
+          "duration_ms": 95.38378300004524
+        },
+        {
+          "step": 8,
+          "duration_ms": 95.19078099998524
+        },
+        {
+          "step": 9,
+          "duration_ms": 95.77210399999103
+        },
+        {
+          "step": 10,
+          "duration_ms": 96.23404199999186
+        },
+        {
+          "step": 11,
+          "duration_ms": 97.81522200000836
+        },
+        {
+          "step": 12,
+          "duration_ms": 96.49848200001543
+        },
+        {
+          "step": 13,
+          "duration_ms": 95.73422799996933
+        },
+        {
+          "step": 14,
+          "duration_ms": 96.63825400002679
+        },
+        {
+          "step": 15,
+          "duration_ms": 95.84606099997472
+        },
+        {
+          "step": 16,
+          "duration_ms": 95.36530000002585
+        },
+        {
+          "step": 17,
+          "duration_ms": 95.6826670000055
+        },
+        {
+          "step": 18,
+          "duration_ms": 95.71559799996976
+        },
+        {
+          "step": 19,
+          "duration_ms": 95.7714759999817
+        },
+        {
+          "step": 20,
+          "duration_ms": 95.93175599997039
+        },
+        {
+          "step": 21,
+          "duration_ms": 97.12816500001509
+        },
+        {
+          "step": 22,
+          "duration_ms": 96.25490300004458
+        },
+        {
+          "step": 23,
+          "duration_ms": 96.00095799999053
+        },
+        {
+          "step": 24,
+          "duration_ms": 96.01000100002466
+        },
+        {
+          "step": 25,
+          "duration_ms": 95.69541399997661
+        },
+        {
+          "step": 26,
+          "duration_ms": 95.989655999972
+        },
+        {
+          "step": 27,
+          "duration_ms": 95.7740150000177
+        },
+        {
+          "step": 28,
+          "duration_ms": 95.78277600002139
+        },
+        {
+          "step": 29,
+          "duration_ms": 96.66355100000601
+        }
+      ],
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": {
+        "python/sglang/multimodal_gen/runtime/models/dits/anima.py": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6",
+        "python/sglang/kernels/ops/diffusion/modulate/modulate_scale_shift_jit.py": "dcbce5b2978f460ba98f0b6e6c647b9432c055e3c1221efbde7029e6341e3bec"
+      },
+      "gpu_before": {
+        "utc": "2026-10-04T16:36:06.845976+00:00",
+        "gpu": "NVIDIA H200, GPU-95d994f4-4962-1fab-8379-49f6c101a354, 580.95.05, P0, 41, 345 MHz, 3201 MHz, 82.30 W, 700.00 W, 0 %, 4 MiB",
+        "gpu_exit_code": 0,
+        "processes": "",
+        "process_exit_code": 0
+      },
+      "gpu_after": {
+        "utc": "2026-10-04T16:37:05.473238+00:00",
+        "gpu": "NVIDIA H200, GPU-95d994f4-4962-1fab-8379-49f6c101a354, 580.95.05, P0, 42, 405 MHz, 3201 MHz, 111.79 W, 700.00 W, 0 %, 4 MiB",
+        "gpu_exit_code": 0,
+        "processes": "",
+        "process_exit_code": 0
+      }
+    },
+    {
+      "label": "05-candidate",
+      "variant": "candidate",
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-rebased-perf-20261004T163234Z-b2ba18da/05-candidate/perf.json",
+        "--output-path",
+        "/results/anima-rebased-perf-20261004T163234Z-b2ba18da/05-candidate/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3043.642693000038,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 80.63941800003249
+        },
+        {
+          "step": 1,
+          "duration_ms": 78.0157309999936
+        },
+        {
+          "step": 2,
+          "duration_ms": 84.49627799996051
+        },
+        {
+          "step": 3,
+          "duration_ms": 90.26914600002556
+        },
+        {
+          "step": 4,
+          "duration_ms": 89.63257099998145
+        },
+        {
+          "step": 5,
+          "duration_ms": 92.0273419999944
+        },
+        {
+          "step": 6,
+          "duration_ms": 92.57109200001423
+        },
+        {
+          "step": 7,
+          "duration_ms": 90.25802200000044
+        },
+        {
+          "step": 8,
+          "duration_ms": 90.43434500000558
+        },
+        {
+          "step": 9,
+          "duration_ms": 90.42793700001539
+        },
+        {
+          "step": 10,
+          "duration_ms": 95.36274699996738
+        },
+        {
+          "step": 11,
+          "duration_ms": 91.11604999998235
+        },
+        {
+          "step": 12,
+          "duration_ms": 91.46704799996996
+        },
+        {
+          "step": 13,
+          "duration_ms": 92.37710799999377
+        },
+        {
+          "step": 14,
+          "duration_ms": 92.9241819999902
+        },
+        {
+          "step": 15,
+          "duration_ms": 90.74533500000825
+        },
+        {
+          "step": 16,
+          "duration_ms": 91.49289600003385
+        },
+        {
+          "step": 17,
+          "duration_ms": 91.5479399999981
+        },
+        {
+          "step": 18,
+          "duration_ms": 90.00402100002702
+        },
+        {
+          "step": 19,
+          "duration_ms": 90.3252720000296
+        },
+        {
+          "step": 20,
+          "duration_ms": 91.11797999997862
+        },
+        {
+          "step": 21,
+          "duration_ms": 91.90292399995315
+        },
+        {
+          "step": 22,
+          "duration_ms": 91.3233549999859
+        },
+        {
+          "step": 23,
+          "duration_ms": 91.05185599997867
+        },
+        {
+          "step": 24,
+          "duration_ms": 90.86462600004097
+        },
+        {
+          "step": 25,
+          "duration_ms": 93.23275399998465
+        },
+        {
+          "step": 26,
+          "duration_ms": 90.58312299998761
+        },
+        {
+          "step": 27,
+          "duration_ms": 90.91013299996575
+        },
+        {
+          "step": 28,
+          "duration_ms": 95.8815379999578
+        },
+        {
+          "step": 29,
+          "duration_ms": 92.45971600000757
+        }
+      ],
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": {
+        "python/sglang/multimodal_gen/runtime/models/dits/anima.py": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013",
+        "python/sglang/kernels/ops/diffusion/modulate/modulate_scale_shift_jit.py": "9fd588001fb3b7b9bd0abbc68c4f1210278cb19f40eea45ed74f649e2daa190e"
+      },
+      "gpu_before": {
+        "utc": "2026-10-04T16:37:06.819186+00:00",
+        "gpu": "NVIDIA H200, GPU-95d994f4-4962-1fab-8379-49f6c101a354, 580.95.05, P0, 41, 345 MHz, 3201 MHz, 82.40 W, 700.00 W, 0 %, 4 MiB",
+        "gpu_exit_code": 0,
+        "processes": "",
+        "process_exit_code": 0
+      },
+      "gpu_after": {
+        "utc": "2026-10-04T16:38:03.070495+00:00",
+        "gpu": "NVIDIA H200, GPU-95d994f4-4962-1fab-8379-49f6c101a354, 580.95.05, P0, 42, 450 MHz, 3201 MHz, 116.89 W, 700.00 W, 0 %, 4 MiB",
+        "gpu_exit_code": 0,
+        "processes": "",
+        "process_exit_code": 0
+      }
+    },
+    {
+      "label": "06-baseline",
+      "variant": "baseline",
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-rebased-perf-20261004T163234Z-b2ba18da/06-baseline/perf.json",
+        "--output-path",
+        "/results/anima-rebased-perf-20261004T163234Z-b2ba18da/06-baseline/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3157.010672999945,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 79.45865300001742
+        },
+        {
+          "step": 1,
+          "duration_ms": 85.94007300001749
+        },
+        {
+          "step": 2,
+          "duration_ms": 95.06523700002845
+        },
+        {
+          "step": 3,
+          "duration_ms": 95.83983800001761
+        },
+        {
+          "step": 4,
+          "duration_ms": 95.3794710000011
+        },
+        {
+          "step": 5,
+          "duration_ms": 95.42903900000965
+        },
+        {
+          "step": 6,
+          "duration_ms": 95.10491700001467
+        },
+        {
+          "step": 7,
+          "duration_ms": 95.34002200001623
+        },
+        {
+          "step": 8,
+          "duration_ms": 95.65066100003605
+        },
+        {
+          "step": 9,
+          "duration_ms": 96.211339999968
+        },
+        {
+          "step": 10,
+          "duration_ms": 96.79047599996693
+        },
+        {
+          "step": 11,
+          "duration_ms": 97.71627399999261
+        },
+        {
+          "step": 12,
+          "duration_ms": 96.95286199996644
+        },
+        {
+          "step": 13,
+          "duration_ms": 95.86326599998074
+        },
+        {
+          "step": 14,
+          "duration_ms": 95.49645300000975
+        },
+        {
+          "step": 15,
+          "duration_ms": 95.37352000000965
+        },
+        {
+          "step": 16,
+          "duration_ms": 95.36622900003522
+        },
+        {
+          "step": 17,
+          "duration_ms": 95.36832999998524
+        },
+        {
+          "step": 18,
+          "duration_ms": 95.36692400001812
+        },
+        {
+          "step": 19,
+          "duration_ms": 95.56721699999571
+        },
+        {
+          "step": 20,
+          "duration_ms": 96.13959500001101
+        },
+        {
+          "step": 21,
+          "duration_ms": 95.97686299997576
+        },
+        {
+          "step": 22,
+          "duration_ms": 96.4847250000389
+        },
+        {
+          "step": 23,
+          "duration_ms": 96.80769599998484
+        },
+        {
+          "step": 24,
+          "duration_ms": 96.44458700000769
+        },
+        {
+          "step": 25,
+          "duration_ms": 96.55454400001418
+        },
+        {
+          "step": 26,
+          "duration_ms": 96.1753040000417
+        },
+        {
+          "step": 27,
+          "duration_ms": 96.07763400003932
+        },
+        {
+          "step": 28,
+          "duration_ms": 96.2907859999973
+        },
+        {
+          "step": 29,
+          "duration_ms": 95.97778799997059
+        }
+      ],
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": {
+        "python/sglang/multimodal_gen/runtime/models/dits/anima.py": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6",
+        "python/sglang/kernels/ops/diffusion/modulate/modulate_scale_shift_jit.py": "dcbce5b2978f460ba98f0b6e6c647b9432c055e3c1221efbde7029e6341e3bec"
+      },
+      "gpu_before": {
+        "utc": "2026-10-04T16:38:04.143766+00:00",
+        "gpu": "NVIDIA H200, GPU-95d994f4-4962-1fab-8379-49f6c101a354, 580.95.05, P0, 41, 345 MHz, 3201 MHz, 82.33 W, 700.00 W, 0 %, 4 MiB",
+        "gpu_exit_code": 0,
+        "processes": "",
+        "process_exit_code": 0
+      },
+      "gpu_after": {
+        "utc": "2026-10-04T16:39:00.252718+00:00",
+        "gpu": "NVIDIA H200, GPU-95d994f4-4962-1fab-8379-49f6c101a354, 580.95.05, P0, 42, 555 MHz, 3201 MHz, 113.83 W, 700.00 W, 0 %, 4 MiB",
+        "gpu_exit_code": 0,
+        "processes": "",
+        "process_exit_code": 0
+      }
+    },
+    {
+      "label": "07-baseline",
+      "variant": "baseline",
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-rebased-perf-20261004T163234Z-b2ba18da/07-baseline/perf.json",
+        "--output-path",
+        "/results/anima-rebased-perf-20261004T163234Z-b2ba18da/07-baseline/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3142.2362079999857,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 77.50360799997225
+        },
+        {
+          "step": 1,
+          "duration_ms": 87.32387899999594
+        },
+        {
+          "step": 2,
+          "duration_ms": 94.55281900000045
+        },
+        {
+          "step": 3,
+          "duration_ms": 94.78632200000447
+        },
+        {
+          "step": 4,
+          "duration_ms": 95.25088499998446
+        },
+        {
+          "step": 5,
+          "duration_ms": 95.34004900001491
+        },
+        {
+          "step": 6,
+          "duration_ms": 95.22279800000888
+        },
+        {
+          "step": 7,
+          "duration_ms": 95.83018300003232
+        },
+        {
+          "step": 8,
+          "duration_ms": 95.69238499994981
+        },
+        {
+          "step": 9,
+          "duration_ms": 95.83514400003423
+        },
+        {
+          "step": 10,
+          "duration_ms": 95.79241000000138
+        },
+        {
+          "step": 11,
+          "duration_ms": 96.86596500000633
+        },
+        {
+          "step": 12,
+          "duration_ms": 96.64838500003725
+        },
+        {
+          "step": 13,
+          "duration_ms": 96.18604199999936
+        },
+        {
+          "step": 14,
+          "duration_ms": 96.0730060000401
+        },
+        {
+          "step": 15,
+          "duration_ms": 95.34849899995379
+        },
+        {
+          "step": 16,
+          "duration_ms": 95.02199899998232
+        },
+        {
+          "step": 17,
+          "duration_ms": 96.08582100003105
+        },
+        {
+          "step": 18,
+          "duration_ms": 95.36101000003327
+        },
+        {
+          "step": 19,
+          "duration_ms": 96.1576650000211
+        },
+        {
+          "step": 20,
+          "duration_ms": 96.00302600000532
+        },
+        {
+          "step": 21,
+          "duration_ms": 95.99999600004594
+        },
+        {
+          "step": 22,
+          "duration_ms": 95.61555999999882
+        },
+        {
+          "step": 23,
+          "duration_ms": 96.69218900000942
+        },
+        {
+          "step": 24,
+          "duration_ms": 96.41267099999595
+        },
+        {
+          "step": 25,
+          "duration_ms": 96.4087309999968
+        },
+        {
+          "step": 26,
+          "duration_ms": 95.87057400000276
+        },
+        {
+          "step": 27,
+          "duration_ms": 96.11084599998776
+        },
+        {
+          "step": 28,
+          "duration_ms": 95.59695799998735
+        },
+        {
+          "step": 29,
+          "duration_ms": 95.9071849999873
+        }
+      ],
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": {
+        "python/sglang/multimodal_gen/runtime/models/dits/anima.py": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6",
+        "python/sglang/kernels/ops/diffusion/modulate/modulate_scale_shift_jit.py": "dcbce5b2978f460ba98f0b6e6c647b9432c055e3c1221efbde7029e6341e3bec"
+      },
+      "gpu_before": {
+        "utc": "2026-10-04T16:39:01.436910+00:00",
+        "gpu": "NVIDIA H200, GPU-95d994f4-4962-1fab-8379-49f6c101a354, 580.95.05, P0, 41, 345 MHz, 3201 MHz, 82.63 W, 700.00 W, 0 %, 4 MiB",
+        "gpu_exit_code": 0,
+        "processes": "",
+        "process_exit_code": 0
+      },
+      "gpu_after": {
+        "utc": "2026-10-04T16:39:56.760558+00:00",
+        "gpu": "NVIDIA H200, GPU-95d994f4-4962-1fab-8379-49f6c101a354, 580.95.05, P0, 41, 420 MHz, 3201 MHz, 93.53 W, 700.00 W, 0 %, 4 MiB",
+        "gpu_exit_code": 0,
+        "processes": "",
+        "process_exit_code": 0
+      }
+    },
+    {
+      "label": "08-candidate",
+      "variant": "candidate",
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/anima-rebased-perf-20261004T163234Z-b2ba18da/08-candidate/perf.json",
+        "--output-path",
+        "/results/anima-rebased-perf-20261004T163234Z-b2ba18da/08-candidate/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3007.736279000028,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 80.0482679999277
+        },
+        {
+          "step": 1,
+          "duration_ms": 77.23566599997866
+        },
+        {
+          "step": 2,
+          "duration_ms": 85.55497299994386
+        },
+        {
+          "step": 3,
+          "duration_ms": 90.04289999995763
+        },
+        {
+          "step": 4,
+          "duration_ms": 89.41148199994586
+        },
+        {
+          "step": 5,
+          "duration_ms": 90.47119800004566
+        },
+        {
+          "step": 6,
+          "duration_ms": 90.35643100003199
+        },
+        {
+          "step": 7,
+          "duration_ms": 90.38614000007783
+        },
+        {
+          "step": 8,
+          "duration_ms": 89.63385899994591
+        },
+        {
+          "step": 9,
+          "duration_ms": 90.71802200003276
+        },
+        {
+          "step": 10,
+          "duration_ms": 92.54708100002063
+        },
+        {
+          "step": 11,
+          "duration_ms": 92.21853000008196
+        },
+        {
+          "step": 12,
+          "duration_ms": 89.72936099996787
+        },
+        {
+          "step": 13,
+          "duration_ms": 90.43651199999658
+        },
+        {
+          "step": 14,
+          "duration_ms": 93.37392700001601
+        },
+        {
+          "step": 15,
+          "duration_ms": 93.51321999997708
+        },
+        {
+          "step": 16,
+          "duration_ms": 92.50759500002914
+        },
+        {
+          "step": 17,
+          "duration_ms": 93.21705199999997
+        },
+        {
+          "step": 18,
+          "duration_ms": 90.64025600002878
+        },
+        {
+          "step": 19,
+          "duration_ms": 90.34283699998014
+        },
+        {
+          "step": 20,
+          "duration_ms": 92.65677299993058
+        },
+        {
+          "step": 21,
+          "duration_ms": 91.47537199999078
+        },
+        {
+          "step": 22,
+          "duration_ms": 92.0985269999619
+        },
+        {
+          "step": 23,
+          "duration_ms": 91.77425300003961
+        },
+        {
+          "step": 24,
+          "duration_ms": 92.0786679999992
+        },
+        {
+          "step": 25,
+          "duration_ms": 90.80068000002939
+        },
+        {
+          "step": 26,
+          "duration_ms": 90.13190100006341
+        },
+        {
+          "step": 27,
+          "duration_ms": 92.00128900010895
+        },
+        {
+          "step": 28,
+          "duration_ms": 93.04973199994038
+        },
+        {
+          "step": 29,
+          "duration_ms": 90.35929699996359
+        }
+      ],
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": {
+        "python/sglang/multimodal_gen/runtime/models/dits/anima.py": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013",
+        "python/sglang/kernels/ops/diffusion/modulate/modulate_scale_shift_jit.py": "9fd588001fb3b7b9bd0abbc68c4f1210278cb19f40eea45ed74f649e2daa190e"
+      },
+      "gpu_before": {
+        "utc": "2026-10-04T16:39:58.845178+00:00",
+        "gpu": "NVIDIA H200, GPU-95d994f4-4962-1fab-8379-49f6c101a354, 580.95.05, P0, 41, 345 MHz, 3201 MHz, 82.21 W, 700.00 W, 0 %, 4 MiB",
+        "gpu_exit_code": 0,
+        "processes": "",
+        "process_exit_code": 0
+      },
+      "gpu_after": {
+        "utc": "2026-10-04T16:40:52.754381+00:00",
+        "gpu": "NVIDIA H200, GPU-95d994f4-4962-1fab-8379-49f6c101a354, 580.95.05, P0, 43, 1980 MHz, 3201 MHz, 131.00 W, 700.00 W, 0 %, 4 MiB",
+        "gpu_exit_code": 0,
+        "processes": "",
+        "process_exit_code": 0
+      }
+    }
+  ]
+}

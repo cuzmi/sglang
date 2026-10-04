@@ -1,0 +1,37 @@
+Shared modulation caller correctness regression
+
+Run: cross-model-correctness-20261004T004258Z-cb6a67f7
+GPU: NVIDIA H200; CUDA: 13.0
+Packages: {'torch': '2.13.0+cu130', 'triton': '3.7.1', 'diffusers': '0.37.0', 'transformers': '5.12.1', 'apache-tvm-ffi': '0.1.11'}
+Baseline: 6fa3fe69e2e5e19b75cadd9fc285b72634551992
+Candidate backend SHA256: 5705525464fedef85e83631e44aa53ce87bd7a7b1b83d7294a25c22621bcc8b0
+
+Result: all checks passed in both source versions; no new output or dispatch differences.
+No performance measurements or full checkpoint-based generation were run.
+
+| Model | Cases per version | Baseline/candidate outputs |
+| --- | ---: | --- |
+| flux | 12 | identical byte hashes |
+| ideogram | 6 | identical byte hashes |
+| lingbot | 12 | identical byte hashes |
+| ltx | 18 | identical byte hashes |
+
+48/48 eager-reference byte comparisons per version, 96 total.
+All first-call and repeated-call shared-kernel invocation counts match across versions.
+FP16/BF16/FP32, batch 1/2, odd sequence length 17, model widths 2048–5120.
+5/5 changed-input CUDA graph replays per version, 10 total.
+Shared wrapper error fallback/disabled retries pass in both versions.
+
+Existing tests, per version:
+- Shared modulation kernel: 12 passed.
+- FLUX and LTX model sites: 9 passed.
+- LTX row layout and CPU fallback: 4 passed.
+Total existing test executions: 50 passed (25 baseline + 25 candidate).
+
+Scope details: README.txt. Model entrypoints are real; tensors are synthetic.
+LingBot uses its supported precomputed camera scale/shift branch.
+FLUX covers normal priority and a controlled fallback to the shared kernel.
+LTX uses its lossless path; Ideogram uses enable_fused=False.
+The tests also cover paths that intentionally bypass the shared kernel.
+Results do not establish full-model generation quality, performance, distributed
+execution, other GPUs, or torch.compile compatibility. No repository tests were changed.

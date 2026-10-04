@@ -1,0 +1,401 @@
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+{
+  "correctness": [
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 1
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 17,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 17,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 1024,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": false,
+      "bit_exact": true,
+      "fused_calls": 0
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "tokens": 4096,
+      "gated": true,
+      "bit_exact": true,
+      "fused_calls": 0
+    }
+  ],
+  "microbenchmark": [
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 1024,
+      "hidden": 2048,
+      "abba_us": [
+        22.97055959701538,
+        24.96000051498413,
+        23.588480949401855,
+        21.93727970123291
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "tokens": 4096,
+      "hidden": 2048,
+      "abba_us": [
+        47.063679695129395,
+        22.032320499420166,
+        21.526079177856445,
+        47.0582389831543
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 1024,
+      "hidden": 2048,
+      "abba_us": [
+        29.05344009399414,
+        50.659518241882324,
+        52.23968029022217,
+        29.075520038604736
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "tokens": 4096,
+      "hidden": 2048,
+      "abba_us": [
+        101.22655868530273,
+        50.865278244018555,
+        50.396480560302734,
+        100.94623565673828
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 1024,
+      "hidden": 2048,
+      "abba_us": [
+        22.087039947509766,
+        23.51936101913452,
+        23.488318920135498,
+        21.91296100616455
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 1,
+      "tokens": 4096,
+      "hidden": 2048,
+      "abba_us": [
+        46.29536151885986,
+        22.884480953216553,
+        22.73439884185791,
+        46.29024028778076
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 1024,
+      "hidden": 2048,
+      "abba_us": [
+        28.525760173797607,
+        49.28736209869385,
+        49.517760276794434,
+        28.61151933670044
+      ],
+      "includes_row_copies": true
+    },
+    {
+      "dtype": "torch.float16",
+      "batch": 2,
+      "tokens": 4096,
+      "hidden": 2048,
+      "abba_us": [
+        100.38304328918457,
+        49.697279930114746,
+        50.35615921020508,
+        100.5344009399414
+      ],
+      "includes_row_copies": true
+    }
+  ],
+  "cuda_graph_replay_bit_exact": true
+}

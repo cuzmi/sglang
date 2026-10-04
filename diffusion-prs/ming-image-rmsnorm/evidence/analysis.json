@@ -1,0 +1,160 @@
+{
+  "source": "6fa3fe69e2e5e19b75cadd9fc285b72634551992",
+  "versions": {
+    "torch": "2.13.0+cu130",
+    "triton": "3.7.1",
+    "diffusers": "0.37.0",
+    "transformers": "5.12.1"
+  },
+  "timing": {
+    "A": {
+      "denoise_ms": [
+        1692.7868510000508,
+        1691.2213489999885,
+        1691.4718469998888,
+        1694.4489010004418
+      ],
+      "total_ms": [
+        1804.4385190000298,
+        1799.7947610000438,
+        1802.954684000042,
+        1802.942149000046
+      ],
+      "median_denoise_ms": 1692.1293489999698,
+      "median_total_ms": 1802.948416500044,
+      "denoise_range_pct_of_median": 0.19073908282251967
+    },
+    "B": {
+      "denoise_ms": [
+        1343.4220660000165,
+        1343.7681590003194,
+        1346.9766020000407,
+        1347.239672999649
+      ],
+      "total_ms": [
+        1461.6493209999817,
+        1462.305778999962,
+        1465.210719999959,
+        1466.207168999972
+      ],
+      "median_denoise_ms": 1345.37238050018,
+      "median_total_ms": 1463.7582494999606,
+      "denoise_range_pct_of_median": 0.2837583894960899
+    }
+  },
+  "traces": {
+    "A": {
+      "dispatch": {
+        "calls": 2665,
+        "fused": 0,
+        "shapes": {
+          "((1, 256, 2560), (655360, 2560, 1), 'torch.bfloat16')": 13,
+          "((1, 4096, 3840), (15728640, 3840, 1), 'torch.bfloat16')": 104,
+          "((122880, 128), (128, 1), 'torch.bfloat16')": 52,
+          "((1, 320, 3840), (1228800, 3840, 1), 'torch.bfloat16')": 104,
+          "((9600, 128), (128, 1), 'torch.bfloat16')": 52,
+          "((1, 4416, 3840), (16957440, 3840, 1), 'torch.bfloat16')": 1560,
+          "((132480, 128), (128, 1), 'torch.bfloat16')": 780
+        },
+        "gate_disabled": null
+      },
+      "step": "ProfilerStep#4",
+      "norm_calls": 205,
+      "kernel_count": 1640,
+      "kernel_sum_ms": 46.641144999999945,
+      "kernels": [
+        {
+          "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",
+          "count": 205,
+          "sum_ms": 9.932900999999998
+        },
+        {
+          "name": "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul>)",
+          "count": 205,
+          "sum_ms": 6.4267259999999995
+        },
+        {
+          "name": "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, float, float, float>, unsigned int, float, 4, 4> >(at::native::ReduceOp<float, at::native::MeanOps<float, float, float, float>, unsigned int, float, 4, 4>)",
+          "count": 205,
+          "sum_ms": 5.982617999999997
+        },
+        {
+          "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul> >(int, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul>)",
+          "count": 205,
+          "sum_ms": 0.27418300000000007
+        },
+        {
+          "name": "void at::native::vectorized_elementwise_kernel<4, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",
+          "count": 205,
+          "sum_ms": 0.24377299999999985
+        },
+        {
+          "name": "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1})",
+          "count": 205,
+          "sum_ms": 10.114590000000002
+        },
+        {
+          "name": "void at::native::vectorized_elementwise_kernel<8, at::native::bfloat16_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::bfloat16_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda(float)#1}, std::array<char*, 2ul>)",
+          "count": 205,
+          "sum_ms": 4.737004000000003
+        },
+        {
+          "name": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<c10::BFloat16, c10::BFloat16, c10::BFloat16, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<c10::BFloat16, c10::BFloat16, c10::BFloat16, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<c10::BFloat16, c10::BFloat16, c10::BFloat16, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<c10::BFloat16, c10::BFloat16, c10::BFloat16, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1})",
+          "count": 205,
+          "sum_ms": 8.929349999999992
+        }
+      ]
+    },
+    "B": {
+      "dispatch": {
+        "calls": 2665,
+        "fused": 2665,
+        "shapes": {
+          "((1, 256, 2560), (655360, 2560, 1), 'torch.bfloat16')": 13,
+          "((1, 4096, 3840), (15728640, 3840, 1), 'torch.bfloat16')": 104,
+          "((122880, 128), (128, 1), 'torch.bfloat16')": 52,
+          "((1, 320, 3840), (1228800, 3840, 1), 'torch.bfloat16')": 104,
+          "((9600, 128), (128, 1), 'torch.bfloat16')": 52,
+          "((1, 4416, 3840), (16957440, 3840, 1), 'torch.bfloat16')": 1560,
+          "((132480, 128), (128, 1), 'torch.bfloat16')": 780
+        },
+        "gate_disabled": false,
+        "verified_signatures": [
+          "(device(type='cuda', index=0), torch.bfloat16, (1, 4416, 3840), 1e-05)",
+          "(device(type='cuda', index=0), torch.bfloat16, (122880, 128), 1e-05)",
+          "(device(type='cuda', index=0), torch.bfloat16, (9600, 128), 1e-05)",
+          "(device(type='cuda', index=0), torch.bfloat16, (1, 4096, 3840), 1e-05)",
+          "(device(type='cuda', index=0), torch.bfloat16, (1, 256, 2560), 1e-05)",
+          "(device(type='cuda', index=0), torch.bfloat16, (132480, 128), 1e-05)",
+          "(device(type='cuda', index=0), torch.bfloat16, (1, 320, 3840), 1e-05)"
+        ]
+      },
+      "step": "ProfilerStep#4",
+      "norm_calls": 205,
+      "kernel_count": 615,
+      "kernel_sum_ms": 14.743645999999988,
+      "kernels": [
+        {
+          "name": "_square_fp32_kernel",
+          "count": 205,
+          "sum_ms": 4.669243
+        },
+        {
+          "name": "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, float, float, float>, unsigned int, float, 4, 4> >(at::native::ReduceOp<float, at::native::MeanOps<float, float, float, float>, unsigned int, float, 4, 4>)",
+          "count": 205,
+          "sum_ms": 5.852388000000005
+        },
+        {
+          "name": "_rmsnorm_finish_kernel",
+          "count": 205,
+          "sum_ms": 4.222015000000003
+        }
+      ]
+    }
+  },
+  "denoise_reduction_pct": 20.4923440814214,
+  "total_reduction_pct": 18.81308216563029,
+  "pixel_hashes": [
+    "b04fe457e7a38a1007c8f23a1d0dd3c42ccd57afdb8c547d6670da661f82448f"
+  ]
+}

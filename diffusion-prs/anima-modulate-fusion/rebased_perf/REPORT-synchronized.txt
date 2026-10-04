@@ -1,0 +1,53 @@
+Anima post-rebase performance (synchronized)
+
+Run: anima-rebased-sync-perf-20261004T164048Z-a9b075f6
+Base: affa261e3d289fe4f907c9b2e8d773fef0d36dba
+Head: 05bee50b2f4fef4484bab3db3bff7ef4495e98e5
+Image: im-USSXj25TgwLcB1dg8jFGSS
+GPU: NVIDIA H200; CUDA: 13.0; CPU: ['unknown']
+Packages: {'torch': '2.13.0+cu130', 'triton': '3.7.1', 'diffusers': '0.37.0', 'transformers': '5.12.1', 'apache-tvm-ffi': '0.1.11'}
+
+1024x1024, BF16, TP1, FA, 30 steps, CFG4, seed42, no compile/CUDA graph.
+One container/GPU; ABBA + BAAB; fresh CLI process for every arm.
+One-step same-resolution request warmup per process; one timed 30-step request.
+Metric: worker total_duration_ms with explicit CUDA synchronization at request boundaries; excludes load/warmup/PNG saving.
+No profiler during timing. Four process samples per variant.
+
+Arm          Variant    Worker request (ms)
+01-baseline  baseline   3229.577146
+02-candidate candidate  3099.778507
+03-candidate candidate  3054.307142
+04-baseline  baseline   3179.790543
+05-candidate candidate  3056.575235
+06-baseline  baseline   3164.033129
+07-baseline  baseline   3169.511853
+08-candidate candidate  3051.424162
+
+OVERALL
+baseline: n=4, mean=3185.728 ms, range=3164.033..3229.577 ms, sample SD=29.953 ms
+candidate: n=4, mean=3065.521 ms, range=3051.424..3099.779 ms, sample SD=22.935 ms
+Candidate mean latency change: -3.773%
+
+ABBA
+baseline: n=2, mean=3204.684 ms, range=3179.791..3229.577 ms, sample SD=35.204 ms
+candidate: n=2, mean=3077.043 ms, range=3054.307..3099.779 ms, sample SD=32.153 ms
+Candidate mean latency change: -3.983%
+
+BAAB
+baseline: n=2, mean=3166.772 ms, range=3164.033..3169.512 ms, sample SD=3.874 ms
+candidate: n=2, mean=3054.000 ms, range=3051.424..3056.575 ms, sample SD=3.642 ms
+Candidate mean latency change: -3.561%
+
+Validity: all eight arms completed 30 steps with exact expected source hashes.
+All eight decoded pixel hashes and PNG byte hashes match.
+Pixel SHA256: 2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c
+
+Limitations: one GPU instance, one prompt/seed/resolution, four process samples per version.
+No same-version A/A run or cross-instance replication; this does not establish a universal speedup.
+ABBA/BAAB balance simple ordering effects but cannot remove all runtime noise.
+GPU boundary snapshots are archived; they do not prove isolation throughout each timed request.
+Earlier measurements used a different base and instance; they are not pooled here.
+
+Identical timing-only worker instrumentation synchronizes before timer start and after forward.
+The marker is printed after the timer stops; one warmup and one measured marker per arm are verified.
+Only this benchmark image is instrumented; the production branch is unchanged.

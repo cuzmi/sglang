@@ -1,0 +1,1382 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/xinyuj2/main/ap-jTzjvHkBKw61haxoAVtxcm
+✓ Created objects.
+├── ✓ Uploaded /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/ming_image/rmsnorm/experiment.py
+├── ✓ Uploaded /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/ming_image/rmsnorm/inputs/baseline.tar.gz
+├── ✓ Uploaded /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/ming_image/rmsnorm/inputs/candidate_ming_imag
+│   e.py
+├── ✓ Uploaded /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/ming_image/rmsnorm/verify_rmsnorm.py
+├── ✓ Uploaded /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/ming_image/rmsnorm/inputs/test_rmsnorm_preser
+│   ve_reduction.py
+├── ✓ Uploaded /Users/cuzimi/Coding 
+│   Works/RemoteFiles/modal_sglang/ming_image/rmsnorm/inputs/test_model_fast_pat
+│   hs.py
+└── ✓ Created Function run.
+RUN ['sglang', 'generate', '--model-path', 'inclusionAI/Ming-Image-0.1-Design', '--revision', '208087ada1486931692c1896f38d4cd16ff3df82', '--num-gpus', '1', '--enable-torch-compile=false', '--enable-breakable-cuda-graph=false', '--performance-mode=speed', '--width', '1024', '--height', '1024', '--num-inference-steps', '12', '--guidance-scale', '1', '--prompt', 'A minimalist exhibition poster with a red geometric sculpture', '--seed', '42', '--quality', 'lossless', '--save-output', '--warmup-mode', 'request', '--warmup-steps', '1', '--perf-dump-path', '/results/full-20261003T232158Z/01-A/perf.json', '--output-path', '/results/full-20261003T232158Z/01-A/outputs', '--output-file-name', 'sample']
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:22:45] Applying performance_mode=speed
+[10-03 23:22:45] server_args: {"model_path": "inclusionAI/Ming-Image-0.1-Design", "model_subfolder": null, "model_variant": null, "model_id": null, "served_model_name": "inclusionAI/Ming-Image-0.1-Design", "backend": "auto", "attention_backend": null, "enable_attention_backend_autotune": false, "attention_backend_config": {}, "component_attention_backends": {}, "cache_dit_config": null, "nccl_port": null, "enable_nccl_nvls": false, "trust_remote_code": false, "revision": "208087ada1486931692c1896f38d4cd16ff3df82", "num_gpus": 1, "performance_mode": "speed", "base_gpu_id": 0, "gpu_ids": null, "nnodes": 1, "node_rank": 0, "dist_init_addr": null, "tp_size": 1, "sp_degree": 1, "ulysses_degree": 1, "ring_degree": 1, "kv_gather_degree": 1, "sp_split_auto": false, "dp_size": 1, "enable_cfg_parallel": false, "cfg_parallel_degree": 1, "encoder_parallel": "auto", "hsdp_replicate_dim": 1, "hsdp_shard_dim": 1, "dist_timeout": 3600, "scheduler_rpc_timeout": null, "pipeline_class_name": null, "lora_path": null, "lora_nickname": "default", "lora_scale": 1.0, "lora_alpha": null, "lora_merge_mode": "auto", "lora_weight_name": null, "component_paths": {}, "component_weights_paths": {}, "component_direct_gpu_weight_loading": {}, "component_quantizations": {}, "component_precisions": {}, "component_quantization_ignored_layers": {}, "load_diffusion_decoder": false, "transformer_weights_path": null, "minimax_h3_adaln_cache_path": null, "minimax_h3_adaln_online": false, "minimax_h3_adaln_plan_width": 4, "minimax_h3_adaln_host_cache_gb": 8.0, "quantization": null, "quantization_ignored_layers": null, "lora_target_modules": null, "component_residency": null, "cpu_offload_components": null, "dit_cpu_offload": false, "direct_gpu_weight_loading": false, "dit_layerwise_offload": false, "layerwise_offload_components": null, "dit_offload_prefetch_size": 0.0, "dit_layerwise_resident_layers": 0.0, "dit_layerwise_residency_policy": "leading", "dit_layerwise_residency_lifetime": "forward", "layerwise_prefetch_size": {}, "layerwise_resident_layers": {}, "layerwise_residency_policy": {}, "layerwise_residency_lifetime": {}, "offload_during_compile": true, "text_encoder_cpu_offload": false, "image_encoder_cpu_offload": false, "vae_cpu_offload": false, "use_fsdp_inference": false, "pin_cpu_memory": true, "ltx2_two_stage_device_mode": null, "comfyui_mode": false, "enable_torch_compile": false, "regional_compile": false, "enable_breakable_cuda_graph": false, "bcg_text_buckets": null, "enable_layerwise_nvtx_marker": false, "warmup_mode": "request", "warmup_resolutions": null, "warmup_num_frames": null, "warmup_steps": 1, "warmup_sampling_params": null, "disable_autocast": true, "master_port": 30005, "host": "127.0.0.1", "port": 30000, "enable_metrics": false, "webui": false, "webui_port": 12312, "scheduler_port": 5602, "scheduler_ports": [5602], "batching_mode": "dynamic", "batching_max_size": 1, "batching_delay_ms": 0.0, "batching_config": null, "enable_batching_metrics": false, "strict_ports": false, "output_path": "/results/full-20261003T232158Z/01-A/outputs", "input_save_path": "inputs/uploads", "prompt_file_path": null, "model_paths": {}, "model_loaded": {"transformer": true, "vae": true, "video_vae": true, "audio_vae": true, "video_dit": true, "audio_dit": true, "dual_tower_bridge": true}, "boundary_ratio": null, "disagg_role": "monolithic", "disagg_timeout": 3600, "disagg_downstream_wait_timeout": 1800, "disagg_dispatch_policy": "round_robin", "disagg_mode": false, "disagg_instance_id": 0, "disagg_max_slots_per_instance": 8, "disagg_transfer_redundancy": 1.25, "disagg_role_device": "auto", "disagg_transfer_backend": "auto", "disagg_transfer_pool_size": 268435456, "disagg_transfer_pin_memory": "auto", "disagg_p2p_hostname": "127.0.0.1", "disagg_ib_device": null, "disagg_server_addr": null, "encoder_urls": null, "denoiser_urls": null, "decoder_urls": null, "encoder_tp": null, "denoiser_tp": null, "denoiser_sp": null, "denoiser_ulysses": null, "denoiser_ring": null, "decoder_sp": null, "pool_work_endpoint": null, "pool_result_endpoint": null, "pool_control_endpoint": null, "pool_control_advertised_endpoint": null, "log_level": "info", "log_requests": false, "log_requests_level": 2, "log_requests_format": "text", "log_requests_target": null, "uvicorn_access_log_exclude_prefixes": [], "enable_cache_report": false, "enable_trace": false, "otlp_traces_endpoint": "localhost:4317", "otlp_service_name": null, "srt_encoder_url": null, "srt_encoder_connect_timeout": 3.05, "srt_encoder_timeout": 100, "pe_server_url": null, "prompt_enhancer_config": null}
+[10-03 23:22:45] Local mode: True
+[10-03 23:22:45] Starting server...
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:23:21] Scheduler (dp replica 0) bind at endpoint: tcp://127.0.0.1:5602
+[10-03 23:23:21] torch.compile cache: TORCHINDUCTOR_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/inductor TRITON_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/triton
+[10-03 23:23:21] Initializing distributed environment with world_size=1, device=cuda:0, timeout=3600
+[10-03 23:23:21] Setting distributed timeout to 3600 seconds
+[10-03 23:23:22] No pipeline_class_name specified, using model_index.json
+[10-03 23:23:25] Using pipeline from model_index.json: MingImagePipeline
+[10-03 23:23:25] Loading pipeline modules...
+[10-03 23:23:25] Checking for cached model in Hugging Face Hub cache for inclusionAI/Ming-Image-0.1-Design...
+[10-03 23:23:26] Loading pipeline modules from config: {'_class_name': 'MingImagePipeline', '_diffusers_version': '0.36.0', 'text_encoder': ['transformers', 'MingImageEncoder'], 'tokenizer': ['transformers', 'PreTrainedTokenizerFast'], 'transformer': ['diffusers', 'DiffusionTransformer'], 'vae': ['diffusers', 'AutoencoderKLQwenImage'], 'scheduler': ['diffusers', 'FlowMatchEulerDiscreteScheduler']}
+[10-03 23:23:26] Loading required components: ['text_encoder', 'tokenizer', 'transformer', 'vae', 'scheduler']
+[10-03 23:24:18] Memory-aware component load order: ['tokenizer', 'transformer', 'vae', 'text_encoder', 'scheduler']
+
+Loading required modules:   0%|          | 0/5 [00:00<?, ?it/s][10-03 23:24:18] Loading tokenizer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/mllm. avail mem: 138.65 GB
+[10-03 23:24:27] Loaded tokenizer: TokenizersBackend (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 138.65 GB
+
+Loading required modules:  20%|██        | 1/5 [00:08<00:35,  8.84s/it][10-03 23:24:27] Loading transformer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/transformer. avail mem: 138.65 GB
+[10-03 23:24:27] Loading DiffusionTransformer from 5 safetensors file(s) , param_dtype: torch.bfloat16
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/5[A
+
+Loading safetensors checkpoint shards: 20%|██        | 1/5[A
+
+Loading safetensors checkpoint shards: 40%|████      | 2/5[A
+
+Loading safetensors checkpoint shards: 60%|██████    | 3/5[A
+
+Loading safetensors checkpoint shards: 80%|████████  | 4/5[A
+
+Loading safetensors checkpoint shards: 100%|██████████| 5/5[A
+Loading safetensors checkpoint shards: 100%|██████████| 5/5
+[10-03 23:26:03] Attention backends for transformer: fa
+[10-03 23:26:03] Loaded transformer: MingImageTransformer2DModel (sgl-diffusion version). model size: 11.46 GB, vram: 11.46 GB. avail GPU mem: 126.76 GB
+
+Loading required modules:  40%|████      | 2/5 [01:44<03:00, 60.14s/it][10-03 23:26:03] Loading vae from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/vae. avail mem: 126.76 GB
+[10-03 23:26:03] Qwen-Image VAE: installed quality-gated fast path (29 RMSNorm+SiLU fusions, 3 channels_last upsamples).
+[10-03 23:26:03] Loaded vae: AutoencoderKLQwenImage (sgl-diffusion version). model size: 0.24 GB, vram: 0.24 GB. avail GPU mem: 126.75 GB
+
+Loading required modules:  60%|██████    | 3/5 [01:45<01:05, 32.82s/it][10-03 23:26:03] Loading text_encoder from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/. avail mem: 126.75 GB
+[10-03 23:26:03] Cannot use FlashAttention backend for head size 80.
+[10-03 23:26:04] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:27:00] [RunAI Streamer] Overall time to stream 31.7 GiB of all files to cuda:0: 56.69s, 572.0 MiB/s
+[10-03 23:27:02] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:27:09] [RunAI Streamer] Overall time to stream 5.8 GiB of all files to cuda:0: 6.75s, 873.0 MiB/s
+[10-03 23:27:09] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:27:09] [RunAI Streamer] Overall time to stream 119.1 MiB of all files to cuda:0: 0.21s, 566.4 MiB/s
+[10-03 23:27:09] Attention backends for text_encoder: fa, torch_sdpa
+[10-03 23:27:10] Loaded text_encoder: MingImageEncoder (sgl-diffusion version). model size: 33.55 GB, vram: 33.55 GB. avail GPU mem: 93.09 GB
+
+Loading required modules:  80%|████████  | 4/5 [02:51<00:46, 46.12s/it][10-03 23:27:10] Loading scheduler from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/scheduler. avail mem: 93.09 GB
+[10-03 23:27:10] Loaded scheduler: FlowMatchEulerDiscreteScheduler (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 93.09 GB
+
+Loading required modules: 100%|██████████| 5/5 [02:51<00:00, 34.35s/it]
+[10-03 23:27:10] Creating pipeline stages...
+[10-03 23:27:10] Using fa attention backend
+[10-03 23:27:10] Pipeline instantiated
+[10-03 23:27:10] Worker 0: Initialized device, model, and distributed environment.
+[10-03 23:27:10] Worker 0: Scheduler loop started.
+[10-03 23:27:10] [server-load] workers_ready_monotonic_ns=319701785535
+[10-03 23:27:10] Processing 1 grouped request(s)
+
+Warmup requests:   0%|          | 0/1 [00:00<?, ?req/s][10-03 23:27:10] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200.json.
+[10-03 23:27:10] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200_down.json.
+
+Warmup requests: 100%|██████████| 1/1 [00:11<00:00, 11.99s/req, warmup req (1024x1024, 1/12 steps), last=11.98s]
+Warmup requests: 100%|██████████| 1/1 [00:11<00:00, 11.99s/req, warmup req (1024x1024, 1/12 steps), last=11.98s]
+[10-03 23:27:22] The server is fired up and ready to roll!
+[10-03 23:27:22] Sampling params:
+                       width: 1024
+                      height: 1024
+                  num_frames: 1
+                         fps: 24
+                      prompt: <redacted, len=61>
+                  neg_prompt: <redacted, len=0>
+                        seed: 42
+                 infer_steps: 12
+      num_outputs_per_prompt: 1
+              guidance_scale: 1.0
+     embedded_guidance_scale: 6.0
+                    n_tokens: None
+                  flow_shift: None
+                  image_path: None
+                 save_output: True
+            output_file_path: /results/full-20261003T232158Z/01-A/outputs/sample.png
+        
+[10-03 23:27:22] Running pipeline stages: ['InputValidationStage', 'text_encoding_stage', 'reference_encoding_stage', 'LatentPreparationStage', 'TimestepPreparationStage', 'denoising_stage', 'decoding_stage']
+[10-03 23:27:22] [InputValidationStage] started...
+[10-03 23:27:22] [InputValidationStage] finished in 0.0000 seconds
+[10-03 23:27:22] [MingImageEncodingStage] started...
+[10-03 23:27:22] [MingImageEncodingStage] finished in 0.0714 seconds
+[10-03 23:27:22] [MingImageReferenceStage] started...
+[10-03 23:27:22] [MingImageReferenceStage] finished in 0.0000 seconds
+[10-03 23:27:22] [LatentPreparationStage] started...
+[10-03 23:27:22] [LatentPreparationStage] finished in 0.0020 seconds
+[10-03 23:27:22] [TimestepPreparationStage] started...
+/workspace/sglang/python/sglang/multimodal_gen/runtime/models/schedulers/scheduling_flow_match_euler_discrete.py:652: RuntimeWarning: divide by zero encountered in divide
+  return np.exp(mu) / (np.exp(mu) + (1 / t - 1) ** sigma)
+[10-03 23:27:22] [TimestepPreparationStage] finished in 0.0012 seconds
+[10-03 23:27:22] [DenoisingStage] started...
+
+  0%|          | 0/12 [00:00<?, ?it/s]
+ 17%|█▋        | 2/12 [00:00<00:01,  8.72it/s]
+ 25%|██▌       | 3/12 [00:00<00:01,  7.88it/s]
+ 33%|███▎      | 4/12 [00:00<00:01,  7.51it/s]
+ 42%|████▏     | 5/12 [00:00<00:00,  7.30it/s]
+ 50%|█████     | 6/12 [00:00<00:00,  7.18it/s]
+ 58%|█████▊    | 7/12 [00:00<00:00,  6.88it/s]
+ 67%|██████▋   | 8/12 [00:01<00:00,  6.80it/s]
+ 75%|███████▌  | 9/12 [00:01<00:00,  6.82it/s]
+ 83%|████████▎ | 10/12 [00:01<00:00,  6.85it/s]
+ 92%|█████████▏| 11/12 [00:01<00:00,  6.87it/s]
+100%|██████████| 12/12 [00:01<00:00,  6.89it/s]
+100%|██████████| 12/12 [00:01<00:00,  7.09it/s]
+[10-03 23:27:23] [DenoisingStage] average time per step: 0.1411 seconds
+[10-03 23:27:23] [DenoisingStage] finished in 1.6946 seconds
+[10-03 23:27:23] [MingImageDecodingStage] started...
+[10-03 23:27:23] [MingImageDecodingStage] finished in 0.0298 seconds
+[10-03 23:27:24] Output saved to [1;36m/results/full-20261003T232158Z/01-A/outputs/sample.png[0;0m
+[10-03 23:27:24] Metrics dumped to: [1;36m/results/full-20261003T232158Z/01-A/perf.json[0;0m
+[10-03 23:27:24] Pixel data generated successfully in [92m14.06[0;0m seconds
+[10-03 23:27:24] Warmed-up request processed in [92m1.80[0;0m seconds (with warmup excluded)
+[10-03 23:27:24] Memory usage - Max peak: 52034.00 MB, Avg peak: 52034.00 MB
+[10-03 23:27:24] Metrics dumped to: [1;36m/results/full-20261003T232158Z/01-A/perf.json[0;0m
+[93m[10-03 23:27:24] Generator was garbage collected without being shut down. Forcing local server and client cleanup.[0;0m
+[93m[10-03 23:27:24] Local worker sglang-diffusionWorker-0 did not terminate gracefully, forcing.[0;0m
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+ARM_RESULT {"label": "01-A", "variant": "A", "profile": false, "command": ["sglang", "generate", "--model-path", "inclusionAI/Ming-Image-0.1-Design", "--revision", "208087ada1486931692c1896f38d4cd16ff3df82", "--num-gpus", "1", "--enable-torch-compile=false", "--enable-breakable-cuda-graph=false", "--performance-mode=speed", "--width", "1024", "--height", "1024", "--num-inference-steps", "12", "--guidance-scale", "1", "--prompt", "A minimalist exhibition poster with a red geometric sculpture", "--seed", "42", "--quality", "lossless", "--save-output", "--warmup-mode", "request", "--warmup-steps", "1", "--perf-dump-path", "/results/full-20261003T232158Z/01-A/perf.json", "--output-path", "/results/full-20261003T232158Z/01-A/outputs", "--output-file-name", "sample"], "pixel_sha256": "b04fe457e7a38a1007c8f23a1d0dd3c42ccd57afdb8c547d6670da661f82448f", "total_duration_ms": 1804.4385190000298, "denoise_steps_ms": [{"step": 0, "duration_ms": 85.58416599998964}, {"step": 1, "duration_ms": 143.8215709999895}, {"step": 2, "duration_ms": 144.03860700002724}, {"step": 3, "duration_ms": 143.65620600000284}, {"step": 4, "duration_ms": 143.90190900002153}, {"step": 5, "duration_ms": 144.0669370000478}, {"step": 6, "duration_ms": 158.02520400001185}, {"step": 7, "duration_ms": 150.47989900000402}, {"step": 8, "duration_ms": 145.6145010000114}, {"step": 9, "duration_ms": 144.4835939999507}, {"step": 10, "duration_ms": 144.7230200000149}, {"step": 11, "duration_ms": 144.39123699997936}]}
+RUN ['sglang', 'generate', '--model-path', 'inclusionAI/Ming-Image-0.1-Design', '--revision', '208087ada1486931692c1896f38d4cd16ff3df82', '--num-gpus', '1', '--enable-torch-compile=false', '--enable-breakable-cuda-graph=false', '--performance-mode=speed', '--width', '1024', '--height', '1024', '--num-inference-steps', '12', '--guidance-scale', '1', '--prompt', 'A minimalist exhibition poster with a red geometric sculpture', '--seed', '42', '--quality', 'lossless', '--save-output', '--warmup-mode', 'request', '--warmup-steps', '1', '--perf-dump-path', '/results/full-20261003T232158Z/02-B/perf.json', '--output-path', '/results/full-20261003T232158Z/02-B/outputs', '--output-file-name', 'sample']
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:28:08] Applying performance_mode=speed
+[10-03 23:28:08] server_args: {"model_path": "inclusionAI/Ming-Image-0.1-Design", "model_subfolder": null, "model_variant": null, "model_id": null, "served_model_name": "inclusionAI/Ming-Image-0.1-Design", "backend": "auto", "attention_backend": null, "enable_attention_backend_autotune": false, "attention_backend_config": {}, "component_attention_backends": {}, "cache_dit_config": null, "nccl_port": null, "enable_nccl_nvls": false, "trust_remote_code": false, "revision": "208087ada1486931692c1896f38d4cd16ff3df82", "num_gpus": 1, "performance_mode": "speed", "base_gpu_id": 0, "gpu_ids": null, "nnodes": 1, "node_rank": 0, "dist_init_addr": null, "tp_size": 1, "sp_degree": 1, "ulysses_degree": 1, "ring_degree": 1, "kv_gather_degree": 1, "sp_split_auto": false, "dp_size": 1, "enable_cfg_parallel": false, "cfg_parallel_degree": 1, "encoder_parallel": "auto", "hsdp_replicate_dim": 1, "hsdp_shard_dim": 1, "dist_timeout": 3600, "scheduler_rpc_timeout": null, "pipeline_class_name": null, "lora_path": null, "lora_nickname": "default", "lora_scale": 1.0, "lora_alpha": null, "lora_merge_mode": "auto", "lora_weight_name": null, "component_paths": {}, "component_weights_paths": {}, "component_direct_gpu_weight_loading": {}, "component_quantizations": {}, "component_precisions": {}, "component_quantization_ignored_layers": {}, "load_diffusion_decoder": false, "transformer_weights_path": null, "minimax_h3_adaln_cache_path": null, "minimax_h3_adaln_online": false, "minimax_h3_adaln_plan_width": 4, "minimax_h3_adaln_host_cache_gb": 8.0, "quantization": null, "quantization_ignored_layers": null, "lora_target_modules": null, "component_residency": null, "cpu_offload_components": null, "dit_cpu_offload": false, "direct_gpu_weight_loading": false, "dit_layerwise_offload": false, "layerwise_offload_components": null, "dit_offload_prefetch_size": 0.0, "dit_layerwise_resident_layers": 0.0, "dit_layerwise_residency_policy": "leading", "dit_layerwise_residency_lifetime": "forward", "layerwise_prefetch_size": {}, "layerwise_resident_layers": {}, "layerwise_residency_policy": {}, "layerwise_residency_lifetime": {}, "offload_during_compile": true, "text_encoder_cpu_offload": false, "image_encoder_cpu_offload": false, "vae_cpu_offload": false, "use_fsdp_inference": false, "pin_cpu_memory": true, "ltx2_two_stage_device_mode": null, "comfyui_mode": false, "enable_torch_compile": false, "regional_compile": false, "enable_breakable_cuda_graph": false, "bcg_text_buckets": null, "enable_layerwise_nvtx_marker": false, "warmup_mode": "request", "warmup_resolutions": null, "warmup_num_frames": null, "warmup_steps": 1, "warmup_sampling_params": null, "disable_autocast": true, "master_port": 30005, "host": "127.0.0.1", "port": 30000, "enable_metrics": false, "webui": false, "webui_port": 12312, "scheduler_port": 5628, "scheduler_ports": [5628], "batching_mode": "dynamic", "batching_max_size": 1, "batching_delay_ms": 0.0, "batching_config": null, "enable_batching_metrics": false, "strict_ports": false, "output_path": "/results/full-20261003T232158Z/02-B/outputs", "input_save_path": "inputs/uploads", "prompt_file_path": null, "model_paths": {}, "model_loaded": {"transformer": true, "vae": true, "video_vae": true, "audio_vae": true, "video_dit": true, "audio_dit": true, "dual_tower_bridge": true}, "boundary_ratio": null, "disagg_role": "monolithic", "disagg_timeout": 3600, "disagg_downstream_wait_timeout": 1800, "disagg_dispatch_policy": "round_robin", "disagg_mode": false, "disagg_instance_id": 0, "disagg_max_slots_per_instance": 8, "disagg_transfer_redundancy": 1.25, "disagg_role_device": "auto", "disagg_transfer_backend": "auto", "disagg_transfer_pool_size": 268435456, "disagg_transfer_pin_memory": "auto", "disagg_p2p_hostname": "127.0.0.1", "disagg_ib_device": null, "disagg_server_addr": null, "encoder_urls": null, "denoiser_urls": null, "decoder_urls": null, "encoder_tp": null, "denoiser_tp": null, "denoiser_sp": null, "denoiser_ulysses": null, "denoiser_ring": null, "decoder_sp": null, "pool_work_endpoint": null, "pool_result_endpoint": null, "pool_control_endpoint": null, "pool_control_advertised_endpoint": null, "log_level": "info", "log_requests": false, "log_requests_level": 2, "log_requests_format": "text", "log_requests_target": null, "uvicorn_access_log_exclude_prefixes": [], "enable_cache_report": false, "enable_trace": false, "otlp_traces_endpoint": "localhost:4317", "otlp_service_name": null, "srt_encoder_url": null, "srt_encoder_connect_timeout": 3.05, "srt_encoder_timeout": 100, "pe_server_url": null, "prompt_enhancer_config": null}
+[10-03 23:28:08] Local mode: True
+[10-03 23:28:08] Starting server...
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:28:43] Scheduler (dp replica 0) bind at endpoint: tcp://127.0.0.1:5628
+[10-03 23:28:43] torch.compile cache: TORCHINDUCTOR_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/inductor TRITON_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/triton
+[10-03 23:28:43] Initializing distributed environment with world_size=1, device=cuda:0, timeout=3600
+[10-03 23:28:43] Setting distributed timeout to 3600 seconds
+[10-03 23:28:43] No pipeline_class_name specified, using model_index.json
+[10-03 23:28:46] Using pipeline from model_index.json: MingImagePipeline
+[10-03 23:28:46] Loading pipeline modules...
+[10-03 23:28:46] Checking for cached model in Hugging Face Hub cache for inclusionAI/Ming-Image-0.1-Design...
+[10-03 23:28:46] Loading pipeline modules from config: {'_class_name': 'MingImagePipeline', '_diffusers_version': '0.36.0', 'text_encoder': ['transformers', 'MingImageEncoder'], 'tokenizer': ['transformers', 'PreTrainedTokenizerFast'], 'transformer': ['diffusers', 'DiffusionTransformer'], 'vae': ['diffusers', 'AutoencoderKLQwenImage'], 'scheduler': ['diffusers', 'FlowMatchEulerDiscreteScheduler']}
+[10-03 23:28:46] Loading required components: ['text_encoder', 'tokenizer', 'transformer', 'vae', 'scheduler']
+[10-03 23:28:51] Memory-aware component load order: ['tokenizer', 'transformer', 'vae', 'text_encoder', 'scheduler']
+
+Loading required modules:   0%|          | 0/5 [00:00<?, ?it/s][10-03 23:28:51] Loading tokenizer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/mllm. avail mem: 138.65 GB
+[10-03 23:28:52] Loaded tokenizer: TokenizersBackend (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 138.65 GB
+
+Loading required modules:  20%|██        | 1/5 [00:01<00:04,  1.04s/it][10-03 23:28:52] Loading transformer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/transformer. avail mem: 138.65 GB
+[10-03 23:28:52] Loading DiffusionTransformer from 5 safetensors file(s) , param_dtype: torch.bfloat16
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/5[A
+
+Loading safetensors checkpoint shards: 20%|██        | 1/5[A
+
+Loading safetensors checkpoint shards: 40%|████      | 2/5[A
+
+Loading safetensors checkpoint shards: 60%|██████    | 3/5[A
+
+Loading safetensors checkpoint shards: 80%|████████  | 4/5[A
+
+Loading safetensors checkpoint shards: 100%|██████████| 5/5[A
+Loading safetensors checkpoint shards: 100%|██████████| 5/5
+[10-03 23:28:57] Attention backends for transformer: fa
+[10-03 23:28:57] Loaded transformer: MingImageTransformer2DModel (sgl-diffusion version). model size: 11.46 GB, vram: 11.46 GB. avail GPU mem: 126.76 GB
+
+Loading required modules:  40%|████      | 2/5 [00:05<00:09,  3.16s/it][10-03 23:28:57] Loading vae from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/vae. avail mem: 126.76 GB
+[10-03 23:28:57] Qwen-Image VAE: installed quality-gated fast path (29 RMSNorm+SiLU fusions, 3 channels_last upsamples).
+[10-03 23:28:57] Loaded vae: AutoencoderKLQwenImage (sgl-diffusion version). model size: 0.24 GB, vram: 0.24 GB. avail GPU mem: 126.75 GB
+
+Loading required modules:  60%|██████    | 3/5 [00:05<00:03,  1.85s/it][10-03 23:28:57] Loading text_encoder from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/. avail mem: 126.75 GB
+[10-03 23:28:57] Cannot use FlashAttention backend for head size 80.
+[10-03 23:28:58] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:29:29] [RunAI Streamer] Overall time to stream 31.7 GiB of all files to cuda:0: 31.22s, 1.0 GiB/s
+[10-03 23:29:29] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:29:34] [RunAI Streamer] Overall time to stream 5.8 GiB of all files to cuda:0: 4.06s, 1.4 GiB/s
+[10-03 23:29:34] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:29:34] [RunAI Streamer] Overall time to stream 119.1 MiB of all files to cuda:0: 0.06s, 1.9 GiB/s
+[10-03 23:29:34] Attention backends for text_encoder: fa, torch_sdpa
+[10-03 23:29:34] Loaded text_encoder: MingImageEncoder (sgl-diffusion version). model size: 33.55 GB, vram: 33.55 GB. avail GPU mem: 93.09 GB
+
+Loading required modules:  80%|████████  | 4/5 [00:42<00:15, 15.48s/it][10-03 23:29:34] Loading scheduler from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/scheduler. avail mem: 93.09 GB
+[10-03 23:29:34] Loaded scheduler: FlowMatchEulerDiscreteScheduler (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 93.09 GB
+
+Loading required modules: 100%|██████████| 5/5 [00:42<00:00,  8.47s/it]
+[10-03 23:29:34] Creating pipeline stages...
+[10-03 23:29:34] Using fa attention backend
+[10-03 23:29:34] Pipeline instantiated
+[10-03 23:29:34] Worker 0: Initialized device, model, and distributed environment.
+[10-03 23:29:34] Worker 0: Scheduler loop started.
+[10-03 23:29:34] [server-load] workers_ready_monotonic_ns=463893648155
+[10-03 23:29:34] Processing 1 grouped request(s)
+
+Warmup requests:   0%|          | 0/1 [00:00<?, ?req/s][10-03 23:29:34] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200.json.
+[10-03 23:29:34] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200_down.json.
+
+Warmup requests: 100%|██████████| 1/1 [00:02<00:00,  2.96s/req, warmup req (1024x1024, 1/12 steps), last=2.96s]
+Warmup requests: 100%|██████████| 1/1 [00:02<00:00,  2.96s/req, warmup req (1024x1024, 1/12 steps), last=2.96s]
+[10-03 23:29:37] The server is fired up and ready to roll!
+[10-03 23:29:37] Sampling params:
+                       width: 1024
+                      height: 1024
+                  num_frames: 1
+                         fps: 24
+                      prompt: <redacted, len=61>
+                  neg_prompt: <redacted, len=0>
+                        seed: 42
+                 infer_steps: 12
+      num_outputs_per_prompt: 1
+              guidance_scale: 1.0
+     embedded_guidance_scale: 6.0
+                    n_tokens: None
+                  flow_shift: None
+                  image_path: None
+                 save_output: True
+            output_file_path: /results/full-20261003T232158Z/02-B/outputs/sample.png
+        
+[10-03 23:29:37] Running pipeline stages: ['InputValidationStage', 'text_encoding_stage', 'reference_encoding_stage', 'LatentPreparationStage', 'TimestepPreparationStage', 'denoising_stage', 'decoding_stage']
+[10-03 23:29:37] [InputValidationStage] started...
+[10-03 23:29:37] [InputValidationStage] finished in 0.0000 seconds
+[10-03 23:29:37] [MingImageEncodingStage] started...
+[10-03 23:29:37] [MingImageEncodingStage] finished in 0.0698 seconds
+[10-03 23:29:37] [MingImageReferenceStage] started...
+[10-03 23:29:37] [MingImageReferenceStage] finished in 0.0000 seconds
+[10-03 23:29:37] [LatentPreparationStage] started...
+[10-03 23:29:37] [LatentPreparationStage] finished in 0.0016 seconds
+[10-03 23:29:37] [TimestepPreparationStage] started...
+/workspace/sglang/python/sglang/multimodal_gen/runtime/models/schedulers/scheduling_flow_match_euler_discrete.py:652: RuntimeWarning: divide by zero encountered in divide
+  return np.exp(mu) / (np.exp(mu) + (1 / t - 1) ** sigma)
+[10-03 23:29:37] [TimestepPreparationStage] finished in 0.0009 seconds
+[10-03 23:29:37] [DenoisingStage] started...
+
+  0%|          | 0/12 [00:00<?, ?it/s]
+ 17%|█▋        | 2/12 [00:00<00:00, 13.05it/s]
+ 33%|███▎      | 4/12 [00:00<00:00, 10.03it/s]
+ 50%|█████     | 6/12 [00:00<00:00,  9.34it/s]
+ 58%|█████▊    | 7/12 [00:00<00:00,  9.16it/s]
+ 67%|██████▋   | 8/12 [00:00<00:00,  8.98it/s]
+ 75%|███████▌  | 9/12 [00:00<00:00,  8.47it/s]
+ 83%|████████▎ | 10/12 [00:01<00:00,  8.37it/s]
+ 92%|█████████▏| 11/12 [00:01<00:00,  8.41it/s]
+100%|██████████| 12/12 [00:01<00:00,  8.45it/s]
+100%|██████████| 12/12 [00:01<00:00,  8.93it/s]
+[10-03 23:29:38] [DenoisingStage] average time per step: 0.1120 seconds
+[10-03 23:29:38] [DenoisingStage] finished in 1.3451 seconds
+[10-03 23:29:38] [MingImageDecodingStage] started...
+[10-03 23:29:38] [MingImageDecodingStage] finished in 0.0394 seconds
+[10-03 23:29:38] Output saved to [1;36m/results/full-20261003T232158Z/02-B/outputs/sample.png[0;0m
+[10-03 23:29:38] Metrics dumped to: [1;36m/results/full-20261003T232158Z/02-B/perf.json[0;0m
+[10-03 23:29:38] Pixel data generated successfully in [92m4.69[0;0m seconds
+[10-03 23:29:38] Warmed-up request processed in [92m1.46[0;0m seconds (with warmup excluded)
+[10-03 23:29:38] Memory usage - Max peak: 52034.00 MB, Avg peak: 52034.00 MB
+[10-03 23:29:38] Metrics dumped to: [1;36m/results/full-20261003T232158Z/02-B/perf.json[0;0m
+[93m[10-03 23:29:38] Generator was garbage collected without being shut down. Forcing local server and client cleanup.[0;0m
+[93m[10-03 23:29:38] Local worker sglang-diffusionWorker-0 did not terminate gracefully, forcing.[0;0m
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+ARM_RESULT {"label": "02-B", "variant": "B", "profile": false, "command": ["sglang", "generate", "--model-path", "inclusionAI/Ming-Image-0.1-Design", "--revision", "208087ada1486931692c1896f38d4cd16ff3df82", "--num-gpus", "1", "--enable-torch-compile=false", "--enable-breakable-cuda-graph=false", "--performance-mode=speed", "--width", "1024", "--height", "1024", "--num-inference-steps", "12", "--guidance-scale", "1", "--prompt", "A minimalist exhibition poster with a red geometric sculpture", "--seed", "42", "--quality", "lossless", "--save-output", "--warmup-mode", "request", "--warmup-steps", "1", "--perf-dump-path", "/results/full-20261003T232158Z/02-B/perf.json", "--output-path", "/results/full-20261003T232158Z/02-B/outputs", "--output-file-name", "sample"], "pixel_sha256": "b04fe457e7a38a1007c8f23a1d0dd3c42ccd57afdb8c547d6670da661f82448f", "total_duration_ms": 1461.6493209999817, "denoise_steps_ms": [{"step": 0, "duration_ms": 49.89530599999625}, {"step": 1, "duration_ms": 103.44373100002713}, {"step": 2, "duration_ms": 115.59486700002708}, {"step": 3, "duration_ms": 115.98023999999896}, {"step": 4, "duration_ms": 114.80196299999079}, {"step": 5, "duration_ms": 116.84944499995709}, {"step": 6, "duration_ms": 115.81526900005201}, {"step": 7, "duration_ms": 117.65538200000947}, {"step": 8, "duration_ms": 135.71221799998057}, {"step": 9, "duration_ms": 123.1404260000204}, {"step": 10, "duration_ms": 117.31210699997519}, {"step": 11, "duration_ms": 117.22111199998153}]}
+RUN ['sglang', 'generate', '--model-path', 'inclusionAI/Ming-Image-0.1-Design', '--revision', '208087ada1486931692c1896f38d4cd16ff3df82', '--num-gpus', '1', '--enable-torch-compile=false', '--enable-breakable-cuda-graph=false', '--performance-mode=speed', '--width', '1024', '--height', '1024', '--num-inference-steps', '12', '--guidance-scale', '1', '--prompt', 'A minimalist exhibition poster with a red geometric sculpture', '--seed', '42', '--quality', 'lossless', '--save-output', '--warmup-mode', 'request', '--warmup-steps', '1', '--perf-dump-path', '/results/full-20261003T232158Z/03-B/perf.json', '--output-path', '/results/full-20261003T232158Z/03-B/outputs', '--output-file-name', 'sample']
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:30:20] Applying performance_mode=speed
+[10-03 23:30:20] server_args: {"model_path": "inclusionAI/Ming-Image-0.1-Design", "model_subfolder": null, "model_variant": null, "model_id": null, "served_model_name": "inclusionAI/Ming-Image-0.1-Design", "backend": "auto", "attention_backend": null, "enable_attention_backend_autotune": false, "attention_backend_config": {}, "component_attention_backends": {}, "cache_dit_config": null, "nccl_port": null, "enable_nccl_nvls": false, "trust_remote_code": false, "revision": "208087ada1486931692c1896f38d4cd16ff3df82", "num_gpus": 1, "performance_mode": "speed", "base_gpu_id": 0, "gpu_ids": null, "nnodes": 1, "node_rank": 0, "dist_init_addr": null, "tp_size": 1, "sp_degree": 1, "ulysses_degree": 1, "ring_degree": 1, "kv_gather_degree": 1, "sp_split_auto": false, "dp_size": 1, "enable_cfg_parallel": false, "cfg_parallel_degree": 1, "encoder_parallel": "auto", "hsdp_replicate_dim": 1, "hsdp_shard_dim": 1, "dist_timeout": 3600, "scheduler_rpc_timeout": null, "pipeline_class_name": null, "lora_path": null, "lora_nickname": "default", "lora_scale": 1.0, "lora_alpha": null, "lora_merge_mode": "auto", "lora_weight_name": null, "component_paths": {}, "component_weights_paths": {}, "component_direct_gpu_weight_loading": {}, "component_quantizations": {}, "component_precisions": {}, "component_quantization_ignored_layers": {}, "load_diffusion_decoder": false, "transformer_weights_path": null, "minimax_h3_adaln_cache_path": null, "minimax_h3_adaln_online": false, "minimax_h3_adaln_plan_width": 4, "minimax_h3_adaln_host_cache_gb": 8.0, "quantization": null, "quantization_ignored_layers": null, "lora_target_modules": null, "component_residency": null, "cpu_offload_components": null, "dit_cpu_offload": false, "direct_gpu_weight_loading": false, "dit_layerwise_offload": false, "layerwise_offload_components": null, "dit_offload_prefetch_size": 0.0, "dit_layerwise_resident_layers": 0.0, "dit_layerwise_residency_policy": "leading", "dit_layerwise_residency_lifetime": "forward", "layerwise_prefetch_size": {}, "layerwise_resident_layers": {}, "layerwise_residency_policy": {}, "layerwise_residency_lifetime": {}, "offload_during_compile": true, "text_encoder_cpu_offload": false, "image_encoder_cpu_offload": false, "vae_cpu_offload": false, "use_fsdp_inference": false, "pin_cpu_memory": true, "ltx2_two_stage_device_mode": null, "comfyui_mode": false, "enable_torch_compile": false, "regional_compile": false, "enable_breakable_cuda_graph": false, "bcg_text_buckets": null, "enable_layerwise_nvtx_marker": false, "warmup_mode": "request", "warmup_resolutions": null, "warmup_num_frames": null, "warmup_steps": 1, "warmup_sampling_params": null, "disable_autocast": true, "master_port": 30005, "host": "127.0.0.1", "port": 30000, "enable_metrics": false, "webui": false, "webui_port": 12312, "scheduler_port": 5567, "scheduler_ports": [5567], "batching_mode": "dynamic", "batching_max_size": 1, "batching_delay_ms": 0.0, "batching_config": null, "enable_batching_metrics": false, "strict_ports": false, "output_path": "/results/full-20261003T232158Z/03-B/outputs", "input_save_path": "inputs/uploads", "prompt_file_path": null, "model_paths": {}, "model_loaded": {"transformer": true, "vae": true, "video_vae": true, "audio_vae": true, "video_dit": true, "audio_dit": true, "dual_tower_bridge": true}, "boundary_ratio": null, "disagg_role": "monolithic", "disagg_timeout": 3600, "disagg_downstream_wait_timeout": 1800, "disagg_dispatch_policy": "round_robin", "disagg_mode": false, "disagg_instance_id": 0, "disagg_max_slots_per_instance": 8, "disagg_transfer_redundancy": 1.25, "disagg_role_device": "auto", "disagg_transfer_backend": "auto", "disagg_transfer_pool_size": 268435456, "disagg_transfer_pin_memory": "auto", "disagg_p2p_hostname": "127.0.0.1", "disagg_ib_device": null, "disagg_server_addr": null, "encoder_urls": null, "denoiser_urls": null, "decoder_urls": null, "encoder_tp": null, "denoiser_tp": null, "denoiser_sp": null, "denoiser_ulysses": null, "denoiser_ring": null, "decoder_sp": null, "pool_work_endpoint": null, "pool_result_endpoint": null, "pool_control_endpoint": null, "pool_control_advertised_endpoint": null, "log_level": "info", "log_requests": false, "log_requests_level": 2, "log_requests_format": "text", "log_requests_target": null, "uvicorn_access_log_exclude_prefixes": [], "enable_cache_report": false, "enable_trace": false, "otlp_traces_endpoint": "localhost:4317", "otlp_service_name": null, "srt_encoder_url": null, "srt_encoder_connect_timeout": 3.05, "srt_encoder_timeout": 100, "pe_server_url": null, "prompt_enhancer_config": null}
+[10-03 23:30:20] Local mode: True
+[10-03 23:30:20] Starting server...
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:30:56] Scheduler (dp replica 0) bind at endpoint: tcp://127.0.0.1:5567
+[10-03 23:30:57] torch.compile cache: TORCHINDUCTOR_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/inductor TRITON_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/triton
+[10-03 23:30:57] Initializing distributed environment with world_size=1, device=cuda:0, timeout=3600
+[10-03 23:30:57] Setting distributed timeout to 3600 seconds
+[10-03 23:30:57] No pipeline_class_name specified, using model_index.json
+[10-03 23:31:01] Using pipeline from model_index.json: MingImagePipeline
+[10-03 23:31:01] Loading pipeline modules...
+[10-03 23:31:01] Checking for cached model in Hugging Face Hub cache for inclusionAI/Ming-Image-0.1-Design...
+[10-03 23:31:01] Loading pipeline modules from config: {'_class_name': 'MingImagePipeline', '_diffusers_version': '0.36.0', 'text_encoder': ['transformers', 'MingImageEncoder'], 'tokenizer': ['transformers', 'PreTrainedTokenizerFast'], 'transformer': ['diffusers', 'DiffusionTransformer'], 'vae': ['diffusers', 'AutoencoderKLQwenImage'], 'scheduler': ['diffusers', 'FlowMatchEulerDiscreteScheduler']}
+[10-03 23:31:01] Loading required components: ['text_encoder', 'tokenizer', 'transformer', 'vae', 'scheduler']
+[10-03 23:31:06] Memory-aware component load order: ['tokenizer', 'transformer', 'vae', 'text_encoder', 'scheduler']
+
+Loading required modules:   0%|          | 0/5 [00:00<?, ?it/s][10-03 23:31:06] Loading tokenizer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/mllm. avail mem: 138.65 GB
+[10-03 23:31:07] Loaded tokenizer: TokenizersBackend (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 138.65 GB
+
+Loading required modules:  20%|██        | 1/5 [00:01<00:05,  1.29s/it][10-03 23:31:07] Loading transformer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/transformer. avail mem: 138.65 GB
+[10-03 23:31:07] Loading DiffusionTransformer from 5 safetensors file(s) , param_dtype: torch.bfloat16
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/5[A
+
+Loading safetensors checkpoint shards: 20%|██        | 1/5[A
+
+Loading safetensors checkpoint shards: 40%|████      | 2/5[A
+
+Loading safetensors checkpoint shards: 60%|██████    | 3/5[A
+
+Loading safetensors checkpoint shards: 80%|████████  | 4/5[A
+Loading safetensors checkpoint shards: 100%|██████████| 5/5
+[10-03 23:31:11] Attention backends for transformer: fa
+[10-03 23:31:11] Loaded transformer: MingImageTransformer2DModel (sgl-diffusion version). model size: 11.46 GB, vram: 11.46 GB. avail GPU mem: 126.76 GB
+
+Loading required modules:  40%|████      | 2/5 [00:05<00:08,  3.00s/it][10-03 23:31:11] Loading vae from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/vae. avail mem: 126.76 GB
+[10-03 23:31:12] Qwen-Image VAE: installed quality-gated fast path (29 RMSNorm+SiLU fusions, 3 channels_last upsamples).
+[10-03 23:31:12] Loaded vae: AutoencoderKLQwenImage (sgl-diffusion version). model size: 0.24 GB, vram: 0.24 GB. avail GPU mem: 126.75 GB
+
+Loading required modules:  60%|██████    | 3/5 [00:05<00:03,  1.73s/it][10-03 23:31:12] Loading text_encoder from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/. avail mem: 126.75 GB
+[10-03 23:31:12] Cannot use FlashAttention backend for head size 80.
+[10-03 23:31:12] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:31:42] [RunAI Streamer] Overall time to stream 31.7 GiB of all files to cuda:0: 29.98s, 1.1 GiB/s
+[10-03 23:31:42] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:31:46] [RunAI Streamer] Overall time to stream 5.8 GiB of all files to cuda:0: 4.13s, 1.4 GiB/s
+[10-03 23:31:47] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:31:47] [RunAI Streamer] Overall time to stream 119.1 MiB of all files to cuda:0: 0.06s, 1.8 GiB/s
+[10-03 23:31:47] Attention backends for text_encoder: fa, torch_sdpa
+[10-03 23:31:47] Loaded text_encoder: MingImageEncoder (sgl-diffusion version). model size: 33.55 GB, vram: 33.55 GB. avail GPU mem: 93.09 GB
+
+Loading required modules:  80%|████████  | 4/5 [00:40<00:14, 14.90s/it][10-03 23:31:47] Loading scheduler from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/scheduler. avail mem: 93.09 GB
+[10-03 23:31:47] Loaded scheduler: FlowMatchEulerDiscreteScheduler (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 93.09 GB
+
+Loading required modules: 100%|██████████| 5/5 [00:40<00:00,  8.16s/it]
+[10-03 23:31:47] Creating pipeline stages...
+[10-03 23:31:47] Using fa attention backend
+[10-03 23:31:47] Pipeline instantiated
+[10-03 23:31:47] Worker 0: Initialized device, model, and distributed environment.
+[10-03 23:31:47] Worker 0: Scheduler loop started.
+[10-03 23:31:47] [server-load] workers_ready_monotonic_ns=596805881557
+[10-03 23:31:47] Processing 1 grouped request(s)
+
+Warmup requests:   0%|          | 0/1 [00:00<?, ?req/s][10-03 23:31:47] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200.json.
+[10-03 23:31:47] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200_down.json.
+
+Warmup requests: 100%|██████████| 1/1 [00:01<00:00,  1.85s/req, warmup req (1024x1024, 1/12 steps), last=1.85s]
+Warmup requests: 100%|██████████| 1/1 [00:01<00:00,  1.85s/req, warmup req (1024x1024, 1/12 steps), last=1.85s]
+[10-03 23:31:49] The server is fired up and ready to roll!
+[10-03 23:31:49] Sampling params:
+                       width: 1024
+                      height: 1024
+                  num_frames: 1
+                         fps: 24
+                      prompt: <redacted, len=61>
+                  neg_prompt: <redacted, len=0>
+                        seed: 42
+                 infer_steps: 12
+      num_outputs_per_prompt: 1
+              guidance_scale: 1.0
+     embedded_guidance_scale: 6.0
+                    n_tokens: None
+                  flow_shift: None
+                  image_path: None
+                 save_output: True
+            output_file_path: /results/full-20261003T232158Z/03-B/outputs/sample.png
+        
+[10-03 23:31:49] Running pipeline stages: ['InputValidationStage', 'text_encoding_stage', 'reference_encoding_stage', 'LatentPreparationStage', 'TimestepPreparationStage', 'denoising_stage', 'decoding_stage']
+[10-03 23:31:49] [InputValidationStage] started...
+[10-03 23:31:49] [InputValidationStage] finished in 0.0000 seconds
+[10-03 23:31:49] [MingImageEncodingStage] started...
+[10-03 23:31:49] [MingImageEncodingStage] finished in 0.0696 seconds
+[10-03 23:31:49] [MingImageReferenceStage] started...
+[10-03 23:31:49] [MingImageReferenceStage] finished in 0.0000 seconds
+[10-03 23:31:49] [LatentPreparationStage] started...
+[10-03 23:31:49] [LatentPreparationStage] finished in 0.0021 seconds
+[10-03 23:31:49] [TimestepPreparationStage] started...
+/workspace/sglang/python/sglang/multimodal_gen/runtime/models/schedulers/scheduling_flow_match_euler_discrete.py:652: RuntimeWarning: divide by zero encountered in divide
+  return np.exp(mu) / (np.exp(mu) + (1 / t - 1) ** sigma)
+[10-03 23:31:49] [TimestepPreparationStage] finished in 0.0009 seconds
+[10-03 23:31:49] [DenoisingStage] started...
+
+  0%|          | 0/12 [00:00<?, ?it/s]
+ 17%|█▋        | 2/12 [00:00<00:00, 13.07it/s]
+ 33%|███▎      | 4/12 [00:00<00:00, 10.01it/s]
+ 50%|█████     | 6/12 [00:00<00:00,  9.32it/s]
+ 58%|█████▊    | 7/12 [00:00<00:00,  9.13it/s]
+ 67%|██████▋   | 8/12 [00:00<00:00,  8.93it/s]
+ 75%|███████▌  | 9/12 [00:00<00:00,  8.44it/s]
+ 83%|████████▎ | 10/12 [00:01<00:00,  8.40it/s]
+ 92%|█████████▏| 11/12 [00:01<00:00,  8.43it/s]
+100%|██████████| 12/12 [00:01<00:00,  8.47it/s]
+100%|██████████| 12/12 [00:01<00:00,  8.93it/s]
+[10-03 23:31:50] [DenoisingStage] average time per step: 0.1120 seconds
+[10-03 23:31:50] [DenoisingStage] finished in 1.3459 seconds
+[10-03 23:31:50] [MingImageDecodingStage] started...
+[10-03 23:31:50] [MingImageDecodingStage] finished in 0.0385 seconds
+[10-03 23:31:50] Output saved to [1;36m/results/full-20261003T232158Z/03-B/outputs/sample.png[0;0m
+[10-03 23:31:50] Metrics dumped to: [1;36m/results/full-20261003T232158Z/03-B/perf.json[0;0m
+[10-03 23:31:50] Pixel data generated successfully in [92m3.58[0;0m seconds
+[10-03 23:31:50] Warmed-up request processed in [92m1.46[0;0m seconds (with warmup excluded)
+[10-03 23:31:50] Memory usage - Max peak: 52034.00 MB, Avg peak: 52034.00 MB
+[10-03 23:31:50] Metrics dumped to: [1;36m/results/full-20261003T232158Z/03-B/perf.json[0;0m
+[93m[10-03 23:31:50] Generator was garbage collected without being shut down. Forcing local server and client cleanup.[0;0m
+[93m[10-03 23:31:50] Local worker sglang-diffusionWorker-0 did not terminate gracefully, forcing.[0;0m
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+ARM_RESULT {"label": "03-B", "variant": "B", "profile": false, "command": ["sglang", "generate", "--model-path", "inclusionAI/Ming-Image-0.1-Design", "--revision", "208087ada1486931692c1896f38d4cd16ff3df82", "--num-gpus", "1", "--enable-torch-compile=false", "--enable-breakable-cuda-graph=false", "--performance-mode=speed", "--width", "1024", "--height", "1024", "--num-inference-steps", "12", "--guidance-scale", "1", "--prompt", "A minimalist exhibition poster with a red geometric sculpture", "--seed", "42", "--quality", "lossless", "--save-output", "--warmup-mode", "request", "--warmup-steps", "1", "--perf-dump-path", "/results/full-20261003T232158Z/03-B/perf.json", "--output-path", "/results/full-20261003T232158Z/03-B/outputs", "--output-file-name", "sample"], "pixel_sha256": "b04fe457e7a38a1007c8f23a1d0dd3c42ccd57afdb8c547d6670da661f82448f", "total_duration_ms": 1462.305778999962, "denoise_steps_ms": [{"step": 0, "duration_ms": 50.02472800003943}, {"step": 1, "duration_ms": 103.05556900004831}, {"step": 2, "duration_ms": 115.5728790000694}, {"step": 3, "duration_ms": 116.84790000003886}, {"step": 4, "duration_ms": 116.00151599998298}, {"step": 5, "duration_ms": 116.30834699997195}, {"step": 6, "duration_ms": 116.32742300002974}, {"step": 7, "duration_ms": 119.12874699999065}, {"step": 8, "duration_ms": 135.56222300007903}, {"step": 9, "duration_ms": 120.56283100002929}, {"step": 10, "duration_ms": 117.55568099999891}, {"step": 11, "duration_ms": 116.82031500004086}]}
+RUN ['sglang', 'generate', '--model-path', 'inclusionAI/Ming-Image-0.1-Design', '--revision', '208087ada1486931692c1896f38d4cd16ff3df82', '--num-gpus', '1', '--enable-torch-compile=false', '--enable-breakable-cuda-graph=false', '--performance-mode=speed', '--width', '1024', '--height', '1024', '--num-inference-steps', '12', '--guidance-scale', '1', '--prompt', 'A minimalist exhibition poster with a red geometric sculpture', '--seed', '42', '--quality', 'lossless', '--save-output', '--warmup-mode', 'request', '--warmup-steps', '1', '--perf-dump-path', '/results/full-20261003T232158Z/04-A/perf.json', '--output-path', '/results/full-20261003T232158Z/04-A/outputs', '--output-file-name', 'sample']
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:32:35] Applying performance_mode=speed
+[10-03 23:32:35] server_args: {"model_path": "inclusionAI/Ming-Image-0.1-Design", "model_subfolder": null, "model_variant": null, "model_id": null, "served_model_name": "inclusionAI/Ming-Image-0.1-Design", "backend": "auto", "attention_backend": null, "enable_attention_backend_autotune": false, "attention_backend_config": {}, "component_attention_backends": {}, "cache_dit_config": null, "nccl_port": null, "enable_nccl_nvls": false, "trust_remote_code": false, "revision": "208087ada1486931692c1896f38d4cd16ff3df82", "num_gpus": 1, "performance_mode": "speed", "base_gpu_id": 0, "gpu_ids": null, "nnodes": 1, "node_rank": 0, "dist_init_addr": null, "tp_size": 1, "sp_degree": 1, "ulysses_degree": 1, "ring_degree": 1, "kv_gather_degree": 1, "sp_split_auto": false, "dp_size": 1, "enable_cfg_parallel": false, "cfg_parallel_degree": 1, "encoder_parallel": "auto", "hsdp_replicate_dim": 1, "hsdp_shard_dim": 1, "dist_timeout": 3600, "scheduler_rpc_timeout": null, "pipeline_class_name": null, "lora_path": null, "lora_nickname": "default", "lora_scale": 1.0, "lora_alpha": null, "lora_merge_mode": "auto", "lora_weight_name": null, "component_paths": {}, "component_weights_paths": {}, "component_direct_gpu_weight_loading": {}, "component_quantizations": {}, "component_precisions": {}, "component_quantization_ignored_layers": {}, "load_diffusion_decoder": false, "transformer_weights_path": null, "minimax_h3_adaln_cache_path": null, "minimax_h3_adaln_online": false, "minimax_h3_adaln_plan_width": 4, "minimax_h3_adaln_host_cache_gb": 8.0, "quantization": null, "quantization_ignored_layers": null, "lora_target_modules": null, "component_residency": null, "cpu_offload_components": null, "dit_cpu_offload": false, "direct_gpu_weight_loading": false, "dit_layerwise_offload": false, "layerwise_offload_components": null, "dit_offload_prefetch_size": 0.0, "dit_layerwise_resident_layers": 0.0, "dit_layerwise_residency_policy": "leading", "dit_layerwise_residency_lifetime": "forward", "layerwise_prefetch_size": {}, "layerwise_resident_layers": {}, "layerwise_residency_policy": {}, "layerwise_residency_lifetime": {}, "offload_during_compile": true, "text_encoder_cpu_offload": false, "image_encoder_cpu_offload": false, "vae_cpu_offload": false, "use_fsdp_inference": false, "pin_cpu_memory": true, "ltx2_two_stage_device_mode": null, "comfyui_mode": false, "enable_torch_compile": false, "regional_compile": false, "enable_breakable_cuda_graph": false, "bcg_text_buckets": null, "enable_layerwise_nvtx_marker": false, "warmup_mode": "request", "warmup_resolutions": null, "warmup_num_frames": null, "warmup_steps": 1, "warmup_sampling_params": null, "disable_autocast": true, "master_port": 30005, "host": "127.0.0.1", "port": 30000, "enable_metrics": false, "webui": false, "webui_port": 12312, "scheduler_port": 5580, "scheduler_ports": [5580], "batching_mode": "dynamic", "batching_max_size": 1, "batching_delay_ms": 0.0, "batching_config": null, "enable_batching_metrics": false, "strict_ports": false, "output_path": "/results/full-20261003T232158Z/04-A/outputs", "input_save_path": "inputs/uploads", "prompt_file_path": null, "model_paths": {}, "model_loaded": {"transformer": true, "vae": true, "video_vae": true, "audio_vae": true, "video_dit": true, "audio_dit": true, "dual_tower_bridge": true}, "boundary_ratio": null, "disagg_role": "monolithic", "disagg_timeout": 3600, "disagg_downstream_wait_timeout": 1800, "disagg_dispatch_policy": "round_robin", "disagg_mode": false, "disagg_instance_id": 0, "disagg_max_slots_per_instance": 8, "disagg_transfer_redundancy": 1.25, "disagg_role_device": "auto", "disagg_transfer_backend": "auto", "disagg_transfer_pool_size": 268435456, "disagg_transfer_pin_memory": "auto", "disagg_p2p_hostname": "127.0.0.1", "disagg_ib_device": null, "disagg_server_addr": null, "encoder_urls": null, "denoiser_urls": null, "decoder_urls": null, "encoder_tp": null, "denoiser_tp": null, "denoiser_sp": null, "denoiser_ulysses": null, "denoiser_ring": null, "decoder_sp": null, "pool_work_endpoint": null, "pool_result_endpoint": null, "pool_control_endpoint": null, "pool_control_advertised_endpoint": null, "log_level": "info", "log_requests": false, "log_requests_level": 2, "log_requests_format": "text", "log_requests_target": null, "uvicorn_access_log_exclude_prefixes": [], "enable_cache_report": false, "enable_trace": false, "otlp_traces_endpoint": "localhost:4317", "otlp_service_name": null, "srt_encoder_url": null, "srt_encoder_connect_timeout": 3.05, "srt_encoder_timeout": 100, "pe_server_url": null, "prompt_enhancer_config": null}
+[10-03 23:32:35] Local mode: True
+[10-03 23:32:35] Starting server...
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:33:09] Scheduler (dp replica 0) bind at endpoint: tcp://127.0.0.1:5580
+[10-03 23:33:10] torch.compile cache: TORCHINDUCTOR_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/inductor TRITON_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/triton
+[10-03 23:33:10] Initializing distributed environment with world_size=1, device=cuda:0, timeout=3600
+[10-03 23:33:10] Setting distributed timeout to 3600 seconds
+[10-03 23:33:10] No pipeline_class_name specified, using model_index.json
+[10-03 23:33:13] Using pipeline from model_index.json: MingImagePipeline
+[10-03 23:33:13] Loading pipeline modules...
+[10-03 23:33:13] Checking for cached model in Hugging Face Hub cache for inclusionAI/Ming-Image-0.1-Design...
+[10-03 23:33:13] Loading pipeline modules from config: {'_class_name': 'MingImagePipeline', '_diffusers_version': '0.36.0', 'text_encoder': ['transformers', 'MingImageEncoder'], 'tokenizer': ['transformers', 'PreTrainedTokenizerFast'], 'transformer': ['diffusers', 'DiffusionTransformer'], 'vae': ['diffusers', 'AutoencoderKLQwenImage'], 'scheduler': ['diffusers', 'FlowMatchEulerDiscreteScheduler']}
+[10-03 23:33:13] Loading required components: ['text_encoder', 'tokenizer', 'transformer', 'vae', 'scheduler']
+[10-03 23:33:18] Memory-aware component load order: ['tokenizer', 'transformer', 'vae', 'text_encoder', 'scheduler']
+
+Loading required modules:   0%|          | 0/5 [00:00<?, ?it/s][10-03 23:33:18] Loading tokenizer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/mllm. avail mem: 138.65 GB
+[10-03 23:33:19] Loaded tokenizer: TokenizersBackend (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 138.65 GB
+
+Loading required modules:  20%|██        | 1/5 [00:01<00:04,  1.06s/it][10-03 23:33:19] Loading transformer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/transformer. avail mem: 138.65 GB
+[10-03 23:33:19] Loading DiffusionTransformer from 5 safetensors file(s) , param_dtype: torch.bfloat16
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/5[A
+
+Loading safetensors checkpoint shards: 20%|██        | 1/5[A
+
+Loading safetensors checkpoint shards: 40%|████      | 2/5[A
+
+Loading safetensors checkpoint shards: 60%|██████    | 3/5[A
+
+Loading safetensors checkpoint shards: 80%|████████  | 4/5[A
+Loading safetensors checkpoint shards: 100%|██████████| 5/5
+[10-03 23:33:23] Attention backends for transformer: fa
+[10-03 23:33:23] Loaded transformer: MingImageTransformer2DModel (sgl-diffusion version). model size: 11.46 GB, vram: 11.46 GB. avail GPU mem: 126.76 GB
+
+Loading required modules:  40%|████      | 2/5 [00:05<00:08,  2.79s/it][10-03 23:33:23] Loading vae from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/vae. avail mem: 126.76 GB
+[10-03 23:33:23] Qwen-Image VAE: installed quality-gated fast path (29 RMSNorm+SiLU fusions, 3 channels_last upsamples).
+[10-03 23:33:23] Loaded vae: AutoencoderKLQwenImage (sgl-diffusion version). model size: 0.24 GB, vram: 0.24 GB. avail GPU mem: 126.75 GB
+
+Loading required modules:  60%|██████    | 3/5 [00:05<00:03,  1.61s/it][10-03 23:33:23] Loading text_encoder from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/. avail mem: 126.75 GB
+[10-03 23:33:23] Cannot use FlashAttention backend for head size 80.
+[10-03 23:33:24] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:33:51] [RunAI Streamer] Overall time to stream 31.7 GiB of all files to cuda:0: 27.49s, 1.2 GiB/s
+[10-03 23:33:52] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:33:55] [RunAI Streamer] Overall time to stream 5.8 GiB of all files to cuda:0: 3.8s, 1.5 GiB/s
+[10-03 23:33:55] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:33:56] [RunAI Streamer] Overall time to stream 119.1 MiB of all files to cuda:0: 0.05s, 2.2 GiB/s
+[10-03 23:33:56] Attention backends for text_encoder: fa, torch_sdpa
+[10-03 23:33:56] Loaded text_encoder: MingImageEncoder (sgl-diffusion version). model size: 33.55 GB, vram: 33.55 GB. avail GPU mem: 93.09 GB
+
+Loading required modules:  80%|████████  | 4/5 [00:37<00:13, 13.70s/it][10-03 23:33:56] Loading scheduler from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/scheduler. avail mem: 93.09 GB
+[10-03 23:33:56] Loaded scheduler: FlowMatchEulerDiscreteScheduler (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 93.09 GB
+
+Loading required modules: 100%|██████████| 5/5 [00:37<00:00,  7.50s/it]
+[10-03 23:33:56] Creating pipeline stages...
+[10-03 23:33:56] Using fa attention backend
+[10-03 23:33:56] Pipeline instantiated
+[10-03 23:33:56] Worker 0: Initialized device, model, and distributed environment.
+[10-03 23:33:56] Worker 0: Scheduler loop started.
+[10-03 23:33:56] [server-load] workers_ready_monotonic_ns=725740284955
+[10-03 23:33:56] Processing 1 grouped request(s)
+
+Warmup requests:   0%|          | 0/1 [00:00<?, ?req/s][10-03 23:33:56] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200.json.
+[10-03 23:33:56] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200_down.json.
+
+Warmup requests: 100%|██████████| 1/1 [00:01<00:00,  1.84s/req, warmup req (1024x1024, 1/12 steps), last=1.84s]
+Warmup requests: 100%|██████████| 1/1 [00:01<00:00,  1.84s/req, warmup req (1024x1024, 1/12 steps), last=1.84s]
+[10-03 23:33:57] The server is fired up and ready to roll!
+[10-03 23:33:57] Sampling params:
+                       width: 1024
+                      height: 1024
+                  num_frames: 1
+                         fps: 24
+                      prompt: <redacted, len=61>
+                  neg_prompt: <redacted, len=0>
+                        seed: 42
+                 infer_steps: 12
+      num_outputs_per_prompt: 1
+              guidance_scale: 1.0
+     embedded_guidance_scale: 6.0
+                    n_tokens: None
+                  flow_shift: None
+                  image_path: None
+                 save_output: True
+            output_file_path: /results/full-20261003T232158Z/04-A/outputs/sample.png
+        
+[10-03 23:33:57] Running pipeline stages: ['InputValidationStage', 'text_encoding_stage', 'reference_encoding_stage', 'LatentPreparationStage', 'TimestepPreparationStage', 'denoising_stage', 'decoding_stage']
+[10-03 23:33:57] [InputValidationStage] started...
+[10-03 23:33:57] [InputValidationStage] finished in 0.0000 seconds
+[10-03 23:33:57] [MingImageEncodingStage] started...
+[10-03 23:33:58] [MingImageEncodingStage] finished in 0.0691 seconds
+[10-03 23:33:58] [MingImageReferenceStage] started...
+[10-03 23:33:58] [MingImageReferenceStage] finished in 0.0000 seconds
+[10-03 23:33:58] [LatentPreparationStage] started...
+[10-03 23:33:58] [LatentPreparationStage] finished in 0.0016 seconds
+[10-03 23:33:58] [TimestepPreparationStage] started...
+/workspace/sglang/python/sglang/multimodal_gen/runtime/models/schedulers/scheduling_flow_match_euler_discrete.py:652: RuntimeWarning: divide by zero encountered in divide
+  return np.exp(mu) / (np.exp(mu) + (1 / t - 1) ** sigma)
+[10-03 23:33:58] [TimestepPreparationStage] finished in 0.0009 seconds
+[10-03 23:33:58] [DenoisingStage] started...
+
+  0%|          | 0/12 [00:00<?, ?it/s]
+ 17%|█▋        | 2/12 [00:00<00:01,  8.74it/s]
+ 25%|██▌       | 3/12 [00:00<00:01,  7.89it/s]
+ 33%|███▎      | 4/12 [00:00<00:01,  7.52it/s]
+ 42%|████▏     | 5/12 [00:00<00:00,  7.31it/s]
+ 50%|█████     | 6/12 [00:00<00:00,  7.18it/s]
+ 58%|█████▊    | 7/12 [00:00<00:00,  6.88it/s]
+ 67%|██████▋   | 8/12 [00:01<00:00,  6.82it/s]
+ 75%|███████▌  | 9/12 [00:01<00:00,  6.84it/s]
+ 83%|████████▎ | 10/12 [00:01<00:00,  6.85it/s]
+ 92%|█████████▏| 11/12 [00:01<00:00,  6.88it/s]
+100%|██████████| 12/12 [00:01<00:00,  6.89it/s]
+100%|██████████| 12/12 [00:01<00:00,  7.09it/s]
+[10-03 23:33:59] [DenoisingStage] average time per step: 0.1410 seconds
+[10-03 23:33:59] [DenoisingStage] finished in 1.6930 seconds
+[10-03 23:33:59] [MingImageDecodingStage] started...
+[10-03 23:33:59] [MingImageDecodingStage] finished in 0.0299 seconds
+[10-03 23:33:59] Output saved to [1;36m/results/full-20261003T232158Z/04-A/outputs/sample.png[0;0m
+[10-03 23:33:59] Metrics dumped to: [1;36m/results/full-20261003T232158Z/04-A/perf.json[0;0m
+[10-03 23:33:59] Pixel data generated successfully in [92m3.89[0;0m seconds
+[10-03 23:33:59] Warmed-up request processed in [92m1.80[0;0m seconds (with warmup excluded)
+[10-03 23:33:59] Memory usage - Max peak: 52034.00 MB, Avg peak: 52034.00 MB
+[10-03 23:34:00] Metrics dumped to: [1;36m/results/full-20261003T232158Z/04-A/perf.json[0;0m
+[93m[10-03 23:34:00] Generator was garbage collected without being shut down. Forcing local server and client cleanup.[0;0m
+[93m[10-03 23:34:00] Local worker sglang-diffusionWorker-0 did not terminate gracefully, forcing.[0;0m
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+ARM_RESULT {"label": "04-A", "variant": "A", "profile": false, "command": ["sglang", "generate", "--model-path", "inclusionAI/Ming-Image-0.1-Design", "--revision", "208087ada1486931692c1896f38d4cd16ff3df82", "--num-gpus", "1", "--enable-torch-compile=false", "--enable-breakable-cuda-graph=false", "--performance-mode=speed", "--width", "1024", "--height", "1024", "--num-inference-steps", "12", "--guidance-scale", "1", "--prompt", "A minimalist exhibition poster with a red geometric sculpture", "--seed", "42", "--quality", "lossless", "--save-output", "--warmup-mode", "request", "--warmup-steps", "1", "--perf-dump-path", "/results/full-20261003T232158Z/04-A/perf.json", "--output-path", "/results/full-20261003T232158Z/04-A/outputs", "--output-file-name", "sample"], "pixel_sha256": "b04fe457e7a38a1007c8f23a1d0dd3c42ccd57afdb8c547d6670da661f82448f", "total_duration_ms": 1799.7947610000438, "denoise_steps_ms": [{"step": 0, "duration_ms": 85.17249700003049}, {"step": 1, "duration_ms": 143.82986399994024}, {"step": 2, "duration_ms": 143.70630200005508}, {"step": 3, "duration_ms": 143.66435699992053}, {"step": 4, "duration_ms": 143.95906499999}, {"step": 5, "duration_ms": 143.94574899995405}, {"step": 6, "duration_ms": 158.26294500004678}, {"step": 7, "duration_ms": 149.7580630000357}, {"step": 8, "duration_ms": 145.29851799989046}, {"step": 9, "duration_ms": 145.21270000000186}, {"step": 10, "duration_ms": 144.02117300005557}, {"step": 11, "duration_ms": 144.3901160000678}]}
+RUN ['sglang', 'generate', '--model-path', 'inclusionAI/Ming-Image-0.1-Design', '--revision', '208087ada1486931692c1896f38d4cd16ff3df82', '--num-gpus', '1', '--enable-torch-compile=false', '--enable-breakable-cuda-graph=false', '--performance-mode=speed', '--width', '1024', '--height', '1024', '--num-inference-steps', '12', '--guidance-scale', '1', '--prompt', 'A minimalist exhibition poster with a red geometric sculpture', '--seed', '42', '--quality', 'lossless', '--save-output', '--warmup-mode', 'request', '--warmup-steps', '1', '--perf-dump-path', '/results/full-20261003T232158Z/05-A/perf.json', '--output-path', '/results/full-20261003T232158Z/05-A/outputs', '--output-file-name', 'sample']
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:34:42] Applying performance_mode=speed
+[10-03 23:34:42] server_args: {"model_path": "inclusionAI/Ming-Image-0.1-Design", "model_subfolder": null, "model_variant": null, "model_id": null, "served_model_name": "inclusionAI/Ming-Image-0.1-Design", "backend": "auto", "attention_backend": null, "enable_attention_backend_autotune": false, "attention_backend_config": {}, "component_attention_backends": {}, "cache_dit_config": null, "nccl_port": null, "enable_nccl_nvls": false, "trust_remote_code": false, "revision": "208087ada1486931692c1896f38d4cd16ff3df82", "num_gpus": 1, "performance_mode": "speed", "base_gpu_id": 0, "gpu_ids": null, "nnodes": 1, "node_rank": 0, "dist_init_addr": null, "tp_size": 1, "sp_degree": 1, "ulysses_degree": 1, "ring_degree": 1, "kv_gather_degree": 1, "sp_split_auto": false, "dp_size": 1, "enable_cfg_parallel": false, "cfg_parallel_degree": 1, "encoder_parallel": "auto", "hsdp_replicate_dim": 1, "hsdp_shard_dim": 1, "dist_timeout": 3600, "scheduler_rpc_timeout": null, "pipeline_class_name": null, "lora_path": null, "lora_nickname": "default", "lora_scale": 1.0, "lora_alpha": null, "lora_merge_mode": "auto", "lora_weight_name": null, "component_paths": {}, "component_weights_paths": {}, "component_direct_gpu_weight_loading": {}, "component_quantizations": {}, "component_precisions": {}, "component_quantization_ignored_layers": {}, "load_diffusion_decoder": false, "transformer_weights_path": null, "minimax_h3_adaln_cache_path": null, "minimax_h3_adaln_online": false, "minimax_h3_adaln_plan_width": 4, "minimax_h3_adaln_host_cache_gb": 8.0, "quantization": null, "quantization_ignored_layers": null, "lora_target_modules": null, "component_residency": null, "cpu_offload_components": null, "dit_cpu_offload": false, "direct_gpu_weight_loading": false, "dit_layerwise_offload": false, "layerwise_offload_components": null, "dit_offload_prefetch_size": 0.0, "dit_layerwise_resident_layers": 0.0, "dit_layerwise_residency_policy": "leading", "dit_layerwise_residency_lifetime": "forward", "layerwise_prefetch_size": {}, "layerwise_resident_layers": {}, "layerwise_residency_policy": {}, "layerwise_residency_lifetime": {}, "offload_during_compile": true, "text_encoder_cpu_offload": false, "image_encoder_cpu_offload": false, "vae_cpu_offload": false, "use_fsdp_inference": false, "pin_cpu_memory": true, "ltx2_two_stage_device_mode": null, "comfyui_mode": false, "enable_torch_compile": false, "regional_compile": false, "enable_breakable_cuda_graph": false, "bcg_text_buckets": null, "enable_layerwise_nvtx_marker": false, "warmup_mode": "request", "warmup_resolutions": null, "warmup_num_frames": null, "warmup_steps": 1, "warmup_sampling_params": null, "disable_autocast": true, "master_port": 30005, "host": "127.0.0.1", "port": 30000, "enable_metrics": false, "webui": false, "webui_port": 12312, "scheduler_port": 5582, "scheduler_ports": [5582], "batching_mode": "dynamic", "batching_max_size": 1, "batching_delay_ms": 0.0, "batching_config": null, "enable_batching_metrics": false, "strict_ports": false, "output_path": "/results/full-20261003T232158Z/05-A/outputs", "input_save_path": "inputs/uploads", "prompt_file_path": null, "model_paths": {}, "model_loaded": {"transformer": true, "vae": true, "video_vae": true, "audio_vae": true, "video_dit": true, "audio_dit": true, "dual_tower_bridge": true}, "boundary_ratio": null, "disagg_role": "monolithic", "disagg_timeout": 3600, "disagg_downstream_wait_timeout": 1800, "disagg_dispatch_policy": "round_robin", "disagg_mode": false, "disagg_instance_id": 0, "disagg_max_slots_per_instance": 8, "disagg_transfer_redundancy": 1.25, "disagg_role_device": "auto", "disagg_transfer_backend": "auto", "disagg_transfer_pool_size": 268435456, "disagg_transfer_pin_memory": "auto", "disagg_p2p_hostname": "127.0.0.1", "disagg_ib_device": null, "disagg_server_addr": null, "encoder_urls": null, "denoiser_urls": null, "decoder_urls": null, "encoder_tp": null, "denoiser_tp": null, "denoiser_sp": null, "denoiser_ulysses": null, "denoiser_ring": null, "decoder_sp": null, "pool_work_endpoint": null, "pool_result_endpoint": null, "pool_control_endpoint": null, "pool_control_advertised_endpoint": null, "log_level": "info", "log_requests": false, "log_requests_level": 2, "log_requests_format": "text", "log_requests_target": null, "uvicorn_access_log_exclude_prefixes": [], "enable_cache_report": false, "enable_trace": false, "otlp_traces_endpoint": "localhost:4317", "otlp_service_name": null, "srt_encoder_url": null, "srt_encoder_connect_timeout": 3.05, "srt_encoder_timeout": 100, "pe_server_url": null, "prompt_enhancer_config": null}
+[10-03 23:34:42] Local mode: True
+[10-03 23:34:42] Starting server...
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:35:16] Scheduler (dp replica 0) bind at endpoint: tcp://127.0.0.1:5582
+[10-03 23:35:16] torch.compile cache: TORCHINDUCTOR_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/inductor TRITON_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/triton
+[10-03 23:35:16] Initializing distributed environment with world_size=1, device=cuda:0, timeout=3600
+[10-03 23:35:16] Setting distributed timeout to 3600 seconds
+[10-03 23:35:17] No pipeline_class_name specified, using model_index.json
+[10-03 23:35:20] Using pipeline from model_index.json: MingImagePipeline
+[10-03 23:35:20] Loading pipeline modules...
+[10-03 23:35:20] Checking for cached model in Hugging Face Hub cache for inclusionAI/Ming-Image-0.1-Design...
+[10-03 23:35:20] Loading pipeline modules from config: {'_class_name': 'MingImagePipeline', '_diffusers_version': '0.36.0', 'text_encoder': ['transformers', 'MingImageEncoder'], 'tokenizer': ['transformers', 'PreTrainedTokenizerFast'], 'transformer': ['diffusers', 'DiffusionTransformer'], 'vae': ['diffusers', 'AutoencoderKLQwenImage'], 'scheduler': ['diffusers', 'FlowMatchEulerDiscreteScheduler']}
+[10-03 23:35:20] Loading required components: ['text_encoder', 'tokenizer', 'transformer', 'vae', 'scheduler']
+[10-03 23:35:25] Memory-aware component load order: ['tokenizer', 'transformer', 'vae', 'text_encoder', 'scheduler']
+
+Loading required modules:   0%|          | 0/5 [00:00<?, ?it/s][10-03 23:35:25] Loading tokenizer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/mllm. avail mem: 138.65 GB
+[10-03 23:35:26] Loaded tokenizer: TokenizersBackend (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 138.65 GB
+
+Loading required modules:  20%|██        | 1/5 [00:00<00:03,  1.02it/s][10-03 23:35:26] Loading transformer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/transformer. avail mem: 138.65 GB
+[10-03 23:35:26] Loading DiffusionTransformer from 5 safetensors file(s) , param_dtype: torch.bfloat16
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/5[A
+
+Loading safetensors checkpoint shards: 20%|██        | 1/5[A
+
+Loading safetensors checkpoint shards: 40%|████      | 2/5[A
+
+Loading safetensors checkpoint shards: 60%|██████    | 3/5[A
+
+Loading safetensors checkpoint shards: 80%|████████  | 4/5[A
+Loading safetensors checkpoint shards: 100%|██████████| 5/5
+[10-03 23:35:30] Attention backends for transformer: fa
+[10-03 23:35:30] Loaded transformer: MingImageTransformer2DModel (sgl-diffusion version). model size: 11.46 GB, vram: 11.46 GB. avail GPU mem: 126.76 GB
+
+Loading required modules:  40%|████      | 2/5 [00:04<00:08,  2.76s/it][10-03 23:35:30] Loading vae from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/vae. avail mem: 126.76 GB
+[10-03 23:35:30] Qwen-Image VAE: installed quality-gated fast path (29 RMSNorm+SiLU fusions, 3 channels_last upsamples).
+[10-03 23:35:30] Loaded vae: AutoencoderKLQwenImage (sgl-diffusion version). model size: 0.24 GB, vram: 0.24 GB. avail GPU mem: 126.75 GB
+
+Loading required modules:  60%|██████    | 3/5 [00:05<00:03,  1.60s/it][10-03 23:35:30] Loading text_encoder from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/. avail mem: 126.75 GB
+[10-03 23:35:30] Cannot use FlashAttention backend for head size 80.
+[10-03 23:35:31] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:35:58] [RunAI Streamer] Overall time to stream 31.7 GiB of all files to cuda:0: 27.69s, 1.1 GiB/s
+[10-03 23:35:58] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:36:02] [RunAI Streamer] Overall time to stream 5.8 GiB of all files to cuda:0: 3.99s, 1.4 GiB/s
+[10-03 23:36:03] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:36:03] [RunAI Streamer] Overall time to stream 119.1 MiB of all files to cuda:0: 0.07s, 1.7 GiB/s
+[10-03 23:36:03] Attention backends for text_encoder: fa, torch_sdpa
+[10-03 23:36:03] Loaded text_encoder: MingImageEncoder (sgl-diffusion version). model size: 33.55 GB, vram: 33.55 GB. avail GPU mem: 93.09 GB
+
+Loading required modules:  80%|████████  | 4/5 [00:37<00:13, 13.83s/it][10-03 23:36:03] Loading scheduler from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/scheduler. avail mem: 93.09 GB
+[10-03 23:36:03] Loaded scheduler: FlowMatchEulerDiscreteScheduler (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 93.09 GB
+
+Loading required modules: 100%|██████████| 5/5 [00:37<00:00,  7.56s/it]
+[10-03 23:36:03] Creating pipeline stages...
+[10-03 23:36:03] Using fa attention backend
+[10-03 23:36:03] Pipeline instantiated
+[10-03 23:36:03] Worker 0: Initialized device, model, and distributed environment.
+[10-03 23:36:03] Worker 0: Scheduler loop started.
+[10-03 23:36:03] [server-load] workers_ready_monotonic_ns=852786365599
+[10-03 23:36:03] Processing 1 grouped request(s)
+
+Warmup requests:   0%|          | 0/1 [00:00<?, ?req/s][10-03 23:36:03] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200.json.
+[10-03 23:36:03] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200_down.json.
+
+Warmup requests: 100%|██████████| 1/1 [00:01<00:00,  1.88s/req, warmup req (1024x1024, 1/12 steps), last=1.88s]
+Warmup requests: 100%|██████████| 1/1 [00:01<00:00,  1.88s/req, warmup req (1024x1024, 1/12 steps), last=1.88s]
+[10-03 23:36:05] The server is fired up and ready to roll!
+[10-03 23:36:05] Sampling params:
+                       width: 1024
+                      height: 1024
+                  num_frames: 1
+                         fps: 24
+                      prompt: <redacted, len=61>
+                  neg_prompt: <redacted, len=0>
+                        seed: 42
+                 infer_steps: 12
+      num_outputs_per_prompt: 1
+              guidance_scale: 1.0
+     embedded_guidance_scale: 6.0
+                    n_tokens: None
+                  flow_shift: None
+                  image_path: None
+                 save_output: True
+            output_file_path: /results/full-20261003T232158Z/05-A/outputs/sample.png
+        
+[10-03 23:36:05] Running pipeline stages: ['InputValidationStage', 'text_encoding_stage', 'reference_encoding_stage', 'LatentPreparationStage', 'TimestepPreparationStage', 'denoising_stage', 'decoding_stage']
+[10-03 23:36:05] [InputValidationStage] started...
+[10-03 23:36:05] [InputValidationStage] finished in 0.0000 seconds
+[10-03 23:36:05] [MingImageEncodingStage] started...
+[10-03 23:36:05] [MingImageEncodingStage] finished in 0.0720 seconds
+[10-03 23:36:05] [MingImageReferenceStage] started...
+[10-03 23:36:05] [MingImageReferenceStage] finished in 0.0000 seconds
+[10-03 23:36:05] [LatentPreparationStage] started...
+[10-03 23:36:05] [LatentPreparationStage] finished in 0.0017 seconds
+[10-03 23:36:05] [TimestepPreparationStage] started...
+/workspace/sglang/python/sglang/multimodal_gen/runtime/models/schedulers/scheduling_flow_match_euler_discrete.py:652: RuntimeWarning: divide by zero encountered in divide
+  return np.exp(mu) / (np.exp(mu) + (1 / t - 1) ** sigma)
+[10-03 23:36:05] [TimestepPreparationStage] finished in 0.0009 seconds
+[10-03 23:36:05] [DenoisingStage] started...
+
+  0%|          | 0/12 [00:00<?, ?it/s]
+ 17%|█▋        | 2/12 [00:00<00:01,  8.73it/s]
+ 25%|██▌       | 3/12 [00:00<00:01,  7.88it/s]
+ 33%|███▎      | 4/12 [00:00<00:01,  7.51it/s]
+ 42%|████▏     | 5/12 [00:00<00:00,  7.30it/s]
+ 50%|█████     | 6/12 [00:00<00:00,  7.18it/s]
+ 58%|█████▊    | 7/12 [00:00<00:00,  6.85it/s]
+ 67%|██████▋   | 8/12 [00:01<00:00,  6.81it/s]
+ 75%|███████▌  | 9/12 [00:01<00:00,  6.83it/s]
+ 83%|████████▎ | 10/12 [00:01<00:00,  6.86it/s]
+ 92%|█████████▏| 11/12 [00:01<00:00,  6.88it/s]
+100%|██████████| 12/12 [00:01<00:00,  6.90it/s]
+100%|██████████| 12/12 [00:01<00:00,  7.09it/s]
+[10-03 23:36:06] [DenoisingStage] average time per step: 0.1410 seconds
+[10-03 23:36:06] [DenoisingStage] finished in 1.6933 seconds
+[10-03 23:36:06] [MingImageDecodingStage] started...
+[10-03 23:36:06] [MingImageDecodingStage] finished in 0.0297 seconds
+[10-03 23:36:07] Output saved to [1;36m/results/full-20261003T232158Z/05-A/outputs/sample.png[0;0m
+[10-03 23:36:07] Metrics dumped to: [1;36m/results/full-20261003T232158Z/05-A/perf.json[0;0m
+[10-03 23:36:07] Pixel data generated successfully in [92m3.94[0;0m seconds
+[10-03 23:36:07] Warmed-up request processed in [92m1.80[0;0m seconds (with warmup excluded)
+[10-03 23:36:07] Memory usage - Max peak: 52034.00 MB, Avg peak: 52034.00 MB
+[10-03 23:36:07] Metrics dumped to: [1;36m/results/full-20261003T232158Z/05-A/perf.json[0;0m
+[93m[10-03 23:36:07] Generator was garbage collected without being shut down. Forcing local server and client cleanup.[0;0m
+[93m[10-03 23:36:07] Local worker sglang-diffusionWorker-0 did not terminate gracefully, forcing.[0;0m
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+ARM_RESULT {"label": "05-A", "variant": "A", "profile": false, "command": ["sglang", "generate", "--model-path", "inclusionAI/Ming-Image-0.1-Design", "--revision", "208087ada1486931692c1896f38d4cd16ff3df82", "--num-gpus", "1", "--enable-torch-compile=false", "--enable-breakable-cuda-graph=false", "--performance-mode=speed", "--width", "1024", "--height", "1024", "--num-inference-steps", "12", "--guidance-scale", "1", "--prompt", "A minimalist exhibition poster with a red geometric sculpture", "--seed", "42", "--quality", "lossless", "--save-output", "--warmup-mode", "request", "--warmup-steps", "1", "--perf-dump-path", "/results/full-20261003T232158Z/05-A/perf.json", "--output-path", "/results/full-20261003T232158Z/05-A/outputs", "--output-file-name", "sample"], "pixel_sha256": "b04fe457e7a38a1007c8f23a1d0dd3c42ccd57afdb8c547d6670da661f82448f", "total_duration_ms": 1802.954684000042, "denoise_steps_ms": [{"step": 0, "duration_ms": 85.40041499998097}, {"step": 1, "duration_ms": 143.63712699991993}, {"step": 2, "duration_ms": 144.25399800006744}, {"step": 3, "duration_ms": 143.8130059999594}, {"step": 4, "duration_ms": 143.92555699998866}, {"step": 5, "duration_ms": 144.05557899999621}, {"step": 6, "duration_ms": 159.73890700001903}, {"step": 7, "duration_ms": 149.0366670000185}, {"step": 8, "duration_ms": 145.23136100001466}, {"step": 9, "duration_ms": 144.43302199993013}, {"step": 10, "duration_ms": 144.31152099996325}, {"step": 11, "duration_ms": 143.63468700003068}]}
+RUN ['sglang', 'generate', '--model-path', 'inclusionAI/Ming-Image-0.1-Design', '--revision', '208087ada1486931692c1896f38d4cd16ff3df82', '--num-gpus', '1', '--enable-torch-compile=false', '--enable-breakable-cuda-graph=false', '--performance-mode=speed', '--width', '1024', '--height', '1024', '--num-inference-steps', '12', '--guidance-scale', '1', '--prompt', 'A minimalist exhibition poster with a red geometric sculpture', '--seed', '42', '--quality', 'lossless', '--save-output', '--warmup-mode', 'request', '--warmup-steps', '1', '--perf-dump-path', '/results/full-20261003T232158Z/06-B/perf.json', '--output-path', '/results/full-20261003T232158Z/06-B/outputs', '--output-file-name', 'sample']
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:36:48] Applying performance_mode=speed
+[10-03 23:36:48] server_args: {"model_path": "inclusionAI/Ming-Image-0.1-Design", "model_subfolder": null, "model_variant": null, "model_id": null, "served_model_name": "inclusionAI/Ming-Image-0.1-Design", "backend": "auto", "attention_backend": null, "enable_attention_backend_autotune": false, "attention_backend_config": {}, "component_attention_backends": {}, "cache_dit_config": null, "nccl_port": null, "enable_nccl_nvls": false, "trust_remote_code": false, "revision": "208087ada1486931692c1896f38d4cd16ff3df82", "num_gpus": 1, "performance_mode": "speed", "base_gpu_id": 0, "gpu_ids": null, "nnodes": 1, "node_rank": 0, "dist_init_addr": null, "tp_size": 1, "sp_degree": 1, "ulysses_degree": 1, "ring_degree": 1, "kv_gather_degree": 1, "sp_split_auto": false, "dp_size": 1, "enable_cfg_parallel": false, "cfg_parallel_degree": 1, "encoder_parallel": "auto", "hsdp_replicate_dim": 1, "hsdp_shard_dim": 1, "dist_timeout": 3600, "scheduler_rpc_timeout": null, "pipeline_class_name": null, "lora_path": null, "lora_nickname": "default", "lora_scale": 1.0, "lora_alpha": null, "lora_merge_mode": "auto", "lora_weight_name": null, "component_paths": {}, "component_weights_paths": {}, "component_direct_gpu_weight_loading": {}, "component_quantizations": {}, "component_precisions": {}, "component_quantization_ignored_layers": {}, "load_diffusion_decoder": false, "transformer_weights_path": null, "minimax_h3_adaln_cache_path": null, "minimax_h3_adaln_online": false, "minimax_h3_adaln_plan_width": 4, "minimax_h3_adaln_host_cache_gb": 8.0, "quantization": null, "quantization_ignored_layers": null, "lora_target_modules": null, "component_residency": null, "cpu_offload_components": null, "dit_cpu_offload": false, "direct_gpu_weight_loading": false, "dit_layerwise_offload": false, "layerwise_offload_components": null, "dit_offload_prefetch_size": 0.0, "dit_layerwise_resident_layers": 0.0, "dit_layerwise_residency_policy": "leading", "dit_layerwise_residency_lifetime": "forward", "layerwise_prefetch_size": {}, "layerwise_resident_layers": {}, "layerwise_residency_policy": {}, "layerwise_residency_lifetime": {}, "offload_during_compile": true, "text_encoder_cpu_offload": false, "image_encoder_cpu_offload": false, "vae_cpu_offload": false, "use_fsdp_inference": false, "pin_cpu_memory": true, "ltx2_two_stage_device_mode": null, "comfyui_mode": false, "enable_torch_compile": false, "regional_compile": false, "enable_breakable_cuda_graph": false, "bcg_text_buckets": null, "enable_layerwise_nvtx_marker": false, "warmup_mode": "request", "warmup_resolutions": null, "warmup_num_frames": null, "warmup_steps": 1, "warmup_sampling_params": null, "disable_autocast": true, "master_port": 30005, "host": "127.0.0.1", "port": 30000, "enable_metrics": false, "webui": false, "webui_port": 12312, "scheduler_port": 5601, "scheduler_ports": [5601], "batching_mode": "dynamic", "batching_max_size": 1, "batching_delay_ms": 0.0, "batching_config": null, "enable_batching_metrics": false, "strict_ports": false, "output_path": "/results/full-20261003T232158Z/06-B/outputs", "input_save_path": "inputs/uploads", "prompt_file_path": null, "model_paths": {}, "model_loaded": {"transformer": true, "vae": true, "video_vae": true, "audio_vae": true, "video_dit": true, "audio_dit": true, "dual_tower_bridge": true}, "boundary_ratio": null, "disagg_role": "monolithic", "disagg_timeout": 3600, "disagg_downstream_wait_timeout": 1800, "disagg_dispatch_policy": "round_robin", "disagg_mode": false, "disagg_instance_id": 0, "disagg_max_slots_per_instance": 8, "disagg_transfer_redundancy": 1.25, "disagg_role_device": "auto", "disagg_transfer_backend": "auto", "disagg_transfer_pool_size": 268435456, "disagg_transfer_pin_memory": "auto", "disagg_p2p_hostname": "127.0.0.1", "disagg_ib_device": null, "disagg_server_addr": null, "encoder_urls": null, "denoiser_urls": null, "decoder_urls": null, "encoder_tp": null, "denoiser_tp": null, "denoiser_sp": null, "denoiser_ulysses": null, "denoiser_ring": null, "decoder_sp": null, "pool_work_endpoint": null, "pool_result_endpoint": null, "pool_control_endpoint": null, "pool_control_advertised_endpoint": null, "log_level": "info", "log_requests": false, "log_requests_level": 2, "log_requests_format": "text", "log_requests_target": null, "uvicorn_access_log_exclude_prefixes": [], "enable_cache_report": false, "enable_trace": false, "otlp_traces_endpoint": "localhost:4317", "otlp_service_name": null, "srt_encoder_url": null, "srt_encoder_connect_timeout": 3.05, "srt_encoder_timeout": 100, "pe_server_url": null, "prompt_enhancer_config": null}
+[10-03 23:36:48] Local mode: True
+[10-03 23:36:48] Starting server...
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:37:22] Scheduler (dp replica 0) bind at endpoint: tcp://127.0.0.1:5601
+[10-03 23:37:23] torch.compile cache: TORCHINDUCTOR_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/inductor TRITON_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/triton
+[10-03 23:37:23] Initializing distributed environment with world_size=1, device=cuda:0, timeout=3600
+[10-03 23:37:23] Setting distributed timeout to 3600 seconds
+[10-03 23:37:23] No pipeline_class_name specified, using model_index.json
+[10-03 23:37:26] Using pipeline from model_index.json: MingImagePipeline
+[10-03 23:37:26] Loading pipeline modules...
+[10-03 23:37:26] Checking for cached model in Hugging Face Hub cache for inclusionAI/Ming-Image-0.1-Design...
+[10-03 23:37:26] Loading pipeline modules from config: {'_class_name': 'MingImagePipeline', '_diffusers_version': '0.36.0', 'text_encoder': ['transformers', 'MingImageEncoder'], 'tokenizer': ['transformers', 'PreTrainedTokenizerFast'], 'transformer': ['diffusers', 'DiffusionTransformer'], 'vae': ['diffusers', 'AutoencoderKLQwenImage'], 'scheduler': ['diffusers', 'FlowMatchEulerDiscreteScheduler']}
+[10-03 23:37:26] Loading required components: ['text_encoder', 'tokenizer', 'transformer', 'vae', 'scheduler']
+[10-03 23:37:31] Memory-aware component load order: ['tokenizer', 'transformer', 'vae', 'text_encoder', 'scheduler']
+
+Loading required modules:   0%|          | 0/5 [00:00<?, ?it/s][10-03 23:37:32] Loading tokenizer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/mllm. avail mem: 138.65 GB
+[10-03 23:37:32] Loaded tokenizer: TokenizersBackend (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 138.65 GB
+
+Loading required modules:  20%|██        | 1/5 [00:01<00:04,  1.02s/it][10-03 23:37:32] Loading transformer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/transformer. avail mem: 138.65 GB
+[10-03 23:37:33] Loading DiffusionTransformer from 5 safetensors file(s) , param_dtype: torch.bfloat16
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/5[A
+
+Loading safetensors checkpoint shards: 20%|██        | 1/5[A
+
+Loading safetensors checkpoint shards: 40%|████      | 2/5[A
+
+Loading safetensors checkpoint shards: 60%|██████    | 3/5[A
+
+Loading safetensors checkpoint shards: 80%|████████  | 4/5[A
+Loading safetensors checkpoint shards: 100%|██████████| 5/5
+[10-03 23:37:37] Attention backends for transformer: fa
+[10-03 23:37:37] Loaded transformer: MingImageTransformer2DModel (sgl-diffusion version). model size: 11.46 GB, vram: 11.46 GB. avail GPU mem: 126.76 GB
+
+Loading required modules:  40%|████      | 2/5 [00:05<00:08,  2.82s/it][10-03 23:37:37] Loading vae from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/vae. avail mem: 126.76 GB
+[10-03 23:37:37] Qwen-Image VAE: installed quality-gated fast path (29 RMSNorm+SiLU fusions, 3 channels_last upsamples).
+[10-03 23:37:37] Loaded vae: AutoencoderKLQwenImage (sgl-diffusion version). model size: 0.24 GB, vram: 0.24 GB. avail GPU mem: 126.75 GB
+
+Loading required modules:  60%|██████    | 3/5 [00:05<00:03,  1.63s/it][10-03 23:37:37] Loading text_encoder from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/. avail mem: 126.75 GB
+[10-03 23:37:37] Cannot use FlashAttention backend for head size 80.
+[10-03 23:37:37] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:38:06] [RunAI Streamer] Overall time to stream 31.7 GiB of all files to cuda:0: 28.59s, 1.1 GiB/s
+[10-03 23:38:06] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:38:10] [RunAI Streamer] Overall time to stream 5.8 GiB of all files to cuda:0: 3.89s, 1.5 GiB/s
+[10-03 23:38:10] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:38:10] [RunAI Streamer] Overall time to stream 119.1 MiB of all files to cuda:0: 0.06s, 2.0 GiB/s
+[10-03 23:38:10] Attention backends for text_encoder: fa, torch_sdpa
+[10-03 23:38:10] Loaded text_encoder: MingImageEncoder (sgl-diffusion version). model size: 33.55 GB, vram: 33.55 GB. avail GPU mem: 93.09 GB
+
+Loading required modules:  80%|████████  | 4/5 [00:38<00:14, 14.21s/it][10-03 23:38:10] Loading scheduler from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/scheduler. avail mem: 93.09 GB
+[10-03 23:38:10] Loaded scheduler: FlowMatchEulerDiscreteScheduler (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 93.09 GB
+
+Loading required modules: 100%|██████████| 5/5 [00:38<00:00,  7.76s/it]
+[10-03 23:38:10] Creating pipeline stages...
+[10-03 23:38:10] Using fa attention backend
+[10-03 23:38:10] Pipeline instantiated
+[10-03 23:38:10] Worker 0: Initialized device, model, and distributed environment.
+[10-03 23:38:10] Worker 0: Scheduler loop started.
+[10-03 23:38:10] [server-load] workers_ready_monotonic_ns=980429160352
+[10-03 23:38:10] Processing 1 grouped request(s)
+
+Warmup requests:   0%|          | 0/1 [00:00<?, ?req/s][10-03 23:38:11] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200.json.
+[10-03 23:38:11] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200_down.json.
+
+Warmup requests: 100%|██████████| 1/1 [00:01<00:00,  1.84s/req, warmup req (1024x1024, 1/12 steps), last=1.84s]
+Warmup requests: 100%|██████████| 1/1 [00:01<00:00,  1.84s/req, warmup req (1024x1024, 1/12 steps), last=1.84s]
+[10-03 23:38:12] The server is fired up and ready to roll!
+[10-03 23:38:12] Sampling params:
+                       width: 1024
+                      height: 1024
+                  num_frames: 1
+                         fps: 24
+                      prompt: <redacted, len=61>
+                  neg_prompt: <redacted, len=0>
+                        seed: 42
+                 infer_steps: 12
+      num_outputs_per_prompt: 1
+              guidance_scale: 1.0
+     embedded_guidance_scale: 6.0
+                    n_tokens: None
+                  flow_shift: None
+                  image_path: None
+                 save_output: True
+            output_file_path: /results/full-20261003T232158Z/06-B/outputs/sample.png
+        
+[10-03 23:38:12] Running pipeline stages: ['InputValidationStage', 'text_encoding_stage', 'reference_encoding_stage', 'LatentPreparationStage', 'TimestepPreparationStage', 'denoising_stage', 'decoding_stage']
+[10-03 23:38:12] [InputValidationStage] started...
+[10-03 23:38:12] [InputValidationStage] finished in 0.0000 seconds
+[10-03 23:38:12] [MingImageEncodingStage] started...
+[10-03 23:38:12] [MingImageEncodingStage] finished in 0.0695 seconds
+[10-03 23:38:12] [MingImageReferenceStage] started...
+[10-03 23:38:12] [MingImageReferenceStage] finished in 0.0000 seconds
+[10-03 23:38:12] [LatentPreparationStage] started...
+[10-03 23:38:12] [LatentPreparationStage] finished in 0.0016 seconds
+[10-03 23:38:12] [TimestepPreparationStage] started...
+/workspace/sglang/python/sglang/multimodal_gen/runtime/models/schedulers/scheduling_flow_match_euler_discrete.py:652: RuntimeWarning: divide by zero encountered in divide
+  return np.exp(mu) / (np.exp(mu) + (1 / t - 1) ** sigma)
+[10-03 23:38:12] [TimestepPreparationStage] finished in 0.0009 seconds
+[10-03 23:38:12] [DenoisingStage] started...
+
+  0%|          | 0/12 [00:00<?, ?it/s]
+ 17%|█▋        | 2/12 [00:00<00:00, 13.09it/s]
+ 33%|███▎      | 4/12 [00:00<00:00,  9.98it/s]
+ 50%|█████     | 6/12 [00:00<00:00,  9.29it/s]
+ 58%|█████▊    | 7/12 [00:00<00:00,  9.13it/s]
+ 67%|██████▋   | 8/12 [00:00<00:00,  8.94it/s]
+ 75%|███████▌  | 9/12 [00:00<00:00,  8.48it/s]
+ 83%|████████▎ | 10/12 [00:01<00:00,  8.37it/s]
+ 92%|█████████▏| 11/12 [00:01<00:00,  8.40it/s]
+100%|██████████| 12/12 [00:01<00:00,  8.42it/s]
+100%|██████████| 12/12 [00:01<00:00,  8.91it/s]
+[10-03 23:38:14] [DenoisingStage] average time per step: 0.1123 seconds
+[10-03 23:38:14] [DenoisingStage] finished in 1.3489 seconds
+[10-03 23:38:14] [MingImageDecodingStage] started...
+[10-03 23:38:14] [MingImageDecodingStage] finished in 0.0396 seconds
+[10-03 23:38:14] Output saved to [1;36m/results/full-20261003T232158Z/06-B/outputs/sample.png[0;0m
+[10-03 23:38:14] Metrics dumped to: [1;36m/results/full-20261003T232158Z/06-B/perf.json[0;0m
+[10-03 23:38:14] Pixel data generated successfully in [92m3.57[0;0m seconds
+[10-03 23:38:14] Warmed-up request processed in [92m1.47[0;0m seconds (with warmup excluded)
+[10-03 23:38:14] Memory usage - Max peak: 52034.00 MB, Avg peak: 52034.00 MB
+[10-03 23:38:14] Metrics dumped to: [1;36m/results/full-20261003T232158Z/06-B/perf.json[0;0m
+[93m[10-03 23:38:14] Generator was garbage collected without being shut down. Forcing local server and client cleanup.[0;0m
+[93m[10-03 23:38:14] Local worker sglang-diffusionWorker-0 did not terminate gracefully, forcing.[0;0m
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+ARM_RESULT {"label": "06-B", "variant": "B", "profile": false, "command": ["sglang", "generate", "--model-path", "inclusionAI/Ming-Image-0.1-Design", "--revision", "208087ada1486931692c1896f38d4cd16ff3df82", "--num-gpus", "1", "--enable-torch-compile=false", "--enable-breakable-cuda-graph=false", "--performance-mode=speed", "--width", "1024", "--height", "1024", "--num-inference-steps", "12", "--guidance-scale", "1", "--prompt", "A minimalist exhibition poster with a red geometric sculpture", "--seed", "42", "--quality", "lossless", "--save-output", "--warmup-mode", "request", "--warmup-steps", "1", "--perf-dump-path", "/results/full-20261003T232158Z/06-B/perf.json", "--output-path", "/results/full-20261003T232158Z/06-B/outputs", "--output-file-name", "sample"], "pixel_sha256": "b04fe457e7a38a1007c8f23a1d0dd3c42ccd57afdb8c547d6670da661f82448f", "total_duration_ms": 1465.210719999959, "denoise_steps_ms": [{"step": 0, "duration_ms": 50.06432099992253}, {"step": 1, "duration_ms": 102.81866200000422}, {"step": 2, "duration_ms": 116.3763970000673}, {"step": 3, "duration_ms": 117.29680400003417}, {"step": 4, "duration_ms": 116.44614499994077}, {"step": 5, "duration_ms": 116.43020900010015}, {"step": 6, "duration_ms": 115.34554200000002}, {"step": 7, "duration_ms": 118.38719000002129}, {"step": 8, "duration_ms": 134.5266470000297}, {"step": 9, "duration_ms": 123.43236599997454}, {"step": 10, "duration_ms": 117.69507700000759}, {"step": 11, "duration_ms": 118.15724199993838}]}
+RUN ['sglang', 'generate', '--model-path', 'inclusionAI/Ming-Image-0.1-Design', '--revision', '208087ada1486931692c1896f38d4cd16ff3df82', '--num-gpus', '1', '--enable-torch-compile=false', '--enable-breakable-cuda-graph=false', '--performance-mode=speed', '--width', '1024', '--height', '1024', '--num-inference-steps', '12', '--guidance-scale', '1', '--prompt', 'A minimalist exhibition poster with a red geometric sculpture', '--seed', '42', '--quality', 'lossless', '--save-output', '--warmup-mode', 'request', '--warmup-steps', '1', '--perf-dump-path', '/results/full-20261003T232158Z/07-B/perf.json', '--output-path', '/results/full-20261003T232158Z/07-B/outputs', '--output-file-name', 'sample']
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:38:57] Applying performance_mode=speed
+[10-03 23:38:57] server_args: {"model_path": "inclusionAI/Ming-Image-0.1-Design", "model_subfolder": null, "model_variant": null, "model_id": null, "served_model_name": "inclusionAI/Ming-Image-0.1-Design", "backend": "auto", "attention_backend": null, "enable_attention_backend_autotune": false, "attention_backend_config": {}, "component_attention_backends": {}, "cache_dit_config": null, "nccl_port": null, "enable_nccl_nvls": false, "trust_remote_code": false, "revision": "208087ada1486931692c1896f38d4cd16ff3df82", "num_gpus": 1, "performance_mode": "speed", "base_gpu_id": 0, "gpu_ids": null, "nnodes": 1, "node_rank": 0, "dist_init_addr": null, "tp_size": 1, "sp_degree": 1, "ulysses_degree": 1, "ring_degree": 1, "kv_gather_degree": 1, "sp_split_auto": false, "dp_size": 1, "enable_cfg_parallel": false, "cfg_parallel_degree": 1, "encoder_parallel": "auto", "hsdp_replicate_dim": 1, "hsdp_shard_dim": 1, "dist_timeout": 3600, "scheduler_rpc_timeout": null, "pipeline_class_name": null, "lora_path": null, "lora_nickname": "default", "lora_scale": 1.0, "lora_alpha": null, "lora_merge_mode": "auto", "lora_weight_name": null, "component_paths": {}, "component_weights_paths": {}, "component_direct_gpu_weight_loading": {}, "component_quantizations": {}, "component_precisions": {}, "component_quantization_ignored_layers": {}, "load_diffusion_decoder": false, "transformer_weights_path": null, "minimax_h3_adaln_cache_path": null, "minimax_h3_adaln_online": false, "minimax_h3_adaln_plan_width": 4, "minimax_h3_adaln_host_cache_gb": 8.0, "quantization": null, "quantization_ignored_layers": null, "lora_target_modules": null, "component_residency": null, "cpu_offload_components": null, "dit_cpu_offload": false, "direct_gpu_weight_loading": false, "dit_layerwise_offload": false, "layerwise_offload_components": null, "dit_offload_prefetch_size": 0.0, "dit_layerwise_resident_layers": 0.0, "dit_layerwise_residency_policy": "leading", "dit_layerwise_residency_lifetime": "forward", "layerwise_prefetch_size": {}, "layerwise_resident_layers": {}, "layerwise_residency_policy": {}, "layerwise_residency_lifetime": {}, "offload_during_compile": true, "text_encoder_cpu_offload": false, "image_encoder_cpu_offload": false, "vae_cpu_offload": false, "use_fsdp_inference": false, "pin_cpu_memory": true, "ltx2_two_stage_device_mode": null, "comfyui_mode": false, "enable_torch_compile": false, "regional_compile": false, "enable_breakable_cuda_graph": false, "bcg_text_buckets": null, "enable_layerwise_nvtx_marker": false, "warmup_mode": "request", "warmup_resolutions": null, "warmup_num_frames": null, "warmup_steps": 1, "warmup_sampling_params": null, "disable_autocast": true, "master_port": 30005, "host": "127.0.0.1", "port": 30000, "enable_metrics": false, "webui": false, "webui_port": 12312, "scheduler_port": 5609, "scheduler_ports": [5609], "batching_mode": "dynamic", "batching_max_size": 1, "batching_delay_ms": 0.0, "batching_config": null, "enable_batching_metrics": false, "strict_ports": false, "output_path": "/results/full-20261003T232158Z/07-B/outputs", "input_save_path": "inputs/uploads", "prompt_file_path": null, "model_paths": {}, "model_loaded": {"transformer": true, "vae": true, "video_vae": true, "audio_vae": true, "video_dit": true, "audio_dit": true, "dual_tower_bridge": true}, "boundary_ratio": null, "disagg_role": "monolithic", "disagg_timeout": 3600, "disagg_downstream_wait_timeout": 1800, "disagg_dispatch_policy": "round_robin", "disagg_mode": false, "disagg_instance_id": 0, "disagg_max_slots_per_instance": 8, "disagg_transfer_redundancy": 1.25, "disagg_role_device": "auto", "disagg_transfer_backend": "auto", "disagg_transfer_pool_size": 268435456, "disagg_transfer_pin_memory": "auto", "disagg_p2p_hostname": "127.0.0.1", "disagg_ib_device": null, "disagg_server_addr": null, "encoder_urls": null, "denoiser_urls": null, "decoder_urls": null, "encoder_tp": null, "denoiser_tp": null, "denoiser_sp": null, "denoiser_ulysses": null, "denoiser_ring": null, "decoder_sp": null, "pool_work_endpoint": null, "pool_result_endpoint": null, "pool_control_endpoint": null, "pool_control_advertised_endpoint": null, "log_level": "info", "log_requests": false, "log_requests_level": 2, "log_requests_format": "text", "log_requests_target": null, "uvicorn_access_log_exclude_prefixes": [], "enable_cache_report": false, "enable_trace": false, "otlp_traces_endpoint": "localhost:4317", "otlp_service_name": null, "srt_encoder_url": null, "srt_encoder_connect_timeout": 3.05, "srt_encoder_timeout": 100, "pe_server_url": null, "prompt_enhancer_config": null}
+[10-03 23:38:57] Local mode: True
+[10-03 23:38:58] Starting server...
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:39:32] Scheduler (dp replica 0) bind at endpoint: tcp://127.0.0.1:5609
+[10-03 23:39:33] torch.compile cache: TORCHINDUCTOR_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/inductor TRITON_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/triton
+[10-03 23:39:33] Initializing distributed environment with world_size=1, device=cuda:0, timeout=3600
+[10-03 23:39:33] Setting distributed timeout to 3600 seconds
+[10-03 23:39:33] No pipeline_class_name specified, using model_index.json
+[10-03 23:39:36] Using pipeline from model_index.json: MingImagePipeline
+[10-03 23:39:36] Loading pipeline modules...
+[10-03 23:39:36] Checking for cached model in Hugging Face Hub cache for inclusionAI/Ming-Image-0.1-Design...
+[10-03 23:39:36] Loading pipeline modules from config: {'_class_name': 'MingImagePipeline', '_diffusers_version': '0.36.0', 'text_encoder': ['transformers', 'MingImageEncoder'], 'tokenizer': ['transformers', 'PreTrainedTokenizerFast'], 'transformer': ['diffusers', 'DiffusionTransformer'], 'vae': ['diffusers', 'AutoencoderKLQwenImage'], 'scheduler': ['diffusers', 'FlowMatchEulerDiscreteScheduler']}
+[10-03 23:39:36] Loading required components: ['text_encoder', 'tokenizer', 'transformer', 'vae', 'scheduler']
+[10-03 23:39:41] Memory-aware component load order: ['tokenizer', 'transformer', 'vae', 'text_encoder', 'scheduler']
+
+Loading required modules:   0%|          | 0/5 [00:00<?, ?it/s][10-03 23:39:41] Loading tokenizer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/mllm. avail mem: 138.65 GB
+[10-03 23:39:42] Loaded tokenizer: TokenizersBackend (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 138.65 GB
+
+Loading required modules:  20%|██        | 1/5 [00:01<00:04,  1.05s/it][10-03 23:39:42] Loading transformer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/transformer. avail mem: 138.65 GB
+[10-03 23:39:42] Loading DiffusionTransformer from 5 safetensors file(s) , param_dtype: torch.bfloat16
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/5[A
+
+Loading safetensors checkpoint shards: 20%|██        | 1/5[A
+
+Loading safetensors checkpoint shards: 40%|████      | 2/5[A
+
+Loading safetensors checkpoint shards: 60%|██████    | 3/5[A
+
+Loading safetensors checkpoint shards: 80%|████████  | 4/5[A
+Loading safetensors checkpoint shards: 100%|██████████| 5/5
+[10-03 23:39:46] Attention backends for transformer: fa
+[10-03 23:39:46] Loaded transformer: MingImageTransformer2DModel (sgl-diffusion version). model size: 11.46 GB, vram: 11.46 GB. avail GPU mem: 126.76 GB
+
+Loading required modules:  40%|████      | 2/5 [00:04<00:08,  2.71s/it][10-03 23:39:46] Loading vae from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/vae. avail mem: 126.76 GB
+[10-03 23:39:46] Qwen-Image VAE: installed quality-gated fast path (29 RMSNorm+SiLU fusions, 3 channels_last upsamples).
+[10-03 23:39:46] Loaded vae: AutoencoderKLQwenImage (sgl-diffusion version). model size: 0.24 GB, vram: 0.24 GB. avail GPU mem: 126.75 GB
+
+Loading required modules:  60%|██████    | 3/5 [00:05<00:03,  1.56s/it][10-03 23:39:46] Loading text_encoder from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/. avail mem: 126.75 GB
+[10-03 23:39:46] Cannot use FlashAttention backend for head size 80.
+[10-03 23:39:47] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:40:14] [RunAI Streamer] Overall time to stream 31.7 GiB of all files to cuda:0: 27.24s, 1.2 GiB/s
+[10-03 23:40:14] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:40:18] [RunAI Streamer] Overall time to stream 5.8 GiB of all files to cuda:0: 3.79s, 1.5 GiB/s
+[10-03 23:40:18] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:40:18] [RunAI Streamer] Overall time to stream 119.1 MiB of all files to cuda:0: 0.06s, 2.1 GiB/s
+[10-03 23:40:18] Attention backends for text_encoder: fa, torch_sdpa
+[10-03 23:40:18] Loaded text_encoder: MingImageEncoder (sgl-diffusion version). model size: 33.55 GB, vram: 33.55 GB. avail GPU mem: 93.09 GB
+
+Loading required modules:  80%|████████  | 4/5 [00:37<00:13, 13.57s/it][10-03 23:40:18] Loading scheduler from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/scheduler. avail mem: 93.09 GB
+[10-03 23:40:18] Loaded scheduler: FlowMatchEulerDiscreteScheduler (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 93.09 GB
+
+Loading required modules: 100%|██████████| 5/5 [00:37<00:00,  7.42s/it]
+[10-03 23:40:18] Creating pipeline stages...
+[10-03 23:40:18] Using fa attention backend
+[10-03 23:40:18] Pipeline instantiated
+[10-03 23:40:18] Worker 0: Initialized device, model, and distributed environment.
+[10-03 23:40:18] Worker 0: Scheduler loop started.
+[10-03 23:40:18] [server-load] workers_ready_monotonic_ns=1108298746473
+[10-03 23:40:18] Processing 1 grouped request(s)
+
+Warmup requests:   0%|          | 0/1 [00:00<?, ?req/s][10-03 23:40:19] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200.json.
+[10-03 23:40:19] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200_down.json.
+
+Warmup requests: 100%|██████████| 1/1 [00:01<00:00,  1.83s/req, warmup req (1024x1024, 1/12 steps), last=1.83s]
+Warmup requests: 100%|██████████| 1/1 [00:01<00:00,  1.83s/req, warmup req (1024x1024, 1/12 steps), last=1.83s]
+[10-03 23:40:20] The server is fired up and ready to roll!
+[10-03 23:40:20] Sampling params:
+                       width: 1024
+                      height: 1024
+                  num_frames: 1
+                         fps: 24
+                      prompt: <redacted, len=61>
+                  neg_prompt: <redacted, len=0>
+                        seed: 42
+                 infer_steps: 12
+      num_outputs_per_prompt: 1
+              guidance_scale: 1.0
+     embedded_guidance_scale: 6.0
+                    n_tokens: None
+                  flow_shift: None
+                  image_path: None
+                 save_output: True
+            output_file_path: /results/full-20261003T232158Z/07-B/outputs/sample.png
+        
+[10-03 23:40:20] Running pipeline stages: ['InputValidationStage', 'text_encoding_stage', 'reference_encoding_stage', 'LatentPreparationStage', 'TimestepPreparationStage', 'denoising_stage', 'decoding_stage']
+[10-03 23:40:20] [InputValidationStage] started...
+[10-03 23:40:20] [InputValidationStage] finished in 0.0000 seconds
+[10-03 23:40:20] [MingImageEncodingStage] started...
+[10-03 23:40:20] [MingImageEncodingStage] finished in 0.0692 seconds
+[10-03 23:40:20] [MingImageReferenceStage] started...
+[10-03 23:40:20] [MingImageReferenceStage] finished in 0.0000 seconds
+[10-03 23:40:20] [LatentPreparationStage] started...
+[10-03 23:40:20] [LatentPreparationStage] finished in 0.0015 seconds
+[10-03 23:40:20] [TimestepPreparationStage] started...
+/workspace/sglang/python/sglang/multimodal_gen/runtime/models/schedulers/scheduling_flow_match_euler_discrete.py:652: RuntimeWarning: divide by zero encountered in divide
+  return np.exp(mu) / (np.exp(mu) + (1 / t - 1) ** sigma)
+[10-03 23:40:20] [TimestepPreparationStage] finished in 0.0012 seconds
+[10-03 23:40:20] [DenoisingStage] started...
+
+  0%|          | 0/12 [00:00<?, ?it/s]
+ 17%|█▋        | 2/12 [00:00<00:00, 13.16it/s]
+ 33%|███▎      | 4/12 [00:00<00:00, 10.03it/s]
+ 50%|█████     | 6/12 [00:00<00:00,  9.31it/s]
+ 58%|█████▊    | 7/12 [00:00<00:00,  9.11it/s]
+ 67%|██████▋   | 8/12 [00:00<00:00,  8.92it/s]
+ 75%|███████▌  | 9/12 [00:00<00:00,  8.38it/s]
+ 83%|████████▎ | 10/12 [00:01<00:00,  8.34it/s]
+ 92%|█████████▏| 11/12 [00:01<00:00,  8.40it/s]
+100%|██████████| 12/12 [00:01<00:00,  8.45it/s]
+100%|██████████| 12/12 [00:01<00:00,  8.91it/s]
+[10-03 23:40:21] [DenoisingStage] average time per step: 0.1123 seconds
+[10-03 23:40:21] [DenoisingStage] finished in 1.3491 seconds
+[10-03 23:40:21] [MingImageDecodingStage] started...
+[10-03 23:40:21] [MingImageDecodingStage] finished in 0.0399 seconds
+[10-03 23:40:22] Output saved to [1;36m/results/full-20261003T232158Z/07-B/outputs/sample.png[0;0m
+[10-03 23:40:22] Metrics dumped to: [1;36m/results/full-20261003T232158Z/07-B/perf.json[0;0m
+[10-03 23:40:22] Pixel data generated successfully in [92m3.55[0;0m seconds
+[10-03 23:40:22] Warmed-up request processed in [92m1.47[0;0m seconds (with warmup excluded)
+[10-03 23:40:22] Memory usage - Max peak: 52034.00 MB, Avg peak: 52034.00 MB
+[10-03 23:40:22] Metrics dumped to: [1;36m/results/full-20261003T232158Z/07-B/perf.json[0;0m
+[93m[10-03 23:40:22] Generator was garbage collected without being shut down. Forcing local server and client cleanup.[0;0m
+[93m[10-03 23:40:22] Local worker sglang-diffusionWorker-0 did not terminate gracefully, forcing.[0;0m
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+ARM_RESULT {"label": "07-B", "variant": "B", "profile": false, "command": ["sglang", "generate", "--model-path", "inclusionAI/Ming-Image-0.1-Design", "--revision", "208087ada1486931692c1896f38d4cd16ff3df82", "--num-gpus", "1", "--enable-torch-compile=false", "--enable-breakable-cuda-graph=false", "--performance-mode=speed", "--width", "1024", "--height", "1024", "--num-inference-steps", "12", "--guidance-scale", "1", "--prompt", "A minimalist exhibition poster with a red geometric sculpture", "--seed", "42", "--quality", "lossless", "--save-output", "--warmup-mode", "request", "--warmup-steps", "1", "--perf-dump-path", "/results/full-20261003T232158Z/07-B/perf.json", "--output-path", "/results/full-20261003T232158Z/07-B/outputs", "--output-file-name", "sample"], "pixel_sha256": "b04fe457e7a38a1007c8f23a1d0dd3c42ccd57afdb8c547d6670da661f82448f", "total_duration_ms": 1466.207168999972, "denoise_steps_ms": [{"step": 0, "duration_ms": 50.049785000055635}, {"step": 1, "duration_ms": 102.01625699983197}, {"step": 2, "duration_ms": 115.60844899986478}, {"step": 3, "duration_ms": 116.87897100000555}, {"step": 4, "duration_ms": 116.60097200001474}, {"step": 5, "duration_ms": 116.60291699990921}, {"step": 6, "duration_ms": 116.76613700001326}, {"step": 7, "duration_ms": 118.98540100014543}, {"step": 8, "duration_ms": 138.57409299998835}, {"step": 9, "duration_ms": 121.5103319998434}, {"step": 10, "duration_ms": 117.02704100002848}, {"step": 11, "duration_ms": 116.61931799994818}]}
+RUN ['sglang', 'generate', '--model-path', 'inclusionAI/Ming-Image-0.1-Design', '--revision', '208087ada1486931692c1896f38d4cd16ff3df82', '--num-gpus', '1', '--enable-torch-compile=false', '--enable-breakable-cuda-graph=false', '--performance-mode=speed', '--width', '1024', '--height', '1024', '--num-inference-steps', '12', '--guidance-scale', '1', '--prompt', 'A minimalist exhibition poster with a red geometric sculpture', '--seed', '42', '--quality', 'lossless', '--save-output', '--warmup-mode', 'request', '--warmup-steps', '1', '--perf-dump-path', '/results/full-20261003T232158Z/08-A/perf.json', '--output-path', '/results/full-20261003T232158Z/08-A/outputs', '--output-file-name', 'sample']
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:41:03] Applying performance_mode=speed
+[10-03 23:41:03] server_args: {"model_path": "inclusionAI/Ming-Image-0.1-Design", "model_subfolder": null, "model_variant": null, "model_id": null, "served_model_name": "inclusionAI/Ming-Image-0.1-Design", "backend": "auto", "attention_backend": null, "enable_attention_backend_autotune": false, "attention_backend_config": {}, "component_attention_backends": {}, "cache_dit_config": null, "nccl_port": null, "enable_nccl_nvls": false, "trust_remote_code": false, "revision": "208087ada1486931692c1896f38d4cd16ff3df82", "num_gpus": 1, "performance_mode": "speed", "base_gpu_id": 0, "gpu_ids": null, "nnodes": 1, "node_rank": 0, "dist_init_addr": null, "tp_size": 1, "sp_degree": 1, "ulysses_degree": 1, "ring_degree": 1, "kv_gather_degree": 1, "sp_split_auto": false, "dp_size": 1, "enable_cfg_parallel": false, "cfg_parallel_degree": 1, "encoder_parallel": "auto", "hsdp_replicate_dim": 1, "hsdp_shard_dim": 1, "dist_timeout": 3600, "scheduler_rpc_timeout": null, "pipeline_class_name": null, "lora_path": null, "lora_nickname": "default", "lora_scale": 1.0, "lora_alpha": null, "lora_merge_mode": "auto", "lora_weight_name": null, "component_paths": {}, "component_weights_paths": {}, "component_direct_gpu_weight_loading": {}, "component_quantizations": {}, "component_precisions": {}, "component_quantization_ignored_layers": {}, "load_diffusion_decoder": false, "transformer_weights_path": null, "minimax_h3_adaln_cache_path": null, "minimax_h3_adaln_online": false, "minimax_h3_adaln_plan_width": 4, "minimax_h3_adaln_host_cache_gb": 8.0, "quantization": null, "quantization_ignored_layers": null, "lora_target_modules": null, "component_residency": null, "cpu_offload_components": null, "dit_cpu_offload": false, "direct_gpu_weight_loading": false, "dit_layerwise_offload": false, "layerwise_offload_components": null, "dit_offload_prefetch_size": 0.0, "dit_layerwise_resident_layers": 0.0, "dit_layerwise_residency_policy": "leading", "dit_layerwise_residency_lifetime": "forward", "layerwise_prefetch_size": {}, "layerwise_resident_layers": {}, "layerwise_residency_policy": {}, "layerwise_residency_lifetime": {}, "offload_during_compile": true, "text_encoder_cpu_offload": false, "image_encoder_cpu_offload": false, "vae_cpu_offload": false, "use_fsdp_inference": false, "pin_cpu_memory": true, "ltx2_two_stage_device_mode": null, "comfyui_mode": false, "enable_torch_compile": false, "regional_compile": false, "enable_breakable_cuda_graph": false, "bcg_text_buckets": null, "enable_layerwise_nvtx_marker": false, "warmup_mode": "request", "warmup_resolutions": null, "warmup_num_frames": null, "warmup_steps": 1, "warmup_sampling_params": null, "disable_autocast": true, "master_port": 30005, "host": "127.0.0.1", "port": 30000, "enable_metrics": false, "webui": false, "webui_port": 12312, "scheduler_port": 5560, "scheduler_ports": [5560], "batching_mode": "dynamic", "batching_max_size": 1, "batching_delay_ms": 0.0, "batching_config": null, "enable_batching_metrics": false, "strict_ports": false, "output_path": "/results/full-20261003T232158Z/08-A/outputs", "input_save_path": "inputs/uploads", "prompt_file_path": null, "model_paths": {}, "model_loaded": {"transformer": true, "vae": true, "video_vae": true, "audio_vae": true, "video_dit": true, "audio_dit": true, "dual_tower_bridge": true}, "boundary_ratio": null, "disagg_role": "monolithic", "disagg_timeout": 3600, "disagg_downstream_wait_timeout": 1800, "disagg_dispatch_policy": "round_robin", "disagg_mode": false, "disagg_instance_id": 0, "disagg_max_slots_per_instance": 8, "disagg_transfer_redundancy": 1.25, "disagg_role_device": "auto", "disagg_transfer_backend": "auto", "disagg_transfer_pool_size": 268435456, "disagg_transfer_pin_memory": "auto", "disagg_p2p_hostname": "127.0.0.1", "disagg_ib_device": null, "disagg_server_addr": null, "encoder_urls": null, "denoiser_urls": null, "decoder_urls": null, "encoder_tp": null, "denoiser_tp": null, "denoiser_sp": null, "denoiser_ulysses": null, "denoiser_ring": null, "decoder_sp": null, "pool_work_endpoint": null, "pool_result_endpoint": null, "pool_control_endpoint": null, "pool_control_advertised_endpoint": null, "log_level": "info", "log_requests": false, "log_requests_level": 2, "log_requests_format": "text", "log_requests_target": null, "uvicorn_access_log_exclude_prefixes": [], "enable_cache_report": false, "enable_trace": false, "otlp_traces_endpoint": "localhost:4317", "otlp_service_name": null, "srt_encoder_url": null, "srt_encoder_connect_timeout": 3.05, "srt_encoder_timeout": 100, "pe_server_url": null, "prompt_enhancer_config": null}
+[10-03 23:41:03] Local mode: True
+[10-03 23:41:03] Starting server...
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:41:38] Scheduler (dp replica 0) bind at endpoint: tcp://127.0.0.1:5560
+[10-03 23:41:38] torch.compile cache: TORCHINDUCTOR_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/inductor TRITON_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/triton
+[10-03 23:41:38] Initializing distributed environment with world_size=1, device=cuda:0, timeout=3600
+[10-03 23:41:38] Setting distributed timeout to 3600 seconds
+[10-03 23:41:39] No pipeline_class_name specified, using model_index.json
+[10-03 23:41:42] Using pipeline from model_index.json: MingImagePipeline
+[10-03 23:41:42] Loading pipeline modules...
+[10-03 23:41:42] Checking for cached model in Hugging Face Hub cache for inclusionAI/Ming-Image-0.1-Design...
+[10-03 23:41:42] Loading pipeline modules from config: {'_class_name': 'MingImagePipeline', '_diffusers_version': '0.36.0', 'text_encoder': ['transformers', 'MingImageEncoder'], 'tokenizer': ['transformers', 'PreTrainedTokenizerFast'], 'transformer': ['diffusers', 'DiffusionTransformer'], 'vae': ['diffusers', 'AutoencoderKLQwenImage'], 'scheduler': ['diffusers', 'FlowMatchEulerDiscreteScheduler']}
+[10-03 23:41:42] Loading required components: ['text_encoder', 'tokenizer', 'transformer', 'vae', 'scheduler']
+[10-03 23:41:47] Memory-aware component load order: ['tokenizer', 'transformer', 'vae', 'text_encoder', 'scheduler']
+
+Loading required modules:   0%|          | 0/5 [00:00<?, ?it/s][10-03 23:41:47] Loading tokenizer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/mllm. avail mem: 138.65 GB
+[10-03 23:41:48] Loaded tokenizer: TokenizersBackend (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 138.65 GB
+
+Loading required modules:  20%|██        | 1/5 [00:01<00:04,  1.05s/it][10-03 23:41:48] Loading transformer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/transformer. avail mem: 138.65 GB
+[10-03 23:41:48] Loading DiffusionTransformer from 5 safetensors file(s) , param_dtype: torch.bfloat16
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/5[A
+
+Loading safetensors checkpoint shards: 20%|██        | 1/5[A
+
+Loading safetensors checkpoint shards: 40%|████      | 2/5[A
+
+Loading safetensors checkpoint shards: 60%|██████    | 3/5[A
+
+Loading safetensors checkpoint shards: 80%|████████  | 4/5[A
+Loading safetensors checkpoint shards: 100%|██████████| 5/5
+[10-03 23:41:52] Attention backends for transformer: fa
+[10-03 23:41:52] Loaded transformer: MingImageTransformer2DModel (sgl-diffusion version). model size: 11.46 GB, vram: 11.46 GB. avail GPU mem: 126.76 GB
+
+Loading required modules:  40%|████      | 2/5 [00:05<00:08,  2.78s/it][10-03 23:41:52] Loading vae from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/vae. avail mem: 126.76 GB
+[10-03 23:41:52] Qwen-Image VAE: installed quality-gated fast path (29 RMSNorm+SiLU fusions, 3 channels_last upsamples).
+[10-03 23:41:52] Loaded vae: AutoencoderKLQwenImage (sgl-diffusion version). model size: 0.24 GB, vram: 0.24 GB. avail GPU mem: 126.75 GB
+
+Loading required modules:  60%|██████    | 3/5 [00:05<00:03,  1.60s/it][10-03 23:41:52] Loading text_encoder from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/. avail mem: 126.75 GB
+[10-03 23:41:52] Cannot use FlashAttention backend for head size 80.
+[10-03 23:41:53] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:42:20] [RunAI Streamer] Overall time to stream 31.7 GiB of all files to cuda:0: 27.28s, 1.2 GiB/s
+[10-03 23:42:20] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:42:24] [RunAI Streamer] Overall time to stream 5.8 GiB of all files to cuda:0: 3.91s, 1.5 GiB/s
+[10-03 23:42:24] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:42:24] [RunAI Streamer] Overall time to stream 119.1 MiB of all files to cuda:0: 0.06s, 2.1 GiB/s
+[10-03 23:42:24] Attention backends for text_encoder: fa, torch_sdpa
+[10-03 23:42:24] Loaded text_encoder: MingImageEncoder (sgl-diffusion version). model size: 33.55 GB, vram: 33.55 GB. avail GPU mem: 93.09 GB
+
+Loading required modules:  80%|████████  | 4/5 [00:37<00:13, 13.65s/it][10-03 23:42:24] Loading scheduler from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/scheduler. avail mem: 93.09 GB
+[10-03 23:42:24] Loaded scheduler: FlowMatchEulerDiscreteScheduler (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 93.09 GB
+
+Loading required modules: 100%|██████████| 5/5 [00:37<00:00,  7.47s/it]
+[10-03 23:42:24] Creating pipeline stages...
+[10-03 23:42:24] Using fa attention backend
+[10-03 23:42:24] Pipeline instantiated
+[10-03 23:42:24] Worker 0: Initialized device, model, and distributed environment.
+[10-03 23:42:24] Worker 0: Scheduler loop started.
+[10-03 23:42:24] [server-load] workers_ready_monotonic_ns=1234374027718
+[10-03 23:42:24] Processing 1 grouped request(s)
+
+Warmup requests:   0%|          | 0/1 [00:00<?, ?req/s][10-03 23:42:25] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200.json.
+[10-03 23:42:25] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200_down.json.
+
+Warmup requests: 100%|██████████| 1/1 [00:01<00:00,  1.84s/req, warmup req (1024x1024, 1/12 steps), last=1.84s]
+Warmup requests: 100%|██████████| 1/1 [00:01<00:00,  1.84s/req, warmup req (1024x1024, 1/12 steps), last=1.84s]
+[10-03 23:42:26] The server is fired up and ready to roll!
+[10-03 23:42:26] Sampling params:
+                       width: 1024
+                      height: 1024
+                  num_frames: 1
+                         fps: 24
+                      prompt: <redacted, len=61>
+                  neg_prompt: <redacted, len=0>
+                        seed: 42
+                 infer_steps: 12
+      num_outputs_per_prompt: 1
+              guidance_scale: 1.0
+     embedded_guidance_scale: 6.0
+                    n_tokens: None
+                  flow_shift: None
+                  image_path: None
+                 save_output: True
+            output_file_path: /results/full-20261003T232158Z/08-A/outputs/sample.png
+        
+[10-03 23:42:26] Running pipeline stages: ['InputValidationStage', 'text_encoding_stage', 'reference_encoding_stage', 'LatentPreparationStage', 'TimestepPreparationStage', 'denoising_stage', 'decoding_stage']
+[10-03 23:42:26] [InputValidationStage] started...
+[10-03 23:42:26] [InputValidationStage] finished in 0.0000 seconds
+[10-03 23:42:26] [MingImageEncodingStage] started...
+[10-03 23:42:26] [MingImageEncodingStage] finished in 0.0689 seconds
+[10-03 23:42:26] [MingImageReferenceStage] started...
+[10-03 23:42:26] [MingImageReferenceStage] finished in 0.0000 seconds
+[10-03 23:42:26] [LatentPreparationStage] started...
+[10-03 23:42:26] [LatentPreparationStage] finished in 0.0020 seconds
+[10-03 23:42:26] [TimestepPreparationStage] started...
+/workspace/sglang/python/sglang/multimodal_gen/runtime/models/schedulers/scheduling_flow_match_euler_discrete.py:652: RuntimeWarning: divide by zero encountered in divide
+  return np.exp(mu) / (np.exp(mu) + (1 / t - 1) ** sigma)
+[10-03 23:42:26] [TimestepPreparationStage] finished in 0.0009 seconds
+[10-03 23:42:26] [DenoisingStage] started...
+
+  0%|          | 0/12 [00:00<?, ?it/s]
+ 17%|█▋        | 2/12 [00:00<00:01,  8.71it/s]
+ 25%|██▌       | 3/12 [00:00<00:01,  7.88it/s]
+ 33%|███▎      | 4/12 [00:00<00:01,  7.51it/s]
+ 42%|████▏     | 5/12 [00:00<00:00,  7.29it/s]
+ 50%|█████     | 6/12 [00:00<00:00,  7.17it/s]
+ 58%|█████▊    | 7/12 [00:00<00:00,  6.90it/s]
+ 67%|██████▋   | 8/12 [00:01<00:00,  6.81it/s]
+ 75%|███████▌  | 9/12 [00:01<00:00,  6.81it/s]
+ 83%|████████▎ | 10/12 [00:01<00:00,  6.83it/s]
+ 92%|█████████▏| 11/12 [00:01<00:00,  6.85it/s]
+100%|██████████| 12/12 [00:01<00:00,  6.88it/s]
+100%|██████████| 12/12 [00:01<00:00,  7.08it/s]
+[10-03 23:42:28] [DenoisingStage] average time per step: 0.1413 seconds
+[10-03 23:42:28] [DenoisingStage] finished in 1.6962 seconds
+[10-03 23:42:28] [MingImageDecodingStage] started...
+[10-03 23:42:28] [MingImageDecodingStage] finished in 0.0299 seconds
+[10-03 23:42:28] Output saved to [1;36m/results/full-20261003T232158Z/08-A/outputs/sample.png[0;0m
+[10-03 23:42:28] Metrics dumped to: [1;36m/results/full-20261003T232158Z/08-A/perf.json[0;0m
+[10-03 23:42:28] Pixel data generated successfully in [92m3.89[0;0m seconds
+[10-03 23:42:28] Warmed-up request processed in [92m1.80[0;0m seconds (with warmup excluded)
+[10-03 23:42:28] Memory usage - Max peak: 52034.00 MB, Avg peak: 52034.00 MB
+[10-03 23:42:28] Metrics dumped to: [1;36m/results/full-20261003T232158Z/08-A/perf.json[0;0m
+[93m[10-03 23:42:28] Generator was garbage collected without being shut down. Forcing local server and client cleanup.[0;0m
+[93m[10-03 23:42:28] Local worker sglang-diffusionWorker-0 did not terminate gracefully, forcing.[0;0m
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+ARM_RESULT {"label": "08-A", "variant": "A", "profile": false, "command": ["sglang", "generate", "--model-path", "inclusionAI/Ming-Image-0.1-Design", "--revision", "208087ada1486931692c1896f38d4cd16ff3df82", "--num-gpus", "1", "--enable-torch-compile=false", "--enable-breakable-cuda-graph=false", "--performance-mode=speed", "--width", "1024", "--height", "1024", "--num-inference-steps", "12", "--guidance-scale", "1", "--prompt", "A minimalist exhibition poster with a red geometric sculpture", "--seed", "42", "--quality", "lossless", "--save-output", "--warmup-mode", "request", "--warmup-steps", "1", "--perf-dump-path", "/results/full-20261003T232158Z/08-A/perf.json", "--output-path", "/results/full-20261003T232158Z/08-A/outputs", "--output-file-name", "sample"], "pixel_sha256": "b04fe457e7a38a1007c8f23a1d0dd3c42ccd57afdb8c547d6670da661f82448f", "total_duration_ms": 1802.942149000046, "denoise_steps_ms": [{"step": 0, "duration_ms": 85.60497899998154}, {"step": 1, "duration_ms": 144.03895899999952}, {"step": 2, "duration_ms": 143.6472790001062}, {"step": 3, "duration_ms": 143.94686200012075}, {"step": 4, "duration_ms": 144.59690000012415}, {"step": 5, "duration_ms": 144.1874839999855}, {"step": 6, "duration_ms": 156.50031000018316}, {"step": 7, "duration_ms": 151.1127729997952}, {"step": 8, "duration_ms": 146.61697899987303}, {"step": 9, "duration_ms": 145.75700400018832}, {"step": 10, "duration_ms": 144.6263220000219}, {"step": 11, "duration_ms": 143.8130500000625}]}
+RUN ['sglang', 'generate', '--model-path', 'inclusionAI/Ming-Image-0.1-Design', '--revision', '208087ada1486931692c1896f38d4cd16ff3df82', '--num-gpus', '1', '--enable-torch-compile=false', '--enable-breakable-cuda-graph=false', '--performance-mode=speed', '--width', '1024', '--height', '1024', '--num-inference-steps', '12', '--guidance-scale', '1', '--prompt', 'A minimalist exhibition poster with a red geometric sculpture', '--seed', '42', '--quality', 'lossless', '--save-output', '--warmup-mode', 'request', '--warmup-steps', '1', '--perf-dump-path', '/results/full-20261003T232158Z/profile-A/perf.json', '--output-path', '/results/full-20261003T232158Z/profile-A/outputs', '--output-file-name', 'sample', '--profile', '--num-profiled-timesteps', '5']
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:43:09] Applying performance_mode=speed
+[10-03 23:43:09] server_args: {"model_path": "inclusionAI/Ming-Image-0.1-Design", "model_subfolder": null, "model_variant": null, "model_id": null, "served_model_name": "inclusionAI/Ming-Image-0.1-Design", "backend": "auto", "attention_backend": null, "enable_attention_backend_autotune": false, "attention_backend_config": {}, "component_attention_backends": {}, "cache_dit_config": null, "nccl_port": null, "enable_nccl_nvls": false, "trust_remote_code": false, "revision": "208087ada1486931692c1896f38d4cd16ff3df82", "num_gpus": 1, "performance_mode": "speed", "base_gpu_id": 0, "gpu_ids": null, "nnodes": 1, "node_rank": 0, "dist_init_addr": null, "tp_size": 1, "sp_degree": 1, "ulysses_degree": 1, "ring_degree": 1, "kv_gather_degree": 1, "sp_split_auto": false, "dp_size": 1, "enable_cfg_parallel": false, "cfg_parallel_degree": 1, "encoder_parallel": "auto", "hsdp_replicate_dim": 1, "hsdp_shard_dim": 1, "dist_timeout": 3600, "scheduler_rpc_timeout": null, "pipeline_class_name": null, "lora_path": null, "lora_nickname": "default", "lora_scale": 1.0, "lora_alpha": null, "lora_merge_mode": "auto", "lora_weight_name": null, "component_paths": {}, "component_weights_paths": {}, "component_direct_gpu_weight_loading": {}, "component_quantizations": {}, "component_precisions": {}, "component_quantization_ignored_layers": {}, "load_diffusion_decoder": false, "transformer_weights_path": null, "minimax_h3_adaln_cache_path": null, "minimax_h3_adaln_online": false, "minimax_h3_adaln_plan_width": 4, "minimax_h3_adaln_host_cache_gb": 8.0, "quantization": null, "quantization_ignored_layers": null, "lora_target_modules": null, "component_residency": null, "cpu_offload_components": null, "dit_cpu_offload": false, "direct_gpu_weight_loading": false, "dit_layerwise_offload": false, "layerwise_offload_components": null, "dit_offload_prefetch_size": 0.0, "dit_layerwise_resident_layers": 0.0, "dit_layerwise_residency_policy": "leading", "dit_layerwise_residency_lifetime": "forward", "layerwise_prefetch_size": {}, "layerwise_resident_layers": {}, "layerwise_residency_policy": {}, "layerwise_residency_lifetime": {}, "offload_during_compile": true, "text_encoder_cpu_offload": false, "image_encoder_cpu_offload": false, "vae_cpu_offload": false, "use_fsdp_inference": false, "pin_cpu_memory": true, "ltx2_two_stage_device_mode": null, "comfyui_mode": false, "enable_torch_compile": false, "regional_compile": false, "enable_breakable_cuda_graph": false, "bcg_text_buckets": null, "enable_layerwise_nvtx_marker": false, "warmup_mode": "request", "warmup_resolutions": null, "warmup_num_frames": null, "warmup_steps": 1, "warmup_sampling_params": null, "disable_autocast": true, "master_port": 30005, "host": "127.0.0.1", "port": 30000, "enable_metrics": false, "webui": false, "webui_port": 12312, "scheduler_port": 5622, "scheduler_ports": [5622], "batching_mode": "dynamic", "batching_max_size": 1, "batching_delay_ms": 0.0, "batching_config": null, "enable_batching_metrics": false, "strict_ports": false, "output_path": "/results/full-20261003T232158Z/profile-A/outputs", "input_save_path": "inputs/uploads", "prompt_file_path": null, "model_paths": {}, "model_loaded": {"transformer": true, "vae": true, "video_vae": true, "audio_vae": true, "video_dit": true, "audio_dit": true, "dual_tower_bridge": true}, "boundary_ratio": null, "disagg_role": "monolithic", "disagg_timeout": 3600, "disagg_downstream_wait_timeout": 1800, "disagg_dispatch_policy": "round_robin", "disagg_mode": false, "disagg_instance_id": 0, "disagg_max_slots_per_instance": 8, "disagg_transfer_redundancy": 1.25, "disagg_role_device": "auto", "disagg_transfer_backend": "auto", "disagg_transfer_pool_size": 268435456, "disagg_transfer_pin_memory": "auto", "disagg_p2p_hostname": "127.0.0.1", "disagg_ib_device": null, "disagg_server_addr": null, "encoder_urls": null, "denoiser_urls": null, "decoder_urls": null, "encoder_tp": null, "denoiser_tp": null, "denoiser_sp": null, "denoiser_ulysses": null, "denoiser_ring": null, "decoder_sp": null, "pool_work_endpoint": null, "pool_result_endpoint": null, "pool_control_endpoint": null, "pool_control_advertised_endpoint": null, "log_level": "info", "log_requests": false, "log_requests_level": 2, "log_requests_format": "text", "log_requests_target": null, "uvicorn_access_log_exclude_prefixes": [], "enable_cache_report": false, "enable_trace": false, "otlp_traces_endpoint": "localhost:4317", "otlp_service_name": null, "srt_encoder_url": null, "srt_encoder_connect_timeout": 3.05, "srt_encoder_timeout": 100, "pe_server_url": null, "prompt_enhancer_config": null}
+[10-03 23:43:09] Local mode: True
+[10-03 23:43:09] Starting server...
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:43:43] Scheduler (dp replica 0) bind at endpoint: tcp://127.0.0.1:5622
+[10-03 23:43:43] torch.compile cache: TORCHINDUCTOR_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/inductor TRITON_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/triton
+[10-03 23:43:43] Initializing distributed environment with world_size=1, device=cuda:0, timeout=3600
+[10-03 23:43:43] Setting distributed timeout to 3600 seconds
+[10-03 23:43:44] No pipeline_class_name specified, using model_index.json
+[10-03 23:43:47] Using pipeline from model_index.json: MingImagePipeline
+[10-03 23:43:47] Loading pipeline modules...
+[10-03 23:43:47] Checking for cached model in Hugging Face Hub cache for inclusionAI/Ming-Image-0.1-Design...
+[10-03 23:43:47] Loading pipeline modules from config: {'_class_name': 'MingImagePipeline', '_diffusers_version': '0.36.0', 'text_encoder': ['transformers', 'MingImageEncoder'], 'tokenizer': ['transformers', 'PreTrainedTokenizerFast'], 'transformer': ['diffusers', 'DiffusionTransformer'], 'vae': ['diffusers', 'AutoencoderKLQwenImage'], 'scheduler': ['diffusers', 'FlowMatchEulerDiscreteScheduler']}
+[10-03 23:43:47] Loading required components: ['text_encoder', 'tokenizer', 'transformer', 'vae', 'scheduler']
+[10-03 23:43:51] Memory-aware component load order: ['tokenizer', 'transformer', 'vae', 'text_encoder', 'scheduler']
+
+Loading required modules:   0%|          | 0/5 [00:00<?, ?it/s][10-03 23:43:52] Loading tokenizer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/mllm. avail mem: 138.65 GB
+[10-03 23:43:52] Loaded tokenizer: TokenizersBackend (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 138.65 GB
+
+Loading required modules:  20%|██        | 1/5 [00:00<00:03,  1.03it/s][10-03 23:43:52] Loading transformer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/transformer. avail mem: 138.65 GB
+[10-03 23:43:52] Loading DiffusionTransformer from 5 safetensors file(s) , param_dtype: torch.bfloat16
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/5[A
+
+Loading safetensors checkpoint shards: 20%|██        | 1/5[A
+
+Loading safetensors checkpoint shards: 40%|████      | 2/5[A
+
+Loading safetensors checkpoint shards: 60%|██████    | 3/5[A
+
+Loading safetensors checkpoint shards: 80%|████████  | 4/5[A
+Loading safetensors checkpoint shards: 100%|██████████| 5/5
+[10-03 23:43:56] Attention backends for transformer: fa
+[10-03 23:43:56] Loaded transformer: MingImageTransformer2DModel (sgl-diffusion version). model size: 11.46 GB, vram: 11.46 GB. avail GPU mem: 126.76 GB
+
+Loading required modules:  40%|████      | 2/5 [00:04<00:07,  2.66s/it][10-03 23:43:56] Loading vae from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/vae. avail mem: 126.76 GB
+[10-03 23:43:56] Qwen-Image VAE: installed quality-gated fast path (29 RMSNorm+SiLU fusions, 3 channels_last upsamples).
+[10-03 23:43:56] Loaded vae: AutoencoderKLQwenImage (sgl-diffusion version). model size: 0.24 GB, vram: 0.24 GB. avail GPU mem: 126.75 GB
+
+Loading required modules:  60%|██████    | 3/5 [00:05<00:03,  1.54s/it][10-03 23:43:56] Loading text_encoder from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/. avail mem: 126.75 GB
+[10-03 23:43:57] Cannot use FlashAttention backend for head size 80.
+[10-03 23:43:57] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:44:24] [RunAI Streamer] Overall time to stream 31.7 GiB of all files to cuda:0: 27.28s, 1.2 GiB/s
+[10-03 23:44:25] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:44:28] [RunAI Streamer] Overall time to stream 5.8 GiB of all files to cuda:0: 3.83s, 1.5 GiB/s
+[10-03 23:44:28] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:44:28] [RunAI Streamer] Overall time to stream 119.1 MiB of all files to cuda:0: 0.05s, 2.1 GiB/s
+[10-03 23:44:28] Attention backends for text_encoder: fa, torch_sdpa
+[10-03 23:44:29] Loaded text_encoder: MingImageEncoder (sgl-diffusion version). model size: 33.55 GB, vram: 33.55 GB. avail GPU mem: 93.09 GB
+
+Loading required modules:  80%|████████  | 4/5 [00:37<00:13, 13.57s/it][10-03 23:44:29] Loading scheduler from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/scheduler. avail mem: 93.09 GB
+[10-03 23:44:29] Loaded scheduler: FlowMatchEulerDiscreteScheduler (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 93.09 GB
+
+Loading required modules: 100%|██████████| 5/5 [00:37<00:00,  7.41s/it]
+[10-03 23:44:29] Creating pipeline stages...
+[10-03 23:44:29] Using fa attention backend
+[10-03 23:44:29] Pipeline instantiated
+[10-03 23:44:29] Worker 0: Initialized device, model, and distributed environment.
+[10-03 23:44:29] Worker 0: Scheduler loop started.
+[10-03 23:44:29] [server-load] workers_ready_monotonic_ns=1358649329359
+[10-03 23:44:29] Processing 1 grouped request(s)
+
+Warmup requests:   0%|          | 0/1 [00:00<?, ?req/s][10-03 23:44:29] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200.json.
+[10-03 23:44:29] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200_down.json.
+
+Warmup requests: 100%|██████████| 1/1 [00:01<00:00,  1.87s/req, warmup req (1024x1024, 1/12 steps), last=1.87s]
+Warmup requests: 100%|██████████| 1/1 [00:01<00:00,  1.87s/req, warmup req (1024x1024, 1/12 steps), last=1.87s]
+[10-03 23:44:30] The server is fired up and ready to roll!
+[10-03 23:44:30] Sampling params:
+                       width: 1024
+                      height: 1024
+                  num_frames: 1
+                         fps: 24
+                      prompt: <redacted, len=61>
+                  neg_prompt: <redacted, len=0>
+                        seed: 42
+                 infer_steps: 12
+      num_outputs_per_prompt: 1
+              guidance_scale: 1.0
+     embedded_guidance_scale: 6.0
+                    n_tokens: None
+                  flow_shift: None
+                  image_path: None
+                 save_output: True
+            output_file_path: /results/full-20261003T232158Z/profile-A/outputs/sample.png
+        
+[10-03 23:44:30] Running pipeline stages: ['InputValidationStage', 'text_encoding_stage', 'reference_encoding_stage', 'LatentPreparationStage', 'TimestepPreparationStage', 'denoising_stage', 'decoding_stage']
+[10-03 23:44:30] Profiling request: 1b5d56bc-8b37-4b97-be50-3166ddcfa35c for 5 steps...
+[10-03 23:44:30] Starting Profiler...
+[10-03 23:44:30] [InputValidationStage] started...
+[10-03 23:44:30] [InputValidationStage] finished in 0.0001 seconds
+[10-03 23:44:30] [MingImageEncodingStage] started...
+[10-03 23:44:31] [MingImageEncodingStage] finished in 0.0905 seconds
+[10-03 23:44:31] [MingImageReferenceStage] started...
+[10-03 23:44:31] [MingImageReferenceStage] finished in 0.0000 seconds
+[10-03 23:44:31] [LatentPreparationStage] started...
+[10-03 23:44:31] [LatentPreparationStage] finished in 0.0025 seconds
+[10-03 23:44:31] [TimestepPreparationStage] started...
+/workspace/sglang/python/sglang/multimodal_gen/runtime/models/schedulers/scheduling_flow_match_euler_discrete.py:652: RuntimeWarning: divide by zero encountered in divide
+  return np.exp(mu) / (np.exp(mu) + (1 / t - 1) ** sigma)
+[10-03 23:44:31] [TimestepPreparationStage] finished in 0.0013 seconds
+[10-03 23:44:31] [DenoisingStage] started...
+
+  0%|          | 0/12 [00:00<?, ?it/s]USDT:2026-10-03 23:44:31 1651:1651 SyncActivityProfilerHandler.cpp:52] profiler_start
+
+ 17%|█▋        | 2/12 [00:00<00:01,  6.99it/s]
+ 25%|██▌       | 3/12 [00:00<00:01,  6.86it/s]
+ 33%|███▎      | 4/12 [00:00<00:01,  6.78it/s]
+ 42%|████▏     | 5/12 [00:00<00:01,  6.68it/s]
+ 50%|█████     | 6/12 [00:00<00:00,  6.55it/s]
+ 58%|█████▊    | 7/12 [00:01<00:00,  6.59it/s]USDT:2026-10-03 23:44:32 1651:1651 SyncActivityProfilerHandler.cpp:59] profiler_stop
+
+ 67%|██████▋   | 8/12 [00:02<00:02,  1.65it/s][10-03 23:44:33] Stopping Profiler...
+[10-03 23:44:40] Saved profiler traces to: [1;36m/results/full-20261003T232158Z/profile-A/traces/1b5d56bc-8b37-4b97-be50-3166ddcfa35c-5_steps-global-rank0.trace.json.gz[0;0m
+
+ 75%|███████▌  | 9/12 [00:09<00:07,  2.51s/it]
+ 83%|████████▎ | 10/12 [00:09<00:03,  1.78s/it]
+ 92%|█████████▏| 11/12 [00:09<00:01,  1.28s/it]
+100%|██████████| 12/12 [00:09<00:00,  1.07it/s]
+100%|██████████| 12/12 [00:09<00:00,  1.22it/s]
+[10-03 23:44:40] [DenoisingStage] average time per step: 0.8223 seconds
+[10-03 23:44:40] [DenoisingStage] finished in 9.8687 seconds
+[10-03 23:44:40] [MingImageDecodingStage] started...
+[10-03 23:44:40] [MingImageDecodingStage] finished in 0.0629 seconds
+[10-03 23:44:41] Output saved to [1;36m/results/full-20261003T232158Z/profile-A/outputs/sample.png[0;0m
+[10-03 23:44:41] Metrics dumped to: [1;36m/results/full-20261003T232158Z/profile-A/perf.json[0;0m
+[10-03 23:44:41] Pixel data generated successfully in [92m12.12[0;0m seconds
+[10-03 23:44:41] Warmed-up request processed in [92m10.07[0;0m seconds (with warmup excluded)
+[10-03 23:44:41] Memory usage - Max peak: 52034.00 MB, Avg peak: 52034.00 MB
+[10-03 23:44:41] Metrics dumped to: [1;36m/results/full-20261003T232158Z/profile-A/perf.json[0;0m
+[93m[10-03 23:44:41] Generator was garbage collected without being shut down. Forcing local server and client cleanup.[0;0m
+[93m[10-03 23:44:41] Local worker sglang-diffusionWorker-0 did not terminate gracefully, forcing.[0;0m
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+ARM_RESULT {"label": "profile-A", "variant": "A", "profile": true, "command": ["sglang", "generate", "--model-path", "inclusionAI/Ming-Image-0.1-Design", "--revision", "208087ada1486931692c1896f38d4cd16ff3df82", "--num-gpus", "1", "--enable-torch-compile=false", "--enable-breakable-cuda-graph=false", "--performance-mode=speed", "--width", "1024", "--height", "1024", "--num-inference-steps", "12", "--guidance-scale", "1", "--prompt", "A minimalist exhibition poster with a red geometric sculpture", "--seed", "42", "--quality", "lossless", "--save-output", "--warmup-mode", "request", "--warmup-steps", "1", "--perf-dump-path", "/results/full-20261003T232158Z/profile-A/perf.json", "--output-path", "/results/full-20261003T232158Z/profile-A/outputs", "--output-file-name", "sample", "--profile", "--num-profiled-timesteps", "5"], "pixel_sha256": "b04fe457e7a38a1007c8f23a1d0dd3c42ccd57afdb8c547d6670da661f82448f", "total_duration_ms": 10071.772132999968, "denoise_steps_ms": [{"step": 0, "duration_ms": 145.88707400002932}, {"step": 1, "duration_ms": 153.8689690000865}, {"step": 2, "duration_ms": 153.6836300001596}, {"step": 3, "duration_ms": 152.98359200005507}, {"step": 4, "duration_ms": 153.48020700002962}, {"step": 5, "duration_ms": 154.858109000088}, {"step": 6, "duration_ms": 1638.3056489999035}, {"step": 7, "duration_ms": 6733.667853000043}, {"step": 8, "duration_ms": 144.1298239999469}, {"step": 9, "duration_ms": 145.02920100017036}, {"step": 10, "duration_ms": 145.08238999997047}, {"step": 11, "duration_ms": 144.93165499993665}]}
+RUN ['sglang', 'generate', '--model-path', 'inclusionAI/Ming-Image-0.1-Design', '--revision', '208087ada1486931692c1896f38d4cd16ff3df82', '--num-gpus', '1', '--enable-torch-compile=false', '--enable-breakable-cuda-graph=false', '--performance-mode=speed', '--width', '1024', '--height', '1024', '--num-inference-steps', '12', '--guidance-scale', '1', '--prompt', 'A minimalist exhibition poster with a red geometric sculpture', '--seed', '42', '--quality', 'lossless', '--save-output', '--warmup-mode', 'request', '--warmup-steps', '1', '--perf-dump-path', '/results/full-20261003T232158Z/profile-B/perf.json', '--output-path', '/results/full-20261003T232158Z/profile-B/outputs', '--output-file-name', 'sample', '--profile', '--num-profiled-timesteps', '5']
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:45:22] Applying performance_mode=speed
+[10-03 23:45:22] server_args: {"model_path": "inclusionAI/Ming-Image-0.1-Design", "model_subfolder": null, "model_variant": null, "model_id": null, "served_model_name": "inclusionAI/Ming-Image-0.1-Design", "backend": "auto", "attention_backend": null, "enable_attention_backend_autotune": false, "attention_backend_config": {}, "component_attention_backends": {}, "cache_dit_config": null, "nccl_port": null, "enable_nccl_nvls": false, "trust_remote_code": false, "revision": "208087ada1486931692c1896f38d4cd16ff3df82", "num_gpus": 1, "performance_mode": "speed", "base_gpu_id": 0, "gpu_ids": null, "nnodes": 1, "node_rank": 0, "dist_init_addr": null, "tp_size": 1, "sp_degree": 1, "ulysses_degree": 1, "ring_degree": 1, "kv_gather_degree": 1, "sp_split_auto": false, "dp_size": 1, "enable_cfg_parallel": false, "cfg_parallel_degree": 1, "encoder_parallel": "auto", "hsdp_replicate_dim": 1, "hsdp_shard_dim": 1, "dist_timeout": 3600, "scheduler_rpc_timeout": null, "pipeline_class_name": null, "lora_path": null, "lora_nickname": "default", "lora_scale": 1.0, "lora_alpha": null, "lora_merge_mode": "auto", "lora_weight_name": null, "component_paths": {}, "component_weights_paths": {}, "component_direct_gpu_weight_loading": {}, "component_quantizations": {}, "component_precisions": {}, "component_quantization_ignored_layers": {}, "load_diffusion_decoder": false, "transformer_weights_path": null, "minimax_h3_adaln_cache_path": null, "minimax_h3_adaln_online": false, "minimax_h3_adaln_plan_width": 4, "minimax_h3_adaln_host_cache_gb": 8.0, "quantization": null, "quantization_ignored_layers": null, "lora_target_modules": null, "component_residency": null, "cpu_offload_components": null, "dit_cpu_offload": false, "direct_gpu_weight_loading": false, "dit_layerwise_offload": false, "layerwise_offload_components": null, "dit_offload_prefetch_size": 0.0, "dit_layerwise_resident_layers": 0.0, "dit_layerwise_residency_policy": "leading", "dit_layerwise_residency_lifetime": "forward", "layerwise_prefetch_size": {}, "layerwise_resident_layers": {}, "layerwise_residency_policy": {}, "layerwise_residency_lifetime": {}, "offload_during_compile": true, "text_encoder_cpu_offload": false, "image_encoder_cpu_offload": false, "vae_cpu_offload": false, "use_fsdp_inference": false, "pin_cpu_memory": true, "ltx2_two_stage_device_mode": null, "comfyui_mode": false, "enable_torch_compile": false, "regional_compile": false, "enable_breakable_cuda_graph": false, "bcg_text_buckets": null, "enable_layerwise_nvtx_marker": false, "warmup_mode": "request", "warmup_resolutions": null, "warmup_num_frames": null, "warmup_steps": 1, "warmup_sampling_params": null, "disable_autocast": true, "master_port": 30005, "host": "127.0.0.1", "port": 30000, "enable_metrics": false, "webui": false, "webui_port": 12312, "scheduler_port": 5592, "scheduler_ports": [5592], "batching_mode": "dynamic", "batching_max_size": 1, "batching_delay_ms": 0.0, "batching_config": null, "enable_batching_metrics": false, "strict_ports": false, "output_path": "/results/full-20261003T232158Z/profile-B/outputs", "input_save_path": "inputs/uploads", "prompt_file_path": null, "model_paths": {}, "model_loaded": {"transformer": true, "vae": true, "video_vae": true, "audio_vae": true, "video_dit": true, "audio_dit": true, "dual_tower_bridge": true}, "boundary_ratio": null, "disagg_role": "monolithic", "disagg_timeout": 3600, "disagg_downstream_wait_timeout": 1800, "disagg_dispatch_policy": "round_robin", "disagg_mode": false, "disagg_instance_id": 0, "disagg_max_slots_per_instance": 8, "disagg_transfer_redundancy": 1.25, "disagg_role_device": "auto", "disagg_transfer_backend": "auto", "disagg_transfer_pool_size": 268435456, "disagg_transfer_pin_memory": "auto", "disagg_p2p_hostname": "127.0.0.1", "disagg_ib_device": null, "disagg_server_addr": null, "encoder_urls": null, "denoiser_urls": null, "decoder_urls": null, "encoder_tp": null, "denoiser_tp": null, "denoiser_sp": null, "denoiser_ulysses": null, "denoiser_ring": null, "decoder_sp": null, "pool_work_endpoint": null, "pool_result_endpoint": null, "pool_control_endpoint": null, "pool_control_advertised_endpoint": null, "log_level": "info", "log_requests": false, "log_requests_level": 2, "log_requests_format": "text", "log_requests_target": null, "uvicorn_access_log_exclude_prefixes": [], "enable_cache_report": false, "enable_trace": false, "otlp_traces_endpoint": "localhost:4317", "otlp_service_name": null, "srt_encoder_url": null, "srt_encoder_connect_timeout": 3.05, "srt_encoder_timeout": 100, "pe_server_url": null, "prompt_enhancer_config": null}
+[10-03 23:45:22] Local mode: True
+[10-03 23:45:22] Starting server...
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v1.0.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+[10-03 23:45:56] Scheduler (dp replica 0) bind at endpoint: tcp://127.0.0.1:5592
+[10-03 23:45:56] torch.compile cache: TORCHINDUCTOR_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/inductor TRITON_CACHE_DIR=/root/.cache/sgl_diffusion/torch_compile_cache/triton
+[10-03 23:45:56] Initializing distributed environment with world_size=1, device=cuda:0, timeout=3600
+[10-03 23:45:56] Setting distributed timeout to 3600 seconds
+[10-03 23:45:56] No pipeline_class_name specified, using model_index.json
+[10-03 23:45:59] Using pipeline from model_index.json: MingImagePipeline
+[10-03 23:45:59] Loading pipeline modules...
+[10-03 23:45:59] Checking for cached model in Hugging Face Hub cache for inclusionAI/Ming-Image-0.1-Design...
+[10-03 23:45:59] Loading pipeline modules from config: {'_class_name': 'MingImagePipeline', '_diffusers_version': '0.36.0', 'text_encoder': ['transformers', 'MingImageEncoder'], 'tokenizer': ['transformers', 'PreTrainedTokenizerFast'], 'transformer': ['diffusers', 'DiffusionTransformer'], 'vae': ['diffusers', 'AutoencoderKLQwenImage'], 'scheduler': ['diffusers', 'FlowMatchEulerDiscreteScheduler']}
+[10-03 23:45:59] Loading required components: ['text_encoder', 'tokenizer', 'transformer', 'vae', 'scheduler']
+[10-03 23:46:04] Memory-aware component load order: ['tokenizer', 'transformer', 'vae', 'text_encoder', 'scheduler']
+
+Loading required modules:   0%|          | 0/5 [00:00<?, ?it/s][10-03 23:46:04] Loading tokenizer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/mllm. avail mem: 138.65 GB
+[10-03 23:46:05] Loaded tokenizer: TokenizersBackend (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 138.65 GB
+
+Loading required modules:  20%|██        | 1/5 [00:01<00:04,  1.02s/it][10-03 23:46:05] Loading transformer from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/transformer. avail mem: 138.65 GB
+[10-03 23:46:05] Loading DiffusionTransformer from 5 safetensors file(s) , param_dtype: torch.bfloat16
+
+
+Loading safetensors checkpoint shards: 0%|          | 0/5[A
+
+Loading safetensors checkpoint shards: 20%|██        | 1/5[A
+
+Loading safetensors checkpoint shards: 40%|████      | 2/5[A
+
+Loading safetensors checkpoint shards: 60%|██████    | 3/5[A
+
+Loading safetensors checkpoint shards: 80%|████████  | 4/5[A
+Loading safetensors checkpoint shards: 100%|██████████| 5/5
+[10-03 23:46:09] Attention backends for transformer: fa
+[10-03 23:46:09] Loaded transformer: MingImageTransformer2DModel (sgl-diffusion version). model size: 11.46 GB, vram: 11.46 GB. avail GPU mem: 126.76 GB
+
+Loading required modules:  40%|████      | 2/5 [00:04<00:07,  2.59s/it][10-03 23:46:09] Loading vae from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/vae. avail mem: 126.76 GB
+[10-03 23:46:09] Qwen-Image VAE: installed quality-gated fast path (29 RMSNorm+SiLU fusions, 3 channels_last upsamples).
+[10-03 23:46:09] Loaded vae: AutoencoderKLQwenImage (sgl-diffusion version). model size: 0.24 GB, vram: 0.24 GB. avail GPU mem: 126.75 GB
+
+Loading required modules:  60%|██████    | 3/5 [00:04<00:02,  1.50s/it][10-03 23:46:09] Loading text_encoder from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/. avail mem: 126.75 GB
+[10-03 23:46:09] Cannot use FlashAttention backend for head size 80.
+[10-03 23:46:10] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:46:37] [RunAI Streamer] Overall time to stream 31.7 GiB of all files to cuda:0: 27.29s, 1.2 GiB/s
+[10-03 23:46:37] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:46:41] [RunAI Streamer] Overall time to stream 5.8 GiB of all files to cuda:0: 3.86s, 1.5 GiB/s
+[10-03 23:46:41] Loading safetensors with Run:ai Model Streamer to cuda:0
+[10-03 23:46:41] [RunAI Streamer] Overall time to stream 119.1 MiB of all files to cuda:0: 0.06s, 2.0 GiB/s
+[10-03 23:46:41] Attention backends for text_encoder: fa, torch_sdpa
+[10-03 23:46:41] Loaded text_encoder: MingImageEncoder (sgl-diffusion version). model size: 33.55 GB, vram: 33.55 GB. avail GPU mem: 93.09 GB
+
+Loading required modules:  80%|████████  | 4/5 [00:37<00:13, 13.59s/it][10-03 23:46:41] Loading scheduler from /__modal/volumes/vo-rIRmK17CspujA4RnkgK0zP/hub/models--inclusionAI--Ming-Image-0.1-Design/snapshots/208087ada1486931692c1896f38d4cd16ff3df82/scheduler. avail mem: 93.09 GB
+[10-03 23:46:41] Loaded scheduler: FlowMatchEulerDiscreteScheduler (sgl-diffusion version). model size: NA GB, weights: none. avail GPU mem: 93.09 GB
+
+Loading required modules: 100%|██████████| 5/5 [00:37<00:00,  7.41s/it]
+[10-03 23:46:41] Creating pipeline stages...
+[10-03 23:46:41] Using fa attention backend
+[10-03 23:46:41] Pipeline instantiated
+[10-03 23:46:41] Worker 0: Initialized device, model, and distributed environment.
+[10-03 23:46:41] Worker 0: Scheduler loop started.
+[10-03 23:46:41] [server-load] workers_ready_monotonic_ns=1491397348795
+[10-03 23:46:41] Processing 1 grouped request(s)
+
+Warmup requests:   0%|          | 0/1 [00:00<?, ?req/s][10-03 23:46:42] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200.json.
+[10-03 23:46:42] Using MoE kernel config from /workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H200_down.json.
+
+Warmup requests: 100%|██████████| 1/1 [00:01<00:00,  1.83s/req, warmup req (1024x1024, 1/12 steps), last=1.83s]
+Warmup requests: 100%|██████████| 1/1 [00:01<00:00,  1.83s/req, warmup req (1024x1024, 1/12 steps), last=1.83s]
+[10-03 23:46:43] The server is fired up and ready to roll!
+[10-03 23:46:43] Sampling params:
+                       width: 1024
+                      height: 1024
+                  num_frames: 1
+                         fps: 24
+                      prompt: <redacted, len=61>
+                  neg_prompt: <redacted, len=0>
+                        seed: 42
+                 infer_steps: 12
+      num_outputs_per_prompt: 1
+              guidance_scale: 1.0
+     embedded_guidance_scale: 6.0
+                    n_tokens: None
+                  flow_shift: None
+                  image_path: None
+                 save_output: True
+            output_file_path: /results/full-20261003T232158Z/profile-B/outputs/sample.png
+        
+[10-03 23:46:43] Running pipeline stages: ['InputValidationStage', 'text_encoding_stage', 'reference_encoding_stage', 'LatentPreparationStage', 'TimestepPreparationStage', 'denoising_stage', 'decoding_stage']
+[10-03 23:46:43] Profiling request: 66064edd-fb79-4ade-94d3-3f09877650e6 for 5 steps...
+[10-03 23:46:43] Starting Profiler...
+[10-03 23:46:43] [InputValidationStage] started...
+[10-03 23:46:43] [InputValidationStage] finished in 0.0001 seconds
+[10-03 23:46:43] [MingImageEncodingStage] started...
+[10-03 23:46:43] [MingImageEncodingStage] finished in 0.0896 seconds
+[10-03 23:46:43] [MingImageReferenceStage] started...
+[10-03 23:46:43] [MingImageReferenceStage] finished in 0.0000 seconds
+[10-03 23:46:43] [LatentPreparationStage] started...
+[10-03 23:46:43] [LatentPreparationStage] finished in 0.0016 seconds
+[10-03 23:46:43] [TimestepPreparationStage] started...
+/workspace/sglang/python/sglang/multimodal_gen/runtime/models/schedulers/scheduling_flow_match_euler_discrete.py:652: RuntimeWarning: divide by zero encountered in divide
+  return np.exp(mu) / (np.exp(mu) + (1 / t - 1) ** sigma)
+[10-03 23:46:43] [TimestepPreparationStage] finished in 0.0009 seconds
+[10-03 23:46:43] [DenoisingStage] started...
+
+  0%|          | 0/12 [00:00<?, ?it/s]USDT:2026-10-03 23:46:43 1848:1848 SyncActivityProfilerHandler.cpp:52] profiler_start
+
+ 17%|█▋        | 2/12 [00:00<00:01,  7.60it/s]
+ 25%|██▌       | 3/12 [00:00<00:01,  7.31it/s]
+ 33%|███▎      | 4/12 [00:00<00:01,  7.12it/s]
+ 42%|████▏     | 5/12 [00:00<00:00,  7.13it/s]
+ 50%|█████     | 6/12 [00:00<00:00,  7.05it/s]
+ 58%|█████▊    | 7/12 [00:00<00:00,  6.98it/s]USDT:2026-10-03 23:46:45 1848:1848 SyncActivityProfilerHandler.cpp:59] profiler_stop
+
+ 67%|██████▋   | 8/12 [00:02<00:02,  1.40it/s][10-03 23:46:46] Stopping Profiler...
+[10-03 23:46:56] Saved profiler traces to: [1;36m/results/full-20261003T232158Z/profile-B/traces/66064edd-fb79-4ade-94d3-3f09877650e6-5_steps-global-rank0.trace.json.gz[0;0m
+
+ 75%|███████▌  | 9/12 [00:12<00:10,  3.48s/it]
+ 83%|████████▎ | 10/12 [00:12<00:04,  2.45s/it]
+ 92%|█████████▏| 11/12 [00:12<00:01,  1.74s/it]
+100%|██████████| 12/12 [00:12<00:00,  1.24s/it]
+100%|██████████| 12/12 [00:12<00:00,  1.08s/it]
+[10-03 23:46:56] [DenoisingStage] average time per step: 1.0811 seconds
+[10-03 23:46:56] [DenoisingStage] finished in 12.9745 seconds
+[10-03 23:46:56] [MingImageDecodingStage] started...
+[10-03 23:46:56] [MingImageDecodingStage] finished in 0.0637 seconds
+[10-03 23:46:56] Output saved to [1;36m/results/full-20261003T232158Z/profile-B/outputs/sample.png[0;0m
+[10-03 23:46:56] Metrics dumped to: [1;36m/results/full-20261003T232158Z/profile-B/perf.json[0;0m
+[10-03 23:46:56] Pixel data generated successfully in [92m15.17[0;0m seconds
+[10-03 23:46:56] Warmed-up request processed in [92m13.18[0;0m seconds (with warmup excluded)
+[10-03 23:46:56] Memory usage - Max peak: 52034.00 MB, Avg peak: 52034.00 MB
+[10-03 23:46:56] Metrics dumped to: [1;36m/results/full-20261003T232158Z/profile-B/perf.json[0;0m
+[93m[10-03 23:46:56] Generator was garbage collected without being shut down. Forcing local server and client cleanup.[0;0m
+[93m[10-03 23:46:56] Local worker sglang-diffusionWorker-0 did not terminate gracefully, forcing.[0;0m
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+ARM_RESULT {"label": "profile-B", "variant": "B", "profile": true, "command": ["sglang", "generate", "--model-path", "inclusionAI/Ming-Image-0.1-Design", "--revision", "208087ada1486931692c1896f38d4cd16ff3df82", "--num-gpus", "1", "--enable-torch-compile=false", "--enable-breakable-cuda-graph=false", "--performance-mode=speed", "--width", "1024", "--height", "1024", "--num-inference-steps", "12", "--guidance-scale", "1", "--prompt", "A minimalist exhibition poster with a red geometric sculpture", "--seed", "42", "--quality", "lossless", "--save-output", "--warmup-mode", "request", "--warmup-steps", "1", "--perf-dump-path", "/results/full-20261003T232158Z/profile-B/perf.json", "--output-path", "/results/full-20261003T232158Z/profile-B/outputs", "--output-file-name", "sample", "--profile", "--num-profiled-timesteps", "5"], "pixel_sha256": "b04fe457e7a38a1007c8f23a1d0dd3c42ccd57afdb8c547d6670da661f82448f", "total_duration_ms": 13180.791021999994, "denoise_steps_ms": [{"step": 0, "duration_ms": 114.76556699994944}, {"step": 1, "duration_ms": 148.77812800000356}, {"step": 2, "duration_ms": 143.66316099994947}, {"step": 3, "duration_ms": 146.50515399989672}, {"step": 4, "duration_ms": 139.74884599997495}, {"step": 5, "duration_ms": 145.1148999999532}, {"step": 6, "duration_ms": 2036.4564550000068}, {"step": 7, "duration_ms": 9629.64150599987}, {"step": 8, "duration_ms": 115.11785100015004}, {"step": 9, "duration_ms": 117.89366200014229}, {"step": 10, "duration_ms": 117.1512599999005}, {"step": 11, "duration_ms": 117.07134900007077}]}
+RESULT full-20261003T232158Z
+[modal-client] 2026-10-03T19:47:11-0400 Timed out waiting for final app logs.
+✓ App completed. View run at 
+https://modal.com/apps/xinyuj2/main/ap-jTzjvHkBKw61haxoAVtxcm

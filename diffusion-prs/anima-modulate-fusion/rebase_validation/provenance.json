@@ -1,0 +1,9 @@
+{
+  "base": "affa261e3d289fe4f907c9b2e8d773fef0d36dba",
+  "head": "05bee50b2f4fef4484bab3db3bff7ef4495e98e5",
+  "archive_sha256": "bc6052c159cb5f1eef2236a7e8e82e06c9b0377ea79a7d1beb35c55ea664ac68",
+  "sources": {
+    "python/sglang/kernels/ops/diffusion/modulate/modulate_scale_shift_jit.py": "9fd588001fb3b7b9bd0abbc68c4f1210278cb19f40eea45ed74f649e2daa190e",
+    "python/sglang/multimodal_gen/runtime/models/dits/anima.py": "ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013"
+  }
+}

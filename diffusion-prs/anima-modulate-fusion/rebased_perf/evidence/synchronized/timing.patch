@@ -1,0 +1,26 @@
+--- a/python/sglang/multimodal_gen/runtime/managers/gpu_worker.py
++++ b/python/sglang/multimodal_gen/runtime/managers/gpu_worker.py
+@@ -677,6 +677,7 @@
+                         ),
+                     )
+ 
++            torch.cuda.synchronize()
+             start_time = (
+                 execution_start_time
+                 if execution_start_time is not None
+@@ -715,6 +716,7 @@
+             if return_req and isinstance(result, Req):
+                 return result
+ 
++            torch.cuda.synchronize()
+             output_batch = self._to_output_batch(result)
+ 
+             output_metrics = self._iter_output_metrics(output_batch)
+@@ -724,6 +726,7 @@
+                     metrics.record_memory_snapshot("after_forward", peak_snapshot)
+ 
+             duration_ms = (time.monotonic() - start_time) * 1000
++            print(f"ANIMA_BENCHMARK_END_SYNC warmup={req.is_warmup}", flush=True)
+             for metrics in output_metrics:
+                 metrics.total_duration_ms = duration_ms
+ 

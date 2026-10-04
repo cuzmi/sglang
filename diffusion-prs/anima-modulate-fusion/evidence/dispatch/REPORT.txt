@@ -1,0 +1,50 @@
+Anima cached dispatch: controlled full-model ABC-CBA
+
+Run: dispatch-abccba-20261003T232600Z-e9defb4f
+Baseline: 6fa3fe69e2e5e19b75cadd9fc285b72634551992
+Model: circlestone-labs/Anima-Base-v1.0-Diffusers @ 073c3a9db359c31ad0e8aa268d15775473c2176c
+GPU: NVIDIA H200; CUDA: 13.0
+Packages: {'torch': '2.13.0+cu130', 'triton': '3.7.1', 'diffusers': '0.37.0', 'transformers': '5.12.1', 'apache-tvm-ffi': '0.1.11'}
+
+One container/GPU, fresh process per arm, same-resolution one-step request warmup.
+1024x1024, BF16, 30 steps, CFG 4, seed 42, TP1, FA, compile and CUDA graph off.
+Native worker total_duration_ms excludes model loading, warmup and PNG saving.
+All six requests completed with identical decoded pixels and PNG bytes.
+
+| Order | Variant | Worker request (ms) |
+| --- | --- | ---: |
+| 1 | eager | 3163.637 |
+| 2 | initial_mount | 3084.656 |
+| 3 | cached_dispatch | 3024.219 |
+| 4 | cached_dispatch | 3031.376 |
+| 5 | initial_mount | 3116.984 |
+| 6 | eager | 3154.144 |
+
+| Variant | Mean (ms) | Min–max (ms) |
+| --- | ---: | ---: |
+| eager | 3158.890 | 3154.144–3163.637 |
+| initial_mount | 3100.820 | 3084.656–3116.984 |
+| cached_dispatch | 3027.797 | 3024.219–3031.376 |
+
+Initial mount vs eager: -1.838% latency.
+Cached dispatch vs eager: -4.150% latency.
+Cached dispatch vs initial mount: -2.355% latency.
+
+Only two samples per variant: a bounded workload comparison, not a latency distribution.
+Do not pool these absolute times with the earlier Modal instance.
+The earlier initial-mount ABBA regressed 4.93%; retain that negative result.
+
+Correctness: standalone full AdaLN checks, CUDA graph replay, existing modulate (12)
+and Anima (17) tests all completed before the model comparison. See operator.json and test logs.
+No new repository unit tests were added.
+
+The final patch caches the exported FFI callable and avoids a repeated eligibility check.
+CUDA arithmetic and launch geometry are identical across all three arms.
+CUDA source SHA256: 33570b4d2adc897ed2a91d95a4e5f0e6681f8504904d699a3d9da48ebac3e7a5
+Fused model SHA256: ae62fe965c2facdf224aa164a5002dc5bd2e403a48fb51cf6094179b4d254013
+Fixed backend SHA256: 5705525464fedef85e83631e44aa53ce87bd7a7b1b83d7294a25c22621bcc8b0
+Pixel SHA256: 2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c
+
+Geometry/host-path screening is a separate experiment:
+../kernel-screen-20261003T231957Z-36d5d3ca/REPORT.txt
+Screening prototypes are not the exact production wrapper. This run measures the exact final patch.
