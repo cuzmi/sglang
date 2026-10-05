@@ -8,7 +8,6 @@
   "modal_volume": "anima-modulate-experiments",
   "sha256": {
     ".gitattributes": "fb25a78a6381f5646d71aacea4486f6aeeeb03c4d71740227011024be0d20a8f",
-    "PR_BODY.txt": "960d864eae88695747972fdc1b70b73d429448fbfbebc6eb41728c2b1c61461a",
     "README.txt": "94abbe912e88dfafbae9d0b709d3a1a12256aac781b07ba8485800890a12f31a",
     "REPORT-native.txt": "d487c4dcc8ec085f2acb19101d1dcc91e704649639f76a1599b9d042bb9fbaab",
     "REPORT-synchronized.txt": "f91ef5f06fd95a1034c7298b71443b96485e7db2f0acd3ce38a543f95bbf1355",

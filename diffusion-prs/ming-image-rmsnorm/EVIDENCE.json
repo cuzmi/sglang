@@ -16,21 +16,13 @@
       "bytes": 4397,
       "sha256": "0b721d46874fccbb734bf4d5833ce396fbe7472b99b6d75365887c5d3dd8e2ef"
     },
-    "PR_BODY_DRAFT.md": {
-      "bytes": 5498,
-      "sha256": "5048bb70dc8b2fd6790142e8db3db6e982bf0a2ade670428f8d8987e57fcb715"
-    },
-    "PR_TITLE.txt": {
-      "bytes": 62,
-      "sha256": "f2cb9a57f4266b3204411c2f3672d0d407fd604c492845f92506770f305dc90e"
-    },
     "README.md": {
-      "bytes": 3405,
-      "sha256": "6aacbd03b13a042e4985133b096b73af6e73c700871768eb238074399fd6c0bb"
+      "bytes": 3342,
+      "sha256": "26927a424dae7059a6356a89de8867279925c03a750151d435caf1e8c95bce71"
     },
     "REPORT.md": {
-      "bytes": 7530,
-      "sha256": "50713f4fee3bf394193bad72571490521239eaa7a49a98c0fd6624326d2a9591"
+      "bytes": 7454,
+      "sha256": "a4681b7ee88ec6dd27bc44cf9d24bc545ec600a2d8482f288611d8f0fa1e504b"
     },
     "TEST_REVIEW.md": {
       "bytes": 3178,
@@ -65,8 +57,8 @@
       "sha256": "243a4475388ad6f7a77e40d34e008c86185ca8f74a3ff2ef666ce2de3cc13a19"
     },
     "evidence/original_artifact_hashes.json": {
-      "bytes": 9121,
-      "sha256": "33d6fe3d36f3318738d5d3933cb898dcf0718680bd3d4176843a65c673b94190"
+      "bytes": 8869,
+      "sha256": "67e703f48dad8655c6952e368e61cdeecb474afb65e2a76412cb2bd0e600747c"
     },
     "evidence/pre-commit.txt": {
       "bytes": 4210,

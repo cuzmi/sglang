@@ -24,4 +24,4 @@ Same-container A/A + ABBA, two independent processes per variant; A/A denoise di
 - [Baseline image](pr_assets/baseline.png) / [fused image](pr_assets/fused.png)
 - [Original logs, images and compressed traces](results/rope-20261004T161949Z-d5819700)
 
-Original `EVIDENCE.json`, preparation notes and logs retain their historical state; their PR/upload statements do not describe the current publication. `ARCHIVE_MANIFEST.json` records this directory's current file hashes; the root `SHA256SUMS.json` covers the complete results branch. Account-scoped Modal image/volume references are preserved and are not made publicly accessible by this archive.
+Raw measurements, source inputs, scripts and validation logs retain their original bytes. `EVIDENCE.json` indexes the retained evidence; [image evidence](IMAGE_EVIDENCE.txt) records the output hashes and generation settings. `ARCHIVE_MANIFEST.json` records this directory's current file hashes; the root `SHA256SUMS.json` covers the complete results branch. Account-scoped Modal image/volume references are preserved and are not made publicly accessible by this archive.

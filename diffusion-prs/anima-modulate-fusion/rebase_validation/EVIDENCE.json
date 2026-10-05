@@ -5,8 +5,6 @@
   "modal_volume": "anima-modulate-experiments",
   "sha256": {
     ".gitattributes": "4271bda00d49f54b888bd21f7dcc56934d347d61dcec5b16ae8edf596c577cb8",
-    "PR_BODY.before.txt": "0ae8a247711be222a47138fa7d604af6179d956e730328c1ffb5c23d329066f5",
-    "PR_BODY.txt": "e3568d5d53223b6bc95be030c54cd7e2df14a82ee3853593309dfb9cca477023",
     "README.txt": "061b0a77238e2ebb590a8ad8b169979f71df710dd7536242a206a788a27a883f",
     "REPORT.txt": "1881c535750ab4fc1fb1f3d3abbc4a37e35fcc75baa7a3d9f4a3ca9eaf01105f",
     "analyze.py": "71cb158e08b82ec9a221e68e375345afb60e06e641c738d929f55c52b52f31d9",

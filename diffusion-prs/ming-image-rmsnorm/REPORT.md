@@ -77,7 +77,6 @@ Kernel duration 累加仅作机制诊断，不能直接当成请求节省时间�
 - `experiment.py` / `verify_rmsnorm.py` / `EXPERIMENT.md`：实验入口、固定条件和复现说明。
 - `results/`：完整 manifest、原始日志、计时、图片、trace；`analysis.json` 与 `middle-step.trace.json.gz` 是分析产物。
 - `pre-commit.log`：格式及静态检查日志。
-- `PR_BODY_DRAFT.md`：依照仓库当前模板填写的英文 PR 草稿。
 
 参考 [LTX-2 接线 PR #34315](https://github.com/sgl-project/sglang/pull/34315) 和 [Qwen-Image 2.1 PR #39983](https://github.com/sgl-project/sglang/pull/39983)：提交重点是数值契约、平台/shape 边界、真实融合证据、固定环境下的 accuracy/speed 结果和可复现命令。没有把这两篇 PR 的作者性能数据当作本轮证据。
 

@@ -12,7 +12,6 @@ Evidence to read
   evidence/initial/REPORT.txt: initial integration-only ABBA, +4.93% latency.
   evidence/geometry/REPORT.txt: nine geometry variants and host-path screen.
   evidence/dispatch/REPORT.txt: final ABC-CBA, -4.15% vs eager, -2.35% vs initial.
-  PR_BODY.txt: local PR draft, including limitations and negative evidence.
   EVIDENCE.json: run IDs, storage locations, scope and tracked-file checksums.
 
 The final model experiment has only two requests per variant on one H200.

@@ -3,24 +3,20 @@
   "run_id": "rope-20261004T161949Z-d5819700",
   "files": {
     "EVIDENCE.json": {
-      "bytes": 9207,
-      "sha256": "0ac2734b5677358cf566c9e9c595e93a0d2183c08659f2fbdc2b34170cb7a9f4"
+      "bytes": 8550,
+      "sha256": "b609bd313398ef827e4cb2238bfaf5e870f93ea8bcc675ce972dc4a0ebcda37e"
     },
-    "PR_IMAGES.txt": {
-      "bytes": 1169,
-      "sha256": "56ab14dcc98c9c961c9fdeb6f0dec3e03ec243f8c3ca969df1a60ca4f20fc564"
-    },
-    "PR_REFERENCES.txt": {
-      "bytes": 959,
-      "sha256": "13db66214d1b6ddcf6365d6d66b59c764ace27524fb32e192d02404011861a74"
+    "IMAGE_EVIDENCE.txt": {
+      "bytes": 883,
+      "sha256": "f30da9e744da03712cbf06b3812d5875107c1ebfeed08ca2b735692d3fda8c66"
     },
     "PUBLISHED.md": {
-      "bytes": 1895,
-      "sha256": "18d3b2d5d5ed5c1fd06e04f2d3bcb6230cf44d40b5ab13e85b7b1dc49abeed4d"
+      "bytes": 1968,
+      "sha256": "d2f858289ae549fb8ec03f9e8263943a565f7768ae5005aba00bcbc777f14aed"
     },
     "README.txt": {
-      "bytes": 6322,
-      "sha256": "22ea29346389acbf6fbc89342f1b01b9d494b03513017a2c24a6aa0a0b31d730"
+      "bytes": 6158,
+      "sha256": "aacf12030b9e2ccc0a2105ae70e6bdbe7d4c813b57002c4a0e612a8bb1462420"
     },
     "analyze.py": {
       "bytes": 3165,

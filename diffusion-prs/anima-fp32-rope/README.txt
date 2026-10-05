@@ -81,8 +81,6 @@ inputs/manifest.json: exact uploaded runtime source hashes.
 inputs/runtime.patch: proposed runtime changes against baseline, including new kernel.
 experiment.py, verify_rope.py, download.py, analyze.py: reproducible experiment tools.
 results/<run-id>/: raw manifests, outputs, logs, operator traces, full-model traces.
-PR_REFERENCES.txt: comparable PRs and repository template expectations.
-PR body is maintained with the upstream code PR; this branch archives measurement evidence.
 pre-commit-python313.log: required hooks run with Python 3.13.
 pre-commit.log: initial macOS Python 3.9 hook failure retained for provenance.
 

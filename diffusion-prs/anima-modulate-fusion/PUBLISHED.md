@@ -18,4 +18,4 @@ The two production source hashes were checked against the current PR commit when
 
 [Original raw runs and traces](results/anima-20261003T224511Z-017ed58d/) include both full traces and middle-step slices. The rebased implementation was not reprofiled. Other historical runs are retained under `results/` with their original run IDs.
 
-The original archive files are unchanged. Statements in older READMEs/drafts that results were ignored, tests were uncommitted, or a PR had not been created are historical. This branch publishes the selected raw results alongside those reports. Checkpoint/source tarballs and caches remain excluded.
+Raw measurements, source inputs, scripts and test logs are unchanged. Statements in older READMEs that results were ignored or tests were uncommitted are historical. Documentation and evidence indexes have been cleaned to exclude submission drafts and titles. This branch publishes the selected raw results alongside those reports. Checkpoint/source tarballs and caches remain excluded.

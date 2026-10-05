@@ -2,7 +2,7 @@
 
 This archive records the H200 experiment completed on 2026-10-03. It is separate from committing the SGLang production patch or publishing a PR.
 
-- Read [REPORT.md](REPORT.md) for measured results and limits, [EXPERIMENT.md](EXPERIMENT.md) for controls, and [PR_BODY_DRAFT.md](PR_BODY_DRAFT.md) for the draft submission.
+- Read [REPORT.md](REPORT.md) for measured results and limits, and [EXPERIMENT.md](EXPERIMENT.md) for controls.
 - [candidate.patch](candidate.patch) contains exactly one SGLang model change and two test-file changes. [source_manifest.json](source_manifest.json) identifies the baseline and GPU-tested overlay hashes. The three files in `inputs/` preserve those exact overlays.
 - `evidence/full-manifest.json` retains all eight timing records and both diagnostic records, model revision/configuration, versions and source hashes. `evidence/analysis.json` contains CUPTI-correlated kernel counts; `evidence/micro.json` retains the numerical sweep and microbench samples. Test and pre-commit output are preserved as small text files.
 - [TEST_REVIEW.md](TEST_REVIEW.md) records the follow-up test coverage review. Its proposed tests are not part of the archived 55-test result.

@@ -1,4 +1,4 @@
-PR image assets (original PNGs, no resizing or recompression)
+Image evidence (original PNGs, no resizing or recompression)
 
 pr_assets/baseline.png: ABBA baseline arm 03-eager.
 pr_assets/fused.png: ABBA candidate arm 04-fused.
@@ -12,10 +12,6 @@ Settings: Anima-Base-v1.0-Diffusers, model revision
 guidance 4; seed 42; CPU generator; H200; compile=false; BCG=false.
 Prompt: masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset
 
-When preparing the GitHub PR, upload these original files as PR attachments and
-replace BASELINE_IMAGE_URL and FUSED_IMAGE_URL in PR_BODY.txt with their returned URLs.
-Keep these evidence images outside the SGLang runtime source commit.
 The side-by-side originals illustrate output preservation for this one sample;
 the numeric checks and reproducible timing evidence support the technical claims.
 All eight original outputs remain under results/rope-20261004T161949Z-d5819700/.
-No upload or PR publication has been performed.

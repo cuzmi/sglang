@@ -46,7 +46,6 @@ Files:
 - 01-baseline through 08-baseline: untouched-source unprofiled arms.
 - quality-*: second image-correctness pair.
 - profile-*: diagnostic logs, call counters, original traces and middle-step slices.
-- ../../PR_BODY.txt: English repository-template PR draft explicitly marked not ready to publish.
 
 Reproduce from the experiment directory:
   python prepare_inputs.py '/path/to/sglang-checkout-with-this-exact-candidate'

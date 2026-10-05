@@ -21,16 +21,6 @@
       "bytes": 5100,
       "sha256": "7c1d7c3145166318168ebc76c7c221078a76525077cfb386a6a4da978405ef95"
     },
-    "diffusion-prs/anima-modulate-fusion/PR_BODY.txt": {
-      "source_path": "anima/PR_BODY.txt",
-      "bytes": 7024,
-      "sha256": "70b0afcd5abb4149c0a7534a74778cfa2a42a5f1858e6e016ed7bce8358f252b"
-    },
-    "diffusion-prs/anima-modulate-fusion/PR_TITLE.txt": {
-      "source_path": "anima/PR_TITLE.txt",
-      "bytes": 74,
-      "sha256": "354af202aaf8a841e51630663ed05065a0791284d8530ee23a3bae7d1d3c4797"
-    },
     "diffusion-prs/anima-modulate-fusion/README.txt": {
       "source_path": "anima/README.txt",
       "bytes": 4406,
@@ -351,16 +341,6 @@
       "bytes": 2665,
       "sha256": "e17c3342bd5b2362454db5ac96dfd7401c155e36bfe6ea351e22a2691eddec60"
     },
-    "diffusion-prs/anima-modulate-fusion/rebase_validation/PR_BODY.before.txt": {
-      "source_path": "anima/rebase_validation/PR_BODY.before.txt",
-      "bytes": 5190,
-      "sha256": "0ae8a247711be222a47138fa7d604af6179d956e730328c1ffb5c23d329066f5"
-    },
-    "diffusion-prs/anima-modulate-fusion/rebase_validation/PR_BODY.txt": {
-      "source_path": "anima/rebase_validation/PR_BODY.txt",
-      "bytes": 4624,
-      "sha256": "e3568d5d53223b6bc95be030c54cd7e2df14a82ee3853593309dfb9cca477023"
-    },
     "diffusion-prs/anima-modulate-fusion/rebase_validation/README.txt": {
       "source_path": "anima/rebase_validation/README.txt",
       "bytes": 2098,
@@ -475,11 +455,6 @@
       "source_path": "anima/rebased_perf/EVIDENCE.json",
       "bytes": 3382,
       "sha256": "7dc3e4e11e38a70b296df5e1a807cf7cb972c6063e4541b6d97d74fda4d938cc"
-    },
-    "diffusion-prs/anima-modulate-fusion/rebased_perf/PR_BODY.txt": {
-      "source_path": "anima/rebased_perf/PR_BODY.txt",
-      "bytes": 6096,
-      "sha256": "960d864eae88695747972fdc1b70b73d429448fbfbebc6eb41728c2b1c61461a"
     },
     "diffusion-prs/anima-modulate-fusion/rebased_perf/README.txt": {
       "source_path": "anima/rebased_perf/README.txt",
@@ -735,16 +710,6 @@
       "source_path": "anima/results/anima-20261003T224511Z-017ed58d/08-baseline/perf.json",
       "bytes": 4566,
       "sha256": "044b97b9ddefe995bd1ce54f9bf0ebe727c06d228351fd5dca168d38b3725a67"
-    },
-    "diffusion-prs/anima-modulate-fusion/results/anima-20261003T224511Z-017ed58d/INITIAL_PR_BODY.txt": {
-      "source_path": "anima/results/anima-20261003T224511Z-017ed58d/INITIAL_PR_BODY.txt",
-      "bytes": 8026,
-      "sha256": "6c8b77175139e5c26aa753bd7eb34d91330bd444c49e94b808ef509299b2776c"
-    },
-    "diffusion-prs/anima-modulate-fusion/results/anima-20261003T224511Z-017ed58d/INITIAL_PR_TITLE.txt": {
-      "source_path": "anima/results/anima-20261003T224511Z-017ed58d/INITIAL_PR_TITLE.txt",
-      "bytes": 54,
-      "sha256": "0294b796e47d861e760b913e478d12f9349e9a2abfaffb87cbcfd8b3c81d2d65"
     },
     "diffusion-prs/anima-modulate-fusion/results/anima-20261003T224511Z-017ed58d/REPORT.txt": {
       "source_path": "anima/results/anima-20261003T224511Z-017ed58d/REPORT.txt",
@@ -1471,16 +1436,6 @@
       "bytes": 4397,
       "sha256": "0b721d46874fccbb734bf4d5833ce396fbe7472b99b6d75365887c5d3dd8e2ef"
     },
-    "diffusion-prs/ming-image-rmsnorm/PR_BODY_DRAFT.md": {
-      "source_path": "ming_image/rmsnorm/PR_BODY_DRAFT.md",
-      "bytes": 5498,
-      "sha256": "5048bb70dc8b2fd6790142e8db3db6e982bf0a2ade670428f8d8987e57fcb715"
-    },
-    "diffusion-prs/ming-image-rmsnorm/PR_TITLE.txt": {
-      "source_path": "ming_image/rmsnorm/PR_TITLE.txt",
-      "bytes": 62,
-      "sha256": "f2cb9a57f4266b3204411c2f3672d0d407fd604c492845f92506770f305dc90e"
-    },
     "diffusion-prs/ming-image-rmsnorm/README.md": {
       "source_path": "ming_image/rmsnorm/README.md",
       "bytes": 3405,
@@ -1853,5 +1808,6 @@
       "archive_manifest": "diffusion-prs/anima-fp32-rope/ARCHIVE_MANIFEST.json",
       "new_gpu_runs": 0
     }
-  ]
+  ],
+  "source_files_note": "Original import paths and hashes for retained files. Documentation and evidence indexes may have been cleaned since import; SHA256SUMS.json records current bytes."
 }
