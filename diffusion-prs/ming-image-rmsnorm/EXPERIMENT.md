@@ -1,5 +1,7 @@
 # Ming-Image RMSNorm experiment
 
+Evidence-only archive. [Reproduction scripts and source patches](https://github.com/cuzmi/sglang/tree/893495236a5ba25667313768b5e791fc51e355d8/diffusion-prs/ming-image-rmsnorm) are retained in a fixed snapshot; commands and source-file paths below refer to that snapshot.
+
 ## Scope and controls
 
 - Branch: `perf/ming-image-rmsnorm`.
@@ -18,12 +20,6 @@
 FP32 conversion and square are fused; `aten::mean` receives a same-shape contiguous FP32 square buffer. The finishing kernel performs FP32 epsilon/rsqrt/multiply, casts the normalized activation to the input dtype, then multiplies weight and rounds the output. The original reduction remains unchanged.
 
 The wrapper checks each `(device, dtype, shape, eps)` on first dispatch with `torch.equal`; mismatch disables fusion and returns the native result. FP32, unsupported layouts/platforms, residual calls, compile tracing, and unseen shapes during CUDA graph capture retain the native path. Verified graph replay can use the fusion.
-
-## PR precedents
-
-- [LTX-2 modulate mount #34315](https://github.com/sgl-project/sglang/pull/34315): a small model wiring change, live gate verification, output equality, kernel tests, exact hardware/configuration and before/after denoise/E2E numbers. Its reported speedup is author evidence, not a prediction for Ming.
-- [Qwen-Image 2.1 #39983](https://github.com/sgl-project/sglang/pull/39983): provenance of `rmsnorm_preserve_reduction`; documents first-call checks, fresh-start comparisons, output parity, and limitations of pre-final-revision measurements.
-- Local `.github/PULL_REQUEST_TEMPLATE.md`: Motivation, Modifications, Accuracy Tests, Speed Tests and Profiling, Checklist. No unrun upstream CI or broader model quality checks should be marked passed.
 
 ## Reproduction
 

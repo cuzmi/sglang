@@ -1,4 +1,9 @@
 Anima FP32 split-half RoPE experiment
+
+Evidence-only archive. Reproduction scripts and source patches are retained at:
+https://github.com/cuzmi/sglang/tree/893495236a5ba25667313768b5e791fc51e355d8/diffusion-prs/anima-fp32-rope
+Commands and source-file paths below refer to that fixed snapshot.
+
 ===================================
 
 Source worktree: /Users/cuzimi/.codex/worktrees/anima-fp32-rope/sglang
@@ -78,8 +83,6 @@ claiming the metadata identifies the imported source version.
 Artifacts
 ---------
 inputs/manifest.json: exact uploaded runtime source hashes.
-inputs/runtime.patch: proposed runtime changes against baseline, including new kernel.
-experiment.py, verify_rope.py, download.py, analyze.py: reproducible experiment tools.
 results/<run-id>/: raw manifests, outputs, logs, operator traces, full-model traces.
 pre-commit-python313.log: required hooks run with Python 3.13.
 pre-commit.log: initial macOS Python 3.9 hook failure retained for provenance.

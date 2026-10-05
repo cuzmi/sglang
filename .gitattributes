@@ -1,5 +1,3 @@
-*.patch -whitespace
-*.diff -whitespace
 *.log -whitespace
 *.png binary
 *.gz binary

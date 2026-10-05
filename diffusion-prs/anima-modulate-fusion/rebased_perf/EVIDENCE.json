@@ -7,11 +7,9 @@
   },
   "modal_volume": "anima-modulate-experiments",
   "sha256": {
-    ".gitattributes": "fb25a78a6381f5646d71aacea4486f6aeeeb03c4d71740227011024be0d20a8f",
-    "README.txt": "94abbe912e88dfafbae9d0b709d3a1a12256aac781b07ba8485800890a12f31a",
+    "README.txt": "1cf1d8a75e6a5051a24614cd32f20134a5288a409e6a4f2c112814a82299b963",
     "REPORT-native.txt": "d487c4dcc8ec085f2acb19101d1dcc91e704649639f76a1599b9d042bb9fbaab",
     "REPORT-synchronized.txt": "f91ef5f06fd95a1034c7298b71443b96485e7db2f0acd3ce38a543f95bbf1355",
-    "analyze.py": "0752c338d654b0f12c52ccf63af56e5f182e7fd4c361f7b50321883ac213f21b",
     "evidence/native/01-baseline.json": "dbb9017cc57d96f1f52ac87803911e76bd3cd2f79e0a7107a5775fe8ab05a32f",
     "evidence/native/02-candidate.json": "add67bb2ab4da3329f2c85a643d2c745819fc31dbdee972b040ab1eff0fb0e2e",
     "evidence/native/03-candidate.json": "2ab73f29cd23170c7027d3af7cae31d5af1800b42b815b1e53ebb3ee4100f68b",
@@ -31,9 +29,6 @@
     "evidence/synchronized/07-baseline.json": "212b6f46c918b6ebd34a142843e6ac36857e6bb70c545778dab44674a2bb46ea",
     "evidence/synchronized/08-candidate.json": "f0f4eeb6985e5af7475dc76c067b8f3d53ff2e650964841f72a0694ef2351f05",
     "evidence/synchronized/manifest.json": "bc512b5bf88d4c2869ec0729ce21567b2d32d46a55a7b8d397ea7e9fe85d8b48",
-    "evidence/synchronized/summary.json": "8add4e9ec0a12e9a598b8fa552f6f342ac12036881bbae48321a86acf5218ccf",
-    "evidence/synchronized/timing.patch": "a3a87df01950ea41e74575ff481cd16df846e92f52a7ac17b0dfc0e6844b32b9",
-    "run_modal.py": "ab152e157e6586f90e257e09de7389d6016749c7fb664a4041a948aa7d6895fa",
-    "run_modal_synchronized.py": "abde84133f45bcdb9ec339716bcb50c011b6f8c600ffe71b0e6abf6a9561aae5"
+    "evidence/synchronized/summary.json": "8add4e9ec0a12e9a598b8fa552f6f342ac12036881bbae48321a86acf5218ccf"
   }
 }

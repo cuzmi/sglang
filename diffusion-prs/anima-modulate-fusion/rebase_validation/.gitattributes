@@ -1,2 +1,0 @@
-# Preserve the leading spaces in literal Git patch context.
-*.patch -whitespace

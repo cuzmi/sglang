@@ -147,33 +147,13 @@
       "bytes": 1549631,
       "sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d"
     },
-    "experiment.py": {
-      "bytes": 8255,
-      "sha256": "d7cc3ead709887061e7c3c2fbbe4870510b74b725bd59629a448bba859350018"
-    },
-    "verify_rope.py": {
-      "bytes": 7031,
-      "sha256": "14ae4d4897c1268933d6ab82ead94d05305a48b065241056dce71840bdde1229"
-    },
-    "download.py": {
-      "bytes": 712,
-      "sha256": "8df68af1b313e6bb0309dc805ff152f282ec05d654527308ef92480ab5cd0733"
-    },
-    "analyze.py": {
-      "bytes": 3165,
-      "sha256": "bdcce90fd95b78322ebaab61a49a2ef8bfcbe891356a36b8be5f866e48cca67e"
-    },
     "inputs/manifest.json": {
       "bytes": 734,
       "sha256": "3ada4b753c37ce3473c9945e918c3a039483b0f54b31c0afd4d68f757b70586d"
     },
-    "inputs/runtime.patch": {
-      "bytes": 8158,
-      "sha256": "7c16e3f0a687be9c650d3e3c2d81d3ef635585c782ef692ed26399d3affb6054"
-    },
     "README.txt": {
-      "bytes": 6158,
-      "sha256": "aacf12030b9e2ccc0a2105ae70e6bdbe7d4c813b57002c4a0e612a8bb1462420"
+      "bytes": 6241,
+      "sha256": "1471345c156651f0245cf03488ecfef3629924d00a6f7c8e94396123eeb1583d"
     },
     "launch.log": {
       "bytes": 164506,

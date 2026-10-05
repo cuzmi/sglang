@@ -5,10 +5,10 @@ Code: [cuzmi/sglang#2](https://github.com/cuzmi/sglang/pull/2), head `05bee50b2f
 ## Current-head evidence
 
 - [Synchronized worker-latency report](rebased_perf/REPORT-synchronized.txt): four fresh process samples per version, ABBA + BAAB, 3185.73 to 3065.52 ms mean (-3.77%) on one H200 and one fixed workload. Identical timing-only synchronization is applied to both arms. This excludes loading, warmup, transport, and PNG saving; it is not client E2E.
-- [Performance controls and reproduction](rebased_perf/README.txt), [timing patch](rebased_perf/evidence/synchronized/timing.patch), [summary](rebased_perf/evidence/synchronized/summary.json).
+- [Performance controls and reproduction](rebased_perf/README.txt), [timing patch](https://github.com/cuzmi/sglang/tree/893495236a5ba25667313768b5e791fc51e355d8/diffusion-prs/anima-modulate-fusion/rebased_perf/evidence/synchronized/timing.patch), [summary](rebased_perf/evidence/synchronized/summary.json).
 - [Raw synchronized run, logs, timings and all eight PNGs](results/anima-rebased-sync-perf-20261004T164048Z-a9b075f6/).
 - [Separate native-timer report](rebased_perf/REPORT-native.txt) and [raw native run](results/anima-rebased-perf-20261004T163234Z-b2ba18da/). This timer may omit trailing CUDA work; the two runs use separate instances and are not pooled.
-- [Rebased correctness report](rebase_validation/REPORT.txt), [source provenance](rebase_validation/provenance.json), [validation scripts](rebase_validation/README.txt), and [raw component results](results/anima-rebased-correctness-20261004T161931Z-54a6bdc1/).
+- [Rebased correctness report](rebase_validation/REPORT.txt), [source provenance](rebase_validation/provenance.json), [validation scope](rebase_validation/README.txt), and [raw component results](results/anima-rebased-correctness-20261004T161931Z-54a6bdc1/).
 
 The two production source hashes were checked against the current PR commit when publishing. The 16 full-model outputs from the two performance runs have matching bytes/pixels per the archived validation. There is no independent A/A control or cross-instance replication of the synchronized experiment. No new GPU measurements were made for publication.
 
@@ -18,4 +18,4 @@ The two production source hashes were checked against the current PR commit when
 
 [Original raw runs and traces](results/anima-20261003T224511Z-017ed58d/) include both full traces and middle-step slices. The rebased implementation was not reprofiled. Other historical runs are retained under `results/` with their original run IDs.
 
-Raw measurements, source inputs, scripts and test logs are unchanged. Statements in older READMEs that results were ignored or tests were uncommitted are historical. Documentation and evidence indexes have been cleaned to exclude submission drafts and titles. This branch publishes the selected raw results alongside those reports. Checkpoint/source tarballs and caches remain excluded.
+Raw measurements and test logs are unchanged. Statements in older READMEs that results were ignored or tests were uncommitted are historical. Scripts, source copies, patches, submission drafts and titles are excluded from this evidence branch. This branch publishes the selected raw results alongside those reports. Checkpoint/source tarballs and caches remain excluded.

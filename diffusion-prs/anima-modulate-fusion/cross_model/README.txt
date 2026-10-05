@@ -1,5 +1,9 @@
 Shared modulation caller regression — correctness only
 
+Evidence-only archive. Reproduction scripts and source patches are retained at:
+https://github.com/cuzmi/sglang/tree/893495236a5ba25667313768b5e791fc51e355d8/diffusion-prs/anima-modulate-fusion/cross_model
+Commands and source-file paths below refer to that fixed snapshot.
+
 Purpose
   Check whether the two host-dispatch changes used by Anima cause numerical
   errors or routing/fallback changes in other callers. No benchmark, ABBA

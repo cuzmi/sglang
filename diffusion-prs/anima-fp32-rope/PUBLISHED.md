@@ -20,8 +20,8 @@ Same-container A/A + ABBA, two independent processes per variant; A/A denoise di
 - [Raw manifest](results/rope-20261004T161949Z-d5819700/manifest.json)
 - [Analyzed summary](results/rope-20261004T161949Z-d5819700/summary.json)
 - [Numerical checks](results/rope-20261004T161949Z-d5819700/operator.json)
-- [Experiment runner](experiment.py) and [standalone validation](verify_rope.py)
+- [Experiment runner](https://github.com/cuzmi/sglang/tree/893495236a5ba25667313768b5e791fc51e355d8/diffusion-prs/anima-fp32-rope/experiment.py) and [standalone validation](https://github.com/cuzmi/sglang/tree/893495236a5ba25667313768b5e791fc51e355d8/diffusion-prs/anima-fp32-rope/verify_rope.py)
 - [Baseline image](pr_assets/baseline.png) / [fused image](pr_assets/fused.png)
 - [Original logs, images and compressed traces](results/rope-20261004T161949Z-d5819700)
 
-Raw measurements, source inputs, scripts and validation logs retain their original bytes. `EVIDENCE.json` indexes the retained evidence; [image evidence](IMAGE_EVIDENCE.txt) records the output hashes and generation settings. `ARCHIVE_MANIFEST.json` records this directory's current file hashes; the root `SHA256SUMS.json` covers the complete results branch. Account-scoped Modal image/volume references are preserved and are not made publicly accessible by this archive.
+Raw measurements and validation logs retain their original bytes. `EVIDENCE.json` indexes the retained evidence; [image evidence](IMAGE_EVIDENCE.txt) records the output hashes and generation settings. `ARCHIVE_MANIFEST.json` records this directory's current file hashes; the root `SHA256SUMS.json` covers the complete results branch. Account-scoped Modal image/volume references are preserved and are not made publicly accessible by this archive.

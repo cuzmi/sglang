@@ -1,5 +1,9 @@
 Anima PR #2: post-rebase full-model performance
 
+Evidence-only archive. Reproduction scripts and source patches are retained at:
+https://github.com/cuzmi/sglang/tree/893495236a5ba25667313768b5e791fc51e355d8/diffusion-prs/anima-modulate-fusion/rebased_perf
+Commands and source-file paths below refer to that fixed snapshot.
+
 Base: affa261e3d289fe4f907c9b2e8d773fef0d36dba
 Head: 05bee50b2f4fef4484bab3db3bff7ef4495e98e5
 Native-metric Modal app: ap-GKazfgOuBGh2qUkatyF2HD

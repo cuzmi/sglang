@@ -6,16 +6,6 @@
   "source_commit": "1ed2579c82b8edfb4d507f7e1af36438bca0f554",
   "source_root": "modal_sglang",
   "source_files": {
-    "diffusion-prs/anima-modulate-fusion/.gitattributes": {
-      "source_path": "anima/.gitattributes",
-      "bytes": 89,
-      "sha256": "997eaa2b5c13b95a88e864c8ef2ae13a6896bff218ae9278612956bc46d05fc8"
-    },
-    "diffusion-prs/anima-modulate-fusion/.gitignore": {
-      "source_path": "anima/.gitignore",
-      "bytes": 36,
-      "sha256": "54d581a1abb03a7176fb94064ec91aea1df118f3031e835522d8b9c8b65759ff"
-    },
     "diffusion-prs/anima-modulate-fusion/EVIDENCE.json": {
       "source_path": "anima/EVIDENCE.json",
       "bytes": 5100,
@@ -36,21 +26,6 @@
       "bytes": 8606,
       "sha256": "660b8eb02540f93357f9639cffee4417ddffc5544452ae81d61d4a433a0a3c6b"
     },
-    "diffusion-prs/anima-modulate-fusion/analyze_dispatch.py": {
-      "source_path": "anima/analyze_dispatch.py",
-      "bytes": 4360,
-      "sha256": "ff8d7f5f894bf4c53f7b1544c000c010f991bf93af953e47a10b9d14d9937f87"
-    },
-    "diffusion-prs/anima-modulate-fusion/analyze_results.py": {
-      "source_path": "anima/analyze_results.py",
-      "bytes": 4866,
-      "sha256": "a2479ba0e9962fad70ce75d5681818b932e0a993f9318088ddb72ec24b8cb7ca"
-    },
-    "diffusion-prs/anima-modulate-fusion/anima_experiment.py": {
-      "source_path": "anima/anima_experiment.py",
-      "bytes": 11309,
-      "sha256": "4b9efe41a00c529e2fac02562a8f1e65971732f5fc8e1745afdd2b0f92f82d6f"
-    },
     "diffusion-prs/anima-modulate-fusion/cross_model/EVIDENCE.json": {
       "source_path": "anima/cross_model/EVIDENCE.json",
       "bytes": 2052,
@@ -65,16 +40,6 @@
       "source_path": "anima/cross_model/REPORT.txt",
       "bytes": 1917,
       "sha256": "75fcf866aebebe13a48320d70a8d5d112951ad5e634c75ed7baf18319b3fd6a7"
-    },
-    "diffusion-prs/anima-modulate-fusion/cross_model/analyze.py": {
-      "source_path": "anima/cross_model/analyze.py",
-      "bytes": 4276,
-      "sha256": "32098934874e76776f305ba2989c2e2e395a2dadd3011f6618285dc672476a74"
-    },
-    "diffusion-prs/anima-modulate-fusion/cross_model/check_callers.py": {
-      "source_path": "anima/cross_model/check_callers.py",
-      "bytes": 7539,
-      "sha256": "4e818a136c13ff096f55c5f9e490218e2ed8335811942362097ba6cd57bfbf3c"
     },
     "diffusion-prs/anima-modulate-fusion/cross_model/evidence/baseline/callers.json": {
       "source_path": "anima/cross_model/evidence/baseline/callers.json",
@@ -121,11 +86,6 @@
       "bytes": 3433,
       "sha256": "022a0418ea1cfcced952e5a3b896ae7dfe4568e4d905baf18cd905887abde30a"
     },
-    "diffusion-prs/anima-modulate-fusion/cross_model/run_modal.py": {
-      "source_path": "anima/cross_model/run_modal.py",
-      "bytes": 4085,
-      "sha256": "4bc4ab924cae69a6df18022891093d1f08e5b1fbe216f39368d4ce15ee2fc282"
-    },
     "diffusion-prs/anima-modulate-fusion/dispatch-abccba-launch.log": {
       "source_path": "anima/dispatch-abccba-launch.log",
       "bytes": 131104,
@@ -135,11 +95,6 @@
       "source_path": "anima/dispatch-pre-commit.log",
       "bytes": 2542,
       "sha256": "cf8d6ac54e7852e6dea81616361aaa45ba267ebe5f8bdbaacf354a89e1b52ea6"
-    },
-    "diffusion-prs/anima-modulate-fusion/dispatch_abccba.py": {
-      "source_path": "anima/dispatch_abccba.py",
-      "bytes": 7172,
-      "sha256": "04cbcd06d84959beb799d214ccc3afde2921d05779be51ee6f3d1639d0c6ae64"
     },
     "diffusion-prs/anima-modulate-fusion/download-baseline-v2.log": {
       "source_path": "anima/download-baseline-v2.log",
@@ -160,11 +115,6 @@
       "source_path": "anima/download-final.log",
       "bytes": 2659,
       "sha256": "8f18ba4b7e0510ac23a491e4c758610f2bf709c3b80793431bdc07e4e0234467"
-    },
-    "diffusion-prs/anima-modulate-fusion/download_results.py": {
-      "source_path": "anima/download_results.py",
-      "bytes": 843,
-      "sha256": "9c58aa4251982f3269fa7a508ac9c95a7af74ebc8cf1cb10af927a35c33a5169"
     },
     "diffusion-prs/anima-modulate-fusion/evidence/dispatch/REPORT.txt": {
       "source_path": "anima/evidence/dispatch/REPORT.txt",
@@ -266,16 +216,6 @@
       "bytes": 30371,
       "sha256": "2b58eb72cda4aa9f5870187f34ce1887fbde000c6df9b71c14c9c8dd37c9cb95"
     },
-    "diffusion-prs/anima-modulate-fusion/kernel_screen.py": {
-      "source_path": "anima/kernel_screen.py",
-      "bytes": 8383,
-      "sha256": "81b31e6bef2b5b54ec0181b761efc69794772b08d078f997abe13a9040c435b2"
-    },
-    "diffusion-prs/anima-modulate-fusion/kernel_screen_modal.py": {
-      "source_path": "anima/kernel_screen_modal.py",
-      "bytes": 1519,
-      "sha256": "cdc56dafbe872e10aece7cc8c983335cee2c16edf0886f64e80e4c4f7c669347"
-    },
     "diffusion-prs/anima-modulate-fusion/launch-v2.log": {
       "source_path": "anima/launch-v2.log",
       "bytes": 37708,
@@ -306,35 +246,15 @@
       "bytes": 37921,
       "sha256": "4396e5852163cc2802e8234fc48e64a2efe32d6213d73d1746189bc3d4129b45"
     },
-    "diffusion-prs/anima-modulate-fusion/patches/candidate.patch": {
-      "source_path": "anima/patches/candidate.patch",
-      "bytes": 1818,
-      "sha256": "ade58c0bd29048c090758fcac29e57dd49ca14d02b751a59e4a266f677074a77"
-    },
-    "diffusion-prs/anima-modulate-fusion/patches/dispatch_candidate.patch": {
-      "source_path": "anima/patches/dispatch_candidate.patch",
-      "bytes": 4059,
-      "sha256": "45d17104349bc3d655b6299045534bf2ecff99da55c8fe29916aeb89ca013fa2"
-    },
     "diffusion-prs/anima-modulate-fusion/pre-commit.log": {
       "source_path": "anima/pre-commit.log",
       "bytes": 4210,
       "sha256": "23f33d3bf68e875d67d97de29747334cc94d14c2044f3075ce14ded447344db9"
     },
-    "diffusion-prs/anima-modulate-fusion/prepare_inputs.py": {
-      "source_path": "anima/prepare_inputs.py",
-      "bytes": 2567,
-      "sha256": "e411aba848d68b924cb0164afcfe5be29f9668a7f809e77e486f2870ad340029"
-    },
     "diffusion-prs/anima-modulate-fusion/rebase-pre-commit.log": {
       "source_path": "anima/rebase-pre-commit.log",
       "bytes": 2572,
       "sha256": "115799eb4a740e1ef4a681e6bb3457eb1d1845ddfc1f3aa8a199e6b9d1e76907"
-    },
-    "diffusion-prs/anima-modulate-fusion/rebase_validation/.gitattributes": {
-      "source_path": "anima/rebase_validation/.gitattributes",
-      "bytes": 80,
-      "sha256": "4271bda00d49f54b888bd21f7dcc56934d347d61dcec5b16ae8edf596c577cb8"
     },
     "diffusion-prs/anima-modulate-fusion/rebase_validation/EVIDENCE.json": {
       "source_path": "anima/rebase_validation/EVIDENCE.json",
@@ -350,21 +270,6 @@
       "source_path": "anima/rebase_validation/REPORT.txt",
       "bytes": 1569,
       "sha256": "1881c535750ab4fc1fb1f3d3abbc4a37e35fcc75baa7a3d9f4a3ca9eaf01105f"
-    },
-    "diffusion-prs/anima-modulate-fusion/rebase_validation/analyze.py": {
-      "source_path": "anima/rebase_validation/analyze.py",
-      "bytes": 4086,
-      "sha256": "71cb158e08b82ec9a221e68e375345afb60e06e641c738d929f55c52b52f31d9"
-    },
-    "diffusion-prs/anima-modulate-fusion/rebase_validation/candidate.patch": {
-      "source_path": "anima/rebase_validation/candidate.patch",
-      "bytes": 3646,
-      "sha256": "a38b9ff695624f6e092869e6ff22076a929cfc60f7ac604e51bd8e51c6590f09"
-    },
-    "diffusion-prs/anima-modulate-fusion/rebase_validation/check_callers.py": {
-      "source_path": "anima/rebase_validation/check_callers.py",
-      "bytes": 7466,
-      "sha256": "a984a1f8cbabc7ed623c1881b5f4a1fd24872ecad51b31ea3995ac5f821a2e62"
     },
     "diffusion-prs/anima-modulate-fusion/rebase_validation/evidence/baseline/callers.json": {
       "source_path": "anima/rebase_validation/evidence/baseline/callers.json",
@@ -436,21 +341,6 @@
       "bytes": 499,
       "sha256": "6b7ff41c9eba6e9adfde495c0af87b5b0378b3c40a2ef09bd6ddc2b2177bfd18"
     },
-    "diffusion-prs/anima-modulate-fusion/rebase_validation/run_modal.py": {
-      "source_path": "anima/rebase_validation/run_modal.py",
-      "bytes": 5689,
-      "sha256": "d2f13fc3efeef7e2e5460f2cdedae3ad1cb1bf4fbc0111b16e9b8d2c10de38bc"
-    },
-    "diffusion-prs/anima-modulate-fusion/rebase_validation/verify_anima.py": {
-      "source_path": "anima/rebase_validation/verify_anima.py",
-      "bytes": 3761,
-      "sha256": "4f1b09f96c11b62b7ca02377073f998f2a4c21a128b1da17ecce46b7431f0028"
-    },
-    "diffusion-prs/anima-modulate-fusion/rebased_perf/.gitattributes": {
-      "source_path": "anima/rebased_perf/.gitattributes",
-      "bytes": 20,
-      "sha256": "fb25a78a6381f5646d71aacea4486f6aeeeb03c4d71740227011024be0d20a8f"
-    },
     "diffusion-prs/anima-modulate-fusion/rebased_perf/EVIDENCE.json": {
       "source_path": "anima/rebased_perf/EVIDENCE.json",
       "bytes": 3382,
@@ -470,11 +360,6 @@
       "source_path": "anima/rebased_perf/REPORT-synchronized.txt",
       "bytes": 2722,
       "sha256": "f91ef5f06fd95a1034c7298b71443b96485e7db2f0acd3ce38a543f95bbf1355"
-    },
-    "diffusion-prs/anima-modulate-fusion/rebased_perf/analyze.py": {
-      "source_path": "anima/rebased_perf/analyze.py",
-      "bytes": 7031,
-      "sha256": "0752c338d654b0f12c52ccf63af56e5f182e7fd4c361f7b50321883ac213f21b"
     },
     "diffusion-prs/anima-modulate-fusion/rebased_perf/evidence/native/01-baseline.json": {
       "source_path": "anima/rebased_perf/evidence/native/01-baseline.json",
@@ -575,21 +460,6 @@
       "source_path": "anima/rebased_perf/evidence/synchronized/summary.json",
       "bytes": 7938,
       "sha256": "8add4e9ec0a12e9a598b8fa552f6f342ac12036881bbae48321a86acf5218ccf"
-    },
-    "diffusion-prs/anima-modulate-fusion/rebased_perf/evidence/synchronized/timing.patch": {
-      "source_path": "anima/rebased_perf/evidence/synchronized/timing.patch",
-      "bytes": 997,
-      "sha256": "a3a87df01950ea41e74575ff481cd16df846e92f52a7ac17b0dfc0e6844b32b9"
-    },
-    "diffusion-prs/anima-modulate-fusion/rebased_perf/run_modal.py": {
-      "source_path": "anima/rebased_perf/run_modal.py",
-      "bytes": 7890,
-      "sha256": "ab152e157e6586f90e257e09de7389d6016749c7fb664a4041a948aa7d6895fa"
-    },
-    "diffusion-prs/anima-modulate-fusion/rebased_perf/run_modal_synchronized.py": {
-      "source_path": "anima/rebased_perf/run_modal_synchronized.py",
-      "bytes": 9619,
-      "sha256": "abde84133f45bcdb9ec339716bcb50c011b6f8c600ffe71b0e6abf6a9561aae5"
     },
     "diffusion-prs/anima-modulate-fusion/results/anima-20261003T224511Z-017ed58d/01-baseline/generate.log": {
       "source_path": "anima/results/anima-20261003T224511Z-017ed58d/01-baseline/generate.log",
@@ -1366,46 +1236,6 @@
       "bytes": 3008,
       "sha256": "c52fb114f63c262c037ee04bcfef0dd785744f3999bd83166eb4b197a49de81f"
     },
-    "diffusion-prs/anima-modulate-fusion/results/kernel-screen-20261003T231957Z-36d5d3ca/r16_t256.cuh": {
-      "source_path": "anima/results/kernel-screen-20261003T231957Z-36d5d3ca/r16_t256.cuh",
-      "bytes": 5094,
-      "sha256": "28ab024f1721d74088728cf5a506f5eb6347c8f18f956aebf8bf9a8ee5781661"
-    },
-    "diffusion-prs/anima-modulate-fusion/results/kernel-screen-20261003T231957Z-36d5d3ca/r1_t128.cuh": {
-      "source_path": "anima/results/kernel-screen-20261003T231957Z-36d5d3ca/r1_t128.cuh",
-      "bytes": 5093,
-      "sha256": "2eac11d1bc6510d5bb8cfa088ba8335328a332c3373c4c035566473d8968d118"
-    },
-    "diffusion-prs/anima-modulate-fusion/results/kernel-screen-20261003T231957Z-36d5d3ca/r1_t256.cuh": {
-      "source_path": "anima/results/kernel-screen-20261003T231957Z-36d5d3ca/r1_t256.cuh",
-      "bytes": 5093,
-      "sha256": "f6b3be2282f2d133992495cfc3b00931a7b7bcb863959a2ff9a69fa6d4d4c375"
-    },
-    "diffusion-prs/anima-modulate-fusion/results/kernel-screen-20261003T231957Z-36d5d3ca/r2_t128.cuh": {
-      "source_path": "anima/results/kernel-screen-20261003T231957Z-36d5d3ca/r2_t128.cuh",
-      "bytes": 5093,
-      "sha256": "9a3868a8a2f63c793a17dc68c3f28a5669b8a8bb2a97a7c2427ee93f323ccb83"
-    },
-    "diffusion-prs/anima-modulate-fusion/results/kernel-screen-20261003T231957Z-36d5d3ca/r2_t256.cuh": {
-      "source_path": "anima/results/kernel-screen-20261003T231957Z-36d5d3ca/r2_t256.cuh",
-      "bytes": 5093,
-      "sha256": "cdc29257ccfa06008314fd00d1f186e514234e4a56012672340bc9a9d850f078"
-    },
-    "diffusion-prs/anima-modulate-fusion/results/kernel-screen-20261003T231957Z-36d5d3ca/r4_t128.cuh": {
-      "source_path": "anima/results/kernel-screen-20261003T231957Z-36d5d3ca/r4_t128.cuh",
-      "bytes": 5093,
-      "sha256": "b6bc8dc035f62901cce37378923c2d6c739400b685d5e9140aadc0f1f8ecadc1"
-    },
-    "diffusion-prs/anima-modulate-fusion/results/kernel-screen-20261003T231957Z-36d5d3ca/r8_t128.cuh": {
-      "source_path": "anima/results/kernel-screen-20261003T231957Z-36d5d3ca/r8_t128.cuh",
-      "bytes": 5093,
-      "sha256": "317473fb11a39a2bb1ce3ce39c4824fb61e1a4ba0ae34481ce83f270a60f9bf6"
-    },
-    "diffusion-prs/anima-modulate-fusion/results/kernel-screen-20261003T231957Z-36d5d3ca/r8_t256.cuh": {
-      "source_path": "anima/results/kernel-screen-20261003T231957Z-36d5d3ca/r8_t256.cuh",
-      "bytes": 5093,
-      "sha256": "3172076cddf0586a2ae81d90a42459c887f036cc578c6c751d399655f1d49fe5"
-    },
     "diffusion-prs/anima-modulate-fusion/results/kernel-screen-20261003T231957Z-36d5d3ca/screen.json": {
       "source_path": "anima/results/kernel-screen-20261003T231957Z-36d5d3ca/screen.json",
       "bytes": 44084,
@@ -1415,16 +1245,6 @@
       "source_path": "anima/results/kernel-screen-20261003T231957Z-36d5d3ca/screen.log",
       "bytes": 29386,
       "sha256": "3fc3d383dbf13a517ef45f86b91d8a99e658232a1087e9161579af54bba14c53"
-    },
-    "diffusion-prs/anima-modulate-fusion/verify_anima.py": {
-      "source_path": "anima/verify_anima.py",
-      "bytes": 4551,
-      "sha256": "33d8784a18d5856970241e1cc613d8afd380943845d72ad2ec7768371235aaf0"
-    },
-    "diffusion-prs/ming-image-rmsnorm/.gitignore": {
-      "source_path": "ming_image/rmsnorm/.gitignore",
-      "bytes": 714,
-      "sha256": "8eb27a5ce0a9d95753b0e6e87b28177c183936d2dda5f064d396a7a76be88a29"
     },
     "diffusion-prs/ming-image-rmsnorm/EVIDENCE.json": {
       "source_path": "ming_image/rmsnorm/EVIDENCE.json",
@@ -1450,16 +1270,6 @@
       "source_path": "ming_image/rmsnorm/TEST_REVIEW.md",
       "bytes": 3178,
       "sha256": "479a0c49e87be8664c74d49e34e59074c6b5908fea9214c9853ca338ea7e7914"
-    },
-    "diffusion-prs/ming-image-rmsnorm/analyze_results.py": {
-      "source_path": "ming_image/rmsnorm/analyze_results.py",
-      "bytes": 3396,
-      "sha256": "40682e598fadbaebc273de76a3d67201c8529b615cfa92a2f91b2dec6200c6c5"
-    },
-    "diffusion-prs/ming-image-rmsnorm/candidate.patch": {
-      "source_path": "ming_image/rmsnorm/candidate.patch",
-      "bytes": 7772,
-      "sha256": "8b537c76af15e2a2415e63872781c0726bfa1c9718efea3f4b845d4286121970"
     },
     "diffusion-prs/ming-image-rmsnorm/download-full.log": {
       "source_path": "ming_image/rmsnorm/download-full.log",
@@ -1506,26 +1316,6 @@
       "bytes": 850,
       "sha256": "9969e2c3622cb6ae73544ff2a819fa4bd8918c2915848792f31b9f32bc29405a"
     },
-    "diffusion-prs/ming-image-rmsnorm/experiment.py": {
-      "source_path": "ming_image/rmsnorm/experiment.py",
-      "bytes": 8237,
-      "sha256": "e68074edeb039c3762e3677f866d68cb29895e76a103df00b0625843c03e9ed5"
-    },
-    "diffusion-prs/ming-image-rmsnorm/inputs/candidate_ming_image.py": {
-      "source_path": "ming_image/rmsnorm/inputs/candidate_ming_image.py",
-      "bytes": 9581,
-      "sha256": "1bc9d2b61589a5ef5354ed5d637d9cf72a440c6d11087859f7de59fcdeb1ffc2"
-    },
-    "diffusion-prs/ming-image-rmsnorm/inputs/test_model_fast_paths.py": {
-      "source_path": "ming_image/rmsnorm/inputs/test_model_fast_paths.py",
-      "bytes": 70929,
-      "sha256": "450b441c102ce11177ec0687a894f802042c31a36911254f54912e8ae89bb3e4"
-    },
-    "diffusion-prs/ming-image-rmsnorm/inputs/test_rmsnorm_preserve_reduction.py": {
-      "source_path": "ming_image/rmsnorm/inputs/test_rmsnorm_preserve_reduction.py",
-      "bytes": 2956,
-      "sha256": "13965c3c9f93cae202c0bd7fac8d4616aa688f12db80c5305393b7da136b771c"
-    },
     "diffusion-prs/ming-image-rmsnorm/launch-full-v2.log": {
       "source_path": "ming_image/rmsnorm/launch-full-v2.log",
       "bytes": 176495,
@@ -1555,11 +1345,6 @@
       "source_path": "ming_image/rmsnorm/pre-commit.log",
       "bytes": 4210,
       "sha256": "38c2e1fc2da4543048efb3fc864e810820f46ca805588f79a9ecd2f28881e170"
-    },
-    "diffusion-prs/ming-image-rmsnorm/prepare_inputs.py": {
-      "source_path": "ming_image/rmsnorm/prepare_inputs.py",
-      "bytes": 1552,
-      "sha256": "98c5efd4d7a74bd1bb59e07f47befcf222b3c24f883aeb1ecc63b8e9136fdac7"
     },
     "diffusion-prs/ming-image-rmsnorm/results/full-20261003T232158Z/01-A/generate.log": {
       "source_path": "ming_image/rmsnorm/results/full-20261003T232158Z/01-A/generate.log",
@@ -1785,11 +1570,6 @@
       "source_path": "ming_image/rmsnorm/source_manifest.json",
       "bytes": 623,
       "sha256": "7f8001397edbe706e2585eb2c9cd9de0bcbc2c19907c3cea9718996f726a1db2"
-    },
-    "diffusion-prs/ming-image-rmsnorm/verify_rmsnorm.py": {
-      "source_path": "ming_image/rmsnorm/verify_rmsnorm.py",
-      "bytes": 3026,
-      "sha256": "95a1a355527652c0735a0cee60e689a2c8490cfd921cc782447a4630ee093ca5"
     }
   },
   "validation": {

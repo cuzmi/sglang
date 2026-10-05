@@ -1,5 +1,9 @@
 Anima modulation experiments — archive and reproduction
 
+Evidence-only archive. Reproduction scripts and source patches are retained at:
+https://github.com/cuzmi/sglang/tree/893495236a5ba25667313768b5e791fc51e355d8/diffusion-prs/anima-modulate-fusion
+Commands and source-file paths below refer to that fixed snapshot.
+
 Scope
   SGLang baseline: 6fa3fe69e2e5e19b75cadd9fc285b72634551992
   Source branch: perf/anima-modulate-fusion
@@ -22,20 +26,9 @@ eligibility check. All six final outputs match exactly; 36 standalone numerical
 cases, CUDA graph replay, 12 modulate tests and 17 Anima tests passed.
 
 What is archived
-  The executed benchmark/validation/analysis scripts, source patches, compact
-  manifests and numerical samples, summaries, existing-test output, and drafts.
-  Historical reports/manifests retain the original remote paths. Their large
-  referenced artifacts remain in Modal or the local ignored results directory.
-  evidence/initial_harness_sha256.json records the historical harness, before
-  prepare_inputs.py was repaired for two-file source reconstruction. Current
-  archive hashes live in EVIDENCE.json. Benchmark execution scripts are unchanged.
-
-What stays local / on Modal
-  inputs/: generated source tarball and overlaid source files.
-  results/: full logs, generated images, profiler traces and extracted traces.
-  *.log, __pycache__/: launcher logs and Python caches.
-  These paths are ignored. No model weights, credentials or full source tree
-  are committed. Unrelated experiments are not part of this archive.
+  Reports, manifests, numerical samples, test output, raw results, logs,
+  generated images and profiler traces. Source hashes identify the measured code.
+  Historical source paths and commands refer to the fixed snapshot linked above.
 
 Recreate exact input sources without changing any SGLang checkout
   python prepare_inputs.py /path/to/sglang
