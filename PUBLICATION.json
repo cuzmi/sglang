@@ -1842,5 +1842,16 @@
     "existing_manifest_entries_verified": 127,
     "current_pr_production_source_hashes_verified": true,
     "new_gpu_runs": 0
-  }
+  },
+  "additional_publications": [
+    {
+      "published_date": "2026-10-05",
+      "experiment": "diffusion-prs/anima-fp32-rope",
+      "code_pr": "https://github.com/sgl-project/sglang/pull/42598",
+      "runtime_commit": "6143cce2d2f5701b07ae155ad652705cabe7b646",
+      "run_id": "rope-20261004T161949Z-d5819700",
+      "archive_manifest": "diffusion-prs/anima-fp32-rope/ARCHIVE_MANIFEST.json",
+      "new_gpu_runs": 0
+    }
+  ]
 }

@@ -1,0 +1,18 @@
+{
+  "base": "6fa3fe69e2e5e19b75cadd9fc285b72634551992",
+  "baseline_model_sha256": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6",
+  "files": {
+    "python/sglang/multimodal_gen/runtime/models/dits/anima.py": {
+      "file": "candidate-0.py",
+      "sha256": "221ea62e5a7e2278377d9793f643f680ad45bf178fc3c30afc8bcb0407ae58f1"
+    },
+    "python/sglang/kernels/ops/diffusion/__init__.py": {
+      "file": "candidate-1.py",
+      "sha256": "3c8797b9036ad241f2744ae227cd673b745bd72d1509364f4c790e4942fe652e"
+    },
+    "python/sglang/kernels/ops/diffusion/rope/rope_rotate_half_fp32.py": {
+      "file": "candidate-2.py",
+      "sha256": "5dce9574d82e574889f709374fe20f7a5fcca6b185407e886006b882835d5fce"
+    }
+  }
+}

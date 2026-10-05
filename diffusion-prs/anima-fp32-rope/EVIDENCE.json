@@ -1,0 +1,217 @@
+{
+  "status": "complete",
+  "commit": "6143cce2d2f5701b07ae155ad652705cabe7b646",
+  "branch": "perf/anima-fp32-rope",
+  "worktree": "/Users/cuzimi/.codex/worktrees/anima-fp32-rope/sglang",
+  "baseline": "6fa3fe69e2e5e19b75cadd9fc285b72634551992",
+  "modal_app": "https://modal.com/apps/xinyuj2/main/ap-a6OiRZ79GISu7M47A5Alu5",
+  "run_id": "rope-20261004T161949Z-d5819700",
+  "all_8_output_files_verified_locally": true,
+  "runtime_sources_match_experiment": true,
+  "source_tree_clean": true,
+  "new_unit_tests": false,
+  "pushed": true,
+  "pr_created": false,
+  "files": {
+    "results/rope-20261004T161949Z-d5819700/summary.json": {
+      "bytes": 16957,
+      "sha256": "86c29a27b2bab3722a569a79c5d70795d396b20df4fb68b554beeaf190cf32b7"
+    },
+    "results/rope-20261004T161949Z-d5819700/operator-fused.json": {
+      "bytes": 35685,
+      "sha256": "6845d95de8069517fefa95efc78e60ce3202c23c990ff739eb21b84003a24736"
+    },
+    "results/rope-20261004T161949Z-d5819700/operator.log": {
+      "bytes": 1549,
+      "sha256": "10a3e3c21457aa80c463f88b31b7ee3470f921f434cc630372613b3f987e2fcb"
+    },
+    "results/rope-20261004T161949Z-d5819700/operator-eager.json": {
+      "bytes": 470131,
+      "sha256": "5f13a394ff93318f4ebdb961a5e8c21d1e78fe8c200f8c07b725a5bd01758c4f"
+    },
+    "results/rope-20261004T161949Z-d5819700/manifest.json": {
+      "bytes": 37618,
+      "sha256": "8d6df49cd7cd2aeda2c163b947b1dd73e9fed267444332ff90c676038478cf92"
+    },
+    "results/rope-20261004T161949Z-d5819700/operator.json": {
+      "bytes": 10875,
+      "sha256": "76fb74cbcfde9a9a1e45a169f0532d011e893941e6aa4f1da07029c7c3505419"
+    },
+    "results/rope-20261004T161949Z-d5819700/existing-tests.log": {
+      "bytes": 552,
+      "sha256": "fd1f88443e3c87d25c0c5e7e470814e3562d383d0a42c8879064311c2959f6e9"
+    },
+    "results/rope-20261004T161949Z-d5819700/05-fused/perf.json": {
+      "bytes": 4536,
+      "sha256": "6c2cd73803a69dad09cacce39d530cd1b2d28b463a3f360d219f46c315d774dc"
+    },
+    "results/rope-20261004T161949Z-d5819700/05-fused/generate.log": {
+      "bytes": 16021,
+      "sha256": "fe586adaa210507639bc4e30589cecb6b0a4f8a5424d5eac8e41fce0113a770f"
+    },
+    "results/rope-20261004T161949Z-d5819700/05-fused/outputs/sample.png": {
+      "bytes": 1549631,
+      "sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d"
+    },
+    "results/rope-20261004T161949Z-d5819700/04-fused/perf.json": {
+      "bytes": 4536,
+      "sha256": "9d332a700e39c2ae326b1687982f02b112cb9113e83e00ab8efb2476cca0364a"
+    },
+    "results/rope-20261004T161949Z-d5819700/04-fused/generate.log": {
+      "bytes": 16021,
+      "sha256": "9b0019f1d5c8fb53738cd1f5b65f593126baf620a75ab48619792be06538881a"
+    },
+    "results/rope-20261004T161949Z-d5819700/04-fused/outputs/sample.png": {
+      "bytes": 1549631,
+      "sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d"
+    },
+    "results/rope-20261004T161949Z-d5819700/profile-fused/perf.json": {
+      "bytes": 4545,
+      "sha256": "213fc66fda0fc1f2a9f62b1623fd73c0adafa6a767eefb3856f2efd37c956416"
+    },
+    "results/rope-20261004T161949Z-d5819700/profile-fused/dispatch-1348.json": {
+      "bytes": 128,
+      "sha256": "043dd953367393fa39095cb6bfae0eefad8c3aaeeefd051aaaae87fb9ba7f994"
+    },
+    "results/rope-20261004T161949Z-d5819700/profile-fused/generate.log": {
+      "bytes": 16717,
+      "sha256": "35f82c2e558b70fca6731a2be58d3e12c6d6068a7a5f333a26c54e16f224fe3e"
+    },
+    "results/rope-20261004T161949Z-d5819700/profile-fused/traces/9dcb498e-d501-46d0-976a-b4e173f85e0e-5_steps-global-rank0.trace.json.gz": {
+      "bytes": 11042651,
+      "sha256": "d4850e1b9a3678d86546ce3ec4f1744e576bc16b12eb5b64ffbf39e2e908f1fd"
+    },
+    "results/rope-20261004T161949Z-d5819700/profile-fused/outputs/sample.png": {
+      "bytes": 1549631,
+      "sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d"
+    },
+    "results/rope-20261004T161949Z-d5819700/01-eager/perf.json": {
+      "bytes": 4533,
+      "sha256": "ad97fe883250473c225136098f4ea9a9808ee6146532928135b7bc0c5f4a6f0e"
+    },
+    "results/rope-20261004T161949Z-d5819700/01-eager/generate.log": {
+      "bytes": 16108,
+      "sha256": "ad2ee836adf88000d7c9b2f1b741ad804fb01dcc945c9f9e17a5e824796d334c"
+    },
+    "results/rope-20261004T161949Z-d5819700/01-eager/outputs/sample.png": {
+      "bytes": 1549631,
+      "sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d"
+    },
+    "results/rope-20261004T161949Z-d5819700/03-eager/perf.json": {
+      "bytes": 4542,
+      "sha256": "02ca3c1cecb5d92f1b457d7ed55d79a5c331be0df80f22083fc40604c7a265e9"
+    },
+    "results/rope-20261004T161949Z-d5819700/03-eager/generate.log": {
+      "bytes": 16021,
+      "sha256": "0e45c4f0d9438431f5e5b17fd44d6e44387eb108008669f826a5e54267d770e0"
+    },
+    "results/rope-20261004T161949Z-d5819700/03-eager/outputs/sample.png": {
+      "bytes": 1549631,
+      "sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d"
+    },
+    "results/rope-20261004T161949Z-d5819700/profile-eager/perf.json": {
+      "bytes": 4532,
+      "sha256": "6e4eab6c6ce6bfea6fa4c5947410b611d86c59912702e39abb2ce43f2e11bb47"
+    },
+    "results/rope-20261004T161949Z-d5819700/profile-eager/generate.log": {
+      "bytes": 16717,
+      "sha256": "3f110de9370a0059d5c16d026d0e7635a94168687797e8f933aea9b5a5eb5b77"
+    },
+    "results/rope-20261004T161949Z-d5819700/profile-eager/traces/bf8f3c88-c229-444e-9d9f-84120bfdac3b-5_steps-global-rank0.trace.json.gz": {
+      "bytes": 10920113,
+      "sha256": "7822a7d1862533ba7043cb762c2aac5857fe44028d44da45220656af71c898c3"
+    },
+    "results/rope-20261004T161949Z-d5819700/profile-eager/outputs/sample.png": {
+      "bytes": 1549631,
+      "sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d"
+    },
+    "results/rope-20261004T161949Z-d5819700/06-eager/perf.json": {
+      "bytes": 4537,
+      "sha256": "cb37d0500efe2a08605af62457bb8542a49d0d02a8ee158218b3ab58107ef562"
+    },
+    "results/rope-20261004T161949Z-d5819700/06-eager/generate.log": {
+      "bytes": 16021,
+      "sha256": "63636bb69337febeb00f79b5c6653837007ab97d02ebd9f4b8750c1a76fb1b6f"
+    },
+    "results/rope-20261004T161949Z-d5819700/06-eager/outputs/sample.png": {
+      "bytes": 1549631,
+      "sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d"
+    },
+    "results/rope-20261004T161949Z-d5819700/02-eager/perf.json": {
+      "bytes": 4537,
+      "sha256": "e274a184e4fe07a496e8e8ef28db886aa80250460cc114e22deb15d81162cc6c"
+    },
+    "results/rope-20261004T161949Z-d5819700/02-eager/generate.log": {
+      "bytes": 16021,
+      "sha256": "93dbe937c710e713e48b98c922845f98329828c95e71204e540d1727d30d072e"
+    },
+    "results/rope-20261004T161949Z-d5819700/02-eager/outputs/sample.png": {
+      "bytes": 1549631,
+      "sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d"
+    },
+    "experiment.py": {
+      "bytes": 8255,
+      "sha256": "d7cc3ead709887061e7c3c2fbbe4870510b74b725bd59629a448bba859350018"
+    },
+    "verify_rope.py": {
+      "bytes": 7031,
+      "sha256": "14ae4d4897c1268933d6ab82ead94d05305a48b065241056dce71840bdde1229"
+    },
+    "download.py": {
+      "bytes": 712,
+      "sha256": "8df68af1b313e6bb0309dc805ff152f282ec05d654527308ef92480ab5cd0733"
+    },
+    "analyze.py": {
+      "bytes": 3165,
+      "sha256": "bdcce90fd95b78322ebaab61a49a2ef8bfcbe891356a36b8be5f866e48cca67e"
+    },
+    "inputs/manifest.json": {
+      "bytes": 734,
+      "sha256": "3ada4b753c37ce3473c9945e918c3a039483b0f54b31c0afd4d68f757b70586d"
+    },
+    "inputs/runtime.patch": {
+      "bytes": 8158,
+      "sha256": "7c16e3f0a687be9c650d3e3c2d81d3ef635585c782ef692ed26399d3affb6054"
+    },
+    "README.txt": {
+      "bytes": 6053,
+      "sha256": "a55298a5a68670be57f0ebca149673e0fa4010112eba0a0965d29bfbe7886a59"
+    },
+    "PR_BODY.txt": {
+      "bytes": 6590,
+      "sha256": "248da1cde25a1ddb16f8110defd6750e1c8ae55510131e65d3fb4ac9c74cc615"
+    },
+    "PR_TITLE.txt": {
+      "bytes": 64,
+      "sha256": "abf69549801cd2704c798bbbad55c54b5631f0c2f127fa4e5bae7beb58264bcf"
+    },
+    "PR_REFERENCES.txt": {
+      "bytes": 959,
+      "sha256": "13db66214d1b6ddcf6365d6d66b59c764ace27524fb32e192d02404011861a74"
+    },
+    "launch.log": {
+      "bytes": 164506,
+      "sha256": "a7ff5ffd84f401813b35b5a0e97881420d5b453b73e5f1e4e7098c0ee49ce63f"
+    },
+    "pre-commit-python313.log": {
+      "bytes": 2542,
+      "sha256": "cf8d6ac54e7852e6dea81616361aaa45ba267ebe5f8bdbaacf354a89e1b52ea6"
+    },
+    "PR_IMAGES.txt": {
+      "bytes": 1169,
+      "sha256": "56ab14dcc98c9c961c9fdeb6f0dec3e03ec243f8c3ca969df1a60ca4f20fc564"
+    },
+    "pr_assets/baseline.png": {
+      "bytes": 1549631,
+      "sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d"
+    },
+    "pr_assets/fused.png": {
+      "bytes": 1549631,
+      "sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d"
+    }
+  },
+  "pr_images_prepared": true,
+  "pr_images_uploaded": false,
+  "published_branch_url": "https://github.com/cuzmi/sglang/tree/perf/anima-fp32-rope",
+  "verified_remote_commit": "6143cce2d2f5701b07ae155ad652705cabe7b646"
+}

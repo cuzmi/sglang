@@ -5,3 +5,4 @@
 *.gz binary
 diffusion-prs/ming-image-rmsnorm/evidence/kernel-tests.txt -whitespace
 diffusion-prs/ming-image-rmsnorm/evidence/wrapper-tests.txt -whitespace
+diffusion-prs/anima-fp32-rope/results/** -whitespace

@@ -1,0 +1,1506 @@
+{
+  "status": "complete",
+  "baseline_commit": "6fa3fe69e2e5e19b75cadd9fc285b72634551992",
+  "sources": {
+    "base": "6fa3fe69e2e5e19b75cadd9fc285b72634551992",
+    "baseline_model_sha256": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6",
+    "files": {
+      "python/sglang/multimodal_gen/runtime/models/dits/anima.py": {
+        "file": "candidate-0.py",
+        "sha256": "221ea62e5a7e2278377d9793f643f680ad45bf178fc3c30afc8bcb0407ae58f1"
+      },
+      "python/sglang/kernels/ops/diffusion/__init__.py": {
+        "file": "candidate-1.py",
+        "sha256": "3c8797b9036ad241f2744ae227cd673b745bd72d1509364f4c790e4942fe652e"
+      },
+      "python/sglang/kernels/ops/diffusion/rope/rope_rotate_half_fp32.py": {
+        "file": "candidate-2.py",
+        "sha256": "5dce9574d82e574889f709374fe20f7a5fcca6b185407e886006b882835d5fce"
+      }
+    }
+  },
+  "model_id": "circlestone-labs/Anima-Base-v1.0-Diffusers",
+  "model_revision": "073c3a9db359c31ad0e8aa268d15775473c2176c",
+  "gpu": "NVIDIA H200",
+  "cuda": "13.0",
+  "packages": {
+    "torch": "2.13.0+cu130",
+    "triton": "3.7.1",
+    "diffusers": "0.37.0",
+    "transformers": "5.12.1"
+  },
+  "input_sha256": "38372198cc4333e88f710dd2e92b072c9bf918186cd2a32cf94f238beb0c2c18",
+  "validity": "All arms complete; identical logical work and pixels; no concurrent GPU work from this campaign.",
+  "runs": [
+    {
+      "label": "01-eager",
+      "variant": "eager",
+      "profile": false,
+      "seed": 42,
+      "size": 1024,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/rope-20261004T161949Z-d5819700/01-eager/perf.json",
+        "--output-path",
+        "/results/rope-20261004T161949Z-d5819700/01-eager/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3101.4662530000123,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 69.64834500001871
+        },
+        {
+          "step": 1,
+          "duration_ms": 95.27594799999406
+        },
+        {
+          "step": 2,
+          "duration_ms": 95.26542099999347
+        },
+        {
+          "step": 3,
+          "duration_ms": 95.45656299999905
+        },
+        {
+          "step": 4,
+          "duration_ms": 94.95854600001508
+        },
+        {
+          "step": 5,
+          "duration_ms": 95.58819800000151
+        },
+        {
+          "step": 6,
+          "duration_ms": 95.11834599999247
+        },
+        {
+          "step": 7,
+          "duration_ms": 95.46031899998297
+        },
+        {
+          "step": 8,
+          "duration_ms": 95.42199000000551
+        },
+        {
+          "step": 9,
+          "duration_ms": 95.4709199999968
+        },
+        {
+          "step": 10,
+          "duration_ms": 95.12206700000547
+        },
+        {
+          "step": 11,
+          "duration_ms": 95.30963599999609
+        },
+        {
+          "step": 12,
+          "duration_ms": 95.01806399998713
+        },
+        {
+          "step": 13,
+          "duration_ms": 95.51862399999322
+        },
+        {
+          "step": 14,
+          "duration_ms": 95.15354799998477
+        },
+        {
+          "step": 15,
+          "duration_ms": 95.48809200001074
+        },
+        {
+          "step": 16,
+          "duration_ms": 95.07034199998543
+        },
+        {
+          "step": 17,
+          "duration_ms": 95.85331499999938
+        },
+        {
+          "step": 18,
+          "duration_ms": 95.52101599999219
+        },
+        {
+          "step": 19,
+          "duration_ms": 96.05788900000789
+        },
+        {
+          "step": 20,
+          "duration_ms": 95.66391799998542
+        },
+        {
+          "step": 21,
+          "duration_ms": 95.92595200001597
+        },
+        {
+          "step": 22,
+          "duration_ms": 95.63626999999997
+        },
+        {
+          "step": 23,
+          "duration_ms": 95.66184999999905
+        },
+        {
+          "step": 24,
+          "duration_ms": 95.44405599999095
+        },
+        {
+          "step": 25,
+          "duration_ms": 96.61488400001872
+        },
+        {
+          "step": 26,
+          "duration_ms": 96.17045199999552
+        },
+        {
+          "step": 27,
+          "duration_ms": 95.57507900001383
+        },
+        {
+          "step": 28,
+          "duration_ms": 95.64304200000606
+        },
+        {
+          "step": 29,
+          "duration_ms": 95.84791099999279
+        }
+      ],
+      "denoise_ms": 2839.9606029999804,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "mode": "RGB",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6",
+      "phase": "AA"
+    },
+    {
+      "label": "02-eager",
+      "variant": "eager",
+      "profile": false,
+      "seed": 42,
+      "size": 1024,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/rope-20261004T161949Z-d5819700/02-eager/perf.json",
+        "--output-path",
+        "/results/rope-20261004T161949Z-d5819700/02-eager/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3102.705428999997,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 69.67665099998044
+        },
+        {
+          "step": 1,
+          "duration_ms": 95.16580600001134
+        },
+        {
+          "step": 2,
+          "duration_ms": 95.42066599999544
+        },
+        {
+          "step": 3,
+          "duration_ms": 95.36561999999549
+        },
+        {
+          "step": 4,
+          "duration_ms": 95.6684159999952
+        },
+        {
+          "step": 5,
+          "duration_ms": 95.3821330000153
+        },
+        {
+          "step": 6,
+          "duration_ms": 95.31518000000005
+        },
+        {
+          "step": 7,
+          "duration_ms": 95.55012300000953
+        },
+        {
+          "step": 8,
+          "duration_ms": 95.47862700000564
+        },
+        {
+          "step": 9,
+          "duration_ms": 95.65975999998955
+        },
+        {
+          "step": 10,
+          "duration_ms": 95.22183600000744
+        },
+        {
+          "step": 11,
+          "duration_ms": 95.32676599999945
+        },
+        {
+          "step": 12,
+          "duration_ms": 95.19280800000729
+        },
+        {
+          "step": 13,
+          "duration_ms": 95.83312100002672
+        },
+        {
+          "step": 14,
+          "duration_ms": 95.89409999998111
+        },
+        {
+          "step": 15,
+          "duration_ms": 96.10295100000599
+        },
+        {
+          "step": 16,
+          "duration_ms": 95.44182599998408
+        },
+        {
+          "step": 17,
+          "duration_ms": 95.85084799999777
+        },
+        {
+          "step": 18,
+          "duration_ms": 95.36795700000766
+        },
+        {
+          "step": 19,
+          "duration_ms": 95.42933500000572
+        },
+        {
+          "step": 20,
+          "duration_ms": 95.49815100001524
+        },
+        {
+          "step": 21,
+          "duration_ms": 95.84112499999264
+        },
+        {
+          "step": 22,
+          "duration_ms": 95.560101999979
+        },
+        {
+          "step": 23,
+          "duration_ms": 96.43533799999204
+        },
+        {
+          "step": 24,
+          "duration_ms": 95.57826299999306
+        },
+        {
+          "step": 25,
+          "duration_ms": 95.60102200001097
+        },
+        {
+          "step": 26,
+          "duration_ms": 95.43868299999758
+        },
+        {
+          "step": 27,
+          "duration_ms": 95.83394699998848
+        },
+        {
+          "step": 28,
+          "duration_ms": 96.037621999983
+        },
+        {
+          "step": 29,
+          "duration_ms": 95.76851200000647
+        }
+      ],
+      "denoise_ms": 2841.9372949999797,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "mode": "RGB",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6",
+      "phase": "AA"
+    },
+    {
+      "label": "03-eager",
+      "variant": "eager",
+      "profile": false,
+      "seed": 42,
+      "size": 1024,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/rope-20261004T161949Z-d5819700/03-eager/perf.json",
+        "--output-path",
+        "/results/rope-20261004T161949Z-d5819700/03-eager/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3104.0463520000117,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 69.96494599999892
+        },
+        {
+          "step": 1,
+          "duration_ms": 95.38528999999585
+        },
+        {
+          "step": 2,
+          "duration_ms": 95.43285199998763
+        },
+        {
+          "step": 3,
+          "duration_ms": 96.0179500000038
+        },
+        {
+          "step": 4,
+          "duration_ms": 95.55654199999708
+        },
+        {
+          "step": 5,
+          "duration_ms": 95.67619000000605
+        },
+        {
+          "step": 6,
+          "duration_ms": 95.62588500000402
+        },
+        {
+          "step": 7,
+          "duration_ms": 95.70640300000832
+        },
+        {
+          "step": 8,
+          "duration_ms": 95.59211600000594
+        },
+        {
+          "step": 9,
+          "duration_ms": 95.72625299998094
+        },
+        {
+          "step": 10,
+          "duration_ms": 95.44255599999474
+        },
+        {
+          "step": 11,
+          "duration_ms": 95.81288900000118
+        },
+        {
+          "step": 12,
+          "duration_ms": 95.81408099998612
+        },
+        {
+          "step": 13,
+          "duration_ms": 95.63135400000533
+        },
+        {
+          "step": 14,
+          "duration_ms": 95.68002800000386
+        },
+        {
+          "step": 15,
+          "duration_ms": 95.62898499999051
+        },
+        {
+          "step": 16,
+          "duration_ms": 95.61507599997299
+        },
+        {
+          "step": 17,
+          "duration_ms": 95.69583800001169
+        },
+        {
+          "step": 18,
+          "duration_ms": 95.51433199999337
+        },
+        {
+          "step": 19,
+          "duration_ms": 95.65979399999947
+        },
+        {
+          "step": 20,
+          "duration_ms": 95.78372999999374
+        },
+        {
+          "step": 21,
+          "duration_ms": 95.81611500001941
+        },
+        {
+          "step": 22,
+          "duration_ms": 95.62204300002008
+        },
+        {
+          "step": 23,
+          "duration_ms": 95.90838999997686
+        },
+        {
+          "step": 24,
+          "duration_ms": 95.67963599999985
+        },
+        {
+          "step": 25,
+          "duration_ms": 95.80963499999484
+        },
+        {
+          "step": 26,
+          "duration_ms": 95.60670600001231
+        },
+        {
+          "step": 27,
+          "duration_ms": 95.80538500000557
+        },
+        {
+          "step": 28,
+          "duration_ms": 95.58556300001442
+        },
+        {
+          "step": 29,
+          "duration_ms": 95.62543900000264
+        }
+      ],
+      "denoise_ms": 2844.4220019999875,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "mode": "RGB",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6",
+      "phase": "ABBA"
+    },
+    {
+      "label": "04-fused",
+      "variant": "fused",
+      "profile": false,
+      "seed": 42,
+      "size": 1024,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/rope-20261004T161949Z-d5819700/04-fused/perf.json",
+        "--output-path",
+        "/results/rope-20261004T161949Z-d5819700/04-fused/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 2504.097327000011,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 57.47574999998051
+        },
+        {
+          "step": 1,
+          "duration_ms": 64.7004840000136
+        },
+        {
+          "step": 2,
+          "duration_ms": 74.12058200003457
+        },
+        {
+          "step": 3,
+          "duration_ms": 75.05771600000344
+        },
+        {
+          "step": 4,
+          "duration_ms": 74.72048400001086
+        },
+        {
+          "step": 5,
+          "duration_ms": 74.60335700000087
+        },
+        {
+          "step": 6,
+          "duration_ms": 74.88816699998324
+        },
+        {
+          "step": 7,
+          "duration_ms": 75.33232200000839
+        },
+        {
+          "step": 8,
+          "duration_ms": 74.7037460000115
+        },
+        {
+          "step": 9,
+          "duration_ms": 75.20665700002382
+        },
+        {
+          "step": 10,
+          "duration_ms": 74.96530099996335
+        },
+        {
+          "step": 11,
+          "duration_ms": 75.52340800003776
+        },
+        {
+          "step": 12,
+          "duration_ms": 79.6819379999647
+        },
+        {
+          "step": 13,
+          "duration_ms": 76.47390700003598
+        },
+        {
+          "step": 14,
+          "duration_ms": 75.64225800001623
+        },
+        {
+          "step": 15,
+          "duration_ms": 75.67288100000269
+        },
+        {
+          "step": 16,
+          "duration_ms": 75.60498599997345
+        },
+        {
+          "step": 17,
+          "duration_ms": 75.92307999999548
+        },
+        {
+          "step": 18,
+          "duration_ms": 74.74709600001006
+        },
+        {
+          "step": 19,
+          "duration_ms": 75.01548199996932
+        },
+        {
+          "step": 20,
+          "duration_ms": 75.09751300000289
+        },
+        {
+          "step": 21,
+          "duration_ms": 74.9502829999642
+        },
+        {
+          "step": 22,
+          "duration_ms": 74.52202900003613
+        },
+        {
+          "step": 23,
+          "duration_ms": 75.09940200003484
+        },
+        {
+          "step": 24,
+          "duration_ms": 76.27718800000594
+        },
+        {
+          "step": 25,
+          "duration_ms": 77.93419800003676
+        },
+        {
+          "step": 26,
+          "duration_ms": 78.85013399999252
+        },
+        {
+          "step": 27,
+          "duration_ms": 77.70927999996502
+        },
+        {
+          "step": 28,
+          "duration_ms": 75.39261699997724
+        },
+        {
+          "step": 29,
+          "duration_ms": 75.83140200000571
+        }
+      ],
+      "denoise_ms": 2241.723648000061,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "mode": "RGB",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": "221ea62e5a7e2278377d9793f643f680ad45bf178fc3c30afc8bcb0407ae58f1",
+      "phase": "ABBA"
+    },
+    {
+      "label": "05-fused",
+      "variant": "fused",
+      "profile": false,
+      "seed": 42,
+      "size": 1024,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/rope-20261004T161949Z-d5819700/05-fused/perf.json",
+        "--output-path",
+        "/results/rope-20261004T161949Z-d5819700/05-fused/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 2537.1640829999933,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 57.86390800000163
+        },
+        {
+          "step": 1,
+          "duration_ms": 64.84199999999873
+        },
+        {
+          "step": 2,
+          "duration_ms": 74.78774200001226
+        },
+        {
+          "step": 3,
+          "duration_ms": 75.5562950000126
+        },
+        {
+          "step": 4,
+          "duration_ms": 74.89530199995897
+        },
+        {
+          "step": 5,
+          "duration_ms": 75.25897799996528
+        },
+        {
+          "step": 6,
+          "duration_ms": 75.6501160000198
+        },
+        {
+          "step": 7,
+          "duration_ms": 74.74684199996773
+        },
+        {
+          "step": 8,
+          "duration_ms": 75.12550000001283
+        },
+        {
+          "step": 9,
+          "duration_ms": 75.50785500001211
+        },
+        {
+          "step": 10,
+          "duration_ms": 75.20657599997094
+        },
+        {
+          "step": 11,
+          "duration_ms": 75.82061299996212
+        },
+        {
+          "step": 12,
+          "duration_ms": 81.4538259999722
+        },
+        {
+          "step": 13,
+          "duration_ms": 78.43487700000651
+        },
+        {
+          "step": 14,
+          "duration_ms": 76.01689199998418
+        },
+        {
+          "step": 15,
+          "duration_ms": 76.72390300001553
+        },
+        {
+          "step": 16,
+          "duration_ms": 76.57940600000757
+        },
+        {
+          "step": 17,
+          "duration_ms": 75.80889799999113
+        },
+        {
+          "step": 18,
+          "duration_ms": 74.88962600001514
+        },
+        {
+          "step": 19,
+          "duration_ms": 75.81415900000366
+        },
+        {
+          "step": 20,
+          "duration_ms": 75.46211299995775
+        },
+        {
+          "step": 21,
+          "duration_ms": 76.55146299998705
+        },
+        {
+          "step": 22,
+          "duration_ms": 75.7134479999877
+        },
+        {
+          "step": 23,
+          "duration_ms": 76.4824529999828
+        },
+        {
+          "step": 24,
+          "duration_ms": 77.56628900000351
+        },
+        {
+          "step": 25,
+          "duration_ms": 77.34078599997929
+        },
+        {
+          "step": 26,
+          "duration_ms": 78.32066000003124
+        },
+        {
+          "step": 27,
+          "duration_ms": 77.75210900001639
+        },
+        {
+          "step": 28,
+          "duration_ms": 76.31006699995169
+        },
+        {
+          "step": 29,
+          "duration_ms": 76.62517599999319
+        }
+      ],
+      "denoise_ms": 2259.1078779997815,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "mode": "RGB",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": "221ea62e5a7e2278377d9793f643f680ad45bf178fc3c30afc8bcb0407ae58f1",
+      "phase": "ABBA"
+    },
+    {
+      "label": "06-eager",
+      "variant": "eager",
+      "profile": false,
+      "seed": 42,
+      "size": 1024,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/rope-20261004T161949Z-d5819700/06-eager/perf.json",
+        "--output-path",
+        "/results/rope-20261004T161949Z-d5819700/06-eager/outputs",
+        "--output-file-name",
+        "sample"
+      ],
+      "total_duration_ms": 3116.528324000001,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 69.38791400000355
+        },
+        {
+          "step": 1,
+          "duration_ms": 95.39320300001464
+        },
+        {
+          "step": 2,
+          "duration_ms": 95.18258100001731
+        },
+        {
+          "step": 3,
+          "duration_ms": 95.23783599996705
+        },
+        {
+          "step": 4,
+          "duration_ms": 95.3824609999856
+        },
+        {
+          "step": 5,
+          "duration_ms": 95.62462200000255
+        },
+        {
+          "step": 6,
+          "duration_ms": 95.18729399997028
+        },
+        {
+          "step": 7,
+          "duration_ms": 95.27998999999454
+        },
+        {
+          "step": 8,
+          "duration_ms": 95.30776299999388
+        },
+        {
+          "step": 9,
+          "duration_ms": 95.73129800003244
+        },
+        {
+          "step": 10,
+          "duration_ms": 95.51341899998533
+        },
+        {
+          "step": 11,
+          "duration_ms": 95.77421500000582
+        },
+        {
+          "step": 12,
+          "duration_ms": 95.61013899997306
+        },
+        {
+          "step": 13,
+          "duration_ms": 95.90273700001717
+        },
+        {
+          "step": 14,
+          "duration_ms": 95.80262000002904
+        },
+        {
+          "step": 15,
+          "duration_ms": 95.87393499998598
+        },
+        {
+          "step": 16,
+          "duration_ms": 95.57211100002405
+        },
+        {
+          "step": 17,
+          "duration_ms": 95.7582180000145
+        },
+        {
+          "step": 18,
+          "duration_ms": 95.57779400000754
+        },
+        {
+          "step": 19,
+          "duration_ms": 96.33109800000739
+        },
+        {
+          "step": 20,
+          "duration_ms": 96.03048100001388
+        },
+        {
+          "step": 21,
+          "duration_ms": 95.84641700001839
+        },
+        {
+          "step": 22,
+          "duration_ms": 95.08357700002534
+        },
+        {
+          "step": 23,
+          "duration_ms": 95.76196699998718
+        },
+        {
+          "step": 24,
+          "duration_ms": 95.41939600001115
+        },
+        {
+          "step": 25,
+          "duration_ms": 96.26032300002407
+        },
+        {
+          "step": 26,
+          "duration_ms": 96.45030600000837
+        },
+        {
+          "step": 27,
+          "duration_ms": 95.61109300000226
+        },
+        {
+          "step": 28,
+          "duration_ms": 95.64302100000077
+        },
+        {
+          "step": 29,
+          "duration_ms": 95.64816899995776
+        }
+      ],
+      "denoise_ms": 2843.185998000081,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "mode": "RGB",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6",
+      "phase": "ABBA"
+    },
+    {
+      "label": "profile-eager",
+      "variant": "eager",
+      "profile": true,
+      "seed": 42,
+      "size": 1024,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/rope-20261004T161949Z-d5819700/profile-eager/perf.json",
+        "--output-path",
+        "/results/rope-20261004T161949Z-d5819700/profile-eager/outputs",
+        "--output-file-name",
+        "sample",
+        "--profile",
+        "--num-profiled-timesteps",
+        "5"
+      ],
+      "total_duration_ms": 17761.666424,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 97.78448800000206
+        },
+        {
+          "step": 1,
+          "duration_ms": 192.68673499999522
+        },
+        {
+          "step": 2,
+          "duration_ms": 192.475767000019
+        },
+        {
+          "step": 3,
+          "duration_ms": 191.7314929999634
+        },
+        {
+          "step": 4,
+          "duration_ms": 199.37653899995667
+        },
+        {
+          "step": 5,
+          "duration_ms": 198.67220200001157
+        },
+        {
+          "step": 6,
+          "duration_ms": 2902.9630779999707
+        },
+        {
+          "step": 7,
+          "duration_ms": 11303.947446999984
+        },
+        {
+          "step": 8,
+          "duration_ms": 97.42919300003905
+        },
+        {
+          "step": 9,
+          "duration_ms": 97.28362300000981
+        },
+        {
+          "step": 10,
+          "duration_ms": 96.20390300000281
+        },
+        {
+          "step": 11,
+          "duration_ms": 96.41152800003283
+        },
+        {
+          "step": 12,
+          "duration_ms": 96.11941400004298
+        },
+        {
+          "step": 13,
+          "duration_ms": 96.43153599995458
+        },
+        {
+          "step": 14,
+          "duration_ms": 95.99083299997346
+        },
+        {
+          "step": 15,
+          "duration_ms": 96.39100800001188
+        },
+        {
+          "step": 16,
+          "duration_ms": 96.73528000001852
+        },
+        {
+          "step": 17,
+          "duration_ms": 97.04212899998765
+        },
+        {
+          "step": 18,
+          "duration_ms": 96.82808700000578
+        },
+        {
+          "step": 19,
+          "duration_ms": 96.72813499997801
+        },
+        {
+          "step": 20,
+          "duration_ms": 96.29830999995193
+        },
+        {
+          "step": 21,
+          "duration_ms": 96.61665199996605
+        },
+        {
+          "step": 22,
+          "duration_ms": 96.36602900002345
+        },
+        {
+          "step": 23,
+          "duration_ms": 96.34800499998164
+        },
+        {
+          "step": 24,
+          "duration_ms": 96.82466599997497
+        },
+        {
+          "step": 25,
+          "duration_ms": 96.28829400003269
+        },
+        {
+          "step": 26,
+          "duration_ms": 97.40234299999884
+        },
+        {
+          "step": 27,
+          "duration_ms": 96.77447000001393
+        },
+        {
+          "step": 28,
+          "duration_ms": 97.19180999996979
+        },
+        {
+          "step": 29,
+          "duration_ms": 97.6316510000288
+        }
+      ],
+      "denoise_ms": 17406.9746479999,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "mode": "RGB",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": "a21fae70ad5b9164a4804821339ff2c1a94d826488d8de4de4cf467e1ff88cd6"
+    },
+    {
+      "label": "profile-fused",
+      "variant": "fused",
+      "profile": true,
+      "seed": 42,
+      "size": 1024,
+      "steps": 30,
+      "command": [
+        "sglang",
+        "generate",
+        "--model-path",
+        "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--model-id",
+        "circlestone-labs/Anima-Base-v1.0-Diffusers",
+        "--revision",
+        "073c3a9db359c31ad0e8aa268d15775473c2176c",
+        "--num-gpus",
+        "1",
+        "--enable-torch-compile=false",
+        "--enable-breakable-cuda-graph=false",
+        "--performance-mode=speed",
+        "--attention-backend",
+        "fa",
+        "--width",
+        "1024",
+        "--height",
+        "1024",
+        "--num-inference-steps",
+        "30",
+        "--guidance-scale",
+        "4",
+        "--negative-prompt",
+        "",
+        "--prompt",
+        "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset",
+        "--seed",
+        "42",
+        "--generator-device",
+        "cpu",
+        "--quality",
+        "lossless",
+        "--save-output",
+        "--warmup-mode",
+        "request",
+        "--warmup-steps",
+        "1",
+        "--perf-dump-path",
+        "/results/rope-20261004T161949Z-d5819700/profile-fused/perf.json",
+        "--output-path",
+        "/results/rope-20261004T161949Z-d5819700/profile-fused/outputs",
+        "--output-file-name",
+        "sample",
+        "--profile",
+        "--num-profiled-timesteps",
+        "5"
+      ],
+      "total_duration_ms": 16387.262116999977,
+      "denoise_steps_ms": [
+        {
+          "step": 0,
+          "duration_ms": 81.00668400004452
+        },
+        {
+          "step": 1,
+          "duration_ms": 175.0164269999459
+        },
+        {
+          "step": 2,
+          "duration_ms": 172.37694099992495
+        },
+        {
+          "step": 3,
+          "duration_ms": 167.24620399998003
+        },
+        {
+          "step": 4,
+          "duration_ms": 166.96435500000462
+        },
+        {
+          "step": 5,
+          "duration_ms": 171.37777400000687
+        },
+        {
+          "step": 6,
+          "duration_ms": 2462.1711529999857
+        },
+        {
+          "step": 7,
+          "duration_ms": 10960.884739999983
+        },
+        {
+          "step": 8,
+          "duration_ms": 76.49686599995675
+        },
+        {
+          "step": 9,
+          "duration_ms": 75.43566800006829
+        },
+        {
+          "step": 10,
+          "duration_ms": 75.96855600002073
+        },
+        {
+          "step": 11,
+          "duration_ms": 75.81872700006898
+        },
+        {
+          "step": 12,
+          "duration_ms": 75.84097100004783
+        },
+        {
+          "step": 13,
+          "duration_ms": 76.11231600003521
+        },
+        {
+          "step": 14,
+          "duration_ms": 76.30340000002889
+        },
+        {
+          "step": 15,
+          "duration_ms": 76.40937799999392
+        },
+        {
+          "step": 16,
+          "duration_ms": 75.76340299999629
+        },
+        {
+          "step": 17,
+          "duration_ms": 76.42002599993702
+        },
+        {
+          "step": 18,
+          "duration_ms": 76.2307500000361
+        },
+        {
+          "step": 19,
+          "duration_ms": 80.47239699999409
+        },
+        {
+          "step": 20,
+          "duration_ms": 80.11542399992777
+        },
+        {
+          "step": 21,
+          "duration_ms": 77.15058099995531
+        },
+        {
+          "step": 22,
+          "duration_ms": 77.105700000061
+        },
+        {
+          "step": 23,
+          "duration_ms": 77.22533499998008
+        },
+        {
+          "step": 24,
+          "duration_ms": 75.6972469999937
+        },
+        {
+          "step": 25,
+          "duration_ms": 76.05691200001274
+        },
+        {
+          "step": 26,
+          "duration_ms": 76.63219100004426
+        },
+        {
+          "step": 27,
+          "duration_ms": 77.11032999998224
+        },
+        {
+          "step": 28,
+          "duration_ms": 76.67771400008405
+        },
+        {
+          "step": 29,
+          "duration_ms": 76.32255700002588
+        }
+      ],
+      "denoise_ms": 16044.410727000126,
+      "pixel_sha256": "2c12b2376dadcaac1f4b074f169b81ba15f9cf19b07832c21232fd220fe7a20c",
+      "mode": "RGB",
+      "png_sha256": "17057f6295cd6cf1a2affc7c2c8ae45889199edf9bde129a4a3dc1b15f9e212d",
+      "source_sha256": "6f74f572c4575b4a6450b67e5a35b77df2ba16dc5db599f39fe104d7dad3ce64"
+    }
+  ],
+  "operator": "passed",
+  "existing_tests": "passed"
+}

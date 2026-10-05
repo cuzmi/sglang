@@ -1,0 +1,676 @@
+{
+  "correctness": [
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        1,
+        1,
+        1,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        1,
+        1,
+        8,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        1,
+        1,
+        16,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        1,
+        17,
+        1,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        1,
+        17,
+        8,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        1,
+        17,
+        16,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        1,
+        1024,
+        1,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        1,
+        1024,
+        8,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        1,
+        1024,
+        16,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        1,
+        4096,
+        1,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        1,
+        4096,
+        8,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        1,
+        4096,
+        16,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        2,
+        1,
+        1,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        2,
+        1,
+        8,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        2,
+        1,
+        16,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        2,
+        17,
+        1,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        2,
+        17,
+        8,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        2,
+        17,
+        16,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        2,
+        1024,
+        1,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        2,
+        1024,
+        8,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        2,
+        1024,
+        16,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        2,
+        4096,
+        1,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        2,
+        4096,
+        8,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        2,
+        4096,
+        16,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "case": "finite_edges",
+      "bit_exact": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        1,
+        1,
+        1,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        1,
+        1,
+        8,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        1,
+        1,
+        16,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        1,
+        17,
+        1,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        1,
+        17,
+        8,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        1,
+        17,
+        16,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        1,
+        1024,
+        1,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        1,
+        1024,
+        8,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        1,
+        1024,
+        16,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        1,
+        4096,
+        1,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        1,
+        4096,
+        8,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        1,
+        4096,
+        16,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        2,
+        1,
+        1,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        2,
+        1,
+        8,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        2,
+        1,
+        16,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        2,
+        17,
+        1,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        2,
+        17,
+        8,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        2,
+        17,
+        16,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        2,
+        1024,
+        1,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        2,
+        1024,
+        8,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        2,
+        1024,
+        16,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        2,
+        4096,
+        1,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        2,
+        4096,
+        8,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "shape": [
+        2,
+        4096,
+        16,
+        128
+      ],
+      "bit_exact": true,
+      "mounted": true,
+      "nonmutation": true
+    },
+    {
+      "dtype": "torch.float16",
+      "case": "finite_edges",
+      "bit_exact": true
+    }
+  ],
+  "fallback": [
+    "fp32",
+    "strided",
+    "small_dim",
+    "cos_bf16",
+    "cpu",
+    "autograd_exact",
+    "exception_no_retry",
+    "mismatch"
+  ],
+  "microbenchmark": [
+    {
+      "shape": [
+        1,
+        1024,
+        16,
+        128
+      ],
+      "order": [
+        "A0",
+        "A1",
+        "A",
+        "B",
+        "B",
+        "A"
+      ],
+      "us": [
+        122.12970907794123,
+        122.14072684339381,
+        122.17185717961749,
+        10.259807741506755,
+        10.251345119335348,
+        122.20709227299791
+      ]
+    },
+    {
+      "shape": [
+        1,
+        4096,
+        16,
+        128
+      ],
+      "order": [
+        "A0",
+        "A1",
+        "A",
+        "B",
+        "B",
+        "A"
+      ],
+      "us": [
+        411.6087185689452,
+        411.55621961484337,
+        411.47927290593566,
+        24.206128107347528,
+        24.04162398456981,
+        411.51502723783676
+      ]
+    },
+    {
+      "shape": [
+        1,
+        16384,
+        16,
+        128
+      ],
+      "order": [
+        "A0",
+        "A1",
+        "A",
+        "B",
+        "B",
+        "A"
+      ],
+      "us": [
+        1489.4290557179427,
+        1489.140727977061,
+        1489.2277760826862,
+        76.60783899187443,
+        76.60527333473864,
+        1489.6583649778613
+      ]
+    }
+  ],
+  "cuda_graph_first_and_warmed": true,
+  "compile_preserves_compiled_eager": true
+}

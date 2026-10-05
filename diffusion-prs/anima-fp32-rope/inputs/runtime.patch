@@ -1,0 +1,207 @@
+diff --git a/python/sglang/kernels/ops/diffusion/__init__.py b/python/sglang/kernels/ops/diffusion/__init__.py
+index 9b918fabf5..7565cd1d55 100644
+--- a/python/sglang/kernels/ops/diffusion/__init__.py
++++ b/python/sglang/kernels/ops/diffusion/__init__.py
+@@ -273,6 +273,13 @@ _SPECS: tuple[tuple[str, KernelBackend, str, frozenset, str], ...] = (
+         _CUDA,
+         "Paired LTX-2.5 decoder 3D RoPE.",
+     ),
++    (
++        "diffusion.rope_rotate_half_fp32",
++        KernelBackend.TRITON,
++        "rope.rope_rotate_half_fp32:fused_rope_rotate_half_fp32",
++        _CUDA,
++        "Paired split-half RoPE with FP32 arithmetic and one output cast.",
++    ),
+     (
+         "diffusion.rope_rotate_half",
+         KernelBackend.TRITON,
+@@ -643,6 +650,8 @@ _EXPORTS: dict[str, str] = {
+     "fused_inplace_qknorm_rope": "rope.qknorm_rope_jit",
+     "fused_qknorm_rope_pack_kv": "rope.qknorm_rope_jit",
+     "try_fused_qwen_qkv_epilogue": "rope.qwen_qkv_epilogue_jit",
++    "can_use_fused_rope_rotate_half_fp32": "rope.rope_rotate_half_fp32",
++    "fused_rope_rotate_half_fp32": "rope.rope_rotate_half_fp32",
+     "can_use_fused_rope_rotate_half": "rope.rope_rotate_half_bitexact",
+     "fused_rope_rotate_half_bitexact": "rope.rope_rotate_half_bitexact",
+     "can_use_interleaved_rope_fp64": "rope.interleaved_rope_fp64_jit",
+diff --git a/python/sglang/multimodal_gen/runtime/models/dits/anima.py b/python/sglang/multimodal_gen/runtime/models/dits/anima.py
+index e508040d78..18e9ef3064 100644
+--- a/python/sglang/multimodal_gen/runtime/models/dits/anima.py
++++ b/python/sglang/multimodal_gen/runtime/models/dits/anima.py
+@@ -8,6 +8,7 @@ import torch
+ from diffusers.models.embeddings import Timesteps
+ from torch import nn
+ 
++from sglang.kernels.ops.diffusion import BitExactFusionGate, tensors_equal
+ from sglang.multimodal_gen.configs.models.dits.anima import AnimaDiTConfig
+ from sglang.multimodal_gen.configs.models.fsdp import is_module_list_entry_in
+ from sglang.multimodal_gen.runtime.distributed import get_tp_world_size
+@@ -28,6 +29,55 @@ from sglang.multimodal_gen.runtime.managers.memory_managers.layerwise_offload im
+     LayerwiseOffloadableModuleMixin,
+ )
+ from sglang.multimodal_gen.runtime.models.dits.base import CachableDiT
++from sglang.multimodal_gen.runtime.utils.logging_utils import init_logger
++
++logger = init_logger(__name__)
++
++
++_ANIMA_ROPE = BitExactFusionGate("Anima FP32 RoPE", per_signature=True)
++
++
++def _anima_rope_eager(q, k, cos, sin):
++    cos, sin = cos[None, :, None, :], sin[None, :, None, :]
++    q1, q2 = q.chunk(2, dim=-1)
++    k1, k2 = k.chunk(2, dim=-1)
++    return (
++        (q.float() * cos + torch.cat((-q2, q1), -1).float() * sin).to(q.dtype),
++        (k.float() * cos + torch.cat((-k2, k1), -1).float() * sin).to(k.dtype),
++    )
++
++
++def _anima_rope(q, k, cos, sin):
++    if (
++        not torch.compiler.is_compiling()
++        and q.is_cuda
++        and torch.version.hip is None
++        and not _ANIMA_ROPE.disabled
++    ):
++        from sglang.kernels.ops.diffusion import (
++            can_use_fused_rope_rotate_half_fp32,
++            fused_rope_rotate_half_fp32,
++        )
++
++        if can_use_fused_rope_rotate_half_fp32(q, k, cos, sin):
++            sig = (q.device, q.dtype, q.shape)
++            verified = _ANIMA_ROPE.is_verified(sig)
++            if verified or not torch.cuda.is_current_stream_capturing():
++                try:
++                    out = fused_rope_rotate_half_fp32(q, k, cos, sin)
++                except Exception as exc:
++                    _ANIMA_ROPE.on_exception(exc, logger=logger)
++                else:
++                    if verified:
++                        return out
++                    return _ANIMA_ROPE.accept_or_fallback(
++                        out,
++                        _anima_rope_eager(q, k, cos, sin),
++                        sig=sig,
++                        equal=tensors_equal,
++                        logger=logger,
++                    )
++    return _anima_rope_eager(q, k, cos, sin)
+ 
+ 
+ def _is_anima_block(name, module):
+@@ -170,12 +220,7 @@ class AnimaAttention(nn.Module):
+         v = self.to_v(context)[0].unflatten(-1, (self.heads, self.head_dim))
+         q, k = self.norm_q(q), self.norm_k(k)
+         if rope is not None:
+-            cos, sin = (r[None, :, None, :] for r in rope)
+-            # Cosmos uses split-half RoPE in fp32, then rounds once
+-            q1, q2 = q.chunk(2, dim=-1)
+-            k1, k2 = k.chunk(2, dim=-1)
+-            q = (q.float() * cos + torch.cat((-q2, q1), -1).float() * sin).to(q.dtype)
+-            k = (k.float() * cos + torch.cat((-k2, k1), -1).float() * sin).to(k.dtype)
++            q, k = _anima_rope(q, k, *rope)
+         out = self.attn(q, k, v, attn_mask_meta=attn_mask_meta).flatten(2)
+         return self.to_out[0](out)[0]
+ 
+diff --git a/python/sglang/kernels/ops/diffusion/rope/rope_rotate_half_fp32.py b/python/sglang/kernels/ops/diffusion/rope/rope_rotate_half_fp32.py
+new file mode 100644
+index 0000000000..b9ada75780
+--- /dev/null
++++ b/python/sglang/kernels/ops/diffusion/rope/rope_rotate_half_fp32.py
+@@ -0,0 +1,92 @@
++# SPDX-License-Identifier: Apache-2.0
++"""Paired split-half RoPE with FP32 products and sum, then one output cast.
++
++Unlike the BF16-rounded RoPE kernel, this matches Cosmos/Anima eager math.
++Cos/sin have shape (S, D) and are shared by every batch and attention head.
++"""
++
++import torch
++import triton
++import triton.language as tl
++
++
++@triton.jit
++def _rope_rotate_half_fp32_kernel(
++    Q,
++    K,
++    Cos,
++    Sin,
++    OutQ,
++    OutK,
++    N: tl.constexpr,
++    S: tl.constexpr,
++    H: tl.constexpr,
++    D: tl.constexpr,
++    BLOCK: tl.constexpr,
++):
++    offsets = tl.program_id(0) * BLOCK + tl.arange(0, BLOCK)
++    mask = offsets < N
++    col = offsets % D
++    rotated = offsets + tl.where(col < D // 2, D // 2, -D // 2)
++    freq = ((offsets // (H * D)) % S) * D + col
++    c = tl.load(Cos + freq, mask, other=0)
++    s = tl.load(Sin + freq, mask, other=0)
++    if tl.program_id(1) == 0:
++        x = tl.load(Q + offsets, mask, other=0).to(tl.float32)
++        r = tl.load(Q + rotated, mask, other=0).to(tl.float32)
++    else:
++        x = tl.load(K + offsets, mask, other=0).to(tl.float32)
++        r = tl.load(K + rotated, mask, other=0).to(tl.float32)
++    r = tl.where(col < D // 2, -r, r)
++    # Preserve the two FP32 multiplication boundaries; do not contract to FMA.
++    out = x * c + r * s
++    if tl.program_id(1) == 0:
++        tl.store(OutQ + offsets, out, mask)
++    else:
++        tl.store(OutK + offsets, out, mask)
++
++
++def can_use_fused_rope_rotate_half_fp32(q, k, cos, sin):
++    """Conservative inference-only contract; unsupported inputs stay eager."""
++    return (
++        q.is_cuda
++        and torch.version.hip is None
++        and q.dtype in (torch.float16, torch.bfloat16)
++        and q.ndim == 4
++        and all(n > 0 for n in q.shape)
++        and q.shape[-1] == 128
++        and k.shape == q.shape
++        and k.dtype == q.dtype
++        and cos.shape == sin.shape == (q.shape[1], q.shape[-1])
++        and cos.dtype == sin.dtype == torch.float32
++        and all(t.device == q.device and t.is_contiguous() for t in (q, k, cos, sin))
++        and not (
++            torch.is_grad_enabled() and any(t.requires_grad for t in (q, k, cos, sin))
++        )
++    )
++
++
++def fused_rope_rotate_half_fp32(q, k, cos, sin):
++    """Return fresh Q/K tensors; never mutate inputs or allocate FP32 activations."""
++    if not can_use_fused_rope_rotate_half_fp32(q, k, cos, sin):
++        raise ValueError(
++            "Expected contiguous CUDA FP16/BF16 Q/K [B,S,H,128] and FP32 cos/sin [S,128]"
++        )
++    out_q, out_k = torch.empty_like(q), torch.empty_like(k)
++    _, seq, heads, dim = q.shape
++    with torch.cuda.device(q.device):
++        _rope_rotate_half_fp32_kernel[(triton.cdiv(q.numel(), 1024), 2)](
++            q,
++            k,
++            cos,
++            sin,
++            out_q,
++            out_k,
++            q.numel(),
++            seq,
++            heads,
++            dim,
++            BLOCK=1024,
++            enable_fp_fusion=False,
++        )
++    return out_q, out_k

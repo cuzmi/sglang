@@ -8,6 +8,7 @@ This branch stores experiment evidence separately from production changes. It is
 | --- | --- | --- | --- |
 | Anima modulation fusion | [Published evidence](diffusion-prs/anima-modulate-fusion/PUBLISHED.md) | [cuzmi/sglang#2](https://github.com/cuzmi/sglang/pull/2) | Base `affa261e3d289fe4f907c9b2e8d773fef0d36dba`, candidate `05bee50b2f4fef4484bab3db3bff7ef4495e98e5` |
 | Ming-Image RMSNorm | [Published evidence](diffusion-prs/ming-image-rmsnorm/PUBLISHED.md) | [cuzmi/sglang#1](https://github.com/cuzmi/sglang/pull/1) | Base `6fa3fe69e2e5e19b75cadd9fc285b72634551992`; tested production file matches candidate `8adb4c267d4f2b38d463817ed6c51b937ae89266` |
+| Anima FP32 RoPE | [Published evidence](diffusion-prs/anima-fp32-rope/PUBLISHED.md) | [sgl-project/sglang#42598](https://github.com/sgl-project/sglang/pull/42598) | Base `6fa3fe69e2`; candidate `6143cce2d2` |
 
 ## Archive contents
 

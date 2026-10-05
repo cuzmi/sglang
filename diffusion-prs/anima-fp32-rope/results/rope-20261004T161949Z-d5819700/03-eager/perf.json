@@ -1,0 +1,214 @@
+{
+  "timestamp": "2026-10-04T16:23:56.418377+00:00",
+  "request_id": "e147910c-b365-44b5-a395-548947a3a519",
+  "commit_hash": "N/A",
+  "tag": "cli_generate",
+  "total_duration_ms": 3104.0463520000117,
+  "steps": [
+    {
+      "name": "InputValidationStage",
+      "duration_ms": 0.031978000009758034
+    },
+    {
+      "name": "TextEncodingStage",
+      "duration_ms": 21.859543999994457
+    },
+    {
+      "name": "AnimaTextConditioningStage",
+      "duration_ms": 8.989687999985563
+    },
+    {
+      "name": "TimestepPreparationStage",
+      "duration_ms": 0.40172999999299464
+    },
+    {
+      "name": "LatentPreparationStage",
+      "duration_ms": 2.2679930000037984
+    },
+    {
+      "name": "DenoisingStage",
+      "duration_ms": 2846.2609529999836
+    },
+    {
+      "name": "DecodingStage",
+      "duration_ms": 218.8866369999971
+    },
+    {
+      "name": "Scheduler.return_result.spill_arrays",
+      "duration_ms": 0.07463000000029751
+    },
+    {
+      "name": "Scheduler.return_result.spill_cuda",
+      "duration_ms": 0.03795699998931923
+    },
+    {
+      "name": "SchedulerClient.materialize_file_refs",
+      "duration_ms": 0.005702000009932817
+    }
+  ],
+  "denoise_steps_ms": [
+    {
+      "step": 0,
+      "duration_ms": 69.96494599999892
+    },
+    {
+      "step": 1,
+      "duration_ms": 95.38528999999585
+    },
+    {
+      "step": 2,
+      "duration_ms": 95.43285199998763
+    },
+    {
+      "step": 3,
+      "duration_ms": 96.0179500000038
+    },
+    {
+      "step": 4,
+      "duration_ms": 95.55654199999708
+    },
+    {
+      "step": 5,
+      "duration_ms": 95.67619000000605
+    },
+    {
+      "step": 6,
+      "duration_ms": 95.62588500000402
+    },
+    {
+      "step": 7,
+      "duration_ms": 95.70640300000832
+    },
+    {
+      "step": 8,
+      "duration_ms": 95.59211600000594
+    },
+    {
+      "step": 9,
+      "duration_ms": 95.72625299998094
+    },
+    {
+      "step": 10,
+      "duration_ms": 95.44255599999474
+    },
+    {
+      "step": 11,
+      "duration_ms": 95.81288900000118
+    },
+    {
+      "step": 12,
+      "duration_ms": 95.81408099998612
+    },
+    {
+      "step": 13,
+      "duration_ms": 95.63135400000533
+    },
+    {
+      "step": 14,
+      "duration_ms": 95.68002800000386
+    },
+    {
+      "step": 15,
+      "duration_ms": 95.62898499999051
+    },
+    {
+      "step": 16,
+      "duration_ms": 95.61507599997299
+    },
+    {
+      "step": 17,
+      "duration_ms": 95.69583800001169
+    },
+    {
+      "step": 18,
+      "duration_ms": 95.51433199999337
+    },
+    {
+      "step": 19,
+      "duration_ms": 95.65979399999947
+    },
+    {
+      "step": 20,
+      "duration_ms": 95.78372999999374
+    },
+    {
+      "step": 21,
+      "duration_ms": 95.81611500001941
+    },
+    {
+      "step": 22,
+      "duration_ms": 95.62204300002008
+    },
+    {
+      "step": 23,
+      "duration_ms": 95.90838999997686
+    },
+    {
+      "step": 24,
+      "duration_ms": 95.67963599999985
+    },
+    {
+      "step": 25,
+      "duration_ms": 95.80963499999484
+    },
+    {
+      "step": 26,
+      "duration_ms": 95.60670600001231
+    },
+    {
+      "step": 27,
+      "duration_ms": 95.80538500000557
+    },
+    {
+      "step": 28,
+      "duration_ms": 95.58556300001442
+    },
+    {
+      "step": 29,
+      "duration_ms": 95.62543900000264
+    }
+  ],
+  "memory_checkpoints": {
+    "before_forward": {
+      "allocated_mb": 5461.27,
+      "reserved_mb": 5866.0,
+      "peak_allocated_mb": 5461.27,
+      "peak_reserved_mb": 5866.0,
+      "peak_host_anon_mb": 0.0
+    },
+    "after_forward": {
+      "allocated_mb": 5469.77,
+      "reserved_mb": 5870.0,
+      "peak_allocated_mb": 5740.0,
+      "peak_reserved_mb": 5870.0,
+      "peak_host_anon_mb": 0.0
+    },
+    "load_peak": {
+      "allocated_mb": 5463.77,
+      "reserved_mb": 5870.0,
+      "peak_allocated_mb": 5420.36,
+      "peak_reserved_mb": 5472.0,
+      "peak_host_anon_mb": 0.0
+    },
+    "runtime_peak": {
+      "allocated_mb": 5463.77,
+      "reserved_mb": 5870.0,
+      "peak_allocated_mb": 5740.0,
+      "peak_reserved_mb": 5870.0,
+      "peak_host_anon_mb": 0.0
+    },
+    "warmup_peak": {
+      "allocated_mb": 5463.77,
+      "reserved_mb": 5870.0,
+      "peak_allocated_mb": 5740.0,
+      "peak_reserved_mb": 5866.0,
+      "peak_host_anon_mb": 0.0
+    }
+  },
+  "meta": {
+    "prompt": [
+      "masterpiece, best quality, safe, watercolor landscape, a quiet seaside village at sunset"
+    ],
+    "model": "/vol/hf-cache/hub/models--circlestone-labs--Anima-Base-v1.0-Diffusers/snapshots/073c3a9db359c31ad0e8aa268d15775473c2176c"
+  }
+}
